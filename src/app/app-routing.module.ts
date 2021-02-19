@@ -43,6 +43,11 @@ import { EtrekComponent } from './lore/races/etrek/etrek.component';
 import { DarkElfComponent } from './lore/races/dark-elf/dark-elf.component';
 import { LyuneComponent } from './lore/races/lyune/lyune.component';
 
+import { MagicCreationComponent } from './system/magic-system/magic-creation/magic-creation.component';
+import { MagicManipulationComponent } from './system/magic-system/magic-manipulation/magic-manipulation.component';
+import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
+import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -91,7 +96,16 @@ const routes: Routes = [
       { path: 'gauges', component: GaugesComponent },
       { path: 'attacking', component: AttackingComponent },
       { path: 'combat', component: CombatComponent },
-      { path: 'magic', component: MagicSystemComponent },
+      {
+        path: 'magic',
+        component: MagicSystemComponent,
+        children: [
+          { path: 'creation', component: MagicCreationComponent },
+          { path: 'manipulation', component: MagicManipulationComponent },
+          { path: 'ballparks', component: MagicBallparksComponent },
+          { path: 'group', component: MagicGroupComponent },
+        ]
+      },
       { path: 'healing', component: HealingComponent },
       { path: 'states', component: StatesComponent },
     ]
