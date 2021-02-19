@@ -1,0 +1,103 @@
+/* h1 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+} */
+.button {
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    display: inline-block;
+    background-color: rgba(238, 238, 238, 0);
+    border-radius: 0px;
+    color: #002999;
+    font: small-caps bold 15px/30px Georgia, serif;
+}
+.button:hover {
+    background-color: #ded2ff75;
+}
+.activebutton {
+    background-color: #4400ff21;
+}
+.button_language {
+    padding-bottom: -10px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-right: 0px;
+    margin-left: 10px;
+    background-color: rgba(238, 238, 238, 0);
+    border-radius: 0px;
+    border: 0px;
+    float: right;
+}
+.home-icon {
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    display: inline-block;
+    background-color: rgba(238, 238, 238, 0);
+    border-radius: 4px;
+    font: small-caps bold 25px/30px Georgia, serif;
+    color: #22298f;
+}
+.headband {
+    --gap: 32px;
+    background-size: 100%;
+    padding: 1px var(--gap);
+    margin-top: calc(-1 * var(--gap));
+    margin-left: calc(-1 * var(--gap));
+    margin-right: calc(-1 * var(--gap));
+    background-color: #cab7ff;
+}
+.band {
+    --gap: 32px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: var(--gap);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: calc(-1  * var(--gap));
+    margin-right: calc(-1 * var(--gap));
+}
+.band1 {
+    background-color: #b99fff;
+
+}
+.band2 {
+    background-color: #a98aff;
+
+}
+.band3 {
+    background-color: #9b78fd;
+
+}
+.page-background {
+    --gap: 32px;
+    background-image: url("../assets/images/background2_light.jpg");
+    background-size: 100%;
+    margin-top: 0px;
+    margin-bottom: calc(-1  * var(--gap));
+    margin-left: calc(-1  * var(--gap));
+    margin-right: calc(-1  * var(--gap));
+    padding-top: 0px;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    height: 900px;
+    color: black;
+    font: 20px Georgia, serif;
+}
+p {
+    background-color: #ffffff4f;
+    border-radius: 20px;
+    padding: 20px;
+}
+pre {
+    background-color: #ffffff4f;
+    border-radius: 20px;
+    padding: 20px;
+}

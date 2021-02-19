@@ -1,0 +1,7 @@
+@import '../app.component.css';
+.home-page-bg {
+    padding-top: 200px;
+    color: black;
+    font: 20px Georgia, serif;
+    text-align: center;
+}

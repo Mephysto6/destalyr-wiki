@@ -1,0 +1,105 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { HomePageComponent } from './home-page/home-page.component';
+import { LoreComponent } from './lore/lore.component';
+import { SystemComponent } from './system/system.component';
+import { CharacterComponent } from './character/character.component';
+
+import { HistoryComponent } from './lore/history/history.component';
+import { ReligionComponent } from './lore/religion/religion.component';
+import { RacesComponent } from './lore/races/races.component';
+import { MagicLoreComponent } from './lore/magic-lore/magic-lore.component';
+import { GeographyComponent } from './lore/geography/geography.component';
+import { CitadelleComponent } from './lore/citadelle/citadelle.component';
+
+import { WeaponsComponent } from './system/weapons/weapons.component';
+import { ArmorsComponent } from './system/armors/armors.component';
+import { GaugesComponent } from './system/gauges/gauges.component';
+import { AttackingComponent } from './system/attacking/attacking.component';
+import { CombatComponent } from './system/combat/combat.component';
+import { MagicSystemComponent } from './system/magic-system/magic-system.component';
+import { HealingComponent } from './system/healing/healing.component';
+import { StatesComponent } from './system/states/states.component';
+
+import { CreationComponent } from './character/creation/creation.component';
+import { MagicCharacterComponent } from './character/magic-character/magic-character.component';
+import { StatsComponent } from './character/stats/stats.component';
+import { SkillsComponent } from './character/skills/skills.component';
+import { KnowledgeComponent } from './character/knowledge/knowledge.component';
+
+import { TheElvenTimeComponent } from './lore/history/the-elven-time/the-elven-time.component';
+import { TheElvenWarComponent } from './lore/history/the-elven-war/the-elven-war.component';
+import { TheEmergenceComponent } from './lore/history/the-emergence/the-emergence.component';
+import { TheLyuneCivilWarComponent } from './lore/history/the-lyune-civil-war/the-lyune-civil-war.component';
+import { TheDarkElvesStabilisationComponent } from './lore/history/the-dark-elves-stabilisation/the-dark-elves-stabilisation.component';
+import { TheNewWarComponent } from './lore/history/the-new-war/the-new-war.component';
+
+import { NekaliComponent } from './lore/races/nekali/nekali.component';
+import { FlyhnComponent } from './lore/races/flyhn/flyhn.component';
+import { WoodElfComponent } from './lore/races/wood-elf/wood-elf.component';
+import { EtrekComponent } from './lore/races/etrek/etrek.component';
+import { DarkElfComponent } from './lore/races/dark-elf/dark-elf.component';
+import { LyuneComponent } from './lore/races/lyune/lyune.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    LoreComponent,
+    SystemComponent,
+    CharacterComponent,
+    PageNotFoundComponent,
+    HistoryComponent,
+    ReligionComponent,
+    RacesComponent,
+    MagicLoreComponent,
+    GeographyComponent,
+    CitadelleComponent,
+    WeaponsComponent,
+    ArmorsComponent,
+    GaugesComponent,
+    AttackingComponent,
+    CombatComponent,
+    MagicSystemComponent,
+    HealingComponent,
+    StatesComponent,
+    CreationComponent,
+    MagicCharacterComponent,
+    StatsComponent,
+    SkillsComponent,
+    KnowledgeComponent,
+    TheElvenTimeComponent,
+    TheElvenWarComponent,
+    TheEmergenceComponent,
+    TheLyuneCivilWarComponent,
+    TheDarkElvesStabilisationComponent,
+    TheNewWarComponent,
+    NekaliComponent,
+    FlyhnComponent,
+    WoodElfComponent,
+    EtrekComponent,
+    DarkElfComponent,
+    LyuneComponent
+  ],
+  imports: [
+    BrowserModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
