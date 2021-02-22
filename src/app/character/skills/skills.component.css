@@ -1,1 +1,57 @@
 @import '../../app.component.css';
+/* .button-skills {
+    padding: 10px 20px;
+    margin: 20px;
+    width: 15px;
+    background-color: #ffffffb7;
+    color: #002999;
+    border:1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    font: small-caps bold 15px/30px Georgia, serif;
+}
+.button-skills:hover {
+    background-color: #ffffff;
+} */
+.div-skills {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+.div-skills .button-skills {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    font: 15px/30px Georgia, serif;
+    height: 65px;
+    width: 175px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.div-skills .button-skills:hover {
+    background-color: rgba(255, 255, 255, 0.288);
+}
+.div-skills .button-skills .hovertext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: -10px;
+    margin-left: 100px;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+}
+.div-skills .button-skills:hover .hovertext {
+    visibility: visible;
+}

@@ -78,7 +78,7 @@
 }
 .page-background {
     --gap: 32px;
-    background-image: url("../assets/images/background2_light.jpg");
+    background-image: url("../assets/images/backgrounds/background2_light.jpg");
     background-size: 100%;
     margin-top: 0px;
     margin-bottom: calc(-1  * var(--gap));

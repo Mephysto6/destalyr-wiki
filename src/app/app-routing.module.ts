@@ -48,6 +48,10 @@ import { MagicManipulationComponent } from './system/magic-system/magic-manipula
 import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
 import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
 
+import { SkillsAttackComponent } from './character/skills/skills-attack/skills-attack.component';
+import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
+import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -117,7 +121,15 @@ const routes: Routes = [
       { path: 'creation', component: CreationComponent },
       { path: 'magic', component: MagicCharacterComponent },
       { path: 'stats', component: StatsComponent },
-      { path: 'skills', component: SkillsComponent },
+      {
+        path: 'skills',
+        component: SkillsComponent,
+        children: [
+          { path: 'attack', component: SkillsAttackComponent },
+          { path: 'defense', component: SkillsDefenseComponent },
+          { path: 'magic', component: SkillsMagicComponent },
+        ]
+      },
       { path: 'knowledge', component: KnowledgeComponent },
     ]
   },

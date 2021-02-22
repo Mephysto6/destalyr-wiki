@@ -55,6 +55,10 @@ import { MagicManipulationComponent } from './system/magic-system/magic-manipula
 import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
 import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
 
+import { SkillsAttackComponent } from './character/skills/skills-attack/skills-attack.component';
+import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
+import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
+
 
 @NgModule({
   declarations: [
@@ -98,7 +102,10 @@ import { MagicGroupComponent } from './system/magic-system/magic-group/magic-gro
     MagicCreationComponent,
     MagicManipulationComponent,
     MagicBallparksComponent,
-    MagicGroupComponent
+    MagicGroupComponent,
+    SkillsAttackComponent,
+    SkillsDefenseComponent,
+    SkillsMagicComponent
   ],
   imports: [
     BrowserModule,
