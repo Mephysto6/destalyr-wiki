@@ -1,26 +1,29 @@
 @import '../skills.component.css';
 
 .div-skills img {
-    width: 40%;
+    width: 39%;
     height: auto;
 }
 
+.div-skills .xtop {
+  top:6.2%;
+}
 .div-skills .top {
-  top:8.1%;
+  top:33.7%;
 }
 .div-skills .middle {
-  top:43.2%;
+  top:61.2%;
 }
 .div-skills .bot {
-  top:78.3%;
+  top:88.7%;
 }
 
 .div-skills .left {
-  left:36.2%;
+  left:35.5%;
 }
 .div-skills .center {
-  left:49.6%;
+  left:48.9%;
 }
 .div-skills .right {
-  left:63%;
+  left:62.3%;
 }

@@ -87,7 +87,9 @@
     padding-top: 0px;
     padding-left: var(--gap);
     padding-right: var(--gap);
-    height: 950px;
+    padding-bottom: 50px;
+    min-height: 900px;
+    height: auto;
     color: black;
     font: 20px Georgia, serif;
 }
