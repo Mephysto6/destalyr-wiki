@@ -6,16 +6,16 @@
 }
 
 .div-skills .top {
-  top:5.5%;
+  top:3%;
 }
 .div-skills .middle {
-  top:32.5%;
+  top:30.7%;
 }
 .div-skills .bot {
-  top:59.5%;
+  top:58.45%;
 }
 .div-skills .xbot {
-  top:86.5%;
+  top:86.2%;
 }
 
 .div-skills .tleft {
@@ -31,8 +31,13 @@
   left:32.5%;
 }
 .div-skills .bcenter {
-  left:45.6%;
+  left:45.69%;
 }
 .div-skills .bright {
-  left:59%;
+  left:58.9%;
+}
+
+.div-skills .button-skills {
+  height: 9.1%;
+  width: 10.5%;
 }
