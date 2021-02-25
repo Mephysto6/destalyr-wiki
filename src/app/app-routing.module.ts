@@ -52,6 +52,10 @@ import { SkillsAttackComponent } from './character/skills/skills-attack/skills-a
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
 
+import { MagicElementalComponent } from './lore/magic-lore//magic-elemental/magic-elemental.component';
+import { MagicRunicComponent } from './lore/magic-lore//magic-runic/magic-runic.component';
+import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -86,7 +90,15 @@ const routes: Routes = [
           { path: 'lyune', component: LyuneComponent },
         ]
       },
-      { path: 'magic', component: MagicLoreComponent },
+      {
+        path: 'magic',
+        component: MagicLoreComponent,
+        children: [
+          { path: 'elemental', component: MagicElementalComponent },
+          { path: 'runic', component: MagicRunicComponent },
+          { path: 'uses', component: MagicUsesComponent },
+        ]
+      },
       { path: 'geography', component: GeographyComponent },
       { path: 'citadelle', component: CitadelleComponent },
     ]
