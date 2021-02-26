@@ -1,13 +1,13 @@
 <div class="headband">
     <a routerLink="/home" class="home-icon">{{title}}</a>
-    <button (click)="switch_lang('en')" class="button_language" disabled="true"><img src="../assets/images/flags/en_flag_xs_no.png"/></button>
-    <button (click)="switch_lang('fr')" class="button_language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
+    <button (click)="langue.change_lang('en')" class="button_language"><img src="../assets/images/flags/en_flag_xs.png"/></button>
+    <button (click)="langue.change_lang('fr')" class="button_language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
 </div>
 <nav class="band band1">
-    <a routerLink="/home" class="button" routerLinkActive="activebutton">Home</a>
-    <a routerLink="/lore" class="button" routerLinkActive="activebutton">Lore</a>
-    <a routerLink="/system" class="button" routerLinkActive="activebutton">System</a>
-    <a routerLink="/character" class="button" routerLinkActive="activebutton">Character</a>
+    <a routerLink="/home" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
+    <a routerLink="/lore" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
+    <a routerLink="/system" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
+    <a routerLink="/character" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
 </nav>
 <div class="page-background">
     <router-outlet></router-outlet>

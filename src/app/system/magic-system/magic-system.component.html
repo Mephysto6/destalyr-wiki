@@ -1,7 +1,7 @@
 <nav class="band band3">
-    <a routerLink="/system/magic/creation" class="button" routerLinkActive="activebutton">Creation</a>
-    <a routerLink="/system/magic/manipulation" class="button" routerLinkActive="activebutton">Manipulation</a>
-    <a routerLink="/system/magic/ballparks" class="button" routerLinkActive="activebutton">Ballparks</a>
-    <a routerLink="/system/magic/group" class="button" routerLinkActive="activebutton">Group</a>
+    <a routerLink="/system/magic/creation" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
+    <a routerLink="/system/magic/manipulation" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
+    <a routerLink="/system/magic/ballparks" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
+    <a routerLink="/system/magic/group" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
 </nav>
 <router-outlet></router-outlet>

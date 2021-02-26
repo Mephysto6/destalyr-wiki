@@ -1,6 +1,6 @@
 <nav class="band band3">
-    <a routerLink="/character/skills/attack" class="button" routerLinkActive="activebutton">Attack</a>
-    <a routerLink="/character/skills/defense" class="button" routerLinkActive="activebutton">Defense</a>
-    <a routerLink="/character/skills/magic" class="button" routerLinkActive="activebutton">Magic</a>
+    <a routerLink="/character/skills/attack" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
+    <a routerLink="/character/skills/defense" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
+    <a routerLink="/character/skills/magic" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
 </nav>
 <router-outlet></router-outlet>
