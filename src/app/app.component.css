@@ -48,11 +48,12 @@
 .headband {
     --gap: 32px;
     background-size: 100%;
-    padding: 1px var(--gap);
+    padding-right: var(--gap);
     margin-top: calc(-1 * var(--gap));
     margin-left: calc(-1 * var(--gap));
     margin-right: calc(-1 * var(--gap));
     background-color: #cab7ff;
+    min-width: 1032px;
 }
 .band {
     --gap: 32px;
@@ -63,6 +64,7 @@
     margin-bottom: 0px;
     margin-left: calc(-1  * var(--gap));
     margin-right: calc(-1 * var(--gap));
+    min-width: 1032px;
 }
 .band1 {
     background-color: #b99fff;
@@ -90,6 +92,8 @@
     padding-bottom: 20px;
     min-height: 900px;
     height: auto;
+    min-width: 1000px;
+    width: auto;
     color: black;
     font: 20px Georgia, serif;
 }
@@ -121,4 +125,7 @@ th, td {
     border: 1px solid black;
     padding: 10px;
     text-align: left;
+}
+div .div-table {
+    overflow-x:auto;
 }
