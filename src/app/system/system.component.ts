@@ -15,6 +15,9 @@ export class SystemComponent implements OnInit {
   }
 
   fr_text(num : number) {
+    if (num == 0) {
+      return "Explication"
+    }
     if (num == 1) {
       return "Armes"
     }
@@ -42,6 +45,9 @@ export class SystemComponent implements OnInit {
   }
 
   en_text(num : number) {
+    if (num == 0) {
+      return "Explanation"
+    }
     if (num == 1) {
       return "Weapons"
     }

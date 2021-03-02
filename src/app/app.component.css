@@ -115,6 +115,9 @@ h3 {
     font: small-caps bold 20px/30px Georgia, serif;
     color: rgb(8, 0, 51);
 }
+span {
+    font: small-caps bold 15px/30px Georgia, serif;
+}
 table {
     margin: 10px;
     border: 1px solid black;

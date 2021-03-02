@@ -29,6 +29,7 @@ import { CombatComponent } from './system/combat/combat.component';
 import { MagicSystemComponent } from './system/magic-system/magic-system.component';
 import { HealingComponent } from './system/healing/healing.component';
 import { StatesComponent } from './system/states/states.component';
+import { SystemExplanationComponent } from './system/system-explanation/system-explanation.component';
 
 import { CreationComponent } from './character/creation/creation.component';
 import { MagicCharacterComponent } from './character/magic-character/magic-character.component';
@@ -62,6 +63,7 @@ import { SkillsMagicComponent } from './character/skills/skills-magic/skills-mag
 import { MagicElementalComponent } from './lore/magic-lore//magic-elemental/magic-elemental.component';
 import { MagicRunicComponent } from './lore/magic-lore//magic-runic/magic-runic.component';
 import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.component';
+
 
 
 @NgModule({
@@ -112,7 +114,8 @@ import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.com
     SkillsMagicComponent,
     MagicElementalComponent,
     MagicRunicComponent,
-    MagicUsesComponent
+    MagicUsesComponent,
+    SystemExplanationComponent
   ],
   imports: [
     BrowserModule,

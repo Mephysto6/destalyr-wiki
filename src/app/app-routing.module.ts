@@ -22,6 +22,7 @@ import { CombatComponent } from './system/combat/combat.component';
 import { MagicSystemComponent } from './system/magic-system/magic-system.component';
 import { HealingComponent } from './system/healing/healing.component';
 import { StatesComponent } from './system/states/states.component';
+import { SystemExplanationComponent } from './system/system-explanation/system-explanation.component';
 
 import { CreationComponent } from './character/creation/creation.component';
 import { MagicCharacterComponent } from './character/magic-character/magic-character.component';
@@ -124,6 +125,7 @@ const routes: Routes = [
       },
       { path: 'healing', component: HealingComponent },
       { path: 'states', component: StatesComponent },
+      { path: 'explanation', component: SystemExplanationComponent },
     ]
   },
   {

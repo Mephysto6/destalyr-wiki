@@ -1,0 +1,75 @@
+<h3 *ngIf="langue.l == 'fr'">Explication du system de dés et annotations</h3>
+<h3 *ngIf="langue.l == 'en'">Explanation of the dice system and annotations</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Les différents dés sont appelés par leur nombre de faces. Un dé à 20 faces est appelé un d20, un dé à 6 faces est appelé un d6, etc.<br/>
+    Le jeu Destalyr est basé sur le d12, cela veut dire que la plupart des jets de dés se font avec un d12.<br/>
+    <br/>
+    Par exemple pour attaquer avec un marteau, il faut lancer 1d12 + Force contre l'esquive de l'adversaire.
+    Ici, Force correspond à la caractéristique de force du personnage qui effectue l'action,
+    et 1d12 correspond au lancé d'un dé à 12 faces.
+    Le résultat du dé est ajouté à la caractéristique pour obtenir le résultat final du jet.
+    Cette valeur finale est ensuite comparée à un seuil, fixe ou lancé aussi, et la valeur la plus haute l'emporte.<br/>
+    En cas d'égalité entre la valeur résultat et le seuil, le cas particulier est défini selon les situations.
+    Si aucune précision n'a été donnée, la valeur lancée a préférence sur la valeur fixe,
+    et en cas de valeurs lancées opposées, la priorité va à l'attaquant.<br/>
+    <br/>
+    Par exemple dans une situation où A attaque B avec un marteau, et leurs caractéristiques sont :<br/>
+    A : Force 5, Résistance 4, Habileté 2, Agilité 3<br/>
+    B : Force 1, Résistance 2, Habileté 6, Agilité 4<br/>
+    A lance 1d12 + Force pour toucher, et B lance 1d12 + Agilité pour esquiver.
+    A obtient un 7 au dé, donc 7 + 5 = 12 au toucher. B obtient un 3 au dé, donc 3 + 4 = 7 à l'esquive.<br/>
+    Le jet de toucher est plus élevé que le jet d'esquive, l'attaque touche.<br/>
+    <br/>
+    Si B avait obtenu un 10 au dé, il aurait eu 10 + 4 donc 14 à l'esquive, et 14 est plus grand que 12 (le toucher de A), donc B aurait esquivé l'attaque.<br/>
+    Si B avait obtenu un 8 au dé, il aurait eu 8 + 4 donc 12 à l'esquive. Les deux lancés sont égaux, donc priorité à l'attaquant, l'attaque de A touche.<br/>
+    <br/>
+    Une des conventions est d'écrire, dans les lancés, les dés d'abord, les bonus fixes ensuite,
+    et de garder le même ordre pour annoncer les résultats des lancés.<br/>
+    Par exemple, dans notre situation précédente, le lancé de toucher de A s'écrit 1d12 + Force,
+    et le résultat 7 + 5, 7 correspondant au lancé du d12, et 5 correspondant à sa force. S'il avait lancé un 2 au dé, il aurait eu 2 + 5.<br/>
+    Si plusieurs dés ou plusieurs valeurs fixes sont dans le même jet, les mettre dans l'ordre "logique" en jeu.
+    Par exemple, si A obtient un +1 au toucher grâce à une compétence, il lancera 1d12 + Force + 1, ce qui donne 7 + 5 + 1 et non 7 + 6.
+    La valeur mathématique reste la même, mais cela permet de garder une trace des différents bonus et de leur sources.<br/>
+    <br/>
+    <br/>
+    Parfois, des valeurs entières seront divisées par deux (ou autre). Sauf mention du contraire,
+    les valeurs non entières sont arrondies en dessous (avec un minimum de 1 en général). Donc 3 divisé par 2 donne 1.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    The dice are called by their number of sides. A 20-sided die is called a d20, a 6-sided die is called a d6, etc.<br/>
+    The game Destalyr is based on the d12, which means most rolls will be done with a d12.<br/>
+    <br/>
+    For example to attack with a hammer, the roll is 1d12 + Strength against the ennemy's evasion.
+    Here, Strength corresponds to the strength stat of the character who is attacking,
+    and 1d12 corresponds to the roll of one die with 12 sides.
+    The result of the die is added to the stat to obtain the final result of the roll.
+    The final value is then compared to a threshold, either fixed or rolled, and the highest value wins.<br/>
+    In case of a tie, the specifics are defined depending on the situation.
+    If no speficification has been provided, the roll wins over the fixed threshold,
+    and if both values are rolled, the attacker (or the one doing the action) wins.<br/>
+    <br/>
+    For example in a situation where A attacks B with a hammer, and their stats are :<br/>
+    A : Strength 5, Resistance 4, Dexterity 2, Agility 3<br/>
+    B : Strength 1, Resistance 2, Dexterity 6, Agility 4<br/>
+    A rolls 1d12 + Strength to hit, and B rolls 1d12 + Agility to evade.
+    A gets a 7 on the die, so 7 + 5 = 12 to hit. B gets a 3 on the die, so 3 + 4 = 7 to evade.<br/>
+    The roll to hit is higher than the roll to evade, therefore the attack hits.<br/>
+    <br/>
+    If B had gotten a 10 on the die, he would have had 10 + 4 so 14 to evade, and 14 is higher than 12 (A's roll to hit), therefore B would have evaded the attack.<br/>
+    If B had gotten a 8 on the die, he would have had 8 + 4 so 12 to evade. Both rolls are equal, therefore priority to the attacker, and A hits.<br/>
+    <br/>
+    One of the conventions is to write rolls with dice first, fixed bonuses after,
+    and to keep the same order when announcing the results.<br/>
+    For example, in our previous situation, A's roll to hit is written 1d12 + Strength,
+    and the result is 7 + 5, the 7 corresponding to the result of the d12 roll,
+    and the 5 corresponding to his strength. If he had rolled a 2 on the die, the result would have been 2 + 5.<br/>
+    If several dice or several fixed values appear in the same roll, put them in a "logical" order for the game.
+    For example, if A gains a +1 to hit with a skill, he would roll 1d12 + Strength + 1, which gives 7 + 5 + 1 and not 7 + 6.
+    The mathematical values are the same, but this alows to keep track of each bonus and their sources.<br/>
+    <br/>
+    <br/>
+    Sometimes, some integer values are divided by two (or by other numbers).
+    If nothing is said, the non integer values are rounded down (with a minimum of 1 in general).
+    So 3 divided by 2 results in a 1.<br/>
+</p>

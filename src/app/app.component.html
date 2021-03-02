@@ -4,12 +4,23 @@
     <button (click)="langue.change_lang('fr')" class="button_language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
 </div>
 <nav class="band band1">
-    <a routerLink="/home" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/lore" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/system" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
-    <a routerLink="/character" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
+    <a routerLink="/home" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Accueil</span>
+        <span class="" *ngIf="langue.l == 'en'">Home</span>
+    </a>
+    <a routerLink="/lore" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Lore</span>
+        <span class="" *ngIf="langue.l == 'en'">Lore</span>
+    </a>
+    <a routerLink="/system" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Système</span>
+        <span class="" *ngIf="langue.l == 'en'">System</span>
+    </a>
+    <a routerLink="/character" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Personnage</span>
+        <span class="" *ngIf="langue.l == 'en'">Character</span>
+    </a>
 </nav>
 <div class="page-background">
     <router-outlet></router-outlet>
 </div>
-

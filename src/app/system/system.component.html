@@ -1,11 +1,39 @@
 <nav class="band band2">
-    <a routerLink="/system/weapons" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/system/armors" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/system/gauges" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
-    <a routerLink="/system/attacking" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
-    <a routerLink="/system/combat" class="button" routerLinkActive="activebutton">{{show_text(5, langue.l)}}</a>
-    <a routerLink="/system/magic" class="button" routerLinkActive="activebutton">{{show_text(6, langue.l)}}</a>
-    <a routerLink="/system/healing" class="button" routerLinkActive="activebutton">{{show_text(7, langue.l)}}</a>
-    <a routerLink="/system/states" class="button" routerLinkActive="activebutton">{{show_text(8, langue.l)}}</a>
+    <a routerLink="/system/explanation" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Explication</span>
+        <span class="" *ngIf="langue.l == 'en'">Explanation</span>
+    </a>
+    <a routerLink="/system/weapons" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Armes</span>
+        <span class="" *ngIf="langue.l == 'en'">Weapons</span>
+    </a>
+    <a routerLink="/system/armors" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Armures</span>
+        <span class="" *ngIf="langue.l == 'en'">Armors</span>
+    </a>
+    <a routerLink="/system/gauges" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Jauges</span>
+        <span class="" *ngIf="langue.l == 'en'">Gauges</span>
+    </a>
+    <a routerLink="/system/attacking" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Attaquer</span>
+        <span class="" *ngIf="langue.l == 'en'">Attacking</span>
+    </a>
+    <a routerLink="/system/combat" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Combat</span>
+        <span class="" *ngIf="langue.l == 'en'">Combat</span>
+    </a>
+    <a routerLink="/system/magic" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Magie</span>
+        <span class="" *ngIf="langue.l == 'en'">Magic</span>
+    </a>
+    <a routerLink="/system/healing" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">Soins & Repos</span>
+        <span class="" *ngIf="langue.l == 'en'">Healing & Rest</span>
+    </a>
+    <a routerLink="/system/states" class="button" routerLinkActive="activebutton">
+        <span class="" *ngIf="langue.l == 'fr'">États</span>
+        <span class="" *ngIf="langue.l == 'en'">States</span>
+    </a>
 </nav>
 <router-outlet></router-outlet>
