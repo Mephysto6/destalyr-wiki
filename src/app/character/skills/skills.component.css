@@ -52,3 +52,6 @@
 .div-skills .button-skills:hover .hovertext {
     visibility: visible;
 }
+span {
+    font: 15px/25px Arial, serif;
+}
