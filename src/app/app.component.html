@@ -5,20 +5,20 @@
 </div>
 <nav class="band band1">
     <a routerLink="/home" class="button" routerLinkActive="activebutton">
-        <span class="" *ngIf="langue.l == 'fr'">Accueil</span>
-        <span class="" *ngIf="langue.l == 'en'">Home</span>
+        <menu-button *ngIf="langue.l == 'fr'">Accueil</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Home</menu-button>
     </a>
     <a routerLink="/lore" class="button" routerLinkActive="activebutton">
-        <span class="" *ngIf="langue.l == 'fr'">Lore</span>
-        <span class="" *ngIf="langue.l == 'en'">Lore</span>
+        <menu-button *ngIf="langue.l == 'fr'">Lore</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Lore</menu-button>
     </a>
     <a routerLink="/system" class="button" routerLinkActive="activebutton">
-        <span class="" *ngIf="langue.l == 'fr'">Système</span>
-        <span class="" *ngIf="langue.l == 'en'">System</span>
+        <menu-button *ngIf="langue.l == 'fr'">Système</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">System</menu-button>
     </a>
     <a routerLink="/character" class="button" routerLinkActive="activebutton">
-        <span class="" *ngIf="langue.l == 'fr'">Personnage</span>
-        <span class="" *ngIf="langue.l == 'en'">Character</span>
+        <menu-button *ngIf="langue.l == 'fr'">Personnage</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Character</menu-button>
     </a>
 </nav>
 <div class="page-background">

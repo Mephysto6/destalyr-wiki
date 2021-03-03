@@ -1,9 +1,82 @@
-<p>
+<p *ngIf="langue.l == 'fr'">
     Les humains peuvent porter une armure à la fois, et un bouclier si ils ont une main de libre.<br/>
     Le métal étant un conducteur d'énergie magique puissant, les armures en métal peuvent perturber un mage.<br/>
     Si une magie de puissance totale supérieure à la valeur indiqué est lancée avec une armure en métal, l'énergie rebondit sur l'armure et peut blesser le mage.<br/>
 </p>
-<div class="div-table">
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Vêtements</th>
+            <th>Armures légères</th>
+            <th>Armures lourdes</th>
+            <th>Défense</th>
+            <th>Restrictions</th>
+            <th>Limite de puissance de magie</th>
+        </tr>
+        <tr>
+            <td>Vêtements</td>
+            <td>-</td>
+            <td>-</td>
+            <td>0</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Vêtements épais</td>
+            <td>Cuir léger</td>
+            <td>-</td>
+            <td>1</td>
+            <td>-</td>
+            <td>- / -</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Cuir renforcé</td>
+            <td>Armure en chaînes</td>
+            <td>2</td>
+            <td>agilité majorée à 3 (pour l'armure lourde)</td>
+            <td>- / 15</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>Demi plate</td>
+            <td>3</td>
+            <td>min 4 force + agilité majorée à 3</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>Full plate</td>
+            <td>4</td>
+            <td>min 5 force + agilité majorée à 2</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Bouclier léger</td>
+            <td>-</td>
+            <td>+1 esquive</td>
+            <td>1H</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>Bouclier lourd</td>
+            <td>+2 esquive +1 défense</td>
+            <td>min 4 force + 1H</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+
+<div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
             <th>Vêtements</th>

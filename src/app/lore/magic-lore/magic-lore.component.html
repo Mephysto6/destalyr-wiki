@@ -1,6 +1,15 @@
 <nav class="band band3">
-    <a routerLink="/lore/magic/elemental" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/lore/magic/runic" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/lore/magic/uses" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
+    <a routerLink="/lore/magic/elemental" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie Élémentaire</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Elemental Magic</menu-button>
+    </a>
+    <a routerLink="/lore/magic/runic" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie Runique</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Runic Magique</menu-button>
+    </a>
+    <a routerLink="/lore/magic/uses" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Utilisations</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Magic Uses</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>

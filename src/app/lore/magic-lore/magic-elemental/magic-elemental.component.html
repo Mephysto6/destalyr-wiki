@@ -1,4 +1,4 @@
-<p>
+<p *ngIf="langue.l == 'fr'">
     Magie élémentaire = magie naturelle, innée, faisable sans entraînement ni apprentissage, vient de l'intérieur de soi pour manipuler les éléments à l'extérieur.<br/>
     L’apprentissage aide à se concentrer, mais l’affinité reste un facteur important<br/>
     Effets limités à des éléments.<br/>
@@ -54,4 +54,8 @@
     comme la magie d'âme (feu + ténèbres) qui est interdite dans la plupart des sociétés,
     puisque son utilisation est une violation des droits individuels.<br/>
     Par opposition, la magie de la purification est très bien vue, car majoritairement bénéfique.
+</p>
+
+<p *ngIf="langue.l == 'en'">
+
 </p>

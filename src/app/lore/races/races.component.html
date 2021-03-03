@@ -1,8 +1,14 @@
 <nav class="band band3">
     <a routerLink="/lore/races/flyhn" class="button" routerLinkActive="activebutton">Flyhn</a>
     <a routerLink="/lore/races/nekali" class="button" routerLinkActive="activebutton">Nekali</a>
-    <a routerLink="/lore/races/wood-elf" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/lore/races/dark-elf" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
+    <a routerLink="/lore/races/wood-elf" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Elf Sylvain</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Wood Elf</menu-button>
+    </a>
+    <a routerLink="/lore/races/dark-elf" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Elf Sombre</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Dark Elf</menu-button>
+    </a>
     <a routerLink="/lore/races/etrek" class="button" routerLinkActive="activebutton">Etrek</a>
     <a routerLink="/lore/races/lyune" class="button" routerLinkActive="activebutton">Lyune</a>
 </nav>

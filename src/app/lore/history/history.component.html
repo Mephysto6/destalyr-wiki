@@ -1,10 +1,28 @@
 <nav class="band band3">
-    <a routerLink="/lore/history/the-elven-time" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/lore/history/the-elven-war" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/lore/history/the-emergence" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
-    <a routerLink="/lore/history/the-lyune-civil-war" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
-    <a routerLink="/lore/history/the-dark-elves-stabilisation" class="button" routerLinkActive="activebutton">{{show_text(5, langue.l)}}</a>
-    <a routerLink="/lore/history/the-new-war" class="button" routerLinkActive="activebutton">{{show_text(6, langue.l)}}</a>
+    <a routerLink="/lore/history/the-elven-time" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Le Temps Elfique</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The Elven Time</menu-button>
+    </a>
+    <a routerLink="/lore/history/the-elven-war" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">La Guerre des Elfs</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The Elven War</menu-button>
+    </a>
+    <a routerLink="/lore/history/the-emergence" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">L'Emergence</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The Emergence</menu-button>
+    </a>
+    <a routerLink="/lore/history/the-lyune-civil-war" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">La Guerre Civile Lyune</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The Lyune Civil War</menu-button>
+    </a>
+    <a routerLink="/lore/history/the-dark-elves-stabilisation" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">La Stabilisation des Elfs Sombres</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The Dark Elven Stabilisation</menu-button>
+    </a>
+    <a routerLink="/lore/history/the-new-war" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">La Nouvelle Guerre</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">The New War</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
 <p>history is being written</p>

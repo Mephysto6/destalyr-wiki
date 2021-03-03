@@ -1,11 +1,19 @@
-<h3>Types</h3>
-<p>
+<h3 *ngIf="langue.l == 'fr'">Types</h3>
+<h3 *ngIf="langue.l == 'en'">Types</h3>
+
+<p *ngIf="langue.l == 'fr'">
     Armes mêlées : force<br/>
     Armes à distance: habileté<br/>
     Armes 1H tranchante : finesse (au choix, force ou habileté)<br/>
 </p>
-<h3>Exemples</h3>
-<div class="div-table">
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Exemples</h3>
+<h3 *ngIf="langue.l == 'en'">Examples</h3>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
             <th>Nom</th>
@@ -51,4 +59,56 @@
         </tr>
     </table>
 </div>
-*= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
+<p *ngIf="langue.l == 'fr'">
+    *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Exemples</th>
+            <th>Dé d'attaque</th>
+            <th>Restrictions</th>
+            <th>Points d'actions (PA)</th>
+        </tr>
+        <tr>
+            <td>Rien</td>
+            <td>mains nues</td>
+            <td>d1</td>
+            <td>/</td>
+            <td>1?</td>
+        </tr>
+        <tr>
+            <td>Armes improvisées</td>
+            <td>bâton, couteau, gourdin</td>
+            <td>d2</td>
+            <td>/</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Armes légères</td>
+            <td>dague, arc court</td>
+            <td>d4</td>
+            <td>/</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Armes normales</td>
+            <td>épée, hache, arc long, arbalète*</td>
+            <td>d6</td>
+            <td>min 3 force</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Armes lourdes</td>
+            <td>claymore, hache lourde, marteau de guerre</td>
+            <td>d8</td>
+            <td>min 4 force + 2H</td>
+            <td>4</td>
+        </tr>
+    </table>
+</div>
+<p *ngIf="langue.l == 'en'">
+    *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
+</p>

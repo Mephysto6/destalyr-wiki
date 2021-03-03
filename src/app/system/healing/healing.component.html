@@ -1,17 +1,53 @@
-<h2>Repos</h2>
-<p>
+<h2 *ngIf="langue.l == 'fr'">Repos</h2>
+<h2 *ngIf="langue.l == 'en'">Rest</h2>
+
+<p *ngIf="langue.l == 'fr'">
     1d6 / blessure / heure de repos<br/>
     5 ou 6 => Soin de 1 (intensité et douleur réduites de 1)<br/>
+    Si inconscient, seulement le 6 permet de soigner.<br/>
     Blessure à 0 d’intensité existe encore<br/>
     Blessure à -1 d’intensité = blessure guérie<br/><br/>
     Récupère 2 points de fatigue / heure de repos<br/>
 </p>
+<p *ngIf="langue.l == 'en'">
 
-<h2>Sorts</h2>
-<p>Taille et distance selon blessure et cibles</p>
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">Sorts</h2>
+<h2 *ngIf="langue.l == 'en'">Spells</h2>
+
+<p *ngIf="langue.l == 'fr'">Taille et distance selon blessure et cibles</p>
+<p *ngIf="langue.l == 'en'">Size and distance depending on wound and target</p>
 
 
-<div class="div-table">
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Type de blessure</th>
+            <th>Eau</th>
+            <th>Lumière</th>
+            <th>Purification</th>
+        </tr>
+        <tr>
+            <td>Coupure</td>
+            <td>Soin = efficacité -2<br/>
+                1d6 + précision DC5<br/></td>
+            <td>Soin = efficacité -1<br/>
+                1d6 + précision DC7<br/></td>
+            <td>Soin = efficacité<br/>
+                1d6 + précision DC5<br/></td>
+        </tr>
+        <tr>
+            <td>Casse</td>
+            <td>/</td>
+            <td>Soin = efficacité -1<br/>
+                1d6 + précision DC8<br/></td>
+            <td>Soin = efficacité<br/>
+                1d6 + précision DC6<br/></td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
             <th>Type de blessure</th>

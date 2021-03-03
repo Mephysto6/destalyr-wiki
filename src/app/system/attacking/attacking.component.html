@@ -1,12 +1,20 @@
-<h3>Toucher</h3>
-<p>
+<h3 *ngIf="langue.l == 'fr'">Toucher</h3>
+<h3 *ngIf="langue.l == 'en'">Hitting</h3>
+
+<p *ngIf="langue.l == 'fr'">
     Attaque : 1d12 + stat (force ou habilité selon armes)<br/>
     Esquive : 1d12 + agilité<br/>
     Si esquive strictement plus que attaque = esquivé => aucun dégâts<br/>
     Si attaque est égale ou plus que esquive = touché => lance les dégâts<br/>
 </p>
-<h3>Résultats spéciaux</h3>
-<div class="div-table">
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Résultats spéciaux</h3>
+<h3 *ngIf="langue.l == 'en'">Special results</h3>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
             <th>Attaque</th>
@@ -35,8 +43,40 @@
         </tr>
     </table>
 </div>
-<h3>Dégâts</h3>
-<p>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Attack</th>
+            <th>Defense</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>?</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>?</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1</td>
+            <td>critique : ignore la résistance naturelle.</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>?</td>
+        </tr>
+    </table>
+</div>
+
+<h3 *ngIf="langue.l == 'fr'">Dégâts</h3>
+<h3 *ngIf="langue.l == 'en'">Damages</h3>
+
+<p *ngIf="langue.l == 'fr'">
     Attaquant : 1dx (selon arme) + stat (force ou habi)<br/>
     Défense : res + armure (fixe)<br/>
     Différence = dégâts en douleur (si 0 ou négatif, pas de blessure)<br/>
@@ -50,4 +90,7 @@
     <br/>
     Dégâts -1 = intensité de la blessure laissée (coupure ou casse)<br/>
     L'échelle des intensités commence à 0.
+</p>
+<p *ngIf="langue.l == 'en'">
+
 </p>

@@ -1,5 +1,6 @@
+<br/>
 
-<div class="div-table">
+<div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
             <th>Élement pur</th>
@@ -59,8 +60,165 @@
         </tr>
     </table>
 </div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Élement pur</th>
+            <th>Tangibilité</th>
+            <th>Effet simple</th>
+            <th>Effet moyen</th>
+            <th>Effet avancé</th>
+            <th>Bonus</th>
+        </tr>
+        <tr>
+            <td>Feu</td>
+            <td>i</td>
+            <td>Allumer une torche</td>
+            <td>Trait de feu</td>
+            <td>Chalumeau</td>
+            <td>Détection magique</td>
+        </tr>
+        <tr>
+            <td>Air</td>
+            <td>T</td>
+            <td>Éteindre une torche</td>
+            <td>Pousser qqn, amortir une chute</td>
+            <td>Désarmer qqn</td>
+            <td>Détection physique (dans l'air)</td>
+        </tr>
+        <tr>
+            <td>Lumière</td>
+            <td>i</td>
+            <td>Éclairer une pièce</td>
+            <td>Éblouir qqn</td>
+            <td>Barreaux</td>
+            <td>Soins + détection magique légère</td>
+        </tr>
+        <tr>
+            <td>Nature</td>
+            <td>T</td>
+            <td>Écarter des vignes</td>
+            <td>Fouetter</td>
+            <td>Restreindre qqn</td>
+            <td>Discrétion magique</td>
+        </tr>
+        <tr>
+            <td>Eau</td>
+            <td>T</td>
+            <td>Transvaser</td>
+            <td>Pousser qqn</td>
+            <td>Couper</td>
+            <td>Soins légers + détection physique dans l'eau</td>
+        </tr>
+        <tr>
+            <td>Ténèbres</td>
+            <td>i</td>
+            <td>Cacher qqch</td>
+            <td>Bloquer une lumière</td>
+            <td>Profondeur d'ombre</td>
+            <td>Discrétion physique</td>
+        </tr>
+    </table>
+</div>
+
 <br/>
-<div class="div-table">
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Élement combiné</th>
+            <th>Tangibilité</th>
+            <th>Effet simple</th>
+            <th>Effet moyen</th>
+            <th>Effet avancé</th>
+        </tr>
+        <tr>
+            <td>Explosion</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tonnerre</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Purification</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Croissance</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Animaux</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Terre</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Glace</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Eau de vie</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Illusion</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Esprit</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tentacules</td>
+            <td>i</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Âme</td>
+            <td>T</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
             <th>Élement combiné</th>

@@ -96,6 +96,7 @@
     width: auto;
     color: black;
     font: 20px Georgia, serif;
+    background-color: #cab7ff;
 }
 p {
     background-color: #ffffff79;
@@ -115,7 +116,7 @@ h3 {
     font: small-caps bold 20px/30px Georgia, serif;
     color: rgb(8, 0, 51);
 }
-span {
+menu-button {
     font: small-caps bold 15px/30px Georgia, serif;
 }
 table {

@@ -1,9 +1,27 @@
 <nav class="band band2">
-    <a routerLink="/lore/history" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/lore/religion" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/lore/races" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
-    <a routerLink="/lore/magic" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
-    <a routerLink="/lore/geography" class="button" routerLinkActive="activebutton">{{show_text(5, langue.l)}}</a>
-    <a routerLink="/lore/citadelle" class="button" routerLinkActive="activebutton">{{show_text(6, langue.l)}}</a>
+    <a routerLink="/lore/history" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Histoire</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">History</menu-button>
+    </a>
+    <a routerLink="/lore/religion" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Religion</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Religion</menu-button>
+    </a>
+    <a routerLink="/lore/races" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Races</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Races</menu-button>
+    </a>
+    <a routerLink="/lore/magic" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Magic</menu-button>
+    </a>
+    <a routerLink="/lore/geography" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Geographie</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Geography</menu-button>
+    </a>
+    <a routerLink="/lore/citadelle" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Citadelle</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Citadelle</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
