@@ -1,4 +1,4 @@
-<p>
+<p *ngIf="langue.l == 'fr'">
     Tout sort lancé possède 4 caractéristiques :<br/>
     Taille - Distance - Efficacité - Précision<br/>
     <br/>
@@ -10,8 +10,14 @@
     Pas obligé d'utiliser tous les dés<br/>
     Ajoute les résultats des dés dans la même carac, 1+1 = même résultat que 2<br/>
 </p>
-<h3>Bonus de dés</h3>
-<p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Bonus de dés</h3>
+<h3 *ngIf="langue.l == 'en'">Bonus dice</h3>
+
+<p *ngIf="langue.l == 'fr'">
     Si entouré de l'élément, +(1-3)d4 selon la quantité de l'éléménet présent.<br/>
     +1 à poser au choix (à chaque sort) dans une catégorie pour magie majeure et combinée.<br/>
     Spécialisation (optionel) > +2 sur majeure / +0 sur combinée si spec dans majeure<br/>
@@ -29,9 +35,18 @@
     Si le sort a une puissance entre 15 et 19 inclus, il est de niveau 3, et coûte 2 point d'énergie aditionnel (3 points au total).<br/>
     Ainsi, chaque niveau de sort correspond à une fourchette de 5 de puissance et coûte de plus en plus cher à lancer.<br/>
 </p>
-<h3>Attaque</h3>
-<p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Attaque</h3>
+<h3 *ngIf="langue.l == 'en'">Attack</h3>
+
+<p *ngIf="langue.l == 'fr'">
     Toucher : 1d12 + (précision x2) contre esquive<br/>
     Dégâts : efficacité x (taille/2) - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
     (tant que taille couvre la cible, si taille est plus grande que cible, taille = cible (cf ordres de grandeurs))<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
 </p>

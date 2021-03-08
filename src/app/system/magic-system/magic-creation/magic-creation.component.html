@@ -1,5 +1,7 @@
-<h2>Création</h2>
-<p>
+<h2 *ngIf="langue.l == 'fr'">Création</h2>
+<h2 *ngIf="langue.l == 'en'">Creation</h2>
+
+<p *ngIf="langue.l == 'fr'">
     Pour manipuler un élément, un mage doit avoir de cet élément à disposition. Si il n'en existe pas à proximité, le mage peut en créer.<br/>
     La difficulté de créer un élément dépend du type de l'élément et de la taille invoquée. Un élément peut être tangible ou intangible (noté T et i respectivement).<br/>
     Les éléments tangibles sont plus difficiles à invoquer, coûtent plus d'énergie, mais ne demande pas la concentration pour les maintenir invoqués.<br/>
@@ -10,7 +12,43 @@
     <br/>
     L'invocation de magies tangibles ou combinées ajoute un coût en énergie (+1).
 </p>
-<div class="div-table">
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Résultat (1d12 + sensitivité)</th>
+            <th>Taille</th>
+            <th>Coût de base</th>
+            <th>Coût de magie tangible</th>
+            <th>Coût de magie combinée</th>
+        </tr>
+        <tr>
+            <td>1 - 5</td>
+            <td>doigt - main</td>
+            <td>0</td>
+            <td>+1</td>
+            <td>+1</td>
+        </tr>
+        <tr>
+            <td>6 - 10</td>
+            <td>bras - corps</td>
+            <td>+1</td>
+            <td>+1</td>
+            <td>+1</td>
+        </tr>
+        <tr>
+            <td>11+</td>
+            <td>groupe</td>
+            <td>+2</td>
+            <td>+1</td>
+            <td>+1</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
             <th>Résultat (1d12 + sensitivité)</th>

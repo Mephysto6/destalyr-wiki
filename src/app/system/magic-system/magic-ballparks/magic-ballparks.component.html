@@ -1,5 +1,5 @@
 <br/>
-<div class="div-table">
+<div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
             <th>Valeur</th>
@@ -52,8 +52,71 @@
         </tr>
     </table>
 </div>
-*= contact quasi impossible avec un ennemi en combat<br/><br/>
-**= distance d’attaque mêlée “classique”<br/>
-<p>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Taille</th>
+            <th>Distance</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Paume (5 cm)</td>
+            <td>Contact*</td>
+            <td>Légère / visuelle</td>
+            <td>Aléatoire / minimale pour exister</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Main (20 cm)</td>
+            <td>1 case**</td>
+            <td>Basique</td>
+            <td>Basique (2 m)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Bras (1 pas)</td>
+            <td>2-4 cases</td>
+            <td>Utile</td>
+            <td>Utile (1 pas)</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Corps (2 m)</td>
+            <td>5-10 cases</td>
+            <td>Forte</td>
+            <td>Forte (20 cm)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Groupe (5-10 m)</td>
+            <td>11-20 cases</td>
+            <td>Très forte</td>
+            <td>Très forte (5 cm)</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>Très grand (20 m)</td>
+            <td>21+ cases</td>
+            <td>Extrême</td>
+            <td>Extrême (1 cm)</td>
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="langue.l == 'fr'">
+    *= contact quasi impossible avec un ennemi en combat<br/><br/>
+    **= distance d’attaque mêlée “classique”<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<p *ngIf="langue.l == 'fr'">
     Note : Les valeurs du tableau ne sont là que comme valeur indicative. Les résultats réels vont dépendre de la magie et de l'utilisation voulue.
+</p>
+<p *ngIf="langue.l == 'en'">
+
 </p>

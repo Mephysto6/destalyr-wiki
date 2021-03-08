@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageLanguageService } from "../../../page-language.service";
 
 @Component({
   selector: 'app-skills-defense',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsDefenseComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public langue: PageLanguageService) {
+  }
+  
   ngOnInit(): void {
   }
 

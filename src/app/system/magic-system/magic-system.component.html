@@ -1,7 +1,19 @@
 <nav class="band band3">
-    <a routerLink="/system/magic/creation" class="button" routerLinkActive="activebutton">{{show_text(1, langue.l)}}</a>
-    <a routerLink="/system/magic/manipulation" class="button" routerLinkActive="activebutton">{{show_text(2, langue.l)}}</a>
-    <a routerLink="/system/magic/ballparks" class="button" routerLinkActive="activebutton">{{show_text(3, langue.l)}}</a>
-    <a routerLink="/system/magic/group" class="button" routerLinkActive="activebutton">{{show_text(4, langue.l)}}</a>
+    <a routerLink="/system/magic/creation" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Création</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Creation</menu-button>
+    </a>
+    <a routerLink="/system/magic/manipulation" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Manipulation</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Manipulation</menu-button>
+    </a>
+    <a routerLink="/system/magic/ballparks" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Ordres de Grandeur</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Ballparks</menu-button>
+    </a>
+    <a routerLink="/system/magic/group" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie de Groupe</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Group Magic</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
