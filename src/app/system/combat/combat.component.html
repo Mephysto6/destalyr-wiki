@@ -42,31 +42,31 @@
             <td>se déplacer*</td>
             <td>1</td>
             <td>1</td>
-            <td>seulement marcher</td>
+            <td>marcher, (courrir)</td>
         </tr>
         <tr>
             <td>attaque arme légère</td>
             <td>2</td>
             <td>1</td>
-            <td>avec compétence</td>
+            <td>(oui)</td>
         </tr>
         <tr>
             <td>attaque arme normale</td>
             <td>3</td>
             <td>2</td>
-            <td>avec compétence</td>
+            <td>(oui)</td>
         </tr>
         <tr>
             <td>attaque arme lourde</td>
             <td>4</td>
             <td>3</td>
-            <td>avec compétence</td>
+            <td>(oui)</td>
         </tr>
         <tr>
             <td>magie</td>
             <td>4</td>
-            <td>-</td>
-            <td>avec compétence</td>
+            <td>(3)</td>
+            <td>(oui)</td>
         </tr>
     </table>
 </div>
@@ -131,6 +131,7 @@
 
 <p *ngIf="langue.l == 'fr'">
     *= se déplacer peut se faire de 2 façons : marcher et courrir. Marcher permet de se déplacer de 1 case par point dépensé, et courrir 2 cases par point.<br/>
+    () = débloqué par compétence<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>

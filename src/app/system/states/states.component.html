@@ -3,21 +3,17 @@
 <h2 *ngIf="langue.l == 'en'">Concentrated</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	Source : préparer une action, garder un sort actif<br/>
-	Effets : personnage limité dans ses actions (cf combat).<br/>
-    Coûte 1 PA par tour pour rester concentré.<br/>
-	Effets spéciaux : Si la concentration vient d'un sort de niveau 1 ou plus, alors il faut continuellement dépenser de l'énergie pour garder le sort actif.<br/>
+	<b>Source</b> : préparer une action, garder un sort actif<br/>
+	<b>Effets</b> : personnage limité dans ses actions (cf combat).<br/>
+    Coûte 2 PA par tour par concentration pour rester concentré.<br/>
+	<b>Effets spéciaux</b> : > Si la concentration vient d'un sort de niveau 1 ou plus, alors il faut continuellement dépenser de l'énergie pour garder le sort actif.<br/>
     - niveau 1 : 1 énergie / minute<br/>
     - niveau 2 : 1 énergie / 5 tours<br/>
     - niveau 3 : 1 énergie / 2 tours<br/>
     - niveau 4+ : 1 énergie / tour<br/>
     <br/>
     Pas besoin de concentration pour un sort de niveau 0.<br/>
-    <br/>
-    Si en méditation, le coût en énergie est ignoré mais les points d'énergie temporaire ne sont pas gagnés et le lanceur du sort est de plus en plus limité suivant la puissance du sort.<br/>
-    - niveau 2 : assis (actions impossibles à part parler)<br/>
-    - niveau 3 : assis et aveugle<br/>
-    - niveau 4+ : assis, aveugle et sourd<br/>
+
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -27,9 +23,9 @@
 <h2 *ngIf="langue.l == 'en'">Hurt</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    Source : Douleur à 4 ou plus<br/>
-    Effets : Au début de son tour, lance dé de valeur correspondante. (cf jauges)<br/>
-    Si résultat + intensité des casses > résistance, alors les points d’action sont divisés par 2 pour ce tour (arrondi bas)<br/>
+    <b>Source</b> : Douleur à 4 ou plus<br/>
+    <b>Effets</b> : Au début de son tour, lance dé de valeur correspondante. (cf jauges)<br/>
+    Si résultat + intensité des casses strictement supérieur à la résistance, alors les points d’action sont divisés par 2 pour ce tour (arrondi bas, min 0)<br/>
     Douleur : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Dé : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
 </p>
@@ -41,8 +37,8 @@
 <h2 *ngIf="langue.l == 'en'">Tired</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	Source : Fatigue à 4 ou plus<br/>
-	Effets : Malus aux jets selon la fatigue. (cf jauges)<br/>
+	<b>Source</b> : Fatigue à 4 ou plus<br/>
+	<b>Effets</b> : Malus aux jets selon la fatigue. (cf jauges)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -52,12 +48,28 @@
 <h2 *ngIf="langue.l == 'en'">Unconscious</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	Source : Fatigue à 10 ou Douleur à 10 (ou autre)<br/>
-	Effets : tombe par terre, perd connaissance, perd concentration.<br/>
-	Effets spéciaux :<br/>
-    Si Douleur à 10, dure 1 minute<br/>
-    Si Fatigue à 10, dure 1 heure<br/>
+	<b>Source</b> : Fatigue à 10 ou Douleur à 10 (ou autre)<br/>
+	<b>Effets</b> : tombe par terre, perd connaissance, perd concentrations.<br/>
+	<b>Effets spéciaux</b> : > si Douleur à 10, dure 1 minute ; > si Fatigue à 10, dure 1 heure<br/>
     Peut être réveillé à la moitié du temps par un input externe<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">En méditation</h2>
+<h2 *ngIf="langue.l == 'en'">In meditation</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : Méditer (débloqué par compétence en magie)<br/>
+    <b>Effets</b> : La personne en train de méditer doit être assise ou alongée, dans une optique de repos.<br/>
+    Elle devient incapable d'attaquer ou de lancer de sorts sans sortir de méditation, mais elle peut encore parler, utiliser un objet ou d'autres intéractions.<br/>
+    <b>Effets spéciaux</b> : > Si la méditation dure 1 heure, récupère 1 point d'énergie + 2 points d'énergie temporaire.<br/>
+    > Après 5 minutes de méditation et si la méditation continue, alors la personne peut lancer des sorts et le coût en énergie des sorts et des concentrations est ignoré.<br/>
+    > Si combiné avec un sort en concentration, le lanceur du sort est de plus en plus limité suivant la puissance du sort.<br/>
+    - niveau 2 : immobilisé (peut seulement parler)<br/>
+    - niveau 3 : + aveugle<br/>
+    - niveau 4+ : + sourd<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 

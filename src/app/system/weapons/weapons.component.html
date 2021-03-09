@@ -27,7 +27,7 @@
             <td>mains nues</td>
             <td>d1</td>
             <td>/</td>
-            <td>1?</td>
+            <td>1</td>
         </tr>
         <tr>
             <td>Armes improvisées</td>
@@ -59,10 +59,6 @@
         </tr>
     </table>
 </div>
-<p *ngIf="langue.l == 'fr'">
-    *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
-</p>
-
 <div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
@@ -77,7 +73,7 @@
             <td>mains nues</td>
             <td>d1</td>
             <td>/</td>
-            <td>1?</td>
+            <td>2</td>
         </tr>
         <tr>
             <td>Armes improvisées</td>
@@ -109,6 +105,21 @@
         </tr>
     </table>
 </div>
-<p *ngIf="langue.l == 'en'">
+
+<p *ngIf="langue.l == 'fr'">
     *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
+</p>
+<p *ngIf="langue.l == 'en'">
+    *= The crossbow ignores the force restriction, but requires another action (2PA) to recharge.
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Attaquer à une main ou deux mains ?</h3>
+<h3 *ngIf="langue.l == 'en'">Attacking one-handed or two-handed ?</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Si une armes à deux mains est utilisée à une mains pour attaquer, l'attaque prend un -3 au toucher.<br/>
+    Si une armes à une main est utilisée à deux mains pour attaquer, l'attaque gagne un +1 au toucher.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    
 </p>
