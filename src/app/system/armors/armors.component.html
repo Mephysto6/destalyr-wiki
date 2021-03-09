@@ -4,7 +4,9 @@
     Si une magie de puissance totale supérieure ou égale à la valeur indiqué est lancée avec une armure en métal, l'énergie rebondit sur l'armure et peut blesser le mage.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Humans can wear one armor at a time, and a shield if they have a free hand.<br/>
+    All metals are conductors of magic energy, therefore metal armors can prevent a mage from casting spells.<br/>
+    If a spell is cast with a total power equal to or larger than the indicated number, the spell bounces back on the armor and can hurt the caster.<br/>
 </p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
@@ -38,7 +40,7 @@
             <td>Cuir renforcé</td>
             <td>Armure en chaînes</td>
             <td>2</td>
-            <td>agilité majorée à 3 (pour l'armure lourde)</td>
+            <td>- / agilité majorée à 3</td>
             <td>- / 15</td>
         </tr>
         <tr>
@@ -75,19 +77,18 @@
         </tr>
     </table>
 </div>
-
 <div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
-            <th>Vêtements</th>
-            <th>Armures légères</th>
-            <th>Armures lourdes</th>
-            <th>Défense</th>
+            <th>Clothes</th>
+            <th>Light armor</th>
+            <th>Heavy armor</th>
+            <th>Defense</th>
             <th>Restrictions</th>
-            <th>Limite de puissance de magie</th>
+            <th>Power limit of spells</th>
         </tr>
         <tr>
-            <td>Vêtements</td>
+            <td>Clothes</td>
             <td>-</td>
             <td>-</td>
             <td>0</td>
@@ -95,8 +96,8 @@
             <td>-</td>
         </tr>
         <tr>
-            <td>Vêtements épais</td>
-            <td>Cuir léger</td>
+            <td>Thick clothes</td>
+            <td>Light leather</td>
             <td>-</td>
             <td>1</td>
             <td>-</td>
@@ -104,42 +105,42 @@
         </tr>
         <tr>
             <td>-</td>
-            <td>Cuir renforcé</td>
-            <td>Armure en chaînes</td>
+            <td>Reinforced leather</td>
+            <td>Chain armor</td>
             <td>2</td>
-            <td>-</td>
+            <td>- / agility capped at 3</td>
             <td>- / 15</td>
         </tr>
         <tr>
             <td>-</td>
             <td>-</td>
-            <td>Demi plate</td>
+            <td>Half plate</td>
             <td>3</td>
-            <td>min 4 force</td>
+            <td>min 4 strength + agility capped at 3</td>
             <td>10</td>
         </tr>
         <tr>
             <td>-</td>
             <td>-</td>
             <td>Full plate</td>
-            <td>4 + (-1 agilité)</td>
-            <td>min 5 force</td>
+            <td>4</td>
+            <td>min 5 strength + agility capped at 2</td>
             <td>10</td>
         </tr>
         <tr>
             <td>-</td>
-            <td>Bouclier léger</td>
+            <td>Buckler (light shield)</td>
             <td>-</td>
-            <td>+1 esquive</td>
+            <td>+1 evasion</td>
             <td>1H</td>
             <td>-</td>
         </tr>
         <tr>
             <td>-</td>
             <td>-</td>
-            <td>Bouclier lourd</td>
-            <td>+2 esquive +1 défense</td>
-            <td>min 4 force + 1H</td>
+            <td>Shield</td>
+            <td>+2 evasion +1 defense</td>
+            <td>min 4 strength + 1H</td>
             <td>-</td>
         </tr>
     </table>
