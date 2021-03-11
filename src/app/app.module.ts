@@ -60,9 +60,10 @@ import { SkillsAttackComponent } from './character/skills/skills-attack/skills-a
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
 
-import { MagicElementalComponent } from './lore/magic-lore//magic-elemental/magic-elemental.component';
-import { MagicRunicComponent } from './lore/magic-lore//magic-runic/magic-runic.component';
-import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.component';
+import { MagicElementalComponent } from './lore/magic-lore/magic-elemental/magic-elemental.component';
+import { MagicRunicComponent } from './lore/magic-lore/magic-runic/magic-runic.component';
+import { MagicUsesComponent } from './lore/magic-lore/magic-uses/magic-uses.component';
+import { MetalComponent } from './lore/magic-lore/metal/metal.component';
 
 
 
@@ -115,7 +116,8 @@ import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.com
     MagicElementalComponent,
     MagicRunicComponent,
     MagicUsesComponent,
-    SystemExplanationComponent
+    SystemExplanationComponent,
+    MetalComponent
   ],
   imports: [
     BrowserModule,

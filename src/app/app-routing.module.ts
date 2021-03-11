@@ -53,9 +53,10 @@ import { SkillsAttackComponent } from './character/skills/skills-attack/skills-a
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
 
-import { MagicElementalComponent } from './lore/magic-lore//magic-elemental/magic-elemental.component';
-import { MagicRunicComponent } from './lore/magic-lore//magic-runic/magic-runic.component';
-import { MagicUsesComponent } from './lore/magic-lore//magic-uses/magic-uses.component';
+import { MagicElementalComponent } from './lore/magic-lore/magic-elemental/magic-elemental.component';
+import { MagicRunicComponent } from './lore/magic-lore/magic-runic/magic-runic.component';
+import { MagicUsesComponent } from './lore/magic-lore/magic-uses/magic-uses.component';
+import { MetalComponent } from './lore/magic-lore/metal/metal.component';
 
 
 const routes: Routes = [
@@ -98,6 +99,7 @@ const routes: Routes = [
           { path: 'elemental', component: MagicElementalComponent },
           { path: 'runic', component: MagicRunicComponent },
           { path: 'uses', component: MagicUsesComponent },
+          { path: 'materials', component: MetalComponent },
         ]
       },
       { path: 'geography', component: GeographyComponent },

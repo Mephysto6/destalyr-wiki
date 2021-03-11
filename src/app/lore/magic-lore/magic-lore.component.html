@@ -11,5 +11,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Utilisations</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Magic Uses</menu-button>
     </a>
+    <a routerLink="/lore/magic/materials" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Materiaux supports</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Support materials</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
