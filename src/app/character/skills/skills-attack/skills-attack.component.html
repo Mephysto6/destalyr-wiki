@@ -2,8 +2,11 @@
 <div class="div-skills">
     <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_5_attack.png"/>
     <button class="button-skills top left">
-        <span class="hovertext">
+        <span class="hovertext" *ngIf="langue.l == 'fr'">
             Être capable d'utiliser des armes de distance en combat.
+        </span>
+        <span class="hovertext" *ngIf="langue.l == 'en'">
+            Be able to use ranged weapons in combat.
         </span>
     </button>
     <button class="button-skills top right">

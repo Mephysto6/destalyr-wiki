@@ -13,38 +13,5 @@ export class SkillsComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
-  fr_text(num : number) {
-    if (num == 1) {
-      return "Attaque"
-    }
-    if (num == 2) {
-      return "Défense"
-    }
-    if (num == 3) {
-      return "Magie"
-    }
-  }
-
-  en_text(num : number) {
-    if (num == 1) {
-      return "Attack"
-    }
-    if (num == 2) {
-      return "Defense"
-    }
-    if (num == 3) {
-      return "Magic"
-    }
-  }
-
-  show_text(num : number, language: String): String {
-    if (language == "fr") {
-      return this.fr_text(num)
-    }
-    if (language == "en") {
-      return this.en_text(num)
-    }
-  }
   
 }

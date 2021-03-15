@@ -82,6 +82,7 @@
     --gap: 32px;
     background-image: url("../assets/images/backgrounds/background2_light.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     margin-top: 0px;
     margin-bottom: calc(-1  * var(--gap));
     margin-left: calc(-1  * var(--gap));

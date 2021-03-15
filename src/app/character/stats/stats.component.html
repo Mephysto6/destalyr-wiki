@@ -1,4 +1,4 @@
-<p>
+<p *ngIf="langue.l == 'fr'">
     La plupart des créatures possèdent 7 statistiques qui les décrivent :
     Force, Résistance, Habileté, Agilité, Sensitivité, Perception, Éloquence. 
     <br/>
@@ -30,5 +30,8 @@
     <br/><b>Éloquence</b><br/>
     L'Éloquence d'une créature décrit son charisme, sa capacité à parler et être intéressant.<br/>
     L'Éloquence est utilisée pour les interactions sociales.<br/>
+
+</p>
+<p *ngIf="langue.l == 'en'">
 
 </p>
