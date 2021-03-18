@@ -2,13 +2,16 @@
 <h3 *ngIf="langue.l == 'en'">Hitting</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Attaque : 1d12 + stat (force ou habilité selon armes)<br/>
+    Attaque : 1d12 + stat (force ou habileté selon armes)<br/>
     Esquive : 1d12 + agilité<br/>
     Si esquive strictement plus que attaque = esquivé => aucun dégâts<br/>
     Si attaque est égale ou plus que esquive = touché => lance les dégâts<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Attack : 1d12 + stat (strength or dexterity depending on the weapon type)<br/>
+    Evade : 1d12 + agility<br/>
+    If the evade score is higher than the attack score, then the attack misses and the attack deals no damage.<br/>
+    If the attack score is equal to or higher than the evade score, then the attack hits, and the attacker can roll for damage.<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Résultats spéciaux</h3>
@@ -24,12 +27,17 @@
         <tr>
             <td>1</td>
             <td>1</td>
-            <td>?</td>
+            <td>résultat normal selon stats</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2-11</td>
+            <td>attaque ratée</td>
         </tr>
         <tr>
             <td>1</td>
             <td>12</td>
-            <td>?</td>
+            <td>attaquant distrait (-1 esquive jusqu'au début de son prochain tour)</td>
         </tr>
         <tr>
             <td>12</td>
@@ -38,8 +46,13 @@
         </tr>
         <tr>
             <td>12</td>
+            <td>2-11</td>
+            <td>attaque réussie</td>
+        </tr>
+        <tr>
             <td>12</td>
-            <td>?</td>
+            <td>12</td>
+            <td>résultat normal selon stats</td>
         </tr>
     </table>
 </div>
@@ -48,27 +61,37 @@
         <tr>
             <th>Attack</th>
             <th>Defense</th>
-            <th>Result</th>
+            <th>Results</th>
         </tr>
         <tr>
             <td>1</td>
             <td>1</td>
-            <td>?</td>
+            <td>normal result depending on stats</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2-11</td>
+            <td>miss</td>
         </tr>
         <tr>
             <td>1</td>
             <td>12</td>
-            <td>?</td>
+            <td>attaquant distracted (-1 evade until the start of his next turn)</td>
         </tr>
         <tr>
             <td>12</td>
             <td>1</td>
-            <td>critique : ignore la résistance naturelle.</td>
+            <td>critical : ignore natural resistance</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>2-11</td>
+            <td>hit</td>
         </tr>
         <tr>
             <td>12</td>
             <td>12</td>
-            <td>?</td>
+            <td>normal result depending on stats</td>
         </tr>
     </table>
 </div>
@@ -79,7 +102,7 @@
 <p *ngIf="langue.l == 'fr'">
     Attaquant : 1dx (selon arme) + stat (force ou habi)<br/>
     Défense : res + armure (fixe)<br/>
-    Différence = dégâts en douleur (si 0 ou négatif, pas de blessure)<br/>
+    Dégâts de l'attaque - défense = dégâts en points de douleur (min 0, si 0 alors pas de blessure)<br/>
     <br/>
     Blessure laissée dépend du type de dégâts de l'arme :<br/>
     Tranchant/Perçant = coupure<br/>
@@ -89,8 +112,32 @@
     Les casses peuvent empêcher la victime d'agir (cf état blessé).<br/>
     <br/>
     Dégâts -1 = intensité de la blessure laissée (coupure ou casse)<br/>
-    L'échelle des intensités commence à 0.
+    L'échelle des intensités commence à 0.<br/>
+    0 : égratinure - ecchymose (bleu)<br/>
+    1 : petite coupure - gros ecchymose<br/>
+    2 : coupure moyenne - os fracturé<br/>
+    3 : grosse coupure - os cassé<br/>
+    4 : très grosse coupure - os très cassé<br/>
+    5 : membre coupé - tous les os du membre cassés<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Attacker : 1dx (depending on the weapon) + stat (str or dex)<br/>
+    Defense : res + armor (fixed)<br/>
+    Attack damage - defense score = damage in pain points (min 0, if 0 then no wounds)<br/>
+    <br/>
+    Wound depends on the weapon damage type :<br/>
+    Slashing / piercing = cut<br/>
+    Bludgeoning = break<br/>
+    <br/>
+    Cut cause bleeding, which can result in blood loss and in time, death.<br/>
+    Breaks can prevent the victim from acting (cf wounded state).<br/>
+    <br/>
+    Damage -1 = wound intensity (cut or break)<br/>
+    The scale of the intensities start at 0.<br/>
+    0 : scratch - bruise<br/>
+    1 : small cut - big bruise<br/>
+    2 : medium cut - fractured bone<br/>
+    3 : big cut - broken bone<br/>
+    4 : very big cut - very broken bone<br/>
+    5 : limb cut off - all bones broken in the limb<br/>
 </p>

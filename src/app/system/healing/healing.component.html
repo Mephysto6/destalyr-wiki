@@ -2,15 +2,20 @@
 <h2 *ngIf="langue.l == 'en'">Rest</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    1d6 / blessure / heure de repos<br/>
-    5 ou 6 => Soin de 1 (intensité et douleur réduites de 1)<br/>
-    Si inconscient, seulement le 6 permet de soigner.<br/>
-    Blessure à 0 d’intensité existe encore<br/>
-    Blessure à -1 d’intensité = blessure guérie<br/><br/>
-    Récupère 2 points de fatigue / heure de repos<br/>
+    Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer 1d6 par blessure par heure de repos.<br/>
+    Si le dé donne 5 ou 6 alors la blessure correspondante est soignée de 1 (intensité et douleur réduites de 1 chacune)<br/>
+    Si le personnage est inconscient, alors seulement le 6 permet de soigner.<br/>
+    Une blessure à 0 d’intensité existe encore<br/>
+    Une blessure à -1 d’intensité est guérie.<br/><br/>
+    Un personnage perd aussi 2 points de fatigue par heure de repos<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    A wounded character can rest to heal. They can roll 1d6 per wound per hour of rest.<br/>
+    If the die lands on 6 then the corresponding wound is healed by 1 (intensity and pain both decreased by 1)<br/>
+    If the character is unconscious, a 5 can also heal.<br/>
+    A wound at 0 intensity still exists.<br/>
+    A wound at -1 intensity is healed.<br/><br/>
+    A character also loses 2 fatigue points per hour of rest.<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Sorts</h2>
@@ -50,27 +55,27 @@
 <div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
-            <th>Type de blessure</th>
-            <th>Eau</th>
-            <th>Lumière</th>
+            <th>Type of wound</th>
+            <th>Water</th>
+            <th>Light</th>
             <th>Purification</th>
         </tr>
         <tr>
-            <td>Coupure</td>
-            <td>Soin = efficacité -2<br/>
-                1d6 + précision DC5<br/></td>
-            <td>Soin = efficacité -1<br/>
-                1d6 + précision DC7<br/></td>
-            <td>Soin = efficacité<br/>
-                1d6 + précision DC5<br/></td>
+            <td>Cut</td>
+            <td>Heal = efficacity -2<br/>
+                1d6 + precision DC5<br/></td>
+            <td>Heal = efficacity -1<br/>
+                1d6 + precision DC7<br/></td>
+            <td>Heal = efficacity<br/>
+                1d6 + precision DC5<br/></td>
         </tr>
         <tr>
-            <td>Casse</td>
+            <td>Break</td>
             <td>/</td>
-            <td>Soin = efficacité -1<br/>
-                1d6 + précision DC8<br/></td>
-            <td>Soin = efficacité<br/>
-                1d6 + précision DC6<br/></td>
+            <td>Heal = efficacity -1<br/>
+                1d6 + precision DC8<br/></td>
+            <td>Heal = efficacity<br/>
+                1d6 + precision DC6<br/></td>
         </tr>
     </table>
 </div>

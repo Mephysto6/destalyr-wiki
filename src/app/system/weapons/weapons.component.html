@@ -7,7 +7,9 @@
     Armes 1H tranchante : finesse (au choix, force ou habileté)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Melee weapons : strength<br/>
+    Ranged weapons: dexterity<br/>
+    One-handed slashing weapon : finesse (choice, strength or dexterity)<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Exemples</h3>
@@ -18,7 +20,7 @@
         <tr>
             <th>Nom</th>
             <th>Exemples</th>
-            <th>Dé d'attaque</th>
+            <th>Dé de dégâts</th>
             <th>Restrictions</th>
             <th>Points d'actions (PA)</th>
         </tr>
@@ -31,14 +33,14 @@
         </tr>
         <tr>
             <td>Armes improvisées</td>
-            <td>bâton, couteau, gourdin</td>
+            <td>couteau, gourdin</td>
             <td>d2</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
             <td>Armes légères</td>
-            <td>dague, arc court</td>
+            <td>dague, arc court, bâton</td>
             <td>d4</td>
             <td>/</td>
             <td>2</td>
@@ -62,45 +64,45 @@
 <div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
-            <th>Nom</th>
-            <th>Exemples</th>
-            <th>Dé d'attaque</th>
+            <th>Name</th>
+            <th>Examples</th>
+            <th>Damage die</th>
             <th>Restrictions</th>
-            <th>Points d'actions (PA)</th>
+            <th>Action points (PA)</th>
         </tr>
         <tr>
-            <td>Rien</td>
-            <td>mains nues</td>
+            <td>Nothin</td>
+            <td>bare hands</td>
             <td>d1</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Armes improvisées</td>
-            <td>bâton, couteau, gourdin</td>
+            <td>Improvised weapons</td>
+            <td>knife, club</td>
             <td>d2</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Armes légères</td>
-            <td>dague, arc court</td>
+            <td>Light weapons</td>
+            <td>dagger, short bow, quarterstaff</td>
             <td>d4</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Armes normales</td>
-            <td>épée, hache, arc long, arbalète*</td>
+            <td>Normal weapons</td>
+            <td>sword, axe, longbow, crossbow*</td>
             <td>d6</td>
-            <td>min 3 force</td>
+            <td>min 3 str</td>
             <td>3</td>
         </tr>
         <tr>
-            <td>Armes lourdes</td>
-            <td>claymore, hache lourde, marteau de guerre</td>
+            <td>Heavy weapons</td>
+            <td>claymore, heavy axe, warhammer</td>
             <td>d8</td>
-            <td>min 4 force + 2H</td>
+            <td>min 4 str + 2H</td>
             <td>4</td>
         </tr>
     </table>
@@ -110,16 +112,17 @@
     *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
 </p>
 <p *ngIf="langue.l == 'en'">
-    *= The crossbow ignores the force restriction, but requires another action (2PA) to recharge.
+    *= The crossbow ignores the force restriction, but requires another action (2AP) to recharge.
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Attaquer à une main ou deux mains ?</h3>
 <h3 *ngIf="langue.l == 'en'">Attacking one-handed or two-handed ?</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Si une armes à deux mains est utilisée à une mains pour attaquer, l'attaque prend un -3 au toucher.<br/>
-    Si une armes à une main est utilisée à deux mains pour attaquer, l'attaque gagne un +1 au toucher.<br/>
+    Si une arme à deux mains est utilisée à une mains pour attaquer, l'attaque prend un -3 au toucher.<br/>
+    Si une arme à une main est utilisée à deux mains pour attaquer, l'attaque gagne un +1 au toucher.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    
+    If a two-handed weapon is used one-handed, the attack takes a -3 to hit.<br/>
+    If a one-handed weapon is used two-handed, the attack gains a +1 to hit.<br/>
 </p>

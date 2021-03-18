@@ -9,7 +9,15 @@
     À la fin de son propre tour, un personnage peut consommer un PA pour gagner un PR. Au début du tour, tous les PR non utilisés sont perdus.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Initiative : 1d12 + Agility -> descending = turn order<br/>
+    Each person starts their turn with their maximum action points (AP) and reaction points (RP)<br/>
+    A basic adventurer has 5 AP and half their dexterity (rounded up) in RP.<br/>
+    During their turn, the character can consumme their AP to do the corresponding actions (see table below). Outside their turn, they can use RP when they get a reaction.<br/>
+    Actions are done point by point.<br/>
+    Doing an action other than an attack (for example : magic, object, run) while being in contact with an ennemy (and the attack has to be to this ennemy) will give this enemy a reaction.<br/>
+    Walking does not create reactions.<br/>
+    At the end of their turn, a character can consume 1 AP to gain 1 RP.
+    At the beginning of their turn, all non-used RP are lost.<br/>
 </p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
@@ -74,57 +82,57 @@
     <table>
         <tr>
             <th>Action</th>
-            <th>Prix PA</th>
-            <th>Prix PR</th>
-            <th>Exécutable en étant concentré ?</th>
+            <th>Cost AP</th>
+            <th>Cost RP</th>
+            <th>Executable while concentrated ?</th>
         </tr>
         <tr>
-            <td>parler</td>
+            <td>talk</td>
             <td>0</td>
             <td>0</td>
-            <td>oui</td>
+            <td>yes</td>
         </tr>
         <tr>
-            <td>relâcher une action préparée</td>
+            <td>release a prepared action</td>
             <td>-</td>
             <td>1</td>
-            <td>oui</td>
+            <td>yes</td>
         </tr>
         <tr>
-            <td>intéragir, utiliser un objet</td>
+            <td>interact, use an object</td>
             <td>1</td>
             <td>1</td>
-            <td>oui</td>
+            <td>yes</td>
         </tr>
         <tr>
-            <td>se déplacer*</td>
+            <td>move*</td>
             <td>1</td>
             <td>1</td>
-            <td>seulement marcher</td>
+            <td>walk, (run)</td>
         </tr>
         <tr>
-            <td>attaque arme légère</td>
+            <td>light attack</td>
             <td>2</td>
             <td>1</td>
-            <td>avec compétence</td>
+            <td>(yes)</td>
         </tr>
         <tr>
-            <td>attaque arme normale</td>
+            <td>medium attack</td>
             <td>3</td>
             <td>2</td>
-            <td>avec compétence</td>
+            <td>(yes)</td>
         </tr>
         <tr>
-            <td>attaque arme lourde</td>
+            <td>heavy attack</td>
             <td>4</td>
             <td>3</td>
-            <td>avec compétence</td>
+            <td>(yes)</td>
         </tr>
         <tr>
-            <td>magie</td>
+            <td>magic</td>
             <td>4</td>
-            <td>-</td>
-            <td>avec compétence</td>
+            <td>(3)</td>
+            <td>(yes)</td>
         </tr>
     </table>
 </div>
@@ -135,16 +143,28 @@
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>
+    () = unlocked by a skill<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Préparer une action</h3>
-<h3 *ngIf="langue.l == 'en'">Parparing an action</h3>
+<h3 *ngIf="langue.l == 'en'">Preparing an action</h3>
 
 <p *ngIf="langue.l == 'fr'">
     Pour préparer une action, il faut posséder les PA pour faire l’action normalement, annoncer au DM l’action prévue ainsi que le déclenchement (trigger).
-    Le trigger annoncé est ajouté aux autres actions qui déclanche des réactions jusqu'à ce que l'action soit relâchée. Quand le personnage reçoit une réaction (trigger ou réaction normale), le joueur décide de lancer l’action ou non. L'action reste préparée tant qu'elle n'est pas relâchée ou annulée. Une seule action peut être préparée, une fois une action préparée, le personnage est concentré (cf états) jusqu’au relâchement.<br/>
-    Un personnage peut rester en concentration d’une action préparée sur plusieurs tour, mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf états).<br/>
+    Le trigger annoncé est ajouté aux autres actions qui déclanche des réactions jusqu'à ce que l'action soit relâchée.
+    Quand le personnage reçoit une réaction (trigger ou réaction normale), le joueur décide de lancer l’action ou non.
+    L'action reste préparée tant qu'elle n'est pas relâchée ou annulée.
+    Une seule action peut être préparée, une fois une action préparée, le personnage est concentré (cf états) jusqu’au relâchement.<br/>
+    Un personnage peut rester en concentration d’une action préparée sur plusieurs tour,
+    mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf états).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    To prepare an action, one needs to have the appropriate AP in order to make the action normally, and announce which action is prepared as well as the trigger.
+    The AP are consumed and the character is now in concentration.
+    The trigger announced is added to the list of actions which create reactions (until the prepared action is released).
+    When the player gets a reaction (from the trigger or from normal means), they can decide to release the action or not.
+    The action stays prepared until it is released or canceled by the player.
+    Only one action can be prepared, and once prepared the character is concentrated (see states) until the action is released or canceled.<br/>
+    A character can stay concentrated on an action over several turns,
+    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (cf state concentrated).<br/>
 </p>

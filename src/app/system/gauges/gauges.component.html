@@ -1,11 +1,14 @@
 <p *ngIf="langue.l == 'fr'">
     Chaque être vivant possède une jauge de fatigue et une jauge de douleur.<br/>
     Ces deux jauges sont, en temps normal, à 0.<br/>
-    Le maximum de ces jauges varie selon l'espèce de la créature et d'autres facteurs.<br/>
+    Le maximum de ces jauges varie selon l'espèce de la créature, l'individu, et d'autres facteurs.<br/>
     En général, les humains ont un maximum de 10 sur les deux jauges.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    Every living being possesses a fatigue gauge and a pain gauge.<br/>
+    These two gauges are, normally, at 0.<br/>
+    The maximum of these gauges varies depending on the species, the individual, as well as other factors.<br/>
+    In general, humans have a maximum of 10 on both gauges.<br/>
 </p>
 <div class="div-table"  *ngIf="langue.l == 'fr'">
     <table>
@@ -82,6 +85,6 @@
     Si la personne est réveillée avant la période indiquée, elle n'est qu'à moitié consciente, peut parler et marcher mais pas grand chose d'autre.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    * = when the person gains back consciousness, the gauge is changed back to 9.<br/>
+    * = when the person regains consciousness, the gauge is changed back to 9.<br/>
     If the person is woken up before the indicated period, they are only half conscious, able to talk and walk, not much else.<br/>
 </p>

@@ -5,7 +5,7 @@
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : préparer une action, garder un sort actif<br/>
 	<b>Effets</b> : personnage limité dans ses actions (cf combat).<br/>
-    Coûte 2 PA par tour par concentration pour rester concentré.<br/>
+    Coûte 1 PA par tour par concentration pour rester concentré.<br/>
 	<b>Effets spéciaux</b> : > Si la concentration vient d'un sort de niveau 1 ou plus, alors il faut continuellement dépenser de l'énergie pour garder le sort actif.<br/>
     - niveau 1 : 1 énergie / minute<br/>
     - niveau 2 : 1 énergie / 5 tours<br/>
@@ -13,10 +13,18 @@
     - niveau 4+ : 1 énergie / tour<br/>
     <br/>
     Pas besoin de concentration pour un sort de niveau 0.<br/>
-
 </p>
 <p *ngIf="langue.l == 'en'">
-
+	<b>Source</b> : preparing an action, keeping a spell active<br/>
+	<b>Effects</b> : character is limited in their actions (see combat).<br/>
+    Costs 1 AP per turn per concentration to stay concentrated.<br/>
+	<b>Special effects</b> : > If the concentration comes from a spell of level 1 or more, then energy must be continually spent to keep the spell active.<br/>
+    - level 1 : 1 energy / minute<br/>
+    - level 2 : 1 energy / 5 turns<br/>
+    - level 3 : 1 energy / 2 turns<br/>
+    - level 4+ : 1 energy / turn<br/>
+    <br/>
+    No concentration for spells of level 0.<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Blessé</h2>
@@ -30,7 +38,11 @@
     Dé : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+    <b>Source</b> : Pain at 4 or more<br/>
+    <b>Effects</b> : At the start of the turn, roll the corresponding die (see lower, or the gauges tab)<br/>
+    If the result of the die + intensity of all breaks is strictly higher than the character's resistance, then their AP are divided by 2 for this turn (rounded down, minimum 0)<br/>
+    Pain : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
+    Die : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Fatigué</h2>
@@ -41,7 +53,8 @@
 	<b>Effets</b> : Malus aux jets selon la fatigue. (cf jauges)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+	<b>Source</b> : Fatigue at 4 or more<br/>
+	<b>Effects</b> : Penalty to rolls depending on the points. (see gauges)<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Inconscient</h2>
@@ -54,23 +67,36 @@
     Peut être réveillé à la moitié du temps par un input externe<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+	<b>Source</b> : Fatigue at 10 or Pain at 10 (or other)<br/>
+	<b>Effects</b> : fall on the ground, lose consciousness, lose all concentrations.<br/>
+	<b>Special effects</b> : > If Pain at 10, lasts 1 minute ; > If Fatigue at 10, lasts 1 hour<br/>
+    Can be woken up at half the time by an external input.<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">En méditation</h2>
-<h2 *ngIf="langue.l == 'en'">In meditation</h2>
+<h2 *ngIf="langue.l == 'en'">Meditating</h2>
 
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : Méditer (débloqué par compétence en magie)<br/>
     <b>Effets</b> : La personne en train de méditer doit être assise ou alongée, dans une optique de repos.<br/>
     Elle devient incapable d'attaquer ou de lancer de sorts sans sortir de méditation, mais elle peut encore parler, utiliser un objet ou d'autres intéractions.<br/>
     <b>Effets spéciaux</b> : > Si la méditation dure 1 heure, récupère 1 point d'énergie + 2 points d'énergie temporaire.<br/>
-    > Après 5 minutes de méditation et si la méditation continue, alors la personne peut lancer des sorts et le coût en énergie des sorts et des concentrations est ignoré.<br/>
+    > Après 5 minutes de méditation et si la méditation continue, alors la personne peut lancer des sorts,
+    et le coût en énergie des sorts et des concentrations est ignoré.<br/>
     > Si combiné avec un sort en concentration, le lanceur du sort est de plus en plus limité suivant la puissance du sort.<br/>
     - niveau 2 : immobilisé (peut seulement parler)<br/>
     - niveau 3 : + aveugle<br/>
     - niveau 4+ : + sourd<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-
+	<b>Source</b> : Meditation (unlocked by magic skill)<br/>
+    <b>Effects</b> : The meditating character must be sitting or laying down, as if resting.<br/>
+    They become unable to attack or cast spells without leaving meditation, but they can still speak, use objects or other interactions.<br/>
+    <b>Special effects</b> : > If the meditation lasts 1 hour, the character loses 1 point of fatigue and gains 2 points of temporary energy.<br/>
+    > After 5 minutes of meditation and if the meditation continues, then the character can cast spells again,
+    and all costs in fatigue of spells and concentrations are ignored..<br/>
+    > If combined with a concentrating spell, the caster is more and more limited depending on the level of the spell:<br/>
+    - level 2 : immobilised (can only talk)<br/>
+    - level 3 : + blind<br/>
+    - level 4+ : + deaf<br/>
 </p>
