@@ -100,3 +100,45 @@
     - level 3 : + blind<br/>
     - level 4+ : + deaf<br/>
 </p>
+
+<h2 *ngIf="langue.l == 'fr'">Distrait</h2>
+<h2 *ngIf="langue.l == 'en'">Distracted</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : Attaqué par quelqu'un avec la compétence distraction -ou- échec critique à l'attaque<br/>
+    <b>Effets</b> : -1 à l'esquive jusqu'au début de son prochain tour<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+	<b>Source</b> : Attacked by someone with the distraction skill -or- critical failed attack<br/>
+    <b>Effects</b> : -1 to evasion until the start of their next turn<br/>
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">Occupé</h2>
+<h2 *ngIf="langue.l == 'en'">Occupied</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : Face à un ennemi et l'ayant attaqué<br/>
+    <b>Effets</b> : <br/>
+    <b>Effets spéciaux</b> : <br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+	<b>Source</b> : <br/>
+    <b>Effects</b> : <br/>
+    <b>Special effects</b> : <br/>
+</p>
+
+<!-- 
+<h2 *ngIf="langue.l == 'fr'">Occupé</h2>
+<h2 *ngIf="langue.l == 'en'">Occupied</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : <br/>
+    <b>Effets</b> : <br/>
+    <b>Effets spéciaux</b> : <br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+	<b>Source</b> : <br/>
+    <b>Effects</b> : <br/>
+    <b>Special effects</b> : <br/>
+</p>
+-->
