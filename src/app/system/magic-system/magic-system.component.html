@@ -1,4 +1,8 @@
 <nav class="band band3">
+    <a routerLink="/system/magic/explanation" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Explication</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Explanation</menu-button>
+    </a>
     <a routerLink="/system/magic/creation" class="button" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Création</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Creation</menu-button>
@@ -6,6 +10,10 @@
     <a routerLink="/system/magic/manipulation" class="button" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Manipulation</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Manipulation</menu-button>
+    </a>
+    <a routerLink="/system/magic/vision" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Vision</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Vision</menu-button>
     </a>
     <a routerLink="/system/magic/ballparks" class="button" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Ordres de Grandeur</menu-button>

@@ -72,8 +72,8 @@
         </tr>
         <tr>
             <td>magie</td>
-            <td>4</td>
-            <td>(3)</td>
+            <td>3-4**</td>
+            <td>(2)</td>
             <td>(oui)</td>
         </tr>
     </table>
@@ -130,8 +130,8 @@
         </tr>
         <tr>
             <td>magic</td>
-            <td>4</td>
-            <td>(3)</td>
+            <td>3-4**</td>
+            <td>(2)</td>
             <td>(yes)</td>
         </tr>
     </table>
@@ -139,10 +139,12 @@
 
 <p *ngIf="langue.l == 'fr'">
     *= se déplacer peut se faire de 2 façons : marcher et courrir. Marcher permet de se déplacer de 1 case par point dépensé, et courrir 2 cases par point.<br/>
+    **= selon la magie, cf system > magie<br/>
     () = débloqué par compétence<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>
+    **= depending on the magic, see system > magic<br/>
     () = unlocked by a skill<br/>
 </p>
 
@@ -156,7 +158,7 @@
     L'action reste préparée tant qu'elle n'est pas relâchée ou annulée.
     Une seule action peut être préparée, une fois une action préparée, le personnage est concentré (cf états) jusqu’au relâchement.<br/>
     Un personnage peut rester en concentration d’une action préparée sur plusieurs tour,
-    mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf états).<br/>
+    mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf tableau ci-dessus).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     To prepare an action, one needs to have the appropriate AP in order to make the action normally, and announce which action is prepared as well as the trigger.
@@ -166,5 +168,5 @@
     The action stays prepared until it is released or canceled by the player.
     Only one action can be prepared, and once prepared the character is concentrated (see states) until the action is released or canceled.<br/>
     A character can stay concentrated on an action over several turns,
-    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (cf state concentrated).<br/>
+    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (cf table above).<br/>
 </p>
