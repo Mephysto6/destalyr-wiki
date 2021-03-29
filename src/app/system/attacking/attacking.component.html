@@ -2,7 +2,7 @@
 <h3 *ngIf="langue.l == 'en'">Hitting</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Attaque : 1d12 + stat (force ou habileté selon armes)<br/>
+    Attaque : 1d12 + stat (force ou dextérité selon armes)<br/>
     Esquive : 1d12 + agilité<br/>
     Si esquive strictement plus que attaque = esquivé => aucun dégâts<br/>
     Si attaque est égale ou plus que esquive = touché => lance les dégâts<br/>
@@ -100,7 +100,7 @@
 <h3 *ngIf="langue.l == 'en'">Damages</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Attaquant : 1dx (selon arme) + stat (force ou habi)<br/>
+    Attaquant : 1dx (selon arme) + stat (force ou dex)<br/>
     Défense : res + armure (fixe)<br/>
     Dégâts de l'attaque - défense = dégâts en points de douleur (min 0, si 0 alors pas de blessure)<br/>
     <br/>
