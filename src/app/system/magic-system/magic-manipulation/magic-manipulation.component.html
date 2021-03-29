@@ -18,11 +18,15 @@
 <h3 *ngIf="langue.l == 'en'">Bonus dice</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Si entouré de l'élément, +(1-3)d4 selon la quantité de l'éléménet présent.<br/>
-    +1 à poser au choix (à chaque sort) dans une catégorie pour magie majeure et combinée.<br/>
-    Spécialisation (optionelle) > +2 / +0 sur combinée et majeure selon le choix<br/>
+    La spécialisation d'une magie correspond à un nombre donné représentant l'entraînement et la force de l'affinité que la personne a avec cette magie.<br/>
+    Un personnage commence avec un +1 dans sa magie majeure, un +1 dans sa combinée et un +0 dans sa mineure.<br/>
+    Il est possible de décider de transférer sa spécialisation de sa majeure vers sa combinée, ou vice versa. Auquel cas il y aura un +2 et un +0.<br/>
+    Cette spécialisation permet une amélioration des sorts lancés de cette magie.<br/>
+    À chaque lancé de sort, après avoir réparti les dés et avoir calculé la puissance du sort,
+    un mage peut ajouter sa spécialisation sur une des caractéristiques du sort.
+    Si c'est un +2, à considérer comme deux +1 indépendants cummulables.<br/>
     <br/>
-    Détail : Ne peut pas ajouter le +1 sur une carac sans dé. Il faut au moins un dé dans chaque caractéristique.<br/>
+    Détail : Si une caractéristique n'a pas de dé ou est à 0, le sort ne marche pas. De plus, il est impossible d'ajouter un +1 sur une caractéristique sans dé.<br/>
     <br/>
     Sensitivité à 5 : lance 1d4 en plus (total : 5d4)<br/>
     Sensitivité à 6 : lance 1d6 en plus (total 4d4 + 1d6)<br/>
@@ -44,8 +48,8 @@
 
 <p *ngIf="langue.l == 'fr'">
     Toucher : 1d12 + (précision x2) contre esquive<br/>
-    Dégâts : efficacité x (taille/2) - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
-    (tant que taille couvre la cible, si taille est plus grande que cible, taille = cible (cf ordres de grandeurs))<br/>
+    Dégâts : (efficacité x taille /2) - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
+    (tant que taille couvre la cible, si taille est plus grande que cible, taille = cible (cf ordres de grandeurs) selon les situations)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 

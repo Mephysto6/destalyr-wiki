@@ -4,8 +4,7 @@
 
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : préparer une action, garder un sort actif<br/>
-	<b>Effets</b> : personnage limité dans ses actions (cf combat).<br/>
-    Coûte 1 PA par tour par concentration pour rester concentré.<br/>
+	<b>Effets</b> : Coûte 1 PA par tour par concentration pour rester concentré.<br/>
 	<b>Effets spéciaux</b> : > Si la concentration vient d'un sort de niveau 1 ou plus, alors il faut continuellement dépenser de l'énergie pour garder le sort actif.<br/>
     - niveau 1 : 1 énergie / minute<br/>
     - niveau 2 : 1 énergie / 5 tours<br/>
@@ -13,6 +12,11 @@
     - niveau 4+ : 1 énergie / tour<br/>
     <br/>
     Pas besoin de concentration pour un sort de niveau 0.<br/>
+    <br/>
+    Le nombre de concentration par niveau est limité par 1 + la spécialisation dans la magie correspondante.<br/>
+    Exemple : Un mage d'eau et de glace ayant des spécialisations 1/1 peut avoir 2 concentrations de niveaux 0.
+    Si il veut une troisième concentration de niveau 0, cette troisième concentration sera comptée comme de niveau 1.<br/>
+    Si ce mage se spécialise dans la magie de glace, il aura alors 0/2 et donc peut avoir 1 concentration d'eau et 3 de glace de niveau 0.
 </p>
 <p *ngIf="langue.l == 'en'">
 	<b>Source</b> : preparing an action, keeping a spell active<br/>
@@ -25,6 +29,11 @@
     - level 4+ : 1 energy / turn<br/>
     <br/>
     No concentration for spells of level 0.<br/>
+    <br/>
+    Le nombre de concentration par niveau est limité par 1 + la spécialisation dans la magie correspondante.<br/>
+    Exemple : Un mage d'eau et de glace ayant des spécialisations 1/1 peut avoir 2 concentrations de niveaux 0.
+    Si il veut une troisième concentration de niveau 0, cette troisième concentration sera compté comme de niveau 1.<br/>
+    Si ce mage se spécialise dans la magie de glace, il aura alors 0/2 et donc peut avoir 1 concentration d'eau et 3 de glace de niveau 0.
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Blessé</h2>

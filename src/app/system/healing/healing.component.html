@@ -3,26 +3,32 @@
 
 <p *ngIf="langue.l == 'fr'">
     Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer 1d6 par blessure par heure de repos.<br/>
-    Si le dé donne 5 ou 6 alors la blessure correspondante est soignée de 1 (intensité et douleur réduites de 1 chacune)<br/>
-    Si le personnage est inconscient, alors seulement le 6 permet de soigner.<br/>
+    Si le dé donne 6 alors la blessure correspondante est soignée de 1 (intensité et douleur réduites de 1 chacune)<br/>
+    Si le personnage s'occupe de sa blessure, alors le 5 permet aussi de soigner. Une personne ne peut s'occuper que d'une blessure à la fois.<br/>
     Une blessure à 0 d’intensité existe encore<br/>
     Une blessure à -1 d’intensité est guérie.<br/><br/>
-    Un personnage perd aussi 2 points de fatigue par heure de repos<br/>
+    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagne 2 points d'énergie).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     A wounded character can rest to heal. They can roll 1d6 per wound per hour of rest.<br/>
     If the die lands on 6 then the corresponding wound is healed by 1 (intensity and pain both decreased by 1)<br/>
-    If the character is unconscious, a 5 can also heal.<br/>
+    If the character tends to the wound, a 5 can also heal. A character can tend to only one wound at a time.<br/>
     A wound at 0 intensity still exists.<br/>
     A wound at -1 intensity is healed.<br/><br/>
-    A character also loses 2 fatigue points per hour of rest.<br/>
+    A character also loses 2 fatigue points per hour of rest (also called gaining 2 points of energy).<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Sorts</h2>
 <h2 *ngIf="langue.l == 'en'">Spells</h2>
 
-<p *ngIf="langue.l == 'fr'">Taille et distance selon blessure et cibles</p>
-<p *ngIf="langue.l == 'en'">Size and distance depending on wound and target</p>
+<p *ngIf="langue.l == 'fr'">
+    Taille et distance selon blessure et cibles.<br/>
+    Le soigneur lance 1d12 + précision x2 et doit atteindre le seuil indiqué pour que le soin prenne effet.
+</p>
+<p *ngIf="langue.l == 'en'">
+    Size and distance depending on wound and target.<br/>
+    The healer rolls 1d12 + precision x2 and must reach the threshold for the heal to have effect.
+</p>
 
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
@@ -34,21 +40,22 @@
             <th>Purification</th>
         </tr>
         <tr>
+            <td>Quantité de soin</td>
+            <td>efficacité -2</td>
+            <td>efficacité -1</td>
+            <td>efficacité</td>
+        </tr>
+        <tr>
             <td>Coupure</td>
-            <td>Soin = efficacité -2<br/>
-                1d6 + précision DC5<br/></td>
-            <td>Soin = efficacité -1<br/>
-                1d6 + précision DC7<br/></td>
-            <td>Soin = efficacité<br/>
-                1d6 + précision DC5<br/></td>
+            <td>DC9</td>
+            <td>DC13</td>
+            <td>DC9</td>
         </tr>
         <tr>
             <td>Casse</td>
             <td>/</td>
-            <td>Soin = efficacité -1<br/>
-                1d6 + précision DC8<br/></td>
-            <td>Soin = efficacité<br/>
-                1d6 + précision DC6<br/></td>
+            <td>DC15</td>
+            <td>DC11</td>
         </tr>
     </table>
 </div>
@@ -61,21 +68,22 @@
             <th>Purification</th>
         </tr>
         <tr>
+            <td>Heal amount</td>
+            <td>efficacity -2</td>
+            <td>efficacity -1</td>
+            <td>efficacity</td>
+        </tr>
+        <tr>
             <td>Cut</td>
-            <td>Heal = efficacity -2<br/>
-                1d6 + precision DC5<br/></td>
-            <td>Heal = efficacity -1<br/>
-                1d6 + precision DC7<br/></td>
-            <td>Heal = efficacity<br/>
-                1d6 + precision DC5<br/></td>
+            <td>DC9</td>
+            <td>DC13</td>
+            <td>DC9</td>
         </tr>
         <tr>
             <td>Break</td>
             <td>/</td>
-            <td>Heal = efficacity -1<br/>
-                1d6 + precision DC8<br/></td>
-            <td>Heal = efficacity<br/>
-                1d6 + precision DC6<br/></td>
+            <td>DC15</td>
+            <td>DC11</td>
         </tr>
     </table>
 </div>

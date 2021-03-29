@@ -26,55 +26,46 @@
             <th>Action</th>
             <th>Prix PA</th>
             <th>Prix PR</th>
-            <th>Exécutable en étant concentré ?</th>
         </tr>
         <tr>
             <td>parler</td>
             <td>0</td>
             <td>0</td>
-            <td>oui</td>
         </tr>
         <tr>
             <td>relâcher une action préparée</td>
             <td>-</td>
             <td>1</td>
-            <td>oui</td>
         </tr>
         <tr>
             <td>intéragir, utiliser un objet</td>
             <td>1</td>
             <td>1</td>
-            <td>oui</td>
         </tr>
         <tr>
             <td>se déplacer*</td>
             <td>1</td>
             <td>1</td>
-            <td>marcher, (courrir)</td>
         </tr>
         <tr>
             <td>attaque arme légère</td>
             <td>2</td>
             <td>1</td>
-            <td>(oui)</td>
         </tr>
         <tr>
             <td>attaque arme normale</td>
             <td>3</td>
             <td>2</td>
-            <td>(oui)</td>
         </tr>
         <tr>
             <td>attaque arme lourde</td>
             <td>4</td>
             <td>3</td>
-            <td>(oui)</td>
         </tr>
         <tr>
             <td>magie</td>
             <td>3-4**</td>
             <td>(2)</td>
-            <td>(oui)</td>
         </tr>
     </table>
 </div>
@@ -84,55 +75,46 @@
             <th>Action</th>
             <th>Cost AP</th>
             <th>Cost RP</th>
-            <th>Executable while concentrated ?</th>
         </tr>
         <tr>
             <td>talk</td>
             <td>0</td>
             <td>0</td>
-            <td>yes</td>
         </tr>
         <tr>
             <td>release a prepared action</td>
             <td>-</td>
             <td>1</td>
-            <td>yes</td>
         </tr>
         <tr>
             <td>interact, use an object</td>
             <td>1</td>
             <td>1</td>
-            <td>yes</td>
         </tr>
         <tr>
             <td>move*</td>
             <td>1</td>
             <td>1</td>
-            <td>walk, (run)</td>
         </tr>
         <tr>
             <td>light attack</td>
             <td>2</td>
             <td>1</td>
-            <td>(yes)</td>
         </tr>
         <tr>
             <td>medium attack</td>
             <td>3</td>
             <td>2</td>
-            <td>(yes)</td>
         </tr>
         <tr>
             <td>heavy attack</td>
             <td>4</td>
             <td>3</td>
-            <td>(yes)</td>
         </tr>
         <tr>
             <td>magic</td>
             <td>3-4**</td>
             <td>(2)</td>
-            <td>(yes)</td>
         </tr>
     </table>
 </div>
@@ -140,12 +122,10 @@
 <p *ngIf="langue.l == 'fr'">
     *= se déplacer peut se faire de 2 façons : marcher et courrir. Marcher permet de se déplacer de 1 case par point dépensé, et courrir 2 cases par point.<br/>
     **= selon la magie, cf system > magie<br/>
-    () = débloqué par compétence<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>
     **= depending on the magic, see system > magic<br/>
-    () = unlocked by a skill<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Préparer une action</h3>

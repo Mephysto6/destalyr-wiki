@@ -1,14 +1,18 @@
 <p *ngIf="langue.l == 'fr'">
     Pour créer un personnage dans Destalyr, il est suggéré de commencer par la race ou la magie.<br/>
     Chaque race possède des bonus et des limitations sur certaines statistiques de jeu, et la magie est un point important de l'univers.<br/>
-    Note : Les races ont des affinités naturelles, donc un personnage d'une certaine race va avoir tendance a posséder la magie de sa race en majeure ou mineure.<br/>
-    Les exceptions existent, mais sont rares et demandent une explication (grandit autre part, en confrontation avec son environnement, illumination, mentor externe, ...).
+    Note : Les races ont des affinités naturelles,
+    donc un personnage d'une certaine race va avoir tendance a posséder la magie de sa race en majeure ou mineure.<br/>
+    Les exceptions existent, mais sont rares et demandent une explication
+    (grandit autre part, en confrontation avec son environnement, illumination, mentor externe, ...).
 </p>
 <p *ngIf="langue.l == 'en'">
     To create a character in Destalyr, it is suggested to start with a race or a magic.<br/>
     Each race has bonuses and limitations on game stats, and the magic is a big part of the world.<br/>
-    Note : The races have natural affinities, therefore a character of a certain race will tend to have the race's magic as major or minor.<br/>
-    Exceptions exist, but are rare and require an explanation (grew up someplace else, in conflict with one's environment, illumination, external mentor, ...).
+    Note : The races have natural affinities,
+    therefore a character of a certain race will tend to have the race's magic as major or minor.<br/>
+    Exceptions exist, but are rare and require an explanation
+    (grew up someplace else, in conflict with one's environment, illumination, external mentor, ...).
 </p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
@@ -61,45 +65,45 @@
     <table>
         <tr>
             <th>Race</th>
-            <th>+1 au choix</th>
-            <th>Cap à 2</th>
-            <th>Capacité spéciale</th>
+            <th>+1 to choose</th>
+            <th>Max 2</th>
+            <th>Special ability</th>
         </tr>
         <tr>
             <td>Nekali</td>
-            <td>Agilité / Perception</td>
-            <td>Force</td>
-            <td>Grimper</td>
+            <td>Agility / Perception</td>
+            <td>Strength</td>
+            <td>Climbing</td>
         </tr>
         <tr>
             <td>Flyhn</td>
-            <td>Force / Perception</td>
-            <td>Habileté</td>
-            <td>planner</td>
+            <td>Strength / Perception</td>
+            <td>Dexterity</td>
+            <td>Glide</td>
         </tr>
         <tr>
-            <td>Elf Sylvain</td>
-            <td>Éloquence / Sensitivité</td>
-            <td>Résistance</td>
-            <td>Communication basique avec êtres vivants non sensés</td>
+            <td>Wood elf</td>
+            <td>Eloquence / Sensitivity</td>
+            <td>Resistance</td>
+            <td>Basic communication with living non sensible beings</td>
         </tr>
         <tr>
             <td>Etrek</td>
-            <td>Force / Résistance</td>
-            <td>Agilité</td>
-            <td>Purifier de l’eau + enracinement</td>
+            <td>Strength / Resistance</td>
+            <td>Agility</td>
+            <td>Purifiy water + rooting</td>
         </tr>
         <tr>
-            <td>Elf Sombre</td>
-            <td>Habileté / Agilité</td>
-            <td>Éloquence</td>
-            <td>Vision dans le noir total</td>
+            <td>Dark elf</td>
+            <td>Dexterity / Agility</td>
+            <td>Eloquence</td>
+            <td>Actual darkvision</td>
         </tr>
         <tr>
             <td>Lyune</td>
-            <td>Oui</td>
-            <td>Non</td>
-            <td>Ne pas être détesté</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Not being hated</td>
         </tr>
     </table>
 </div>
@@ -107,15 +111,23 @@
 <p *ngIf="langue.l == 'fr'">
     Ensuite il faut répartir les points sur les différentes statistiques.<br/>
     7 valeurs pour 7 stats : 1 - 2 - 2 - 3 - 4 - 4 - 5<br/>
-    Après la répartition, le joueur peut ajouter son point de stat racial, et vérifier que sa limitation est respectée, sinon la stat est baissée à 2 pour respecter.<br/>
-    Ensuite, il faut décider de quel background le personnage vient et quelle éducation le personnage a reçu. S'il est diplômé de la citadelle, le personnage commence avec 3 points de compétence.<br/>
-    Les points de compétence peuvent être dépensé sur un des trois arbres de compétence (cf skills). Chaque bloc coûte un point à apprendre et nécessite un bloc parent connu (suivre les flèches).<br/>
-    Les arbres sont indépendents et un personnage peut aller dans les trois arbres sans restrictions. Les points sont communs à tous les arbres, et une fois consommés ne peuvent pas être ré-utilisés.<br/>
+    Après la répartition, le joueur peut ajouter son point de stat racial, et vérifier que sa limitation est respectée,
+    sinon la stat est baissée à 2 pour respecter.<br/>
+    Ensuite, il faut décider de quel background le personnage vient et quelle éducation le personnage a reçu.
+    S'il est diplômé de la citadelle, le personnage commence avec 3 points de compétence.<br/>
+    Les points de compétence peuvent être dépensé sur un des trois arbres de compétence (cf skills).
+    Chaque bloc coûte un point à apprendre et nécessite un bloc parent connu (suivre les flèches).<br/>
+    Les arbres sont indépendents et un personnage peut aller dans les trois arbres sans restrictions.
+    Les points sont communs à tous les arbres, et une fois consommés ne peuvent pas être ré-utilisés.<br/>
     <b>Exemples</b> :<br/>
     Personnage A veut être un mage sans armure. Il met ses trois points dans l'arbre magie.<br/>
-    Personnage B veut être un archer en armure légère. Il met deux points en attaque côté armes de distance et un point en défense pour l'armure légère.<br/>
-    Personnage C veut porter une armure lourde. Il met deux points en défense, et n'a plus qu'un point à mettre en attaque, qu'il met pour pouvoir manipuler les armes de mêlée.<br/>
-    Enfin, le personnage peut posséder des connaissances sur des sujets variés. Les connaissances est une partie entièrement ouverte et personalisable du personnage (tant que ça reste dans le thème général du monde aka médiéval fantasy).<br/>
+    Personnage B veut être un archer en armure légère.
+    Il met deux points en attaque côté armes de distance et un point en défense pour l'armure légère.<br/>
+    Personnage C veut porter une armure lourde. Il met deux points en défense,
+    et n'a plus qu'un point à mettre en attaque, qu'il met pour pouvoir manipuler les armes de mêlée.<br/>
+    Enfin, le personnage peut posséder des connaissances sur des sujets variés.
+    Les connaissances est une partie entièrement ouverte et personalisable du personnage
+    (tant que ça reste dans le thème général du monde aka médiéval fantasy).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 
