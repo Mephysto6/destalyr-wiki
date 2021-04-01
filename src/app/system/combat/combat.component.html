@@ -4,18 +4,21 @@
     Un aventurier de base possède un maximum de 5 PA et sa Dextérité / 2 (arrondi en haut) en PR.<br/>
     Pendant son tour, le personnage peut consommer ses PA pour effectuer des actions correspondantes. Hors de son tour, un personnage peut consommer ses PR quand il obtient une réaction.<br/>
     Les actions s’effectuent point par point.<br/>
-    Effectuer une action qui n’est pas une attaque tout en étant au contact d’un ennemi provoque une réaction (par exemple : magie, objet, courir).<br/>
-    Marcher ne provoque pas de réaction.<br/>
-    À la fin de son propre tour, un personnage peut consommer un PA pour gagner un PR. Au début du tour, tous les PR non utilisés sont perdus.<br/>
+    La plupart des action faites au contact d'un ennemi provoquent une réaction de la part de l'ennemi.
+    Des exemples d'actions qui créent des réactions : invoquer de la magie, utiliser un objet, courir.
+    Les actions qui ne créent pas de réactions : attaquer cet ennemi, marcher.<br/>
+    À la fin de son propre tour, un personnage peut consommer un PA pour gagner un PR.
+    Au début du tour, tous les PR non utilisés sont perdus.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Initiative : 1d12 + Agility -> descending = turn order<br/>
     Each person starts their turn with their maximum action points (AP) and reaction points (RP)<br/>
     A basic adventurer has 5 AP and half their dexterity (rounded up) in RP.<br/>
-    During their turn, the character can consumme their AP to do the corresponding actions (see table below). Outside their turn, they can use RP when they get a reaction.<br/>
+    During their turn, the character can consume their AP to do the corresponding actions (see table below). Outside their turn, they can use RP when they get a reaction.<br/>
     Actions are done point by point.<br/>
-    Doing an action other than an attack (for example : magic, object, run) while being in contact with an ennemy (and the attack has to be to this ennemy) will give this enemy a reaction.<br/>
-    Walking does not create reactions.<br/>
+    Most actions done while in contact with an enemy will give this enemy a reaction.
+    Examples of actions which will create reactions : invoking magic, using an item, running.
+    Actions that do not create reactions are : attacks to this enemy, walking.<br/>
     At the end of their turn, a character can consume 1 AP to gain 1 RP.
     At the beginning of their turn, all non-used RP are lost.<br/>
 </p>
@@ -125,7 +128,7 @@
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>
-    **= depending on the magic, see system > magic<br/>
+    **= depending on the magic, see <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">magic</a><br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Préparer une action</h3>

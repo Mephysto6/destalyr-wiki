@@ -1,21 +1,51 @@
 <div class="home-page-bg">
     <span *ngIf="langue.l == 'fr'">
-        Bienvenue sur la page d'accueil du Destalyr Wiki<br/><br/><br/>
+        Bienvenue sur la page d'accueil du Destalyr Wiki.<br/><br/><br/>
         Destalyr est un jeu de rôle sur table, comme Donjons&Dragons.<br/>
         Le jeu Destalyr se déroule dans un monde médiéval fantasy où la magie est courante et les problèmes nombreux.<br/>
-        Destalyr est le nom du continent qui contient les 6 six races connues d'humanoïdes (appelés humains), le reste du monde est innexploré.<br/>
+        Destalyr est le nom du continent qui contient les 6 races connues d'humanoïdes (appelés humains), le reste du monde est innexploré.<br/>
         <br/><br/><br/><br/><br/><br/>
+        Nouveau ?<br/>
+        Une suggestion d'ordre de lecture<br/>
+        <button class="in-page-button" (click)="show_the_text()">
+            <span *ngIf="!showtext">Montrer</span>
+            <span *ngIf="showtext">Cacher</span>
+        </button>
+        <div class="button-box" *ngIf="showtext">
+            1- Lore > géographie, histoire, races<br/>
+            2- Lore > croyances, magies élémentaires, magie runique, utilisations<br/>
+            3- Perso > magie, stats, création<br/>
+            4- Système > combat, attaquer, jauges, armes et armures<br/>
+            5- Système > magie explication, création, manipulation, ordres de grandeur<br/>
+            6- le reste<br/>
+        </div>
+        <br/><br/><br/>
         /!\<br/>
         Le site, comme le jeu, est encore en construction.<br/>
         Tout retour est apprécié à l'adresse suivante : mephysto.phelles666@gmail.com.<br/>
     </span>
 
     <span *ngIf="langue.l == 'en'">
-        Welcome to the Destalyr Wiki home page<br/><br/><br/>
-        Destalyr is a tabletop role playing game, like Dungeons&Dragons.<br/>
+        Welcome to the Destalyr Wiki home page.<br/><br/><br/>
+        Destalyr is a tabletop role-playing game, like Dungeons&Dragons.<br/>
         The game Destalyr takes place in a medieval fantasy world where magic is common and problems are plenty.<br/>
-        Destalyr is the name of the continent which holds the 6 six known races of humanoids (called humans), the rest of the world remains undiscovered.<br/>
+        Destalyr is the name of the continent which holds the 6 known races of humanoids (called humans), the rest of the world remains undiscovered.<br/>
         <br/><br/><br/><br/><br/><br/>
+        New ?<br/>
+        Here is our reading order suggestion<br/>
+        <button class="in-page-button" (click)="show_the_text()">
+            <span *ngIf="!showtext">Show</span>
+            <span *ngIf="showtext">Hide</span>
+        </button>
+        <div class="button-box" *ngIf="showtext">
+            1- Lore > geography, history, races<br/>
+            2- Lore > beliefs, elemental magic, runic magic, magic uses<br/>
+            3- Character > magic, stats, creation<br/>
+            4- Systeme > combat, attack, gauges, weapons and armors<br/>
+            5- Systeme > magic explanation, creation, manipulation, ballparks<br/>
+            6- the rest<br/>
+        </div>
+        <br/><br/><br/>
         /!\<br/>
         The website, like the game, is still under construction.<br/>
         Any feedback is appreciated at the following email address : mephysto.phelles666@gmail.com.<br/>

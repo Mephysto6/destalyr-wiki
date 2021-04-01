@@ -8,10 +8,14 @@ import { PageLanguageService } from "../page-language.service";
 })
 export class HomePageComponent implements OnInit {
 
+  showtext = false
   constructor(public langue: PageLanguageService) {
   }
 
   ngOnInit(): void {
   }
 
+  show_the_text() {
+    this.showtext = !this.showtext
+  }
 }

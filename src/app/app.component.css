@@ -134,3 +134,25 @@ th, td {
 div .div-table {
     overflow-x:auto;
 }
+.in-page-button {
+    margin-top: 10px;
+    color: #000000;
+    font: 15px/30px Arial;
+}
+.button-box {
+    min-width: 300px;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: left;
+    font: 15px/30px Arial;
+    padding: 5px 10px;
+    margin-left: max(50%, 530px);
+    
+    border-radius: 6px;
+    transform: translate(-55%, -120%);
+    -ms-transform: translate(-50%, -50%);
+   
+    position: absolute;
+    z-index: 99;
+}
