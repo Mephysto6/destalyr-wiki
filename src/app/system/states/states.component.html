@@ -41,14 +41,16 @@
 
 <p *ngIf="langue.l == 'fr'">
     <b>Source</b> : Douleur à 4 ou plus<br/>
-    <b>Effets</b> : Au début de son tour, lance dé de valeur correspondante. (cf jauges)<br/>
+    <b>Effets</b> : Au début de son tour, lance dé de valeur correspondante.
+    (cf <a routerLink="/system/gauges" routerLinkActive="activebutton">jauges</a>)<br/>
     Si résultat + intensité des casses strictement supérieur à la résistance, alors les points d’action sont divisés par 2 pour ce tour (arrondi bas, min 0)<br/>
     Douleur : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Dé : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     <b>Source</b> : Pain at 4 or more<br/>
-    <b>Effects</b> : At the start of the turn, roll the corresponding die (see lower, or the gauges tab)<br/>
+    <b>Effects</b> : At the start of the turn, roll the corresponding die
+    (see <a routerLink="/system/gauges" routerLinkActive="activebutton">gauges</a>)<br/>
     If the result of the die + intensity of all breaks is strictly higher than the character's resistance, then their AP are divided by 2 for this turn (rounded down, minimum 0)<br/>
     Pain : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Die : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
@@ -59,11 +61,11 @@
 
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : Fatigue à 4 ou plus<br/>
-	<b>Effets</b> : Malus aux jets selon la fatigue. (cf jauges)<br/>
+	<b>Effets</b> : Malus aux jets selon la fatigue. (cf <a routerLink="/system/gauges" routerLinkActive="activebutton">jauges</a>)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 	<b>Source</b> : Fatigue at 4 or more<br/>
-	<b>Effects</b> : Penalty to rolls depending on the points. (see gauges)<br/>
+	<b>Effects</b> : Penalty to rolls depending on the points. (see <a routerLink="/system/gauges" routerLinkActive="activebutton">gauges</a>)<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Inconscient</h2>

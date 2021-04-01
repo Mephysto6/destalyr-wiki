@@ -1,14 +1,16 @@
 <p *ngIf="langue.l == 'fr'">
     Les magies sont de deux types : tangible et intangible.<br/>
     "Faire de la magie" est appelé "invoquer" et est séparé en plusieurs étapes :  1- création -ou- prise de contrôle, 2- manipulation, 3- dissipation -ou- relâchement de contrôle.<br/>
-    Une invocation peut donc se dérouler comme ceci : création, manipulation, relâchement de contrôle ; ou bien : prise de contrôle puis dissipation.<br/>
+    Une invocation peut donc par exemple se dérouler comme ceci : création, manipulation, relâchement de contrôle ; ou bien : prise de contrôle puis dissipation.<br/>
+    Il faut exactement une étape 1 et une étape 3, et un nombre quelconque d'étape 2. L'étape 2 est techniquement optionelle.<br/>
     La création et la dissipation sont légèrement plus difficile pour les magies tangibles.<br/>
     Garder le contrôle d'une magie intangible demande une concentration.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Magics are of two types : tangible and intangible.<br/>
     "To do magic" is called "invoking" and is separated in several steps :  1- creation -or- taking control, 2- manipulation, 3- dissipation -or- releasing control.<br/>
-    An invokation can go like this : creation, manipulation, releasing control ; or : taking control then dissipation.<br/>
+    An invocation can for example go like this : creation, manipulation, releasing control ; or : taking control then dissipation.<br/>
+    The invocation requires exactly one step 1 and one step 3, and any number of step 2. Step 2 is technically optional.<br/>
     Creation and dissipation are slithly more difficult for tangible magics.<br/>
     Keeping control of an intangible magic requires a concentration.<br/>
 </p>
@@ -97,7 +99,8 @@
 
 
 <p *ngIf="langue.l == 'fr'">
-    Pour créer, un mage lance un d12 + sensitivité et obtient l'ordre de grandeur maximale de la taille de l'élément créé (cf création).
+    Pour créer, un mage lance un d12 + sensitivité et obtient l'ordre de grandeur maximale de la taille de l'élément créé
+    (cf <a routerLink="/system/magic/creation" routerLinkActive="activebutton">création</a>).
     Le mage décide de combien d'élément est effectivement créé (ce qui décidera de la taille maximale de la manipulation) et dépense l'énergie correspondante.
     L'élément créé est sous le contrôle du mage.<br/>
     Pour manipuler, il faut avoir un élément sous son contrôle (soit prise de contrôle, soit créé), et commencer la manipulation.<br/>
@@ -105,7 +108,8 @@
     Si le mage ne veut qu'un effet visuel ou mineur, il peut considérer qu'il obtient des 1 à tous ses dés et ne les lance pas.
     Il ajoute ensuite ses bonus et peut lancer le sort.<br/>
     Si le mage veut un vrai sort utile, il dépense 1 point d'énergie pour lancer ses dés.
-    Il les distribue sur les 4 caractéristiques (cf manipulation), compte le total des dés pour déterminer la puissance et donc le niveau du sort,
+    Il les distribue sur les 4 caractéristiques (cf <a routerLink="/system/magic/manipulation" routerLinkActive="activebutton">manipulation</a>),
+    compte le total des dés pour déterminer la puissance et donc le niveau du sort,
     puis ajoute ses bonus et peut lancer le sort en dépensant les points d'énergie supplémentaires selon le niveau du sort.<br/>
     <br/>
     À tout moment de la manipulation, le mage peut décider d'arrêter. Il pert ses points d'action et d'énergie déjà dépensés mais n'a pas à en dépenser plus.<br/>
@@ -115,7 +119,8 @@
     Un mage peut essayer de prendre le contrôle de l'élément d'un autre mage. (pas encore implémenté)
 </p>
 <p *ngIf="langue.l == 'en'">
-    To create, a mage rolls a d12 + sensitivity and gets the maximum ballpark for the size of the created element (see création).
+    To create, a mage rolls a d12 + sensitivity and gets the maximum ballpark for the size of the created element
+    (see <a routerLink="/system/magic/creation" routerLinkActive="activebutton">creation</a>).
     The mage decides how much of the element is actually created (which will decide the maximum size of the manipulation to come) and spends the corresponding energy.
     The created element is under the mage's control.<br/>
     To manipulate, a mage needs some element under their control (either taken, or crerated) and starts the manipulation.<br/>
@@ -123,7 +128,8 @@
     If the mage only wants a visual or minor effect, they can consider that they rolled 1 on all their dice and doesn't need to really roll them.
     They can then add their bonuses and cast the spell.<br/>
     If the mage wants a real useful spell, they can spend 1 energy point to roll their dice.
-    They distribute them on the 4 caracteristics (see manipulation), counts the total of all dice to determine the power of and level of the spell,
+    They distribute them on the 4 caracteristics (see <a routerLink="/system/magic/manipulation" routerLinkActive="activebutton">manipulation</a>),
+    counts the total of all dice to determine the power of and level of the spell,
     then they can add their bonuses and cast the spell by spending the appropriate extra energy points depending on the spell level.<br/>
     <br/>
     At any moment of the manipulation, the mage can decide to stop. They lose any energy or action points already spent, but do not have to spend any more.<br/>

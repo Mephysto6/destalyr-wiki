@@ -121,7 +121,7 @@
 
 <p *ngIf="langue.l == 'fr'">
     *= se déplacer peut se faire de 2 façons : marcher et courrir. Marcher permet de se déplacer de 1 case par point dépensé, et courrir 2 cases par point.<br/>
-    **= selon la magie, cf system > magie<br/>
+    **= selon la magie, cf <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">magie</a><br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     *= moving can be done 2 ways : walking and running. Walking allows to move 1 square per spent point, and running 2 squares per point.<br/>
@@ -136,7 +136,9 @@
     Le trigger annoncé est ajouté aux autres actions qui déclanche des réactions jusqu'à ce que l'action soit relâchée.
     Quand le personnage reçoit une réaction (trigger ou réaction normale), le joueur décide de lancer l’action ou non.
     L'action reste préparée tant qu'elle n'est pas relâchée ou annulée.
-    Une seule action peut être préparée, une fois une action préparée, le personnage est concentré (cf états) jusqu’au relâchement.<br/>
+    Une seule action peut être préparée, une fois une action préparée, le personnage est concentré
+    (cf <a routerLink="/system/states" routerLinkActive="activebutton">état concentré</a>)
+    jusqu’au relâchement.<br/>
     Un personnage peut rester en concentration d’une action préparée sur plusieurs tour,
     mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf tableau ci-dessus).<br/>
 </p>
@@ -146,7 +148,9 @@
     The trigger announced is added to the list of actions which create reactions (until the prepared action is released).
     When the player gets a reaction (from the trigger or from normal means), they can decide to release the action or not.
     The action stays prepared until it is released or canceled by the player.
-    Only one action can be prepared, and once prepared the character is concentrated (see states) until the action is released or canceled.<br/>
+    Only one action can be prepared, and once prepared the character is concentrated
+    (see <a routerLink="/system/states" routerLinkActive="activebutton">state concentrated</a>)
+    until the action is released or canceled.<br/>
     A character can stay concentrated on an action over several turns,
-    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (cf table above).<br/>
+    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (see table above).<br/>
 </p>
