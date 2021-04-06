@@ -13,6 +13,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoreComponent } from './lore/lore.component';
 import { SystemComponent } from './system/system.component';
 import { CharacterComponent } from './character/character.component';
+import { MoreRulesComponent } from './more-rules/more-rules.component';
 
 import { HistoryComponent } from './lore/history/history.component';
 import { ReligionComponent } from './lore/religion/religion.component';
@@ -66,6 +67,10 @@ import { MagicElementalComponent } from './lore/magic-lore/magic-elemental/magic
 import { MagicRunicComponent } from './lore/magic-lore/magic-runic/magic-runic.component';
 import { MagicUsesComponent } from './lore/magic-lore/magic-uses/magic-uses.component';
 import { MetalComponent } from './lore/magic-lore/metal/metal.component';
+
+import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
+import { MindMagicComponent } from './more-rules/mind-magic/mind-magic.component';
+import { PurificationMagicComponent } from './more-rules/purification-magic/purification-magic.component';
 
 
 
@@ -121,7 +126,11 @@ import { MetalComponent } from './lore/magic-lore/metal/metal.component';
     SystemExplanationComponent,
     MetalComponent,
     MagicVisionComponent,
-    MagicSystemExplanationComponent
+    MagicSystemExplanationComponent,
+    MoreRulesComponent,
+    ActionFlowchartComponent,
+    MindMagicComponent,
+    PurificationMagicComponent
   ],
   imports: [
     BrowserModule,

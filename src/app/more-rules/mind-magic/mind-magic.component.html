@@ -1,0 +1,142 @@
+<p *ngIf="langue.l == 'fr'">Pour lire les pensées :</p>
+<p *ngIf="langue.l == 'en'">Pour lire les pensées :</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>Qualité / Profondeur des pensées</td>
+            <td>Discrétion</td>
+            <td>Quantité</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Voix dans la tête par morceaux</td>
+            <td>1</td>
+            <td>Un mot</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Voix dans la tête entière</td>
+            <td>2</td>
+            <td>quelques mots</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>mémoire courte</td>
+            <td>3</td>
+            <td>une phrase</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>mémoire courte ++</td>
+            <td>4</td>
+            <td>quelques phrases</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>mémoire longue</td>
+            <td>5</td>
+            <td>~ une description</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>souvenirs</td>
+            <td>6</td>
+            <td>~ une scène</td>
+            <td>21+ cases</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>Qualité / Profondeur des pensées</td>
+            <td>Discrétion</td>
+            <td>Quantité</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Voix dans la tête par morceaux</td>
+            <td>1</td>
+            <td>Un mot</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Voix dans la tête entière</td>
+            <td>2</td>
+            <td>quelques mots</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>mémoire courte</td>
+            <td>3</td>
+            <td>une phrase</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>mémoire courte ++</td>
+            <td>4</td>
+            <td>quelques phrase</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>mémoire longue</td>
+            <td>5</td>
+            <td>~ une description</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>souvenirs</td>
+            <td>6</td>
+            <td>~ une scène</td>
+            <td>21+ cases</td>
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="langue.l == 'fr'">
+    Après avoir lancé les dés pour le sort, si le mage veut être discret,
+    il lance un jet de précision (1d12 + (préc x2)) contre un jet de perception de l'opposant.
+    Si le mage ne veut pas être discret ou qu'il perd l'opposition des lancés, la victime sait
+    que quelqu'un lui lit les pensées. Si la victime est elle-même un mage d'esprit, elle le sait.<br/>
+    L'échelle est progressive, donc si la victime gagne de 1,
+    elle va par exemple juste avoir une sensation étrange d'être observée.
+    Si elle gagne de 2 ou 3, elle sent que quelqu'un a essayé d'atteindre son esprit.
+    Si elle gagne de 4 ou plus, elle sait de qui ça provient.<br/>
+    Dans tous les cas, les pensées ont été lues. Le lancé est purement pour déterminer la discrétion.
+</p>
+<p *ngIf="langue.l == 'en'">
+    Après avoir lancé les dés pour le sort, si le mage veut être discret,
+    il lance un jet de précision (1d12 + (préc x2)) contre un jet de perception de l'opposant.
+    Si le mage ne veut pas être discret ou qu'il perd l'opposition des lancés, la victime sait
+    que quelqu'un lui lit les pensées. Si la victime est elle-même un mage d'esprit, elle le sait.
+
+</p>

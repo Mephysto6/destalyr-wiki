@@ -20,6 +20,10 @@
         <menu-button *ngIf="langue.l == 'fr'">Personnage</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Character</menu-button>
     </a>
+    <a routerLink="/more-rules" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Règles additionnelles</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Additionnal rules</menu-button>
+    </a>
 </nav>
 <div class="page-background">
     <router-outlet></router-outlet>

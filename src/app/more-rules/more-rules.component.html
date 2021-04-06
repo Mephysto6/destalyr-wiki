@@ -1,0 +1,16 @@
+<nav class="band band2">
+    <a routerLink="/more-rules/action-flowchart" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Schéma des PA/PR</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Action flowchart</menu-button>
+    </a>
+    <a routerLink="/more-rules/mind-magic" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie d'esprit</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Mind magic</menu-button>
+    </a>
+    <a routerLink="/more-rules/purification-magic" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Magie de purification</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Purification magic</menu-button>
+    </a>
+</nav>
+<p>Ces règles sont en cours d'écriture et vont bientôt être rangées dans leur catégorie correspondante. Ou pas. On verra.</p>
+<router-outlet></router-outlet>
