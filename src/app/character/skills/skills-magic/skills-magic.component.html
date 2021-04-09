@@ -5,7 +5,8 @@
         <span class="hovertext">
             Pouvoir utiliser sa magie en combat.<br/><br/>
             En plus, débloque la méditation.<br/>
-            Méditer une heure (au lieu de se reposer une heure) redonne 1 point d'énergie et 2 points d'énergie temporaire (au lieu de 2 points d'énergie).<br/>
+            Méditer une heure (au lieu de se reposer une heure) redonne 1 point d'énergie
+            et 2 points d'énergie temporaire (au lieu de 2 points d'énergie).<br/>
             L'énergie temporaire ne peut être utilisée que pour la magie et disparait après 12 heures.<br/>
             Méditer ne peut pas ammener quelqu'un à posséder plus que 2 points d'énergie temporaire.
         </span>
@@ -14,8 +15,10 @@
         <span class="hovertext">
             Empêcher un mage d'utiliser sa magie.<br/><br/>
             La réaction consomme 1 PR et permet d'essayer d'enlever un dé à un mage visible lançant un sort.<br/>
-            La victime lance 1d12 + sensitivité, et le perturbant lance 1d12. Si le perturbant a une magie en commun avec le sort lancé, il peut ajouter sa sentivité au jet.<br/>
-            Si le perturbant obtient la même valeur ou plus haut que la valeur de la victime, la victime perd son dé le plus petit. Sinon, il ne se passe rien.
+            La victime lance 1d12 + sensitivité, et le perturbant lance 1d12.
+            Si le perturbant a une magie en commun avec le sort lancé, il peut ajouter sa sentivité au jet.<br/>
+            Si le perturbant obtient la même valeur ou plus haut que la valeur de la victime,
+            la victime perd son dé le plus petit. Sinon, il ne se passe rien.
         </span>
     </button>
     <button class="button-skills top center">
@@ -28,7 +31,7 @@
     </button>
     <button class="button-skills top right">
         <span class="hovertext">
-            Ignore tous les malus de magie liés à l'état fatigué.
+            Ignore tous les malus de magie liés à l'état fatigué (ne change pas les malus aux d12 et dégâts).
         </span>
     </button>
     <button class="passive-skills top xright">
@@ -40,9 +43,11 @@
         <span class="hovertext">
             Par exemple : le lancé donne 1-2-3-4.<br/>
             Situation 1, le sort requiert trois caractéristiques à 3,
-            le mage peut alors décider le transférer un point du 4 vers le 2, pour transformer le résultat en 1-3-3-3.<br/>
+            le mage peut alors décider le transférer un point du 4 vers le 2,
+            our transformer le résultat en 1-3-3-3.<br/>
             Situation 2, le sort requiert une caractéristique à 5,
-            le mage peut alors décider le transférer un point du 2 (ou du 3) vers le 4, pour transformer le résultat en 1-1-3-5 (ou 1-2-2-5).<br/>
+            le mage peut alors décider le transférer un point du 2 (ou du 3) vers le 4,
+            pour transformer le résultat en 1-1-3-5 (ou 1-2-2-5).<br/>
             Situation 3, le mage ne veut pas dépenser un point d'énergie supplémentaire,
             et il enlève un point d'un dé, pour passer la puissance totale à 9.
         </span>
@@ -62,7 +67,8 @@
     <button class="button-skills middle right">
         <span class="hovertext">
             Consomme de l'énergie additionnelle pour un bonus au sort<br/><br/>
-            Après avoir lancé un sort et obtenu le résultat, le lanceur peut décider de prendre des points de fatigue additionnels pour augmenter les résultats du sort.<br/>
+            Après avoir lancé un sort et obtenu le résultat, le lanceur peut décider
+            de prendre des points de fatigue additionnels pour augmenter les résultats du sort.<br/>
             1 point de fatigue en plus donne un +1.<br/>
             2 points de fatigue donnent un +1d4 ou deux +1.<br/>
         </span>
@@ -78,8 +84,11 @@
         <span class="hovertext">
             Réaction pour absorber la magie d'un ennemi.<br/><br/>
             Consomme 2 PR pour essayer d'aborber l'énergie du sort de l'adversaire.<br/>
-            Le mage qui veut absorber lance ses propres dés de magies comme s'il lançait un sort. Il les répartit sur les 4 caractéristiques et ajoute ses différents bonus.
-            Si le résultat sur chaque caractéristique est supérieur ou égal à celui du sort lancé (ou avec un manque cumulé de 2 ou moins), alors le sort est absorbé, n'a aucun effet, et l'énergie additionnelle dépensée par le lanceur est ajouté à l'énergie de l'absorbeur.
+            Le mage qui veut absorber lance ses propres dés de magies comme s'il lançait un sort.
+            Il les répartit sur les 4 caractéristiques et ajoute ses différents bonus.
+            Si le résultat sur chaque caractéristique est supérieur ou égal à celui du sort lancé
+            (ou avec un manque cumulé de 2 ou moins), alors le sort est absorbé, n'a aucun effet,
+            et l'énergie additionnelle dépensée par le lanceur est ajouté à l'énergie de l'absorbeur.
         </span>
     </button>
     <button class="button-skills bot center">
@@ -92,8 +101,12 @@
     <button class="button-skills bot right">
         <span class="hovertext">
             Utiliser toute son énergie restante pour lancer un sort très puissant.<br/><br/>
-            Consomme tous ses points d'énergie restants pour lancer un sort avec un nombre de d4 supplémentaires égal aux points d'énergie consommés (minimum 5). Tous les dés peuvent être utilisés sans limitation.<br/>
-            Après avoir utilisé la transe, le mage tombe inconscient (fatigue à 10), et sa récupération d'énergie est limitée à 1/heure pour les prochaines 24h.
+            Consomme tous ses points d'énergie restants pour lancer un sort
+            avec un nombre de d4 supplémentaires égal aux points d'énergie consommés (minimum 5).
+            Le mage garde la moitié (arrondi haut) des dés supplémentaires lancés (donc min 3).<br/>
+            Après avoir utilisé la transe, le mage tombe inconscient (fatigue à 10),
+            et sa récupération d'énergie est limitée à 1/heure pour les prochaines 24h
+            (et il ne récupère pas de vraie énergie avec la méditation).
         </span>
     </button>
     <button class="passive-skills bot xright">
