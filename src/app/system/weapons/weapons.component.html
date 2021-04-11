@@ -126,3 +126,23 @@
     If a two-handed weapon is used one-handed, the attack takes a -3 to hit.<br/>
     If a one-handed weapon is used two-handed, the attack gains a +1 to hit.<br/>
 </p>
+
+<h3 *ngIf="langue.l == 'fr'">Pas assez de force ?</h3>
+<h3 *ngIf="langue.l == 'en'">Not enough strength ?</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Si une personne veut utiliser une arme sans remplir la condition de force, l'attaque prend -2 au toucher par force manquante.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    If a person wants to use a weapon without filling the strength requirement, the attack takes a -2 to hit per missing strength.<br/>
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Distance limite pour les armes à distance</h3>
+<h3 *ngIf="langue.l == 'en'">Limit range for ranged weapons</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    à voir<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    TBD<br/>
+</p>
