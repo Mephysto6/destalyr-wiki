@@ -135,7 +135,8 @@
 <h3 *ngIf="langue.l == 'en'">Preparing an action</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Pour préparer une action, il faut posséder les PA pour faire l’action normalement, annoncer au DM l’action prévue ainsi que le déclenchement (trigger).
+    Pour préparer une action, il faut posséder les PA pour faire l’action normalement,
+    et annoncer au DM l’action prévue ainsi que le déclenchement (trigger).
     Le trigger annoncé est ajouté aux autres actions qui déclanche des réactions jusqu'à ce que l'action soit relâchée.
     Quand le personnage reçoit une réaction (trigger ou réaction normale), le joueur décide de lancer l’action ou non.
     L'action reste préparée tant qu'elle n'est pas relâchée ou annulée.
@@ -143,10 +144,11 @@
     (cf <a routerLink="/system/states" routerLinkActive="activebutton">état concentré</a>)
     jusqu’au relâchement.<br/>
     Un personnage peut rester en concentration d’une action préparée sur plusieurs tour,
-    mais doit consommer 1 PA à chaque tour pour garder sa concentration et est limité dans ses actions (cf tableau ci-dessus).<br/>
+    mais doit consommer 1 PA à chaque tour pour garder sa concentration.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    To prepare an action, one needs to have the appropriate AP in order to make the action normally, and announce which action is prepared as well as the trigger.
+    To prepare an action, one needs to have the appropriate AP in order to make the action normally,
+    and announce which action is prepared as well as the trigger.
     The AP are consumed and the character is now in concentration.
     The trigger announced is added to the list of actions which create reactions (until the prepared action is released).
     When the player gets a reaction (from the trigger or from normal means), they can decide to release the action or not.
@@ -155,5 +157,5 @@
     (see <a routerLink="/system/states" routerLinkActive="activebutton">state concentrated</a>)
     until the action is released or canceled.<br/>
     A character can stay concentrated on an action over several turns,
-    but must consume 1 AP per concentration at the beginning of their turn and is restricted in their actions (see table above).<br/>
+    but must consume 1 AP per concentration at the beginning of their turn.<br/>
 </p>

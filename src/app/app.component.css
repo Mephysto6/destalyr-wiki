@@ -100,14 +100,10 @@
     /* background-color: #cab7ff; */
 }
 p {
-    background-color: #ffffff79;
+    background-color: #ffffff91;
     border-radius: 20px;
     padding: 20px;
-}
-pre {
-    background-color: #ffffff79;
-    border-radius: 20px;
-    padding: 20px;
+    line-height: 1.5;
 }
 h2 {
     font: small-caps bold 25px/30px Georgia, serif;
@@ -124,7 +120,7 @@ table {
     margin: 10px;
     border: 1px solid black;
     border-collapse: collapse;
-    background-color: #ffffff79;
+    background-color: #ffffff91;
 }
 th, td {
     border: 1px solid black;
