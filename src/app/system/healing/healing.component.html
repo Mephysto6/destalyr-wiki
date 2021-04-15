@@ -1,20 +1,34 @@
+<h2 *ngIf="langue.l == 'fr'">Soin</h2>
+<h2 *ngIf="langue.l == 'en'">Healing</h2>
+
+<p *ngIf="langue.l == 'fr'">
+    L'intensité d'une blessure est liée à la douleur causée par cette blessure par :<br/>
+    Douleur = Intensité + 1 -ou bien- Intensité = Douleur - 1.<br/>
+    La définition de soigner est de réduire l'intensité de la blessure, ce qui réduit aussi la douleur liée.<br/>
+    Une blessure à 0 d’intensité existe encore<br/>
+    Une blessure à -1 d’intensité est guérie et disparaît.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    The intensity of a wound is linked to the pain caused by this wound by :<br/>
+    Pain = Intensity + 1 -or- Intensity = Pain - 1.<br/>
+    The definition of healing is to reduce the intensity of the wound which also reduces the pain.<br/>
+    A wound at 0 intensity still exists.<br/>
+    A wound at -1 intensity is healed and disappears.<br/><br/>
+</p>
+
 <h2 *ngIf="langue.l == 'fr'">Repos</h2>
 <h2 *ngIf="langue.l == 'en'">Rest</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer 1d6 par blessure par heure de repos.<br/>
-    Si le dé donne 6 alors la blessure correspondante est soignée de 1 (intensité et douleur réduites de 1 chacune)<br/>
+    Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer <b>1d6</b> par blessure par heure de repos.<br/>
+    Si le dé donne 6 alors la blessure correspondante est soignée de 1.<br/>
     Si le personnage s'occupe de sa blessure, alors le 5 permet aussi de soigner. Une personne ne peut s'occuper que d'une blessure à la fois.<br/>
-    Une blessure à 0 d’intensité existe encore<br/>
-    Une blessure à -1 d’intensité est guérie.<br/><br/>
-    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagne 2 points d'énergie).<br/>
+    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagner 2 points d'énergie).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    A wounded character can rest to heal. They can roll 1d6 per wound per hour of rest.<br/>
-    If the die lands on 6 then the corresponding wound is healed by 1 (intensity and pain both decreased by 1)<br/>
+    A wounded character can rest to heal. They can roll <b>1d6</b> per wound per hour of rest.<br/>
+    If the die lands on 6 then the corresponding wound is healed by 1.<br/>
     If the character tends to the wound, a 5 can also heal. A character can tend to only one wound at a time.<br/>
-    A wound at 0 intensity still exists.<br/>
-    A wound at -1 intensity is healed.<br/><br/>
     A character also loses 2 fatigue points per hour of rest (also called gaining 2 points of energy).<br/>
 </p>
 
@@ -23,11 +37,11 @@
 
 <p *ngIf="langue.l == 'fr'">
     Taille et distance selon blessure et cibles.<br/>
-    Le soigneur lance 1d12 + précision x2 et doit atteindre le seuil indiqué pour que le soin prenne effet.
+    Le soigneur lance <b>1d12 + précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.
 </p>
 <p *ngIf="langue.l == 'en'">
     Size and distance depending on wound and target.<br/>
-    The healer rolls 1d12 + precision x2 and must reach the threshold for the heal to have effect.
+    The healer rolls <b>1d12 + precision x2</b> and must reach the threshold for the heal to have effect.
 </p>
 
 
