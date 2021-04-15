@@ -2,14 +2,14 @@
 <h3 *ngIf="langue.l == 'en'">Hitting</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Attaque : 1d12 + stat (force ou dextérité selon armes)<br/>
-    Esquive : 1d12 + agilité<br/>
+    Attaque : <b>1d12 + stat</b> (force ou dextérité selon armes)<br/>
+    Esquive : <b>1d12 + agilité</b><br/>
     Si esquive strictement plus que attaque = esquivé => aucun dégâts<br/>
     Si attaque est égale ou plus que esquive = touché => lance les dégâts<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    Attack : 1d12 + stat (strength or dexterity depending on the weapon type)<br/>
-    Evade : 1d12 + agility<br/>
+    Attack : <b>1d12 + stat</b> (strength or dexterity depending on the weapon type)<br/>
+    Evade : <b>1d12 + agility</b><br/>
     If the evade score is higher than the attack score, then the attack misses and the attack deals no damage.<br/>
     If the attack score is equal to or higher than the evade score, then the attack hits, and the attacker can roll for damage.<br/>
 </p>
@@ -100,8 +100,8 @@
 <h3 *ngIf="langue.l == 'en'">Damages</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Attaquant : 1dx (selon arme) + stat (force ou dex)<br/>
-    Défense : res + armure (fixe)<br/>
+    Attaquant : <b>1dx</b> (selon arme) <b>+ stat</b> (force ou dex)<br/>
+    Défense : <b>res + armure</b> (fixe)<br/>
     Dégâts de l'attaque - défense = dégâts en points de douleur (min 0, si 0 alors pas de blessure)<br/>
     <br/>
     Blessure laissée dépend du type de dégâts de l'arme :<br/>
@@ -121,8 +121,8 @@
     5 : membre coupé - tous les os du membre cassés<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    Attacker : 1dx (depending on the weapon) + stat (str or dex)<br/>
-    Defense : res + armor (fixed)<br/>
+    Attacker : <b>1dx</b> (depending on the weapon) <b>+ stat</b> (str or dex)<br/>
+    Defense : <b>res + armor</b> (fixed)<br/>
     Attack damage - defense score = damage in pain points (min 0, if 0 then no wounds)<br/>
     <br/>
     Wound depends on the weapon damage type :<br/>

@@ -29,7 +29,7 @@
             <td>mains nues</td>
             <td>d1</td>
             <td>/</td>
-            <td>1</td>
+            <td>2</td>
         </tr>
         <tr>
             <td>Armes improvisées</td>
@@ -109,7 +109,7 @@
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    *= L'arbalète ignore la restriction de force, mais demande une autre action (2PA) pour recharger l'arbalète
+    *= L'arbalète ignore la restriction de Force, mais demande une autre action (2PA) pour recharger l'arbalète
 </p>
 <p *ngIf="langue.l == 'en'">
     *= The crossbow ignores the force restriction, but requires another action (2AP) to recharge.
@@ -131,10 +131,10 @@
 <h3 *ngIf="langue.l == 'en'">Not enough strength ?</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Si une personne veut utiliser une arme sans remplir la condition de force, l'attaque prend -2 au toucher par force manquante.<br/>
+    Si une personne veut utiliser une arme sans remplir la condition de Force, l'attaque prend -2 au toucher par Force manquante.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    If a person wants to use a weapon without filling the strength requirement, the attack takes a -2 to hit per missing strength.<br/>
+    If a person wants to use a weapon without filling the Strength requirement, the attack takes a -2 to hit per missing Strength.<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Distance limite pour les armes à distance</h3>

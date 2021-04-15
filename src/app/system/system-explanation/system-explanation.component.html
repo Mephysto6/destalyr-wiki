@@ -5,7 +5,7 @@
     Les différents dés sont appelés par leur nombre de faces. Un dé à 20 faces est appelé un d20, un dé à 6 faces est appelé un d6, etc.<br/>
     Le jeu Destalyr est basé sur le d12, cela veut dire que la plupart des jets de dés se font avec un d12.<br/>
     <br/>
-    Par exemple pour attaquer avec un marteau, il faut lancer 1d12 + Force contre l'esquive de l'adversaire.
+    Par exemple pour attaquer avec un marteau, il faut lancer <b>1d12 + Force</b> contre l'esquive de l'adversaire.
     Ici, Force correspond à la caractéristique de force du personnage qui effectue l'action,
     et 1d12 correspond au lancé d'un dé à 12 faces.
     Le résultat du dé est ajouté à la caractéristique pour obtenir le résultat final du jet.
@@ -17,7 +17,7 @@
     Par exemple dans une situation où A attaque B avec un marteau, et leurs caractéristiques sont :<br/>
     A : Force 5, Résistance 4, Dextérité 2, Agilité 3<br/>
     B : Force 1, Résistance 2, Dextérité 6, Agilité 4<br/>
-    A lance 1d12 + Force pour toucher, et B lance 1d12 + Agilité pour esquiver.
+    A lance <b>1d12 + Force pour toucher</b>, et B lance <b>1d12 + Agilité pour esquiver</b>.
     A obtient un 7 au dé, donc 7 + 5 = 12 au toucher. B obtient un 3 au dé, donc 3 + 4 = 7 à l'esquive.<br/>
     Le jet de toucher est plus élevé que le jet d'esquive, l'attaque touche.<br/>
     <br/>
@@ -26,7 +26,7 @@
     <br/>
     Une des conventions est d'écrire, dans les lancés, les dés d'abord, les bonus fixes ensuite,
     et de garder le même ordre pour annoncer les résultats des lancés.<br/>
-    Par exemple, dans notre situation précédente, le lancé de toucher de A s'écrit 1d12 + Force,
+    Par exemple, dans notre situation précédente, le lancé de toucher de A s'écrit <b>1d12 + Force</b>,
     et le résultat 7 + 5, 7 correspondant au lancé du d12, et 5 correspondant à sa force. S'il avait lancé un 2 au dé, il aurait eu 2 + 5.<br/>
     Si plusieurs dés ou plusieurs valeurs fixes sont dans le même jet, les mettre dans l'ordre "logique" en jeu.
     Par exemple, si A obtient un +1 au toucher grâce à une compétence, il lancera 1d12 + Force + 1, ce qui donne 7 + 5 + 1 et non 7 + 6.
@@ -37,7 +37,8 @@
     1H = à une main ; 2H = à deux mains<br/>
     <br/>
     Parfois, des valeurs entières seront divisées par deux (ou autre). Sauf mention du contraire,
-    les valeurs non entières sont arrondies en dessous (avec un minimum de 1 en général). Donc 3 divisé par 2 donne 1.<br/>
+    les valeurs non entières sont arrondies en dessous (avec un minimum de 1 en général).<br/>
+    Donc 3 divisé par 2 donne 1.<br/>
 </p>
 
 <p *ngIf="langue.l == 'en'">

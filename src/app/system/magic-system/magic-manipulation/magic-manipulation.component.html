@@ -2,7 +2,7 @@
     Tout sort lancé possède 4 caractéristiques :<br/>
     Taille - Distance - Efficacité - Précision<br/>
     <br/>
-    Par défaut : lancer 4d4<br/>
+    Par défaut : lancer <b>4d4</b><br/>
     Coûte 1 point de fatigue pour lancer les dés<br/>
     Choisit dans quelle catégorie va chaque dé<br/>
     Ne peut pas "couper" de dé<br/>
@@ -28,8 +28,8 @@
     <br/>
     Détail : Si une caractéristique n'a pas de dé ou est à 0, le sort ne marche pas. De plus, il est impossible d'ajouter un +1 sur une caractéristique sans dé.<br/>
     <br/>
-    Sensitivité à 5 : lance 1d4 en plus (total : 5d4)<br/>
-    Sensitivité à 6 : lance 1d6 en plus (total 4d4 + 1d6)<br/>
+    Sensitivité à 5 : lance 1d4 en plus (total : <b>5d4</b>)<br/>
+    Sensitivité à 6 : lance 1d6 en plus (total <b>4d4 + 1d6</b>)<br/>
     <br/>
     Puissance = somme de tous les dés utilisés (sans compter les +1 de magie primaire ou autres bonus/malus)<br/>
     La puissance d'un sort détermine son "niveau".<br/>
@@ -37,7 +37,7 @@
     Si le sort a une puissance entre 5 et 9, il est de niveau 1, et ne coûte pas plus d'énergie que de lancer les dés (1 point).<br/>
     Si le sort a une puissance entre 10 et 14 inclus, il est de niveau 2, et coûte 1 point d'énergie aditionnel (2 points au total).<br/>
     Si le sort a une puissance entre 15 et 19 inclus, il est de niveau 3, et coûte 2 point d'énergie aditionnel (3 points au total).<br/>
-    Ainsi, chaque niveau de sort correspond à une fourchette de 5 de puissance et coûte de plus en plus cher à lancer.<br/>
+    Les niveaux de sorts continuent à suivre la puissance du sort par fourchette de 5 et coûtent de plus en plus cher, suivant les règles déjà établies.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -47,8 +47,8 @@
 <h3 *ngIf="langue.l == 'en'">Attack</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Toucher : 1d12 + (précision x2) contre esquive<br/>
-    Dégâts : (efficacité x taille /2) - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
+    Toucher : <b>1d12 + (précision x2)</b> contre esquive<br/>
+    Dégâts : <b>(efficacité x taille /2)</b> - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
     (tant que taille couvre la cible, si taille est plus grande que cible, taille = cible
     (cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeurs</a>)
     selon les situations)<br/>
