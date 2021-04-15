@@ -152,3 +152,10 @@ div .div-table {
     position: absolute;
     z-index: 99;
 }
+.image-schema {
+    min-width: 330px;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.377);
+    position: absolute;
+    margin-left: max(65%, 690px);
+}
