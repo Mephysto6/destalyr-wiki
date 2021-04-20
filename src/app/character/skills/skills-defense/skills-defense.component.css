@@ -1,7 +1,7 @@
 @import '../skills.component.css';
 
 .div-skills img {
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 
@@ -9,35 +9,29 @@
   top:3.5%;
 }
 .div-skills .middle {
-  top:32.1%;
+  top:30.54%;
 }
 .div-skills .bot {
-  top:60.9%;
+  top:57.6%;
 }
 .div-skills .xbot {
-  top:89.5%;
+  top:84.7%;
 }
 
-.div-skills .tleft {
-  left:38.92%;
+.div-skills .xleft {
+  left:28.12%;
 }
-.div-skills .tcenter {
-  left:52.35%;
+.div-skills .left {
+  left:41.82%;
 }
-.div-skills .tright {
-  left:65.85%;
+.div-skills .center {
+  left:55.5%;
 }
-.div-skills .bleft {
-  left:32.2%;
-}
-.div-skills .bcenter {
-  left:45.7%;
-}
-.div-skills .bright {
-  left:59.1%;
+.div-skills .right {
+  left:69.18%;
 }
 
 .div-skills .button-skills {
-  height: 9.5%;
-  width: 10.72%;
+  height: 8.95%;
+  width: 10.9%;
 }

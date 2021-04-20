@@ -1,6 +1,6 @@
 <br/>
 <div class="div-skills">
-    <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_7_attack.png"/>
+    <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_attack.png"/>
     <button class="button-skills top left">
         <span class="hovertext" *ngIf="langue.l == 'fr'">
             Être capable d'utiliser des armes de distance en combat.
@@ -17,7 +17,8 @@
     <button class="button-skills middle xleft">
         <span class="hovertext">
             Utiliser des PA pour augmenter ses chances de toucher.<br/><br/>
-            Consommer entre 1, 2 ou 3 PA (une fois par tour) pour obtenir +1, +2 ou +3 (respectivement) au toucher pour la prochaine attaque à distance. Demande concentration.
+            Consommer entre 1, 2 ou 3 PA (une fois par tour) pour obtenir +1, +2 ou +3 (respectivement) au toucher pour la prochaine attaque à distance.<br/>
+            Demande concentration.
         </span>
     </button>
     <button class="button-skills middle left">
@@ -30,9 +31,9 @@
     <button class="button-skills middle center">
         <span class="hovertext">
             Analyser les mouvements d'un ennemi pour le toucher plus facilement.<br/><br/>
-            Consomme 1 PA (une fois par tour) pour analyser une créature et gagner +1 au toucher pour toutes les prochaines attaques sur cette créature. Stackable.<br/>
+            Consomme 1 PA (une fois par tour) pour analyser une créature et gagner +1 au toucher pour toutes les prochaines attaques sur cette créature. Cummulable.<br/>
             Si le +3 au toucher est atteint, un +1 au dégât est ajouté. Un +5 au toucher donne un +2 aux dégâts, etc.<br/>
-            Bonjour je suis un skill snowball.<br/>
+            Demande concentration.<br/>
         </span>
     </button>
     <button class="button-skills middle right">
@@ -55,15 +56,24 @@
             Si le résultat du jet d'attaque est supérieur au résultat d'esquive de 5 ou plus, l'attaque est un crit (ignore résistance naturelle).
         </span>
     </button>
-    <button class="button-skills bot lcenter">
+    <button class="button-skills bot left">
         <span class="hovertext">
             Ne provoque plus de réaction de la part d'un ennemi occupé.<br/><br/>
             Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.<br/>
-            Un ennemi occupé n'obtient pas de réaction de la part des actions du personnage avec cette compétence.<br/>
+            Un ennemi occupé n'obtient pas de réaction de la part des actions du personnage avec cette compétence.<br/><br/>
             De plus, le personnage gagne un +1 au toucher contre les ennemis occupés.
         </span>
     </button>
-    <button class="button-skills bot rcenter">
+    <button class="button-skills bot center">
+        <span class="hovertext">
+            Sa présence influe sur les ennemis.<br/><br/>
+            Bonus - Au début du combat, faire une choix entre Présence Imposante ou Présence Discrète.<br/>
+            Présence Imposante impose un -1 au toucher à tous les ennemis voulant attaquer quelqu'un d'autre.<br/>
+            Présence Discrète impose un -1 au toucher à tous les ennemis voulant attaquer la personne avec la Présence Discrète.<br/><br/>
+            Action - Une fois par tour, peut consommer 1 PA pour donner Inspiration à un allié (+1 au toucher pour le prochain tour).
+        </span>
+    </button>
+    <button class="button-skills bot right">
         <span class="hovertext">
             Gagne des PA.<br/><br/>
             Une fois par jour, peut prendre 2 points de fatigue pour gagner 4 PA pour un tour.
