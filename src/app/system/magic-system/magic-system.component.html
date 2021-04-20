@@ -23,5 +23,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Magie de Groupe</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Group Magic</menu-button>
     </a>
+    <a routerLink="/system/magic/uses" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Utilisations</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Magic Uses</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>

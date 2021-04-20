@@ -100,7 +100,7 @@
     /* background-color: #cab7ff; */
 }
 p {
-    background-color: #ffffff91;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     padding: 20px;
     line-height: 1.5;
@@ -120,7 +120,7 @@ table {
     margin: 10px;
     border: 1px solid black;
     border-collapse: collapse;
-    background-color: #ffffff91;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 th, td {
     border: 1px solid black;
@@ -155,7 +155,7 @@ div .div-table {
 .image-schema {
     min-width: 330px;
     width: 30%;
-    background-color: rgba(255, 255, 255, 0.377);
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     margin-left: max(65%, 690px);
 }
