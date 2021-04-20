@@ -13,6 +13,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoreComponent } from './lore/lore.component';
 import { SystemComponent } from './system/system.component';
 import { CharacterComponent } from './character/character.component';
+import { ColoursOfMagicComponent } from './colours-of-magic/colours-of-magic.component';
 import { MoreRulesComponent } from './more-rules/more-rules.component';
 
 import { HistoryComponent } from './lore/history/history.component';
@@ -58,7 +59,6 @@ import { MagicManipulationComponent } from './system/magic-system/magic-manipula
 import { MagicVisionComponent } from './system/magic-system/magic-vision/magic-vision.component';
 import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
 import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
-import { MagicUsesComponent } from './system/magic-system/magic-uses/magic-uses.component';
 
 import { SkillsAttackComponent } from './character/skills/skills-attack/skills-attack.component';
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
@@ -67,12 +67,13 @@ import { SkillsMagicComponent } from './character/skills/skills-magic/skills-mag
 import { MagicElementalComponent } from './lore/magic-lore/magic-elemental/magic-elemental.component';
 import { MagicRunicComponent } from './lore/magic-lore/magic-runic/magic-runic.component';
 import { MetalComponent } from './lore/magic-lore/metal/metal.component';
-import { MagicColorsComponent } from './lore/magic-lore/magic-colors/magic-colors.component';
+import { MagicColoursComponent } from './lore/magic-lore/magic-colours/magic-colours.component';
+
+import { MagicUsesComponent } from './colours-of-magic/magic-uses/magic-uses.component';
+import { MindMagicComponent } from './colours-of-magic/mind-magic/mind-magic.component';
+import { PurificationMagicComponent } from './colours-of-magic/purification-magic/purification-magic.component';
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
-import { MindMagicComponent } from './more-rules/mind-magic/mind-magic.component';
-import { PurificationMagicComponent } from './more-rules/purification-magic/purification-magic.component';
-
 
 
 @NgModule({
@@ -132,7 +133,8 @@ import { PurificationMagicComponent } from './more-rules/purification-magic/puri
     ActionFlowchartComponent,
     MindMagicComponent,
     PurificationMagicComponent,
-    MagicColorsComponent
+    MagicColoursComponent,
+    ColoursOfMagicComponent
   ],
   imports: [
     BrowserModule,

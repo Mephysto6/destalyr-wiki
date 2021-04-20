@@ -1,0 +1,15 @@
+<nav class="band band2">
+    <a routerLink="/colours-of-magic/uses" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Exemples d'utilisations</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Uses examples</menu-button>
+    </a>
+    <a routerLink="/colours-of-magic/mind" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Esprit</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Mind</menu-button>
+    </a>
+    <a routerLink="/colours-of-magic/purification" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Purification</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Purification</menu-button>
+    </a>
+</nav>
+<router-outlet></router-outlet>

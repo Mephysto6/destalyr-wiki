@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PageLanguageService } from "../../../page-language.service";
 
 @Component({
-  selector: 'app-magic-colors',
-  templateUrl: './magic-colors.component.html',
-  styleUrls: ['./magic-colors.component.css']
+  selector: 'app-magic-colours',
+  templateUrl: './magic-colours.component.html',
+  styleUrls: ['./magic-colours.component.css']
 })
-export class MagicColorsComponent implements OnInit {
+export class MagicColoursComponent implements OnInit {
 
   constructor(public langue: PageLanguageService) {
   }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MagicColorsComponent } from './magic-colors.component';
+import { ColoursOfMagicComponent } from './colours-of-magic.component';
 
-describe('MagicColorsComponent', () => {
-  let component: MagicColorsComponent;
-  let fixture: ComponentFixture<MagicColorsComponent>;
+describe('ColoursOfMagicComponent', () => {
+  let component: ColoursOfMagicComponent;
+  let fixture: ComponentFixture<ColoursOfMagicComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MagicColorsComponent ]
+      declarations: [ ColoursOfMagicComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MagicColorsComponent);
+    fixture = TestBed.createComponent(ColoursOfMagicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
