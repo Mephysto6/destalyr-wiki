@@ -19,5 +19,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Connaissances</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Knowledge</menu-button>
     </a>
+    <a routerLink="/character/dying" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Mourir</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Dying</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>

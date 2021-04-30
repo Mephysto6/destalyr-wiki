@@ -38,6 +38,7 @@ import { MagicCharacterComponent } from './character/magic-character/magic-chara
 import { StatsComponent } from './character/stats/stats.component';
 import { SkillsComponent } from './character/skills/skills.component';
 import { KnowledgeComponent } from './character/knowledge/knowledge.component';
+import { DyingComponent } from './character/dying/dying.component';
 
 import { TheElvenTimeComponent } from './lore/history/the-elven-time/the-elven-time.component';
 import { TheElvenWarComponent } from './lore/history/the-elven-war/the-elven-war.component';
@@ -134,7 +135,8 @@ import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-f
     MindMagicComponent,
     PurificationMagicComponent,
     MagicColoursComponent,
-    ColoursOfMagicComponent
+    ColoursOfMagicComponent,
+    DyingComponent
   ],
   imports: [
     BrowserModule,
