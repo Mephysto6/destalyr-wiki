@@ -47,7 +47,7 @@
         <tr>
             <td>12</td>
             <td>2-11</td>
-            <td>attaque réussie</td>
+            <td>attaque réussie + option pour réattaquer*</td>
         </tr>
         <tr>
             <td>12</td>
@@ -86,7 +86,7 @@
         <tr>
             <td>12</td>
             <td>2-11</td>
-            <td>hit</td>
+            <td>hit + option to reattack*</td>
         </tr>
         <tr>
             <td>12</td>
@@ -95,6 +95,15 @@
         </tr>
     </table>
 </div>
+
+<p *ngIf="langue.l == 'fr'">
+    *= après avoir lancé un 12 à l'attaque, un personnage peut dépenser un point de fatigue ou un PA pour attaquer une deuxième fois.<br/>
+    N'est pas limité à une fois par tour.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    *= if the attack roll is a 12, then the character can spend a fatigue point or an AP to attack a second time.<br/>
+    Not limited to once per turn.<br/>
+</p>
 
 <h3 *ngIf="langue.l == 'fr'">Dégâts</h3>
 <h3 *ngIf="langue.l == 'en'">Damages</h3>
