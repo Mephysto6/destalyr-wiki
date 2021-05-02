@@ -18,6 +18,9 @@
   top:84.76%;
 }
 
+.div-skills .xleft {
+  left:18%;
+}
 .div-skills .left {
   left:36.4%;
 }
@@ -27,8 +30,8 @@
 .div-skills .right {
   left:63.6%;
 }
-.div-skills .xleft {
-  left:18%;
+.div-skills .xright {
+  left:83%;
 }
 
 .div-skills .button-skills {
