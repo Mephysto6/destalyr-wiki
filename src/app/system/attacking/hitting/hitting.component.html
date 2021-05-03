@@ -1,0 +1,106 @@
+<h3 *ngIf="langue.l == 'fr'">Toucher</h3>
+<h3 *ngIf="langue.l == 'en'">Hitting</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Attaque : <b>1d12 + stat</b> (force ou dextérité selon armes)<br/>
+    Esquive : <b>1d12 + agilité</b><br/>
+    Si esquive strictement plus que attaque = esquivé => aucun dégâts<br/>
+    Si attaque est égale ou plus que esquive = touché => lance les dégâts<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    Attack : <b>1d12 + stat</b> (strength or dexterity depending on the weapon type)<br/>
+    Evade : <b>1d12 + agility</b><br/>
+    If the evade score is higher than the attack score, then the attack misses and the attack deals no damage.<br/>
+    If the attack score is equal to or higher than the evade score, then the attack hits, and the attacker can roll for damage.<br/>
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Résultats spéciaux</h3>
+<h3 *ngIf="langue.l == 'en'">Special results</h3>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Attaque</th>
+            <th>Défense</th>
+            <th>Résultat</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>résultat normal selon bonus</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2-11</td>
+            <td>attaque ratée</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>attaquant distrait (-1 esquive jusqu'au début de son prochain tour)</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1</td>
+            <td>critique : ignore la résistance naturelle.</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>2-11</td>
+            <td>attaque réussie + option pour réattaquer*</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>résultat normal selon bonus</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Attack</th>
+            <th>Defense</th>
+            <th>Results</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>normal result depending on stats</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2-11</td>
+            <td>miss</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>attacker distracted (-1 evade until the start of his next turn)</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1</td>
+            <td>critical : ignore natural resistance</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>2-11</td>
+            <td>hit + option to reattack*</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>normal result depending on stats</td>
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="langue.l == 'fr'">
+    *= après avoir lancé un 12 à l'attaque, un personnage peut dépenser un point de fatigue ou un PA pour attaquer une deuxième fois.<br/>
+    N'est pas limité à une fois par tour.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    *= if the attack roll is a 12, then the character can spend a fatigue point or an AP to attack a second time.<br/>
+    Not limited to once per turn.<br/>
+</p>

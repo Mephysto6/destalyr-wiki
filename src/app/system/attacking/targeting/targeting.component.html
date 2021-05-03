@@ -1,0 +1,97 @@
+<p *ngIf="langue.l == 'fr'">
+    Des personnes entraînées peuvent cibler des parties du corps.<br/>
+    /!\ Page en construction
+</p>
+<p *ngIf="langue.l == 'en'">
+    Trained characters can target parts of the body.<br/>
+    /!\ Page in construction
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Cible</th>
+            <th>Malus au toucher</th>
+            <th>Résultat additionnels</th>
+        </tr>
+        <tr>
+            <td>Tête</td>
+            <td>-2</td>
+            <td>étourdissement</td>
+        </tr>
+        <tr>
+            <td>Torse</td>
+            <td>-</td>
+            <td>extra bleeding</td>
+        </tr>
+        <tr>
+            <td>Bras</td>
+            <td>-1</td>
+            <td>diffcultés pour manipuler</td>
+        </tr>
+        <tr>
+            <td>Main</td>
+            <td>-3</td>
+            <td>peut lâcher son arme</td>
+        </tr>
+        <tr>
+            <td>Jambe</td>
+            <td>-1</td>
+            <td>difficultés pour bouger</td>
+        </tr>
+        <tr>
+            <td>Genou</td>
+            <td>-3</td>
+            <td>empêche de bouger</td>
+        </tr>
+        <tr>
+            <td>Pieds</td>
+            <td>-2</td>
+            <td>difficultés pour bouger</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Target</th>
+            <th>To hit</th>
+            <th>Additional results</th>
+        </tr>
+        <tr>
+            <td>Head</td>
+            <td>-2</td>
+            <td>stun</td>
+        </tr>
+        <tr>
+            <td>Torso</td>
+            <td>-</td>
+            <td>extra bleeding</td>
+        </tr>
+        <tr>
+            <td>Arm</td>
+            <td>-1</td>
+            <td>diffculties to manipulate</td>
+        </tr>
+        <tr>
+            <td>Hand</td>
+            <td>-3</td>
+            <td>can drop their weapon</td>
+        </tr>
+        <tr>
+            <td>Leg</td>
+            <td>-1</td>
+            <td>difficulties to move</td>
+        </tr>
+        <tr>
+            <td>Knee</td>
+            <td>-3</td>
+            <td>prevents moving</td>
+        </tr>
+        <tr>
+            <td>Foot</td>
+            <td>-2</td>
+            <td>difficulties to move</td>
+        </tr>
+    </table>
+</div>

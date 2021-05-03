@@ -69,6 +69,10 @@ import { PurificationMagicComponent } from './colours-of-magic/purification-magi
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
 
+import { HittingComponent } from './system/attacking/hitting/hitting.component';
+import { DamagesComponent } from './system/attacking/damages/damages.component';
+import { TargetingComponent } from './system/attacking/targeting/targeting.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -124,7 +128,15 @@ const routes: Routes = [
       { path: 'weapons', component: WeaponsComponent },
       { path: 'armors', component: ArmorsComponent },
       { path: 'gauges', component: GaugesComponent },
-      { path: 'attacking', component: AttackingComponent },
+      { 
+        path: 'attacking',
+        component: AttackingComponent,
+        children: [
+          { path: 'hitting', component: HittingComponent },
+          { path: 'damages', component: DamagesComponent },
+          { path: 'targeting', component: TargetingComponent },
+        ]
+      },
       { path: 'combat', component: CombatComponent },
       {
         path: 'magic',

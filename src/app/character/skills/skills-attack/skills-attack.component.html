@@ -3,7 +3,10 @@
     <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_attack.png"/>
     <button class="button-skills top left">
         <span class="hovertext" *ngIf="langue.l == 'fr'">
-            Être capable d'utiliser des armes de distance en combat.
+            Être capable d'utiliser des armes de distance en combat.<br/><br/>
+            Pour chaque attaque, le personnage attaquant doit cibler un membre spécifique de sa victime.<br/>
+            Selon le membre, l'attaque peut subir un malus au toucher*.
+            Si l'attaque touche, la victime souffre des pénalités selon le membre touché et les dégâts*.
         </span>
         <span class="hovertext" *ngIf="langue.l == 'en'">
             Be able to use ranged weapons in combat.
@@ -11,7 +14,10 @@
     </button>
     <button class="button-skills top right">
         <span class="hovertext">
-            Être capable d'utiliser des armes de mêlée en combat.
+            Être capable d'utiliser des armes de mêlée en combat.<br/><br/>
+            Pour chaque attaque, le personnage attaquant doit cibler un membre spécifique de sa victime.<br/>
+            Selon le membre, l'attaque peut subir un malus au toucher*.
+            Si l'attaque touche, la victime souffre des pénalités selon le membre touché et les dégâts*.
         </span>
     </button>
     <button class="button-skills middle xleft">
@@ -77,7 +83,8 @@
     <button class="button-skills bot right">
         <span class="hovertext">
             Gagne des PA.<br/><br/>
-            Une fois par jour, peut prendre 2 points de fatigue pour gagner 4 PA pour un tour.
+            Une fois par tour, peut prendre 2 points de fatigue pour gagner 4 PA pour un tour.<br/>
+            Les PA gagnés ainsi ne peuvent être cumulés, ni gardés pour un tour suivant.
         </span>
     </button>
     <button class="button-skills bot xright">
@@ -88,3 +95,10 @@
         </span>
     </button>
 </div>
+
+<p *ngIf="langue.l == 'fr'">
+    * : voir page cibler
+</p>
+<p *ngIf="langue.l == 'en'">
+    * : see targeting
+</p>

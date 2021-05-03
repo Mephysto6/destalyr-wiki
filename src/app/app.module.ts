@@ -76,6 +76,10 @@ import { PurificationMagicComponent } from './colours-of-magic/purification-magi
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
 
+import { HittingComponent } from './system/attacking/hitting/hitting.component';
+import { DamagesComponent } from './system/attacking/damages/damages.component';
+import { TargetingComponent } from './system/attacking/targeting/targeting.component';
+
 
 @NgModule({
   declarations: [
@@ -136,7 +140,10 @@ import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-f
     PurificationMagicComponent,
     MagicColoursComponent,
     ColoursOfMagicComponent,
-    DyingComponent
+    DyingComponent,
+    HittingComponent,
+    DamagesComponent,
+    TargetingComponent
   ],
   imports: [
     BrowserModule,

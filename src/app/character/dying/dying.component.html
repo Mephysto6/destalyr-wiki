@@ -40,3 +40,15 @@
     Blood loss is the most classic death.<br/>
     
 </p>
+
+<h3 *ngIf="langue.l == 'fr'">Mort subite</h3>
+<h3 *ngIf="langue.l == 'en'">Instant death</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Si un personnage reçoit une blessure d'intensité 11 ou plus, le personnage meurt sur le coup.<br/>
+    La raison de la mort dépend de la blessure (décapitation, flèche dans le coeur, ...).
+</p>
+<p *ngIf="langue.l == 'en'">
+    If a character receives a wound of intensity 11 or more, then the character dies instantly.<br/>
+    The cause of death depends on the wound (decapitation, arrow to the heart, ...).
+</p>
