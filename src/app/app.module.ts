@@ -22,6 +22,7 @@ import { RacesComponent } from './lore/races/races.component';
 import { MagicLoreComponent } from './lore/magic-lore/magic-lore.component';
 import { GeographyComponent } from './lore/geography/geography.component';
 import { CitadelleComponent } from './lore/citadelle/citadelle.component';
+import { ProfessionsComponent } from './lore/professions/professions.component';
 
 import { WeaponsComponent } from './system/weapons/weapons.component';
 import { ArmorsComponent } from './system/armors/armors.component';
@@ -143,7 +144,8 @@ import { TargetingComponent } from './system/attacking/targeting/targeting.compo
     DyingComponent,
     HittingComponent,
     DamagesComponent,
-    TargetingComponent
+    TargetingComponent,
+    ProfessionsComponent
   ],
   imports: [
     BrowserModule,

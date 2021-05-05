@@ -96,11 +96,14 @@
     </table>
 </div>
 
+<h3 *ngIf="langue.l == 'fr'">Continuation</h3>
+<h3 *ngIf="langue.l == 'en'">Continuation</h3>
+
 <p *ngIf="langue.l == 'fr'">
-    *= après avoir lancé un 12 à l'attaque, un personnage peut dépenser un point de fatigue ou un PA pour attaquer une deuxième fois.<br/>
+    *= si le résultat du dé est 12 à l'attaque, un personnage peut dépenser un point de fatigue ou un PA pour attaquer une deuxième fois.<br/>
     N'est pas limité à une fois par tour.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    *= if the attack roll is a 12, then the character can spend a fatigue point or an AP to attack a second time.<br/>
+    *= if the attack roll is a 12, then the character can spend one fatigue point or one AP to attack a second time.<br/>
     Not limited to once per turn.<br/>
 </p>
