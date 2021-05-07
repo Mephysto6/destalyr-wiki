@@ -81,6 +81,10 @@ import { HittingComponent } from './system/attacking/hitting/hitting.component';
 import { DamagesComponent } from './system/attacking/damages/damages.component';
 import { TargetingComponent } from './system/attacking/targeting/targeting.component';
 
+import { MindReadingComponent } from './colours-of-magic/mind-magic/mind-reading/mind-reading.component';
+import { MindSlowingComponent } from './colours-of-magic/mind-magic/mind-slowing/mind-slowing.component';
+import { MindHallucinatingComponent } from './colours-of-magic/mind-magic/mind-hallucinating/mind-hallucinating.component';
+
 
 @NgModule({
   declarations: [
@@ -145,7 +149,10 @@ import { TargetingComponent } from './system/attacking/targeting/targeting.compo
     HittingComponent,
     DamagesComponent,
     TargetingComponent,
-    ProfessionsComponent
+    ProfessionsComponent,
+    MindReadingComponent,
+    MindSlowingComponent,
+    MindHallucinatingComponent
   ],
   imports: [
     BrowserModule,

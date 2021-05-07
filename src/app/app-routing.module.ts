@@ -74,6 +74,10 @@ import { HittingComponent } from './system/attacking/hitting/hitting.component';
 import { DamagesComponent } from './system/attacking/damages/damages.component';
 import { TargetingComponent } from './system/attacking/targeting/targeting.component';
 
+import { MindReadingComponent } from './colours-of-magic/mind-magic/mind-reading/mind-reading.component';
+import { MindSlowingComponent } from './colours-of-magic/mind-magic/mind-slowing/mind-slowing.component';
+import { MindHallucinatingComponent } from './colours-of-magic/mind-magic/mind-hallucinating/mind-hallucinating.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -182,7 +186,15 @@ const routes: Routes = [
     component: ColoursOfMagicComponent,
     children: [
       { path: 'uses', component: MagicUsesComponent },
-      { path: 'mind', component: MindMagicComponent },
+      {
+        path: 'mind',
+        component: MindMagicComponent,
+        children: [
+          { path: 'reading', component: MindReadingComponent },
+          { path: 'slowing', component: MindSlowingComponent },
+          { path: 'hallucinating', component: MindHallucinatingComponent },
+        ]
+      },
       { path: 'purification', component: PurificationMagicComponent },
     ]
   },

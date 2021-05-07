@@ -1,0 +1,142 @@
+<p *ngIf="langue.l == 'fr'">
+    Pour ralentir les pensées :
+</p>
+<p *ngIf="langue.l == 'en'">
+    To slow someone's mind :
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>De combien c'est ralenti</td>
+            <td>Discrétion</td>
+            <td>Quelles capacités sont affectées</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>-</td>
+            <td>1</td>
+            <td>Discussion</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>Actions (ex : attaquer)</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>-</td>
+            <td>3</td>
+            <td>-</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>Réactions (ex : esquiver)</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>-</td>
+            <td>5</td>
+            <td>-</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>3</td>
+            <td>6+</td>
+            <td>Réflexion</td>
+            <td>21+ cases</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>De combien c'est ralenti</td>
+            <td>Discrétion</td>
+            <td>Quelles capacités sont affectées</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>-</td>
+            <td>1</td>
+            <td>Discussion</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>Actions (ex : attaquer)</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>-</td>
+            <td>3</td>
+            <td>-</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>Réactions (ex : esquiver)</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>-</td>
+            <td>5</td>
+            <td>-</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>3</td>
+            <td>6+</td>
+            <td>Réflexion</td>
+            <td>21+ cases</td>
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="langue.l == 'fr'">
+    * : cf magie > ordre de grandeur
+</p>
+<p *ngIf="langue.l == 'en'">
+    * : see magic > ballparks
+</p>
+
+<p *ngIf="langue.l == 'fr'">
+    Pour la discrétion, cf lire les pensées.
+    
+</p>
+<p *ngIf="langue.l == 'en'">
+    
+</p>
