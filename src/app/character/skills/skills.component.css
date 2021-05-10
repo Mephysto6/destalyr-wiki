@@ -49,6 +49,10 @@
     position: absolute;
     z-index: 99;
 }
+.div-skills .button-skills .right-col {
+    margin-left: -51%;
+    transform: translate(-100%, -50%);
+}
 .div-skills .button-skills:hover .hovertext {
     visibility: visible;
 }
