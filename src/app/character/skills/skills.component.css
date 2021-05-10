@@ -38,20 +38,21 @@
 .div-skills .button-skills .hovertext {
     visibility: hidden;
     width: 300px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 5px 10px;
-    margin-left: 51%;
+    margin-top: 20%;
     border-radius: 6px;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
    
     position: absolute;
     z-index: 99;
 }
-.div-skills .button-skills .right-col {
-    margin-left: -51%;
-    transform: translate(-100%, -50%);
+.div-skills .button-skills .bot-line {
+
+    transform: translate(-50%, -100%);
+    margin-top: -20%;
 }
 .div-skills .button-skills:hover .hovertext {
     visibility: visible;
@@ -73,7 +74,7 @@
 .div-skills .passive-skills .hovertext {
     visibility: hidden;
     width: 300px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 5px 10px;
