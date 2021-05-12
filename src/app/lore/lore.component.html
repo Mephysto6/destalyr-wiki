@@ -27,5 +27,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Métiers</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Professions</menu-button>
     </a>
+    <a routerLink="/lore/languages" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Langues</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Languages</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>

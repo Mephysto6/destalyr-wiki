@@ -16,6 +16,7 @@ import { MagicLoreComponent } from './lore/magic-lore/magic-lore.component';
 import { GeographyComponent } from './lore/geography/geography.component';
 import { CitadelleComponent } from './lore/citadelle/citadelle.component';
 import { ProfessionsComponent } from './lore/professions/professions.component';
+import { LanguagesComponent } from './lore/languages/languages.component';
 
 import { WeaponsComponent } from './system/weapons/weapons.component';
 import { ArmorsComponent } from './system/armors/armors.component';
@@ -125,6 +126,7 @@ const routes: Routes = [
       { path: 'geography', component: GeographyComponent },
       { path: 'citadelle', component: CitadelleComponent },
       { path: 'professions', component: ProfessionsComponent },
+      { path: 'languages', component: LanguagesComponent },
     ]
   },
   {
