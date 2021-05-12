@@ -24,6 +24,7 @@ import { GeographyComponent } from './lore/geography/geography.component';
 import { CitadelleComponent } from './lore/citadelle/citadelle.component';
 import { ProfessionsComponent } from './lore/professions/professions.component';
 import { LanguagesComponent } from './lore/languages/languages.component';
+import { FaunaFloraComponent } from './lore/fauna-flora/fauna-flora.component';
 
 import { WeaponsComponent } from './system/weapons/weapons.component';
 import { ArmorsComponent } from './system/armors/armors.component';
@@ -154,7 +155,8 @@ import { MindHallucinatingComponent } from './colours-of-magic/mind-magic/mind-h
     MindReadingComponent,
     MindSlowingComponent,
     MindHallucinatingComponent,
-    LanguagesComponent
+    LanguagesComponent,
+    FaunaFloraComponent
   ],
   imports: [
     BrowserModule,

@@ -31,5 +31,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Langues</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Languages</menu-button>
     </a>
+    <a routerLink="/lore/fauna-flora" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Faune et flore</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Fauna and flora</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
