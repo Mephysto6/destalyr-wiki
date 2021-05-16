@@ -159,3 +159,7 @@ div .div-table {
     position: absolute;
     margin-left: max(65%, 690px);
 }
+a {
+    color: black;
+    font: 20px Arial, sans-serif;
+}
