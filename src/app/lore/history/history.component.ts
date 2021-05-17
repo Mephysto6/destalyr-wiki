@@ -10,7 +10,7 @@ export class HistoryComponent implements OnInit {
 
   constructor(public langue: PageLanguageService) {
   }
-  
+
   ngOnInit(): void {
   }
   

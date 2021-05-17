@@ -14,10 +14,9 @@ import { ReligionComponent } from './lore/religion/religion.component';
 import { RacesComponent } from './lore/races/races.component';
 import { MagicLoreComponent } from './lore/magic-lore/magic-lore.component';
 import { GeographyComponent } from './lore/geography/geography.component';
-import { CitadelleComponent } from './lore/citadelle/citadelle.component';
-import { ProfessionsComponent } from './lore/professions/professions.component';
 import { LanguagesComponent } from './lore/languages/languages.component';
 import { FaunaFloraComponent } from './lore/fauna-flora/fauna-flora.component';
+import { LivingComponent } from './lore/living/living.component';
 
 import { WeaponsComponent } from './system/weapons/weapons.component';
 import { ArmorsComponent } from './system/armors/armors.component';
@@ -60,6 +59,7 @@ import { MagicGroupComponent } from './system/magic-system/magic-group/magic-gro
 import { SkillsAttackComponent } from './character/skills/skills-attack/skills-attack.component';
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
+import { SkillsExplanationComponent } from './character/skills/skills-explanation/skills-explanation.component';
 
 import { MagicElementalComponent } from './lore/magic-lore/magic-elemental/magic-elemental.component';
 import { MagicRunicComponent } from './lore/magic-lore/magic-runic/magic-runic.component';
@@ -79,6 +79,10 @@ import { TargetingComponent } from './system/attacking/targeting/targeting.compo
 import { MindReadingComponent } from './colours-of-magic/mind-magic/mind-reading/mind-reading.component';
 import { MindSlowingComponent } from './colours-of-magic/mind-magic/mind-slowing/mind-slowing.component';
 import { MindHallucinatingComponent } from './colours-of-magic/mind-magic/mind-hallucinating/mind-hallucinating.component';
+
+import { CitadelleComponent } from './lore/living/citadelle/citadelle.component';
+import { ProfessionsComponent } from './lore/living/professions/professions.component';
+import { EconomyComponent } from './lore/living/economy/economy.component';
 
 
 const routes: Routes = [
@@ -125,10 +129,17 @@ const routes: Routes = [
         ]
       },
       { path: 'geography', component: GeographyComponent },
-      { path: 'citadelle', component: CitadelleComponent },
-      { path: 'professions', component: ProfessionsComponent },
       { path: 'languages', component: LanguagesComponent },
       { path: 'fauna-flora', component: FaunaFloraComponent },
+      {
+        path: 'living',
+        component: LivingComponent,
+        children: [
+          { path: 'citadelle', component: CitadelleComponent },
+          { path: 'professions', component: ProfessionsComponent },
+          { path: 'economy', component: EconomyComponent },
+        ]
+      },
     ]
   },
   {

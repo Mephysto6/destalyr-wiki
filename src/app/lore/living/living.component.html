@@ -1,0 +1,15 @@
+<nav class="band band3">
+    <a routerLink="/lore/living/citadelle" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Citadelle</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Citadelle</menu-button>
+    </a>
+    <a routerLink="/lore/living/economy" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Économie</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Economy</menu-button>
+    </a>
+    <a routerLink="/lore/living/professions" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Métiers</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Professions</menu-button>
+    </a>
+</nav>
+<router-outlet></router-outlet>

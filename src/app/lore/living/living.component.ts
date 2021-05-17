@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PageLanguageService } from "../../page-language.service";
 
 @Component({
-  selector: 'app-professions',
-  templateUrl: './professions.component.html',
-  styleUrls: ['./professions.component.css']
+  selector: 'app-living',
+  templateUrl: './living.component.html',
+  styleUrls: ['./living.component.css']
 })
-export class ProfessionsComponent implements OnInit {
+export class LivingComponent implements OnInit {
 
   constructor(public langue: PageLanguageService) {
   }
