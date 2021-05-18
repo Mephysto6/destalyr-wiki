@@ -190,6 +190,7 @@ const routes: Routes = [
           { path: 'attack', component: SkillsAttackComponent },
           { path: 'defense', component: SkillsDefenseComponent },
           { path: 'magic', component: SkillsMagicComponent },
+          { path: 'explanation', component: SkillsExplanationComponent },
         ]
       },
       { path: 'knowledge', component: KnowledgeComponent },

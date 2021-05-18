@@ -10,7 +10,7 @@ export class SkillsMagicComponent implements OnInit {
 
   constructor(public langue: PageLanguageService) {
   }
-  
+
   ngOnInit(): void {
   }
 

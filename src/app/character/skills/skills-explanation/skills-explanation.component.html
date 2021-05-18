@@ -1,1 +1,89 @@
-<p>skills-explanation works!</p>
+<h3 *ngIf="langue.l == 'fr'">Compétences d'attaque</h3>
+<h3 *ngIf="langue.l == 'en'">Offensive skills</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    <b>Cibler</b><br/>
+    cf page cibler pour le tableau.
+    Cibler est débloqué par les premiers points de compétences dans l'arbre d'attaque :
+    Arme à distance et Armes de mélée (niveau 0).<br/>
+    Lors d'une attaque, il est <b>obligé</b> de cibler une partie du corps à attaquer.
+    Cibler applique un malus au toucher allant de -0 à -3.
+    Les résultats d'avoir ciblé une attaque dépendent de la cible et du type de dégâts de l'attaque.<br/>
+    <br/><b>Présences</b><br/>
+    Les présences sont débloqué par la compétence Présence (niveau 2) dans l'arbre d'attaque.<br/>
+    Présence Imposante impose un -1 au toucher à tous les ennemis voulant attaquer quelqu'un d'autre que la personne avec Présence Imposante.<br/>
+    Présence Discrète impose un -2 au toucher à tous les ennemis voulant attaquer la personne avec Présence Discrète.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Compétences de défense</h3>
+<h3 *ngIf="langue.l == 'en'">Defensive skills</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    <b>Résistance à l'inconscience</b><br/>
+    La résistance à l'inconscience est débloquée par le dernier point de compétence dans l'arbre de défense (niveau 3).<br/>
+    Cette résistance ne s'applique pour l'inconscience causée par la douleur.
+    Le premier tour de résistance correspond à quand le personnage commence son tour à 10 ou plus de douleur.
+    Si pour une certaine raison, le personnage commence son tour à moins de 10 et le finit à 10 ou plus,
+    ce tour ne compte pas dans les 2 tours de résistances, et il faut attendre le prochain tour (où le personnage
+    commencera donc à 10 ou plus) pour compter.<br/>
+    Si le personnage redescend à 9 ou moins de douleur avant de tomber inconscient, il peut continuer,
+    et les tours de résistances sont remis à zéro.
+    Quand il atteindra 10 de nouveau, il aura de nouveau 2 tours de résistance
+    (même si le joueur n'a pas eu de tour entre la baisse et la remontée de douleur).
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Compétences de magie</h3>
+<h3 *ngIf="langue.l == 'en'">Magic skills</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    <b>Méditation</b><br/>
+    La méditation est débloquée par le premier point de compétence de magie (niveau 0).<br/>
+    cf états en méditation<br/>
+    La méditation remplace le repos, et en 1 heure permet d'obtenir
+    2 points d'énergie temporaire ainsi que de restorer 1 point de fatigue.
+    Il est possible de ne méditer que 10 minutes et ainsi obtenir 1 point d'énergie temporaire,
+    mais les résultats de cette pratique sont limités à une fois par heure. 
+    L'énergie temporaire ne peut être utilisée que pour la magie et disparait après un sommeil,
+    ou 12 heures (le premier qui arrive).<br/>
+    Méditer ne peut pas ammener quelqu'un à posséder plus que 2 points d'énergie temporaire.<br/>
+    Méditer permet aussi de réduire à zéro le coût des sorts et des concentrations.
+    <br/>
+    <br/><b>Perturber</b><br/>
+    La perturbation est débloquée par le premier point dans la branch de gauche dans l'arbre de magie (niveau 1).<br/>
+    La personne qui perturbe est appelée perturbant, et la cible est appelée victime.<br/>
+    La victime lance 1d12 + sensitivité, et le perturbant lance 1d12.
+    Si le perturbant a une magie en commun (pure ou combinée) avec le sort lancé, il peut ajouter sa sentivité au jet.<br/>
+    Si le perturbant obtient la même valeur ou plus haut que la valeur de la victime,
+    la victime perd 1d4. Sinon, il ne se passe rien.
+    <br/>
+    <br/><b>Infusion</b><br/>
+
+    <br/><b>Absorber</b><br/>
+    L'absorption est débloquée par le dernier point dans la branche de gauche de l'arbre de magie (niveau 3).<br/>
+    Le mage qui veut absorber lance ses propres dés de magies comme s'il lançait un sort.
+    Il les répartit sur les 4 caractéristiques et ajoute ses différents bonus.
+    Si le résultat sur chaque caractéristique est supérieur ou égal à celui du sort lancé
+    (ou avec un manque cumulé de 2 ou moins), alors le sort est absorbé, n'a aucun effet,
+    et l'énergie additionnelle dépensée par le lanceur est ajouté à l'énergie de l'absorbeur.<br/>
+    Le manque cumulé n'est pas diminué par un dépassement dans une caractéristique.
+    Par exemple : le lanceur a E4-P3-T2-D1, et l'absorbeur ne connait pas ces caractéristiques et doit les deviner.
+    L'absorbeur pose alors E2-P4-T1-D1. Le manque est de 3 au total (2 de efficacité + 1 de taille).
+    Le point additionnel dans précision n'affecte rien. Le sort n'est pas absorbé.<br/>
+    Deuxième situation, l'absorbeur pose E4-P2-T1-D1, il a alors un manque de 2 (1 en précision et 1 en taille),
+    donc le sort est aborbé, et comme il était de niveau 2 (4+3+2+1 = 10),
+    le sort a coûté 1 point de fatigue additionnel (+1 de base pour lancer les dés).
+    L'absorbeur récupère ainsi 1 point d'énergie.<br/>
+    Si l'absorbeur possède une magie en commun avec la magie lancée, ou bien qu'il possède de la détection magique (feu ou lumière),
+    alors il peut sentir quelles sont respectivement la caractéristique la plus forte et celle la plus faible.
+    <br/>
+    <br/><b>Transe</b><br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>

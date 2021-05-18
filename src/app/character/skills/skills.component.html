@@ -11,5 +11,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Magie</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Magic</menu-button>
     </a>
+    <a routerLink="/character/skills/explanation" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Explication</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Explanation</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
