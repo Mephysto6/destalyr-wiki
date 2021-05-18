@@ -1,7 +1,7 @@
 <br/>
 <div class="div-skills">
     <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_attack.png"/>
-    <button class="button-skills top left">
+    <button class="button-skills xtop left">
         <span class="hovertext" *ngIf="langue.l == 'fr'">
             Être capable d'utiliser des armes de distance en combat.<br/><br/>
             Pour chaque attaque, le personnage attaquant doit cibler un membre spécifique de sa victime.<br/>
@@ -12,7 +12,7 @@
             Be able to use ranged weapons in combat.
         </span>
     </button>
-    <button class="button-skills top right">
+    <button class="button-skills xtop right">
         <span class="hovertext">
             Être capable d'utiliser des armes de mêlée en combat.<br/><br/>
             Pour chaque attaque, le personnage attaquant doit cibler un membre spécifique de sa victime.<br/>
@@ -20,76 +20,114 @@
             Si l'attaque touche, la victime souffre des pénalités selon le membre touché et les dégâts*.
         </span>
     </button>
-    <button class="button-skills middle xleft">
+    <button class="button-skills top xleft">
         <span class="hovertext">
-            Utiliser des PA pour augmenter ses chances de toucher.<br/><br/>
+            Viser - Utiliser des PA pour augmenter ses chances de toucher.<br/><br/>
             Consommer entre 1, 2 ou 3 PA (une fois par tour) pour obtenir +1, +2 ou +3 (respectivement) au toucher pour la prochaine attaque à distance.<br/>
             Demande concentration.
         </span>
     </button>
-    <button class="button-skills middle left">
+    <button class="button-skills top left">
         <span class="hovertext">
-            Attaquer un ennemi le distrait.<br/><br/>
+            Distraction - Attaquer un ennemi le distrait.<br/><br/>
             Attaquer un ennemi, si l'attaque touche, qu'elle fasse de dégât ou pas, alors l'ennemi est distrait jusqu'à son prochain tour.<br/>
             Un ennemi distrait a -1 à l'esquive.
         </span>
     </button>
-    <button class="button-skills middle center">
+    <button class="button-skills top center">
         <span class="hovertext">
-            Analyser les mouvements d'un ennemi pour le toucher plus facilement.<br/><br/>
+            Analyse - Analyser les mouvements d'un ennemi pour le toucher plus facilement.<br/><br/>
             Consomme 1 PA (une fois par tour) pour analyser une créature
             et gagner +1 au toucher pour toutes les prochaines attaques sur cette créature. Cummulable.<br/>
             Si le +3 au toucher est atteint, un +1 au dégât est ajouté. Un +4 au toucher donne un +2 aux dégâts, etc.<br/>
         </span>
     </button>
-    <button class="button-skills middle right">
+    <button class="button-skills top right">
         <span class="hovertext">
-            Être capable de manipuler une arme dans chaque main en combat.<br/><br/>
+            Ambidextrie - Être capable de manipuler une arme dans chaque main en combat.<br/><br/>
             La deuxième arme doit être une arme légère.<br/>
             Lors d'une attaque avec son arme principale, consomme 1 PA additionnel ou 1 point de fatigue pour faire une attaque additionnelle avec sa deuxième arme.
         </span>
     </button>
-    <button class="button-skills middle xright">
+    <button class="button-skills top xright">
         <span class="hovertext">
-            Réagir pour essayer de parer une attaque.<br/><br/>
+            Parade - Réagir pour essayer de parer une attaque.<br/><br/>
             Consomme 1 PR pour gagner +1 à l'esquive.<br/>
             Activable quand l'attaque est annoncée mais avant que le toucher soit lancé.
         </span>
     </button>
-    <button class="button-skills bot xleft">
-        <span class="hovertext bot-line">
-            Avoir plus de chance de crit.<br/><br/>
+    <button class="button-skills middle xleft">
+        <span class="hovertext">
+            Crit étendu - Avoir plus de chance de crit.<br/><br/>
             Si le résultat du jet d'attaque est supérieur au résultat d'esquive de 5 ou plus, l'attaque est un crit (ignore résistance naturelle).
         </span>
     </button>
-    <button class="button-skills bot left">
-        <span class="hovertext bot-line">
-            Ne provoque plus de réaction de la part d'un ennemi occupé.<br/><br/>
-            Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.<br/>
-            Un ennemi occupé n'obtient pas de réaction de la part des actions du personnage avec cette compétence.<br/><br/>
+    <button class="button-skills middle left">
+        <span class="hovertext">
+            Diversion - Gagne des avantages contre les ennemis occupés.<br/><br/>
+            Ne provoque plus de réaction de la part d'un ennemi occupé.<br/>
             De plus, le personnage gagne un +1 au toucher contre les ennemis occupés.
         </span>
     </button>
-    <button class="button-skills bot center">
-        <span class="hovertext bot-line">
-            Sa présence influe sur les ennemis.<br/><br/>
+    <button class="button-skills middle center">
+        <span class="hovertext">
+            Présence et Inspiration - Sa présence influe sur les ennemis.<br/><br/>
             Bonus - Au début de chaque combat, faire une choix entre Présence Imposante et Présence Discrète
             (il faut être visible des ennemis pour utiliser Présence Imposante).<br/>
             Action - Une fois par tour, peut consommer 1 PA pour donner Inspiration à un allié (+1 au toucher pour le prochain tour).
         </span>
     </button>
-    <button class="button-skills bot right">
-        <span class="hovertext bot-line">
-            Gagne des PA.<br/><br/>
+    <button class="button-skills middle right">
+        <span class="hovertext">
+            Surge - Gagne des PA.<br/><br/>
             Une fois par tour, peut prendre 2 points de fatigue pour gagner 4 PA pour un tour.<br/>
             Les PA gagnés ainsi ne peuvent être cumulés, ni gardés pour un tour suivant.
         </span>
     </button>
-    <button class="button-skills bot xright">
-        <span class="hovertext bot-line">
-            Contre-attaquer sur une esquive réussie.<br/><br/>
+    <button class="button-skills middle xright">
+        <span class="hovertext">
+            Contre-attaque - Contre-attaquer sur une esquive réussie.<br/><br/>
             Effectuer une attaque en réaction (prix indiqué dans la table système > combat). Activable seulement après avoir esquivé une attaque.<br/>
             Consomme 1 PR de moins si l'attaque a été parée.
+        </span>
+    </button>
+    <button class="button-skills bot xleft">
+        <span class="hovertext bot-line">
+            Double-flèche - Peut tirer deux flèches à la fois.<br/><br/>
+            Effectuer une attaque normale avec un arc,
+            mais consomme deux flèches et doit cibler 2 ennemis différents.<br/>
+            Les deux ennemis doivent être dans un angle de 90°.<br/>
+            Un seul lancé de toucher avec un -2, et deux lancés pour les dégâts.
+        </span>
+    </button>
+    <button class="button-skills bot left">
+        <span class="hovertext bot-line">
+            Angle mort - Avantages contre les ennemis occupés.<br/><br/>
+            Gagne un +1 aux dégâts contre les ennemis occupés.<br/>
+            En plus, si l'ennemis n'a pas vu l'attaquant au tour dernier, l'attaque gagne un +3 au toucher.
+        </span>
+    </button>
+    <button class="button-skills bot center">
+        <span class="hovertext bot-line">
+            Vengeance - Bonus contre les ennemis selon la Présence.<br/><br/>
+            Gagne le niveau d'analyse de +3/+1 contre les ennemis qui ont attaqué
+            la Présence ou quelqu'un d'autre, pour respectivement la Présence Imposante et Discrète.
+        </span>
+    </button>
+    <button class="button-skills bot right">
+        <span class="hovertext bot-line">
+            Extra damage - Plus de dégâts et .<br/><br/>
+            Toutes les attaques avec des armes gagnent un +1 aux dégâts.<br/>
+            En plus, si l'attaque fait 5 ou plus de dégâts, l'ennemis trébuche
+            et permet une deuxième attaque pour 1PA de moins (cf continuation).
+        </span>
+    </button>
+    <button class="button-skills bot xright">
+        <span class="hovertext bot-line">
+            Charge - Attaque chargée.<br/><br/>
+            Consomme les PA d'une attaque selon l'arme, mais permet de se déplacer
+            jusqu'à 3 cases gratuitement avant l'attaque, tant que la direction du déplacement
+            correspond à la direction de l'attaquant vers la cible.<br/>
         </span>
     </button>
 </div>

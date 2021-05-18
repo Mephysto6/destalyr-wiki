@@ -10,9 +10,21 @@
             La méditation rapide ne peut être faite qu'une fois par heure.
         </span>
     </button>
+    <button class="passive-skills xtop xleft">
+        <span>
+            Adaptation<br/>
+            Décaler des points entre les dés selon la profondeur.
+        </span>
+    </button>
+    <button class="passive-skills xtop xright">
+        <span>
+            Investissement<br/>
+            Diminuer le coût des sorts selon les points investis.
+        </span>
+    </button>
     <button class="button-skills top left">
         <span class="hovertext">
-            Empêcher un mage d'utiliser sa magie.<br/><br/>
+            Perturber - Empêcher un mage d'utiliser sa magie.<br/><br/>
             Consomme 1 PR pour essayer d'enlever un dé à un mage visible lançant un sort.<br/>
             Compétition de jets de sensitivité.<br/>
             Activable quand un ennemis visible commence à lancer un sort.
@@ -20,98 +32,77 @@
     </button>
     <button class="button-skills top center">
         <span class="hovertext">
-            Sort pour augmenter un objet physique.<br/><br/>
+            Infusion - Sort pour augmenter un objet physique.<br/><br/>
             Manipulation (3 PA) pour lancer un sort sur un objet.
             Les résultats varient selon l'élément de la magie, les caractéristiques du sort et la volonté du lanceur.<br/>
-            Exemple : magie de feu sur une épée => donne une propriété de feu et des dommages de feu à l'épee le temps de la concentration.
         </span>
     </button>
     <button class="button-skills top right">
         <span class="hovertext">
+            Infatiguable<br/><br/>
             Ignore tous les malus de magie liés à l'état fatigué (ne change pas les malus aux d12 et dégâts).
         </span>
     </button>
-    <button class="passive-skills top xleft">
-        <span>
-            Bonus<br/>
-            Peut passer un point d'un dé à un autre.<br/>
-            Utilisable 1 fois / jour<br/>
-        </span>
+    <button class="button-skills middle xleft">
         <span class="hovertext">
-            Par exemple : le lancé donne 1-2-3-4.<br/>
-            Situation 1, le sort requiert trois caractéristiques à 3,
-            le mage peut alors décider le transférer un point du 4 vers le 2,
-            our transformer le résultat en 1-3-3-3.<br/>
-            Situation 2, le sort requiert une caractéristique à 5,
-            le mage peut alors décider le transférer un point du 2 (ou du 3) vers le 4,
-            pour transformer le résultat en 1-1-3-5 (ou 1-2-2-5).<br/>
-            Situation 3, le mage ne veut pas dépenser un point d'énergie supplémentaire,
-            et il enlève un point d'un dé, pour passer la puissance totale à 9.
+            Transfert - Voler le dé perdu.<br/><br/>
+            Après une perturbation réussie, le mage perturbant gagne le dé
+            perdu de la victime à sa prochaine manipulation.
         </span>
     </button>
     <button class="button-skills middle left">
         <span class="hovertext">
-            Utiliser sa réaction pour utiliser sa magie.<br/><br/>
+            Réaction magie - Utiliser sa réaction pour utiliser sa magie.<br/><br/>
             Consomme 2 PR pour lancer un sort normalement. 
         </span>
     </button>
     <button class="button-skills middle center">
         <span class="hovertext">
-            Pouvoir relancer ses dés.<br/><br/>
+            Détermination - Pouvoir relancer ses dés.<br/><br/>
             Une fois par tour pendant une manipulation, peut relancer gratuitement -tous ses dés- ou bien -tous ses dés sauf 1-.
         </span>
     </button>
     <button class="button-skills middle right">
         <span class="hovertext">
-            Consomme de l'énergie additionnelle pour un bonus au sort<br/><br/>
+            Focus - Consomme de l'énergie additionnelle pour un bonus au sort<br/><br/>
             Consomme 1 point de fatigue pour ajouter 1d4 au résultat d'un sort.<br/>
             Activable après avoir calculé la puissance du sort.<br/>
             Utilisable une fois par manipulation.<br/>
         </span>
     </button>
-    <button class="passive-skills middle xleft">
-        <span>
-            Bonus<br/>
-            Peut passer un point d'un dé à un autre.<br/>
-            Utilisable 2 fois / jour<br/>
+    <button class="button-skills middle xright">
+        <span class="hovertext">
+            Résistance à la fatigue<br/><br/>
+            Le maximum de fatigue est maintenant 12.<br/>
+            En plus, le malus de fatigue aux d12 sont ignorés.
         </span>
     </button>
     <button class="button-skills bot left">
-        <span class="hovertext bot-line">
-            Réaction pour absorber la magie d'un ennemi.<br/><br/>
+        <span class="hovertext">
+            Aborption - Réaction pour absorber la magie d'un ennemi.<br/><br/>
             Consomme 2 PR pour essayer d'aborber l'énergie du sort de l'adversaire.<br/>
             Lance les dés d'un sort et compare-les au sort de l'adversaire.
         </span>
     </button>
     <button class="button-skills bot center">
-        <span class="hovertext bot-line">
+        <span class="hovertext">
             Les concentrations coûtent moins et les sorts sont plus forts<br/><br/>
             Les niveaux des concentrations sont un niveau de moins que les sorts.<br/>
             De plus, tout sort commence à 1 dans chaque caractéristique avant la distribution des dés.
         </span>
     </button>
     <button class="button-skills bot right">
-        <span class="hovertext bot-line">
-            Utiliser toute son énergie restante pour lancer un sort très puissant.<br/><br/>
+        <span class="hovertext">
+            Transe - Utiliser toute son énergie restante pour lancer un sort très puissant.<br/><br/>
             Consomme tous ses points d'énergie restants pour lancer un sort avec plus de dés.<br/>
             Tombe inconscient après.
         </span>
     </button>
-    <button class="passive-skills bot xleft">
-        <span>
-            Bonus<br/>
-            Peut passer un point d'un dé à un autre.<br/>
-            Utilisable 3 fois / jour<br/>
-        </span>
-    </button>
-    <button class="passive-skills middle xright">
-        <span>
-            Investissement<br/><br/>
-            Investir des points dans cet arbre de compétence rend le lancé de sort plus facile.<br/><br/>
-            À partir de 3 points dans cet arbre, tous les coûts de lancé de sorts (pas des concentrations) sont diminués de 1 (min 0).<br/>
-            Les sorts de niveau 1 sont donc gratuits.<br/><br/>
-            À partir de 5 points dans cet arbre, ils sont réduits de 1 additionnel, donc de 2 au total.<br/>
-            Les sorts de niveau 2 sont donc gratuits.<br/>
+    <button class="button-skills xbot center">
+        <span class="hovertext bot-line">
+            Supériorité<br/><br/>
+            Les d4 sont maintenant des d6 et les d6 sont des d8.<br/>
+            En plus, gagne 1d4 à ses manipulations (donc un d6).
         </span>
     </button>
 </div>

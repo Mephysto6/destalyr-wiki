@@ -3,13 +3,21 @@
 
 <p *ngIf="langue.l == 'fr'">
     <b>Cibler</b><br/>
-    cf page cibler pour le tableau.
+    cf cibler pour le tableau.<br/>
     Cibler est débloqué par les premiers points de compétences dans l'arbre d'attaque :
     Arme à distance et Armes de mélée (niveau 0).<br/>
     Lors d'une attaque, il est <b>obligé</b> de cibler une partie du corps à attaquer.
     Cibler applique un malus au toucher allant de -0 à -3.
     Les résultats d'avoir ciblé une attaque dépendent de la cible et du type de dégâts de l'attaque.<br/>
-    <br/><b>Présences</b><br/>
+    <br/>
+    <b>Diversion</b><br/>
+    cf état occupé<br/>
+    Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.<br/>
+    Un ennemi occupé n'obtient pas de réaction de la part des actions du personnage avec cette compétence.<br/>
+    Ne provoque plus de réaction de la part d'un ennemi occupé.<br/>
+    De plus, le personnage gagne un +1 au toucher contre les ennemis occupés.<br/>
+    <br/>
+    <b>Présences</b><br/>
     Les présences sont débloqué par la compétence Présence (niveau 2) dans l'arbre d'attaque.<br/>
     Présence Imposante impose un -1 au toucher à tous les ennemis voulant attaquer quelqu'un d'autre que la personne avec Présence Imposante.<br/>
     Présence Discrète impose un -2 au toucher à tous les ennemis voulant attaquer la personne avec Présence Discrète.<br/>
@@ -42,6 +50,27 @@
 <h3 *ngIf="langue.l == 'en'">Magic skills</h3>
 
 <p *ngIf="langue.l == 'fr'">
+    <b>Adaptation</b><br/>
+    Peut passer un point d'un dé à un autre.<br/>
+    Utilisable N fois / jour<br/>
+    N = niveau maximal de compétence en magie<br/>
+    Par exemple : le lancé donne 1-2-3-4.<br/>
+    Situation 1, le sort requiert trois caractéristiques à 3,
+    le mage peut alors décider le transférer un point du 4 vers le 2,
+    pour transformer le résultat en 1-3-3-3.<br/>
+    Situation 2, le sort requiert une caractéristique à 5,
+    le mage peut alors décider le transférer un point du 2 (ou du 3) vers le 4,
+    pour transformer le résultat en 1-1-3-5 (ou 1-2-2-5).<br/>
+    Situation 3, le mage ne veut pas dépenser un point d'énergie supplémentaire,
+    et il enlève un point d'un dé, pour passer la puissance totale à 9.<br/>
+    <br/>
+    <b>Investissement</b><br/>
+    Investir des points dans cet arbre de compétence rend le lancé de sort plus facile.<br/>
+    À partir de 3 points dans cet arbre, tous les coûts de lancé de sorts (pas des concentrations) sont diminués de 1 (min 0).
+    Les sorts de niveau 1 sont donc gratuits.<br/>
+    À partir de 5 points dans cet arbre, ils sont réduits de 1 additionnel, donc de 2 au total.
+    Les sorts de niveau 2 sont donc gratuits.<br/>
+    <br/>
     <b>Méditation</b><br/>
     La méditation est débloquée par le premier point de compétence de magie (niveau 0).<br/>
     cf états en méditation<br/>
