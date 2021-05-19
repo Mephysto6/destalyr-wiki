@@ -71,6 +71,7 @@ import { MindMagicComponent } from './colours-of-magic/mind-magic/mind-magic.com
 import { PurificationMagicComponent } from './colours-of-magic/purification-magic/purification-magic.component';
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
+import { DestinyComponent } from './more-rules/destiny/destiny.component';
 
 import { HittingComponent } from './system/attacking/hitting/hitting.component';
 import { DamagesComponent } from './system/attacking/damages/damages.component';
@@ -219,8 +220,7 @@ const routes: Routes = [
     component: MoreRulesComponent,
     children: [
       { path: 'action-flowchart', component: ActionFlowchartComponent },
-      { path: 'mind-magic', component: MindMagicComponent },
-      { path: 'purification-magic', component: PurificationMagicComponent },
+      { path: 'destiny', component: DestinyComponent },
     ]
   },
   

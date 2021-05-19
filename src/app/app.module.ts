@@ -78,6 +78,7 @@ import { MindMagicComponent } from './colours-of-magic/mind-magic/mind-magic.com
 import { PurificationMagicComponent } from './colours-of-magic/purification-magic/purification-magic.component';
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
+import { DestinyComponent } from './more-rules/destiny/destiny.component';
 
 import { HittingComponent } from './system/attacking/hitting/hitting.component';
 import { DamagesComponent } from './system/attacking/damages/damages.component';
@@ -162,7 +163,8 @@ import { EconomyComponent } from './lore/living/economy/economy.component';
     FaunaFloraComponent,
     EconomyComponent,
     SkillsExplanationComponent,
-    LivingComponent
+    LivingComponent,
+    DestinyComponent
   ],
   imports: [
     BrowserModule,
