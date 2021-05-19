@@ -94,7 +94,8 @@
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : Méditer (débloqué par compétence en magie)<br/>
     <b>Effets</b> : La personne en train de méditer doit être assise ou alongée, dans une optique de repos.<br/>
-    Elle devient incapable d'attaquer ou de lancer de sorts sans sortir de méditation, mais elle peut encore parler, utiliser un objet ou d'autres intéractions.<br/>
+    Elle devient incapable d'attaquer ou de lancer de sorts sans sortir de méditation,
+    mais elle peut encore parler, utiliser un objet ou d'autres intéractions.<br/>
     <b>Effets spéciaux</b> : > Si la méditation dure 1 heure, récupère 1 point d'énergie + 2 points d'énergie temporaire.<br/>
     > Après 5 minutes de méditation et si la méditation continue, alors la personne peut lancer des sorts,
     et le coût en énergie des sorts et des concentrations est ignoré.<br/>
@@ -121,11 +122,11 @@
 
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : Attaqué par quelqu'un avec la compétence distraction -ou- échec critique à l'attaque<br/>
-    <b>Effets</b> : -1 à l'esquive jusqu'au début de son prochain tour<br/>
+    <b>Effets</b> : -2 à l'esquive jusqu'au début de son prochain tour<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 	<b>Source</b> : Attacked by someone with the distraction skill -or- critical failed attack<br/>
-    <b>Effects</b> : -1 to evasion until the start of their next turn<br/>
+    <b>Effects</b> : -2 to evasion until the start of their next turn<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Occupé</h2>
@@ -133,13 +134,11 @@
 
 <p *ngIf="langue.l == 'fr'">
 	<b>Source</b> : Face à un ennemi et l'ayant attaqué<br/>
-    <b>Effets</b> : <br/>
-    <b>Effets spéciaux</b> : <br/>
+    <b>Effets</b> : Les personnages avec certaines compétences gagnent des avantages contre une personne occupée.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-	<b>Source</b> : <br/>
+	<b>Source</b> : Facing an enemy and having hit them<br/>
     <b>Effects</b> : <br/>
-    <b>Special effects</b> : <br/>
 </p>
 
 <!-- 

@@ -37,7 +37,7 @@
         <tr>
             <td>1</td>
             <td>12</td>
-            <td>attaquant distrait (-1 esquive jusqu'au début de son prochain tour)</td>
+            <td>attaquant distrait (-2 esquive jusqu'au début de son prochain tour)</td>
         </tr>
         <tr>
             <td>12</td>
@@ -47,12 +47,72 @@
         <tr>
             <td>12</td>
             <td>2-11</td>
-            <td>attaque réussie + option pour réattaquer*</td>
+            <td>attaque réussie + continuation</td>
         </tr>
         <tr>
             <td>12</td>
             <td>12</td>
             <td>résultat normal selon bonus</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Défense \ Attaque</th>
+            <td>1</td>
+            <td>2-11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>- (= résultat normal selon bonus)</td>
+            <td>-</td>
+            <td>coup critique<br/>
+                (ignore résistance naturelle)</td>
+        </tr>
+        <tr>
+            <td>2-11</td>
+            <td>échec automatique</td>
+            <td>-</td>
+            <td>réussite automatique</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>attaquant distrait<br/>
+                (-2 esquive jusqu'au début de son prochain tour)</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Attaque \ Défense</th>
+            <td>1</td>
+            <td>2-11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>- (= résultat normal selon bonus)</td>
+            <td>échec automatique</td>
+            <td>attaquant distrait<br/>
+                (-2 esquive jusqu'au début de son prochain tour)</td>
+        </tr>
+        <tr>
+            <td>2-11</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>coup critique<br/>
+                (ignore résistance naturelle)</td>
+            <td>réussite automatique</td>
+            <td>-</td>
         </tr>
     </table>
 </div>
@@ -86,7 +146,7 @@
         <tr>
             <td>12</td>
             <td>2-11</td>
-            <td>hit + option to reattack*</td>
+            <td>hit + continuation</td>
         </tr>
         <tr>
             <td>12</td>
@@ -100,16 +160,16 @@
 <h3 *ngIf="langue.l == 'en'">Continuation</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    *= si le résultat du dé est 12 à l'attaque, un personnage peut attaquer
-    une deuxième fois pour 1 PA de moins que le prix de la première attaque.
-    Ce nombre de PA peut être payé par un mélange de PA, PR et fatigue.<br/>
+    La continuation correspond à l'opportunité d'effectuer une nouvelle attaque contre le même ennemi.<br/>
+    La nouvelle attaque coûte 1 de moins que la précédente (min 0), et le prix peut être payé avec
+    un mélange de PA, PR et fatigue.<br/>
     Pour chaque nouvelle attaque, il faut relancer les dés de toucher, d'esquive, et de dégâts.<br/>
     N'est pas limité à une fois par tour.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    *= if the attack roll is a 12, then the character can attack a second time
-    for 1AP less than the previous attack.
-    This amount of AP can be paid in a mix of AP, RP and fatigue.<br/>
+    Continuation corresponds to the opportunity to attack again against the same enemy.<br/>
+    This new attack costs 1 less than the previous (min 0), and this price can be paid with
+    a mix of AP, RP and fatigue.<br/>
     New rolls are needed for every additional attack (to hit, to evade, and the damages).<br/>
     Not limited to once per turn.<br/>
 </p>

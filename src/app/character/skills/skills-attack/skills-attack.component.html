@@ -31,7 +31,7 @@
         <span class="hovertext">
             Distraction - Attaquer un ennemi le distrait.<br/><br/>
             Attaquer un ennemi, si l'attaque touche, qu'elle fasse de dégât ou pas, alors l'ennemi est distrait jusqu'à son prochain tour.<br/>
-            Un ennemi distrait a -1 à l'esquive.
+            Un ennemi distrait a -2 à l'esquive.
         </span>
     </button>
     <button class="button-skills top center">
@@ -64,7 +64,7 @@
     </button>
     <button class="button-skills middle left">
         <span class="hovertext">
-            Diversion - Gagne des avantages contre les ennemis occupés.<br/><br/>
+            Diversion - Gagner des avantages contre les ennemis occupés.<br/><br/>
             Ne provoque plus de réaction de la part d'un ennemi occupé.<br/>
             De plus, le personnage gagne un +1 au toucher contre les ennemis occupés.
         </span>
@@ -79,7 +79,7 @@
     </button>
     <button class="button-skills middle right">
         <span class="hovertext">
-            Surge - Gagne des PA.<br/><br/>
+            Surge - Gagner des PA.<br/><br/>
             Une fois par tour, peut prendre 2 points de fatigue pour gagner 4 PA pour un tour.<br/>
             Les PA gagnés ainsi ne peuvent être cumulés, ni gardés pour un tour suivant.
         </span>
@@ -93,7 +93,7 @@
     </button>
     <button class="button-skills bot xleft">
         <span class="hovertext bot-line">
-            Double-flèche - Peut tirer deux flèches à la fois.<br/><br/>
+            Double-flèche - Pouvoir tirer deux flèches à la fois.<br/><br/>
             Effectuer une attaque normale avec un arc,
             mais consomme deux flèches et doit cibler 2 ennemis différents.<br/>
             Les deux ennemis doivent être dans un angle de 90°.<br/>
@@ -102,7 +102,7 @@
     </button>
     <button class="button-skills bot left">
         <span class="hovertext bot-line">
-            Angle mort - Avantages contre les ennemis occupés.<br/><br/>
+            Angle mort - Plus d'avantages contre les ennemis occupés.<br/><br/>
             Gagne un +1 aux dégâts contre les ennemis occupés.<br/>
             En plus, si l'ennemis n'a pas vu l'attaquant au tour dernier, l'attaque gagne un +3 au toucher.
         </span>
@@ -116,10 +116,10 @@
     </button>
     <button class="button-skills bot right">
         <span class="hovertext bot-line">
-            Extra damage - Plus de dégâts et .<br/><br/>
+            Extra damage - Plus de dégâts et continuation.<br/><br/>
             Toutes les attaques avec des armes gagnent un +1 aux dégâts.<br/>
             En plus, si l'attaque fait 5 ou plus de dégâts, l'ennemis trébuche
-            et permet une deuxième attaque pour 1PA de moins (cf continuation).
+            et permet une continuation**.
         </span>
     </button>
     <button class="button-skills bot xright">
@@ -128,13 +128,17 @@
             Consomme les PA d'une attaque selon l'arme, mais permet de se déplacer
             jusqu'à 3 cases gratuitement avant l'attaque, tant que la direction du déplacement
             correspond à la direction de l'attaquant vers la cible.<br/>
+            Si 2 cases ou plus ont été traversées, et que l'attaque touche, l'ennemis trébuche
+            et permet une continuation**.
         </span>
     </button>
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    * : cf <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">cibler</a>
+    * : cf <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">cibler</a><br/>
+    ** : cf <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">continuation</a>
 </p>
 <p *ngIf="langue.l == 'en'">
-    * : see <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">targeting</a>
+    * : see <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">targeting</a><br/>
+    ** : see <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">continuation</a>
 </p>
