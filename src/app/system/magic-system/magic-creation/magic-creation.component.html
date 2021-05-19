@@ -1,5 +1,5 @@
-<h2 *ngIf="langue.l == 'fr'">Création</h2>
-<h2 *ngIf="langue.l == 'en'">Creation</h2>
+<h3 *ngIf="langue.l == 'fr'">Création</h3>
+<h3 *ngIf="langue.l == 'en'">Creation</h3>
 
 <p *ngIf="langue.l == 'fr'">
     Pour manipuler un élément, un mage doit avoir de cet élément à disposition.
@@ -91,3 +91,19 @@
         </tr>
     </table>
 </div>
+
+<h3 *ngIf="langue.l == 'fr'">Prise de contrôle</h3>
+<h3 *ngIf="langue.l == 'en'">Taking control</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Un mage peut essayer de voler le contrôle qu'un autre mage possède sur un élément.<br/>
+    Il est nécessaire que le mage possède la même magie que l'élément dont il veut prendre le contrôle.<br/>
+    Les deux mages vont alors faire des jets de sensitivité opposés successifs.<br/>
+    Le mage volant le contrôle doit obtenir 3 réussites pour voler le contrôle.
+    Le mage se défendant doit en obtenir 2 pour le garder.<br/>
+    Sur l'entièreté de leurs jets, les mages peuvent ajouter leur spécialisation dans cet élément une seule fois.<br/>
+</p>
+
+<p *ngIf="langue.l == 'en'">
+
+</p>
