@@ -68,16 +68,41 @@
 }
 .band1 {
     background-color: #b99fff;
-
 }
 .band2 {
     background-color: #a98aff;
-
 }
 .band3 {
     background-color: #9b78fd;
-
 }
+
+.band1 .search-container input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1px;
+    border-color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.band1 .search-container button {
+    float: right;
+    padding: 6px;
+    border: 1px;
+    border-color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    margin-right: 16px;
+    font-size: 17px;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.band1 .search-container button:hover {
+    background: rgba(200, 200, 200, 0.7);
+}
+.band1 .search-container {
+    float: right;
+}
+
 .page-background {
     --gap: 32px;
     background-image: url("../assets/images/backgrounds/background2_light.jpg");
