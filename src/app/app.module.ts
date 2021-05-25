@@ -92,6 +92,8 @@ import { CitadelleComponent } from './lore/living/citadelle/citadelle.component'
 import { ProfessionsComponent } from './lore/living/professions/professions.component';
 import { EconomyComponent } from './lore/living/economy/economy.component';
 
+import { CompendiumComponent } from './compendium/compendium.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -164,7 +166,8 @@ import { EconomyComponent } from './lore/living/economy/economy.component';
     EconomyComponent,
     SkillsExplanationComponent,
     LivingComponent,
-    DestinyComponent
+    DestinyComponent,
+    CompendiumComponent
   ],
   imports: [
     BrowserModule,

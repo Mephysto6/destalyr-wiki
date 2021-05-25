@@ -1,0 +1,36 @@
+<br/>
+<h3 *ngIf="langue.l == 'fr'">Mots-clé</h3>
+<h3 *ngIf="langue.l == 'en'">Keywords</h3>
+<br/>
+<!-- 
+<button class="key-word" (click)="change_kw('')">Reset</button>
+<br/>
+<br/>
+-->
+<button class="key-word" (click)="change_kw('magic')">magie</button>
+<button class="key-word" (click)="change_kw('attacking')">attaquer</button>
+<button class="key-word" (click)="change_kw('concentrated')">concentré</button>
+<br/>
+
+<br/>
+<h3 *ngIf="langue.l == 'fr'">Résultats</h3>
+<h3 *ngIf="langue.l == 'en'">Results</h3>
+<br/>
+
+<p *ngIf="searching == 'magic'">
+    lore > magie > élémentale : <a routerLink="/lore/magic/elemental" routerLinkActive="activebutton">Magie élémentaire</a><br/>
+    lore > magie > runique : <a routerLink="/lore/magic/runic" routerLinkActive="activebutton">Magie runique</a><br/>
+    lore > magie > couleurs : <a routerLink="/lore/magic/colours" routerLinkActive="activebutton">Couleurs de la magie</a><br/>
+    système > magie > explication : <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">Comment utiliser la magie</a><br/>
+    système > magie > manipulation : <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">Magie en combat</a><br/>
+    couleurs de magie > utilisations : <a routerLink="/colours-of-magic/uses" routerLinkActive="activebutton">Exemples d'utilisations de la magie</a><br/>
+</p>
+<p *ngIf="searching == 'attacking'">
+    système > attaquer > toucher : <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">Attaquer en combat</a><br/>
+    système > armes : <a routerLink="/system/weapons" routerLinkActive="activebutton">Armes</a><br/>
+    système > combat : <a routerLink="/system/combat" routerLinkActive="activebutton">Combat, PA et PR</a><br/>
+</p>
+<p *ngIf="searching == 'concentrated'">
+    système > états : <a routerLink="/system/states" routerLinkActive="activebutton">État concentré</a><br/>
+    système > magie > manipulation : <a routerLink="/system/magic/manipulation" routerLinkActive="activebutton">Les niveaux de sorts</a><br/>
+</p>

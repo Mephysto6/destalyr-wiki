@@ -10,7 +10,7 @@ export class ColoursOfMagicComponent implements OnInit {
 
   constructor(public langue: PageLanguageService) {
   }
-  
+
   ngOnInit(): void {
   }
 

@@ -85,11 +85,15 @@ import { CitadelleComponent } from './lore/living/citadelle/citadelle.component'
 import { ProfessionsComponent } from './lore/living/professions/professions.component';
 import { EconomyComponent } from './lore/living/economy/economy.component';
 
+import { CompendiumComponent } from './compendium/compendium.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home', component: HomePageComponent },
+
+  { path: 'compendium', component: CompendiumComponent },
+
   {
     path: 'lore',
     component: LoreComponent,
@@ -143,6 +147,7 @@ const routes: Routes = [
       },
     ]
   },
+
   {
     path: 'system',
     component: SystemComponent,
@@ -177,6 +182,7 @@ const routes: Routes = [
       { path: 'explanation', component: SystemExplanationComponent },
     ]
   },
+
   {
     path: 'character',
     component: CharacterComponent,
@@ -198,6 +204,7 @@ const routes: Routes = [
       { path: 'dying', component: DyingComponent },
     ]
   },
+
   {
     path: 'colours-of-magic',
     component: ColoursOfMagicComponent,
@@ -215,6 +222,7 @@ const routes: Routes = [
       { path: 'purification', component: PurificationMagicComponent },
     ]
   },
+
   {
     path: 'more-rules',
     component: MoreRulesComponent,

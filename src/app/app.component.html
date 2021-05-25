@@ -28,15 +28,20 @@
         <menu-button *ngIf="langue.l == 'fr'">Règles additionnelles</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Additional rules</menu-button>
     </a>
-
+    <a routerLink="/compendium" class="button" style="float: right;" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Compendium</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Compendium</menu-button>
+    </a>
+<!-- 
     <div class="search-container">
         <form>
-            <button *ngIf="langue.l == 'fr'" type="submit">Lancer</button>
-            <button *ngIf="langue.l == 'en'" type="submit">Search</button>
+            <button routerLink="/searching" *ngIf="langue.l == 'fr'" type="submit">Lancer</button>
+            <button routerLink="/searching" *ngIf="langue.l == 'en'" type="submit">Search</button>
             <input *ngIf="langue.l == 'fr'" type="text" placeholder="Rechercher..." name="search">
             <input *ngIf="langue.l == 'en'" type="text" placeholder="Search..." name="search">
         </form>
-      </div>
+    </div>
+-->
 </nav>
 <div class="page-background">
     <router-outlet></router-outlet>
