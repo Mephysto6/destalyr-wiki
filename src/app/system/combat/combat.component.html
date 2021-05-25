@@ -143,27 +143,14 @@
 <h3 *ngIf="langue.l == 'en'">Preparing an action</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Pour préparer une action, il faut posséder les PA pour faire l’action normalement,
-    et annoncer au DM l’action prévue ainsi que le déclenchement (trigger).
-    Le trigger annoncé est ajouté aux autres actions qui déclanche des réactions jusqu'à ce que l'action soit relâchée.
-    Quand le personnage reçoit une réaction (trigger ou réaction normale), le joueur décide de lancer l’action ou non.
-    L'action reste préparée tant qu'elle n'est pas relâchée ou annulée.
-    Une seule action peut être préparée, une fois une action préparée, le personnage est
-    <a routerLink="/system/states" routerLinkActive="activebutton">concentré</a>
-    jusqu’au relâchement.<br/>
-    Un personnage peut rester en concentration d’une action préparée sur plusieurs tour,
-    mais doit consommer 1 PA à chaque tour pour garder sa concentration.<br/>
+    Une action possible est de se préparer.<br/>
+    Cette action coûte 1PA et permet ensuite de transférer un nombre voulu de PA en PR.
+    Le joueur déclare un déclencheur qui s'ajoute à la liste des actions qui provoquent des réactions.<br/>
+    Au début du prochain tour du joueur, ce déclencheur est enlevé de la liste et les PR non utilisés sont perdu.
 </p>
 <p *ngIf="langue.l == 'en'">
-    To prepare an action, one needs to have the appropriate AP in order to make the action normally,
-    and announce which action is prepared as well as the trigger.
-    The AP are consumed and the character is now in concentration.
-    The trigger announced is added to the list of actions which create reactions (until the prepared action is released).
-    When the player gets a reaction (from the trigger or from normal means), they can decide to release the action or not.
-    The action stays prepared until it is released or canceled by the player.
-    Only one action can be prepared, and once prepared the character is concentrated
-    (see <a routerLink="/system/states" routerLinkActive="activebutton">state concentrated</a>)
-    until the action is released or canceled.<br/>
-    A character can stay concentrated on an action over several turns,
-    but must consume 1 AP per concentration at the beginning of their turn.<br/>
+    One possible action is to prepare.<br/>
+    This action costs 1AP and allows the player to transfer any number of AP into RP.
+    The player declares a trigger which is added to the list of actions that create reactions.<br/>
+    At the beginning of the player's next turn, this trigger is removed and any non used RP are lost.
 </p>
