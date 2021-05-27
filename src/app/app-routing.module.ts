@@ -140,7 +140,7 @@ const routes: Routes = [
         path: 'living',
         component: LivingComponent,
         children: [
-          { path: 'citadelle', component: CitadelleComponent },
+          { path: 'education', component: CitadelleComponent },
           { path: 'professions', component: ProfessionsComponent },
           { path: 'economy', component: EconomyComponent },
         ]

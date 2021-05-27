@@ -10,6 +10,7 @@
 <button class="key-word" (click)="change_kw('magic')">magie</button>
 <button class="key-word" (click)="change_kw('attacking')">attaquer</button>
 <button class="key-word" (click)="change_kw('concentrated')">concentré</button>
+<button class="key-word" (click)="change_kw('history')">histoire</button>
 <br/>
 
 <br/>
@@ -17,20 +18,137 @@
 <h3 *ngIf="langue.l == 'en'">Results</h3>
 <br/>
 
-<p *ngIf="searching == 'magic'">
-    lore > magie > élémentale : <a routerLink="/lore/magic/elemental" routerLinkActive="activebutton">Magie élémentaire</a><br/>
-    lore > magie > runique : <a routerLink="/lore/magic/runic" routerLinkActive="activebutton">Magie runique</a><br/>
-    lore > magie > couleurs : <a routerLink="/lore/magic/colours" routerLinkActive="activebutton">Couleurs de la magie</a><br/>
-    système > magie > explication : <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">Comment utiliser la magie</a><br/>
-    système > magie > manipulation : <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">Magie en combat</a><br/>
-    couleurs de magie > utilisations : <a routerLink="/colours-of-magic/uses" routerLinkActive="activebutton">Exemples d'utilisations de la magie</a><br/>
-</p>
-<p *ngIf="searching == 'attacking'">
-    système > attaquer > toucher : <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">Attaquer en combat</a><br/>
-    système > armes : <a routerLink="/system/weapons" routerLinkActive="activebutton">Armes</a><br/>
-    système > combat : <a routerLink="/system/combat" routerLinkActive="activebutton">Combat, PA et PR</a><br/>
-</p>
-<p *ngIf="searching == 'concentrated'">
-    système > états : <a routerLink="/system/states" routerLinkActive="activebutton">État concentré</a><br/>
-    système > magie > manipulation : <a routerLink="/system/magic/manipulation" routerLinkActive="activebutton">Les niveaux de sorts</a><br/>
+<p *ngIf="keyword">
+
+    Lore<br/>
+    <span *ngIf="search_kw_in(['history'])">
+        <a routerLink="/lore/history" routerLinkActive="activebutton">Histoire du monde</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['beliefs'])">
+        <a routerLink="/lore/religion" routerLinkActive="activebutton">Croyances et religions</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['races'])">
+        <a routerLink="/lore/races" routerLinkActive="activebutton">Races</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'elements'])">
+        <a routerLink="/lore/magic/elemental" routerLinkActive="activebutton">Magie élémentaire</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'runes'])">
+        <a routerLink="/lore/magic/runic" routerLinkActive="activebutton">Magie runique</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'materials', 'metals'])">
+        <a routerLink="/lore/magic/materials" routerLinkActive="activebutton">Matériaux supports</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'colors'])">
+        <a routerLink="/lore/magic/colours" routerLinkActive="activebutton">Couleurs de la magie</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['geography'])">
+        <a routerLink="/lore/geography" routerLinkActive="activebutton">Géographie</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['education', 'citadelle'])">
+        <a routerLink="/lore/living/education" routerLinkActive="activebutton">Éducation</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['economy'])">
+        <a routerLink="/lore/living/economy" routerLinkActive="activebutton">Économie</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['professions', 'work'])">
+        <a routerLink="/lore/living/professions" routerLinkActive="activebutton">Métiers</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['languages'])">
+        <a routerLink="/lore/languages" routerLinkActive="activebutton">Langues</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['plants', 'animals'])">
+        <a routerLink="/lore/fauna-flora" routerLinkActive="activebutton">Faune et flore</a><br/>
+    </span>
+
+    <br/>
+    Système<br/>
+    <span *ngIf="search_kw_in(['explications', 'roll'])">
+        <a routerLink="/system/explanation" routerLinkActive="activebutton">Explication du système</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['weapon'])">
+        <a routerLink="/system/weapons" routerLinkActive="activebutton">Armes de combat</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['armor'])">
+        <a routerLink="/system/armors" routerLinkActive="activebutton">Armures de combat</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['jauges', 'douleur', 'fatigue'])">
+        <a routerLink="/system/gauges" routerLinkActive="activebutton">Jauges de fatigue et de douleur</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['hitting'])">
+        <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">Attaquer et toucher</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['damages'])">
+        <a routerLink="/system/attacking/damages" routerLinkActive="activebutton">Dégâts d'une attaque</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['targetting'])">
+        <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">Cibler en combat</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['fighting', 'action points', 'preparing'])">
+        <a routerLink="/system/combat" routerLinkActive="activebutton">Déroulé d'un combat</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic'])">
+        <a routerLink="/system/magic/explanation" routerLinkActive="activebutton">Explication de la magie</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'control'])">
+        <a routerLink="/system/magic/creation" routerLinkActive="activebutton">Création et prise de contrôle</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'manipulation'])">
+        <a routerLink="/system/magic/manipulation" routerLinkActive="activebutton">Manipulation magique</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'vision', 'element'])">
+        <a routerLink="/system/magic/vision" routerLinkActive="activebutton">Vision élémentaire</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'ordre de grandeur', 'manipulation'])">
+        <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">Ordres de grandeur de manipulation</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['magic', 'group'])">
+        <a routerLink="/system/magic/group" routerLinkActive="activebutton">Magie de groupe</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['healing', 'rest'])">
+        <a routerLink="/system/healing" routerLinkActive="activebutton">Soins et repos</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['states', 'concentrated', 'meditation'])">
+        <a routerLink="/system/states" routerLinkActive="activebutton">États physiques</a><br/>
+    </span>
+
+    <br/>
+    Personnage<br/>
+    <span *ngIf="search_kw_in(['character','creation'])">
+        <a routerLink="/character/creation" routerLinkActive="activebutton">Créer un personnage</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['character','magic'])">
+        <a routerLink="/character/magic" routerLinkActive="activebutton">La magie d'un personnage</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['character','stats'])">
+        <a routerLink="/character/stats" routerLinkActive="activebutton">Les caractéristiques d'un personnage</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['character','skills'])">
+        <a routerLink="/character/skills" routerLinkActive="activebutton">Les compétences d'un personnage</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['character','knowledge'])">
+        <a routerLink="/character/knowledge" routerLinkActive="activebutton">Les connaissances d'un personnage</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['character','dying'])">
+        <a routerLink="/character/dying" routerLinkActive="activebutton">Comment mourir</a><br/>
+    </span>
+
+    <br/>
+    Autres<br/>
+    <span *ngIf="search_kw_in(['colours','magic', 'uses'])">
+        <a routerLink="/colours-of-magic/uses" routerLinkActive="activebutton">Exemples d'utilisations de magies</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['colours','magic', 'mind'])">
+        <a routerLink="/colours-of-magic/mind" routerLinkActive="activebutton">Cas particulier : magie d'esprit</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['colours','magic', 'purification'])">
+        <a routerLink="/colours-of-magic/purification" routerLinkActive="activebutton">Cas particulier : magie de purification</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['action points','flowchart'])">
+        <a routerLink="/more-rules/action-flowchart" routerLinkActive="activebutton">Schéma des PA/PA</a><br/>
+    </span>
+    <span *ngIf="search_kw_in(['cards','destiny'])">
+        <a routerLink="/more-rules/destiny" routerLinkActive="activebutton">Cartes de Destinée</a><br/>
+    </span>
+
 </p>

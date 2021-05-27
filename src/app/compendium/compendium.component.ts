@@ -11,12 +11,21 @@ export class CompendiumComponent implements OnInit {
   constructor(public langue: PageLanguageService) {
   }
 
-  searching : string =  "poop"
+  keyword : string
 
   ngOnInit(): void {
   }
 
-  change_kw(keyword: string) {
-    this.searching = keyword
+  change_kw(new_keyword: string) {
+    this.keyword = new_keyword
+  }
+
+  search_kw_in(keywords:string) {
+    for (let i=0; i < keywords.length; i++) {
+      if (this.keyword == keywords[i]) {
+        return true;
+      }
+    }
+    return false
   }
 }
