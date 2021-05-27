@@ -29,7 +29,7 @@
             <td>1</td>
             <td>- (= résultat normal selon bonus)</td>
             <td>échec automatique</td>
-            <td>attaquant distrait<br/>
+            <td>échec automatique + attaquant distrait<br/>
                 (-2 esquive jusqu'au début de son prochain tour)</td>
         </tr>
         <tr>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td>12</td>
-            <td>coup critique<br/>
+            <td>réussite automatique + coup critique<br/>
                 (ignore résistance naturelle)</td>
             <td>réussite automatique</td>
             <td>-</td>
@@ -59,7 +59,7 @@
             <td>1</td>
             <td>- (= normal result depending on stats)</td>
             <td>automatic failure</td>
-            <td>attacker distracted<br/>
+            <td>automatic failure + attacker distracted<br/>
                 (-2 evade until the start of his next turn)</td>
         </tr>
         <tr>
@@ -70,7 +70,7 @@
         </tr>
         <tr>
             <td>12</td>
-            <td>critical hit<br/>
+            <td>automatic success + critical hit<br/>
                 (ignores natural resistance)</td>
             <td>automatic success</td>
             <td>-</td>
@@ -83,6 +83,7 @@
 
 <p *ngIf="langue.l == 'fr'">
     La continuation correspond à l'opportunité d'effectuer une nouvelle attaque contre le même ennemi.<br/>
+    Certaines compétences donnent une continuation selon les situations.<br/>
     La nouvelle attaque coûte 1 de moins que la précédente (min 0), et le prix peut être payé avec
     un mélange de PA, PR et fatigue.<br/>
     Pour chaque nouvelle attaque, il faut relancer les dés de toucher, d'esquive, et de dégâts.<br/>
@@ -90,6 +91,7 @@
 </p>
 <p *ngIf="langue.l == 'en'">
     Continuation corresponds to the opportunity to attack again against the same enemy.<br/>
+    Some skills offer a continuation depending on the situation.<br/>
     This new attack costs 1 less than the previous (min 0), and this price can be paid with
     a mix of AP, RP and fatigue.<br/>
     New rolls are needed for every additional attack (to hit, to evade, and the damages).<br/>

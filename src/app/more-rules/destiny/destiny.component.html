@@ -5,13 +5,14 @@
     pousser les limites de créativité, ou de manière générale pour récompenser un joueur.<br/>
     Quand un joueur reçoit une Carte de Destinée, il reçoit une carte face cachée.
     Quand ce joueur veut utiliser la carte, il la retourne, la lit et décide de la cible (si applicable).<br/>
+    Une fois retournée, la carte doit être activée.<br/>
     Chaque carte a des effets différents, avec quelques tendances globales :<br/>
     - La couleur détermine la qualité de l'effet :
     Coeur est un effet bénéfique, Pique est un effet néfaste,
     et Carreau et Trèfle sont des effets relativement neutres qui peuvent tendre vers le bon ou le mauvais respectivement.<br/>
     - Le numero de la carte détermine la quantité de l'effet :
     les cartes de 2 à 10 ont des effets mineurs augmentant avec le nombre,
-    et les têtes ont des effets forts,
+    les têtes ont des effets forts,
     l'as est le plus fort, et le joker donne le choix au joueur.
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -117,18 +118,20 @@
         <tr>
             <td>K</td>
             <td>L'invocation est gratuite<br/>
-                pour 1 tour pour 1 cible</td>
+                pour 1 tour pour la cible</td>
             <td>La cible brille pour 1 minute</td>
             <td>La cible est enveloppée d'ombres<br/>
                 pour 1 minute</td>
             <td>L'invocation est impossible<br/>
-                pour 1 tour pour 1 cible</td>
+                pour 1 tour pour la cible</td>
         </tr>
         <tr>
             <td>A</td>
             <td>Explosion</td>
-            <td>Tire 2 nouvelles cartes et active-les immédiatement</td>
-            <td>Tire 2 nouvelles cartes et active-les immédiatement</td>
+            <td>Tire 2 nouvelles cartes<br/>
+                et active-les immédiatement</td>
+            <td>Tire 2 nouvelles cartes<br/>
+                et active-les immédiatement</td>
             <td>Explosion</td>
         </tr>
         <tr>
