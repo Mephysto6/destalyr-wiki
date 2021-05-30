@@ -101,27 +101,25 @@
             <td>J</td>
             <td>La cible gagne une de ses visions élémentaires gratuitement<br/>
                 pour 10 minutes</td>
-            <td>La cible est entourrée d'air</td>
-            <td>La cible est entourrée d'eau</td>
+            <td>La cible est capable de faire une manipulation d'air*</td>
+            <td>La cible est capable de faire une manipulation d'eau*</td>
             <td>La cible vomit<br/>
                 pour 1 tour</td>
         </tr>
         <tr>
             <td>Q</td>
             <td>La prochaine manipulation de la cible gagne +1d4</td>
-            <td>La nature pousse autour de la cible </td>
-            <td>La cible s'enflamme<br/>
-                pour 1 minute</td>
+            <td>La cible est capable de faire une manipulation de nature*</td>
+            <td>La cible est capable de faire une manipulation de feu*</td>
             <td>La cible est paralysée<br/>
                 pour 1 tour</td>
         </tr>
         <tr>
             <td>K</td>
-            <td>L'invocation est gratuite<br/>
+            <td>L'invocation est gratuite en fatigue<br/>
                 pour 1 tour pour la cible</td>
-            <td>La cible brille pour 1 minute</td>
-            <td>La cible est enveloppée d'ombres<br/>
-                pour 1 minute</td>
+            <td>La cible est capable de faire une manipulation de lumière*</td>
+            <td>La cible est capable de faire une manipulation de ténèbre*</td>
             <td>L'invocation est impossible<br/>
                 pour 1 tour pour la cible</td>
         </tr>
@@ -247,3 +245,17 @@
         </tr>
     </table>
 </div>
+
+<p *ngIf="langue.l == 'fr'">
+    * = Cette manipulation ne coûte pas de PA ni de fatigue,
+    et est possible même si la cible n'a pas d'affinité à cette magie.<br/>
+    Les dés sont 4d4 sans modificateurs (même si la cible possède
+    de la spécialisation dans la magie correspondante, et même si la cible est fatiguée).<br/>
+    Une fois lancés, ces dés ne peuvent être modifiés par aucune source, ni être relancés.
+    Ces dés ne peuvent pas être enlevés par de la perturbation, ni augmentés par une compétence magique.<br/>
+    La manipulation doit être effectuée dans la minute, après quoi l'effet se dissipe.<br/>
+    Quand la manipulation est effectuée, l'effet se dissipe.
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
+</p>
