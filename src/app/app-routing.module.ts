@@ -80,6 +80,7 @@ import { TargetingComponent } from './system/attacking/targeting/targeting.compo
 import { MindReadingComponent } from './colours-of-magic/mind-magic/mind-reading/mind-reading.component';
 import { MindSlowingComponent } from './colours-of-magic/mind-magic/mind-slowing/mind-slowing.component';
 import { MindHallucinatingComponent } from './colours-of-magic/mind-magic/mind-hallucinating/mind-hallucinating.component';
+import { MindBoostingComponent } from './colours-of-magic/mind-magic/mind-boosting/mind-boosting.component';
 
 import { CitadelleComponent } from './lore/living/citadelle/citadelle.component';
 import { ProfessionsComponent } from './lore/living/professions/professions.component';
@@ -217,6 +218,7 @@ const routes: Routes = [
           { path: 'reading', component: MindReadingComponent },
           { path: 'slowing', component: MindSlowingComponent },
           { path: 'hallucinating', component: MindHallucinatingComponent },
+          { path: 'boosting', component: MindBoostingComponent },
         ]
       },
       { path: 'purification', component: PurificationMagicComponent },
