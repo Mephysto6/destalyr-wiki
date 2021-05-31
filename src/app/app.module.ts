@@ -79,6 +79,7 @@ import { PurificationMagicComponent } from './colours-of-magic/purification-magi
 
 import { ActionFlowchartComponent } from './more-rules/action-flowchart/action-flowchart.component';
 import { DestinyComponent } from './more-rules/destiny/destiny.component';
+import { CheatSheetComponent } from './more-rules/cheat-sheet/cheat-sheet.component';
 
 import { HittingComponent } from './system/attacking/hitting/hitting.component';
 import { DamagesComponent } from './system/attacking/damages/damages.component';
@@ -169,7 +170,8 @@ import { CompendiumComponent } from './compendium/compendium.component';
     LivingComponent,
     DestinyComponent,
     CompendiumComponent,
-    MindBoostingComponent
+    MindBoostingComponent,
+    CheatSheetComponent
   ],
   imports: [
     BrowserModule,
