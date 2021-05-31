@@ -5,11 +5,19 @@
     Armes mêlées : force<br/>
     Armes à distance: dextérité<br/>
     Armes 1H tranchante : finesse (au choix, force ou dextérité)<br/>
+    Les armes simples permettent un type d'attaque (soit légère, soit moyenne, soit lourde),
+    et les armes versatiles permettent 2 types d'attaques (soit légère + moyenne, soit moyenne + lourde).<br/>
+    Les différences entre les deux types sont principalement le prix et l'accessibilité.<br/>
+    Toutes les armes tranchantes peuvent faire une attaque improvisée en dégât contondants.
 </p>
 <p *ngIf="langue.l == 'en'">
     Melee weapons : strength<br/>
     Ranged weapons: dexterity<br/>
     One-handed slashing weapon : finesse (choice, strength or dexterity)<br/>
+    Simple weapons allow for one attack type (either light, medium or heavy),
+    while versatiles weapons allow for 2 attack types (either light + medium, or medium + heavy).<br/>
+    The main differences between the two types are the price and accessibility.<br/>
+    All slashing weapons can make an improvised attack for bludgeoning damage.
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Exemples</h3>
@@ -18,8 +26,8 @@
 <div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
-            <th>Nom</th>
-            <th>Exemples</th>
+            <th>Attaques</th>
+            <th>Exemples d'armes</th>
             <th>Dé de dégâts</th>
             <th>Restrictions</th>
             <th>Points d'actions (PA)</th>
@@ -32,29 +40,37 @@
             <td>2</td>
         </tr>
         <tr>
-            <td>Armes improvisées</td>
+            <td>Attaque improvisée</td>
             <td>couteau, gourdin</td>
             <td>d2 - 2</td>
             <td>/</td>
-            <td>2</td>
+            <td>3</td>
         </tr>
         <tr>
-            <td>Armes légères</td>
+            <td>Attaque légère</td>
             <td>dague, arc court, bâton</td>
             <td>d4</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Armes normales</td>
-            <td>épée, hache, marteau de guerre, arc long, arbalète*</td>
+            <td>Versatile légère ou moyenne</td>
+            <td>scimetaire, arc long</td>
+        </tr>
+        <tr>
+            <td>Attaque moyenne</td>
+            <td>épée, mace, lance, arbalète*</td>
             <td>d6</td>
             <td>min 3 force</td>
             <td>3</td>
         </tr>
         <tr>
-            <td>Armes lourdes</td>
-            <td>claymore, hache lourde, maul</td>
+            <td>Versatile moyenne ou lourde</td>
+            <td>claymore, hache, marteau</td>
+        </tr>
+        <tr>
+            <td>Attaque lourde</td>
+            <td>Zweihänder (espadon), hallebarde, maul</td>
             <td>d8</td>
             <td>min 4 force + 2H</td>
             <td>4</td>
@@ -64,8 +80,8 @@
 <div class="div-table" *ngIf="langue.l == 'en'">
     <table>
         <tr>
-            <th>Name</th>
-            <th>Examples</th>
+            <th>Attacks</th>
+            <th>Weapon examples</th>
             <th>Damage die</th>
             <th>Restrictions</th>
             <th>Action points (PA)</th>
@@ -78,29 +94,37 @@
             <td>2</td>
         </tr>
         <tr>
-            <td>Improvised weapons</td>
+            <td>Improvised attacks</td>
             <td>knife, club</td>
             <td>d2 - 2</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Light weapons</td>
+            <td>Light attacks</td>
             <td>dagger, short bow, quarterstaff</td>
             <td>d4</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>Normal weapons</td>
-            <td>sword, axe, warhammer, longbow, crossbow*</td>
+            <td>Versatile light or medium</td>
+            <td>scimetar, long bow</td>
+        </tr>
+        <tr>
+            <td>Medium attacks</td>
+            <td>sword, mace, spear, crossbow*</td>
             <td>d6</td>
             <td>min 3 str</td>
             <td>3</td>
         </tr>
         <tr>
-            <td>Heavy weapons</td>
-            <td>claymore, heavy axe, maul</td>
+            <td>Versatile medium or heavy</td>
+            <td>claymore, greataxe, great warhammer</td>
+        </tr>
+        <tr>
+            <td>Heavy attacks</td>
+            <td>Zweihänder (greatsword), halberd, maul</td>
             <td>d8</td>
             <td>min 4 str + 2H</td>
             <td>4</td>
