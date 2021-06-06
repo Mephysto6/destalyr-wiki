@@ -14,7 +14,86 @@
     La détection magique permet de ressentir ce transfert d'énergie, et avec de la concentration,
     d'analyser la magie active.<br/>
 </p>
+<p *ngIf="langue.l == 'en'">
+    
+</p>
 
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>De combien la blessure est accentuée</td>
+            <td>Si ça s'applique</td>
+            <td>Taille du support</td>
+            <td>Distance au support</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>-</td>
+            <td></td>
+            <td>Paume (5 cm)</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>-</td>
+            <td></td>
+            <td>Main (20 cm)</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>sans changement</td>
+            <td></td>
+            <td>Bras (1 pas)</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>x 1.25</td>
+            <td></td>
+            <td>Corps (2 m)</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>x 1.5</td>
+            <td></td>
+            <td>Groupe (5-10 m)</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>x 1.75</td>
+            <td></td>
+            <td>Très grand (20 m)</td>
+            <td>21-40 cases</td>
+        </tr>
+        <tr>
+            <td>7+</td>
+            <td>x 2</td>
+            <td></td>
+            <td>Très très grand (40 m)</td>
+            <td>41+ cases</td>
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="langue.l == 'fr'">
+    En utilisant la magie de purification pour accentuer une blessure,
+    certaines conditions peuvent augmenter la précision du sort : <br/>
+    - si il a vu la blessure être infligée<br/>
+    - si c'est le joueur qui a infligé la blessure<br/>
+    - si c'est une magie du personnage qui a infligé la blessure<br/>
+    Pour chacune de ces conditions, le sort gagne +1 en précision (donc un +2 au jet de précision).
+</p>
 <p *ngIf="langue.l == 'en'">
     
 </p>
