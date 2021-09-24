@@ -35,14 +35,14 @@
         <tr>
             <td>1</td>
             <td>création</td>
-            <td>2</td>
+            <td>3</td>
             <td>1</td>
         </tr>
         <tr>
             <td>1</td>
             <td>prise de contrôle</td>
-            <td>1</td>
-            <td>1</td>
+            <td>1*</td>
+            <td>1*</td>
         </tr>
         <tr>
             <td>2</td>
@@ -59,7 +59,7 @@
         <tr>
             <td>3</td>
             <td>dissipation</td>
-            <td>1</td>
+            <td>2</td>
             <td>0</td>
         </tr>
     </table>
@@ -75,7 +75,7 @@
         <tr>
             <td>1</td>
             <td>creation</td>
-            <td>2</td>
+            <td>3</td>
             <td>1</td>
         </tr>
         <tr>
@@ -99,12 +99,23 @@
         <tr>
             <td>3</td>
             <td>dissipation</td>
-            <td>1</td>
+            <td>2</td>
             <td>0</td>
         </tr>
     </table>
 </div>
-
+<p *ngIf="langue.l == 'fr'">
+    * = La prise de contrôle coûte 1 PA si non contestée,
+    et 3 PA si l'élément est déjà sous le contrôle d'une autre source.
+    Il faut ensuite faire des jets de sensitivité opposés pour gagner le contrôle,
+    cf <a routerLink="/system/magic/creation" routerLinkActive="activebutton">prise de contrôle</a>.
+</p>
+<p *ngIf="langue.l == 'en'">
+    * = Taking control costs 1 AP if it is not contested,
+    and 3 AP is the element is already under the control of someone else.
+    In that case, the two opposing forces need to roll sensitivity until one of them wins,
+    see <a routerLink="/system/magic/creation" routerLinkActive="activebutton">Taking control</a>.
+</p>
 
 <p *ngIf="langue.l == 'fr'">
     Pour créer, un mage lance <b>1d12 + sensitivité</b>

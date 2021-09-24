@@ -48,10 +48,19 @@
 
 <p *ngIf="langue.l == 'fr'">
     Toucher : <b>1d12 + (précision x2)</b> contre esquive<br/>
-    Dégâts : <b>(efficacité x taille /2)</b> - résistance (naturelle, sans armure) (arrondi en dessous)<br/>
-    (tant que taille couvre la cible, si taille est plus grande que cible, taille = cible
+    Dégâts : <b>efficacité + taille</b> - résistance* (naturelle, sans armure)<br/>
+    Pour ce calcul, on considère que la valeur de la taille est majorée par la taille de la cible.
+    Par exemple : Une personne fait face à un humain et un renard.
+    La personne lance un sort possèdant 3 en efficacité, et 5 en taille.
+    Le 5 en taille permet de cibler un groupe, donc le sort affectera l'humain cible et le renard cible.
+    À cause de leur différence de taille, l'humain prendra 3+4 dégâts bruts, et le renard 3+3.
+    Grâce à leurs résistances respectives, l'humain subira 3+4-2 de douleur, et le renard 3+3-1.
+    Le renard tombe inconscient et l'humain n'est que blessé.
     (cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeurs</a>)
-    selon les situations)<br/>
+    <br/>
+    * = La plupart des magies auront des conséquences physiques, et donc sont opposées à la résistances d'une personne.
+    Certaines magies (esprit, âme et purification) sont plus abstraites et attaque une créature plus psychologiquement que physiquement.
+    Dans ces cas là, la magie va s'opposer à la sensitivité de la cible et non sa résistance.
 </p>
 <p *ngIf="langue.l == 'en'">
 
