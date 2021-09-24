@@ -1,4 +1,11 @@
-<br/>
+<p *ngIf="langue.l == 'fr'">
+    DET : Damage Efficacity Threshold<br/>
+    Minimum d'efficacité à atteindre pour que le sort puisse servir à faire des dégâts
+</p>
+<p *ngIf="langue.l == 'en'">
+    DET : Damage Efficacity Threshold<br/>
+    Minimum efficacity to reach in order for the spell to be able to deal damage.
+</p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
@@ -59,7 +66,7 @@
         <tr>
             <td>Ténèbres</td>
             <td>i</td>
-            <td>(5)</td>
+            <td>-</td>
             <td>Cacher qqch</td>
             <td>Bloquer une lumière</td>
             <td>Profondeur d'ombre</td>
@@ -157,7 +164,7 @@
             <td>Electrocuter quelqu'un</td>
         </tr>
         <tr>
-            <td>Purification</td>
+            <td>Purification*</td>
             <td>i</td>
             <td>4</td>
             <td>Assainir de l'eau</td>
@@ -205,7 +212,7 @@
             <td>Fondre du métal</td>
         </tr>
         <tr>
-            <td>Illusion</td>
+            <td>Illusion*</td>
             <td>i</td>
             <td>-</td>
             <td>Changer la couleur de quelque chose</td>
@@ -213,7 +220,7 @@
             <td>Se rendre invisible</td>
         </tr>
         <tr>
-            <td>Esprit</td>
+            <td>Esprit*</td>
             <td>T</td>
             <td>-</td>
             <td>Savoir si une personne est consciente,<br/>communiquer avec des gens volontaires</td>
@@ -229,7 +236,7 @@
             <td>Porter du lourd avec un tentacule</td>
         </tr>
         <tr>
-            <td>Âme</td>
+            <td>Âme*</td>
             <td>T</td>
             <td>-</td>
             <td>Ressentir les émotions de surface</td>
@@ -335,10 +342,8 @@
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    DET : Damage Efficacity Threshold<br/>
-    Minimum d'efficacité à atteindre pour que le sort puisse servir à faire des dégâts
+    * = magie non physique, à opposer à la sensitivité à la place de la résistance.
 </p>
 <p *ngIf="langue.l == 'en'">
-    DET : Damage Efficacity Threshold<br/>
-    Minimum efficacity to reach in order for the spell to be able to deal damage.
+    * = non physical magic, use sensitivity instead of resistance for the target.
 </p>
