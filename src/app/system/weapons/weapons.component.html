@@ -165,8 +165,32 @@
 <h3 *ngIf="langue.l == 'en'">Limit range for ranged weapons</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    à voir<br/>
+    Chaque type d'arme a une distance correspondante.<br/>
+    Pour les armes sans projectiles, c'est la distance atteignable par l'arme.<br/>
+    Pour les armes avec projectiles, c'est la distance jusqu'à laquelle un personnage peut tirer sans problème.<br/>
+    Pour ces armes, il est aussi possible de tirer au-delà de cette limite avec un -3 au toucher.
+    La distance maximale pour essayer de tirer est le double de la distance indiquée.<br/>
+    <br/>
+    armes de contact : 1 cases (1.5m = 2 pas)<br/>
+    armes d'aste (polearms) : 2 cases (3m = 4 pas)<br/>
+    fouet normal : 3 cases (4.5m = 6 pas)<br/>
+    fouet liane (magie nature) : 5 cases (7.5m = 10 pas)<br/>
+    arc court : 10 cases (15m = 20 pas)<br/>
+    arbalète : 15 cases (22.5m = 30 pas)<br/>
+    arc long : 30 cases (45m = 60 pas)<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    TBD<br/>
+    Every weapon type has a corresponding distance.<br/>
+    For the weapons without projectiles, it is the distance reachable by the weapon.<br/>
+    For the weapons with projectiles, it is the distance until which a character can shoot without penalty.<br/>
+    For these weapons, it is also possible to shoot further with a -3 to hit.
+    The maximum distance to try to shoot is twice the indicated distance.<br/>
+    <br/>
+    melee weapons : 1 hex (1.5m = 2 steps)<br/>
+    polearms : 2 hex (3m = 4 steps)<br/>
+    whip : 3 hex (4.5m = 6 steps)<br/>
+    vine whip (nature magic) : 5 hex (7.5m = 10 steps)<br/>
+    shortbow : 10 hex (15m = 20 steps)<br/>
+    crossbow : 15 hex (22.5m = 30 steps)<br/>
+    longbow : 30 hex (45m = 60 steps)<br/>
 </p>
