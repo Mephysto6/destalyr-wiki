@@ -23,21 +23,21 @@
         </tr>
         <tr>
             <td>1</td>
-            <td>-</td>
+            <td>0</td>
             <td>1</td>
-            <td>Discussion</td>
+            <td>-</td>
             <td>Contact*</td>
         </tr>
         <tr>
             <td>2</td>
             <td>1</td>
             <td>2</td>
-            <td>Actions (ex : attaquer)</td>
-            <td>1 case**</td>
+            <td>Mouvement</td>
+            <td>1 case*</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>-</td>
+            <td>1</td>
             <td>3</td>
             <td>-</td>
             <td>2-4 cases</td>
@@ -46,22 +46,50 @@
             <td>4</td>
             <td>2</td>
             <td>4</td>
-            <td>Réactions (ex : esquiver)</td>
+            <td>+ Actions (ex : attaquer)</td>
             <td>5-10 cases</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>-</td>
+            <td>2</td>
             <td>5</td>
             <td>-</td>
             <td>11-20 cases</td>
         </tr>
         <tr>
-            <td>6+</td>
+            <td>6</td>
             <td>3</td>
-            <td>6+</td>
-            <td>Réflexion</td>
-            <td>21+ cases</td>
+            <td>6</td>
+            <td>+ Réactions (ex : esquiver)</td>
+            <td>21-50 cases</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>3</td>
+            <td>7</td>
+            <td>-</td>
+            <td>51-100 cases</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>4</td>
+            <td>8</td>
+            <td>+ Vitesse</td>
+            <td>101-200 cases</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>4</td>
+            <td>9</td>
+            <td>-</td>
+            <td>201-500 cases</td>
+        </tr>
+        <tr>
+            <td>10+</td>
+            <td>5</td>
+            <td>10</td>
+            <td>+ Réflexion</td>
+            <td>501+ cases</td>
         </tr>
     </table>
 </div>
@@ -127,15 +155,34 @@
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    * : cf magie > ordre de grandeur
+    Un sort de ralentissement des pensées est lancé sur une personne à la fois.<br/>
+    Le résultat dépend de l'efficacité et de la taille données au sort.
+    La taille détermine la profondeur de l'esprit affectée par le sort,
+    et l'efficacité décide l'intensité de la perturbation.<br/>
+    Si une personne est ralentie dans son <b>mouvement</b> (T2+), alors elle est limitée dans ses points d'actions à consommer pour du mouvement.
+    Par exemple, une personne normale possède 5 PA. Si un sort de ralentissement l'affecte avec une taille de 2 ou plus, et une efficacité de 4,
+    alors la victime peut consommer au maximum 5 - 2 PA pour du mouvement.<br/>
+    Si une personne est ralentie dans ses <b>actions</b> (T4+), alors elle subit une pénalité sur tous ses jets d'actions.
+    Par exemple, considérons une personne possèdant 3 en Force. Si un sort de ralentissement l'affecte avec une taille de 4 ou plus, et une efficacité de 4,
+    alors la personne lancera ses jets d'attaque suivant 1d12 +3 -2. Les jets de dégâts ne sont pas affectés, ici il serait de 1d6 +3 pour une attaque moyenne.<br/>
+    Si une personne est ralentie dans ses <b>réactions</b> (T6+), alors elle subit une pénalité sur tous ses jets de réactions.
+    Par example, considérons une personne possèdant 4 en Agilité. Si un sort de ralentissement l'affecte avec une taille de 6 ou plus, et une efficacité de 4,
+    alors la personne lancera ses jets d'esquive suivant 1d12 +4 -2. La défense n'est pas affectée.<br/>
+    Si une personne est ralentie dans sa <b>vitesse</b> (T8+), alors elle subit une pénalité sur ses PA et PR (min 0).
+    Par exemple, considérons une personne possèdant 5 PA et 3 PR. Si un sort de ralentissement l'affecte avec une taille de 8 ou plus, et une efficacité de 4,
+    alors la personne perdera 2 PA er 2 PR, la laissant à 3 PA et 1 PR par tour.<br/>
+    Si une personne est ralentie dans sa <b>réflexion</b> (T10+), alors elle subit une pénalité sur ses capacités cognitives.
+    Une personne subissant un sort de ralentissement affectant ses capacités cognitive risque de voir ses sens diminuer (vision, équilibre, ouïe, ...),
+    ne pas reconaître ses alliés de ses ennemis, ou simplement tomber à terre en position foetale. 
+    <br/>
+    * cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeur</a>
 </p>
 <p *ngIf="langue.l == 'en'">
-    * : see magic > ballparks
+    * see <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ballparks</a>
 </p>
 
 <p *ngIf="langue.l == 'fr'">
     Pour la discrétion, cf lire les pensées.
-    
 </p>
 <p *ngIf="langue.l == 'en'">
     

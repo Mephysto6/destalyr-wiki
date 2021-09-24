@@ -11,7 +11,8 @@
     Des exemples d'actions qui créent des réactions : invoquer de la magie, utiliser un objet, courir.
     Les actions qui ne créent pas de réactions sont : attaquer cet ennemi, marcher.<br/>
     À la fin de son propre tour, un personnage peut consommer un PA pour gagner un PR (une fois par tour).
-    Au début du tour, tous les PR non utilisés sont perdus.<br/>
+    Au début du tour, tous les PR non utilisés sont perdus, et les PR reviennent à leur valeur de base
+    (sauf si le personnage se concentre sur un préparation, cf plus bas).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Initiative : 1d12 + Agility -> descending = turn order<br/>
@@ -26,7 +27,8 @@
     Examples of actions which will create reactions : invoking magic, using an item, running.
     Actions that do not create reactions are : attacks to this enemy, walking.<br/>
     At the end of their turn, a character can consume 1 AP to gain 1 RP (once per turn).
-    At the beginning of their turn, all non-used RP are lost.<br/>
+    At the beginning of their turn, all non-used RP are lost, and RP are returned to their default value
+    (except if the character is focusing on a preparation, see below).<br/>
 </p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">

@@ -23,45 +23,73 @@
         </tr>
         <tr>
             <td>1</td>
-            <td>Voix dans la tête par morceaux</td>
+            <td>voix dans la tête par morceaux</td>
             <td>1</td>
             <td>Un mot</td>
             <td>Contact*</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Voix dans la tête entière</td>
+            <td>voix dans la tête entière</td>
             <td>2</td>
-            <td>quelques mots</td>
+            <td>deux mots</td>
             <td>1 case**</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>mémoire courte</td>
+            <td>pensées de surface</td>
             <td>3</td>
-            <td>une phrase</td>
+            <td>quelques mots</td>
             <td>2-4 cases</td>
         </tr>
         <tr>
             <td>4</td>
-            <td>mémoire courte ++</td>
+            <td>mémoire courte</td>
             <td>4</td>
-            <td>quelques phrases</td>
+            <td>une phrase</td>
             <td>5-10 cases</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>mémoire longue</td>
+            <td>mémoire moyen-terme</td>
             <td>5</td>
-            <td>~ une description</td>
+            <td>deux phrases</td>
             <td>11-20 cases</td>
         </tr>
         <tr>
-            <td>6+</td>
-            <td>souvenirs</td>
             <td>6</td>
-            <td>~ une scène</td>
-            <td>21+ cases</td>
+            <td>mémoire longue</td>
+            <td>6</td>
+            <td>quelques phrases</td>
+            <td>21-50 cases</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>souvenirs</td>
+            <td>7</td>
+            <td>une description</td>
+            <td>51-100 cases</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>souvenirs</td>
+            <td>8</td>
+            <td>un panorama</td>
+            <td>101-200 cases</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>souvenirs</td>
+            <td>9</td>
+            <td>une scène</td>
+            <td>201-500 cases</td>
+        </tr>
+        <tr>
+            <td>10+</td>
+            <td>subconscient (?)</td>
+            <td>10</td>
+            <td>une succession de scènes</td>
+            <td>501+ cases</td>
         </tr>
     </table>
 </div>
@@ -127,10 +155,10 @@
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    * : cf magie > ordre de grandeur
+    cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeur</a>
 </p>
 <p *ngIf="langue.l == 'en'">
-    * : see magic > ballparks
+    see <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ballparks</a>
 </p>
 
 <p *ngIf="langue.l == 'fr'">
