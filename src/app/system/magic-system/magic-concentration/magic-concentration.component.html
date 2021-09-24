@@ -5,7 +5,7 @@
     </button>
     Contrôle sur un sort
 </p>
-<div *ngIf="show1">
+<div class="divshow" *ngIf="show1">
     Concentration sur un sort
     <div class="div-table" *ngIf="langue.l == 'fr'">
         <table>
@@ -109,7 +109,7 @@
     </button>
     Contrôle sur un élément
 </p>
-<div *ngIf="show2">
+<div class="divshow" *ngIf="show2">
     Niveaux de concentration sur le contrôle d'un élément selon sa tangibilité
     <div class="div-table" *ngIf="langue.l == 'fr'">
         <table>
@@ -240,7 +240,7 @@
         <div *ngIf="!show3">></div>
     </button>
     Garder ses PR d'un tour à l'autre<br/>
-    <span *ngIf="show3">
+    <span class="divshow" *ngIf="show3">
         cf <a routerLink="/system/combat" routerLinkActive="activebutton">préparer une action</a>
     </span>
 </p>
@@ -251,7 +251,7 @@
         <div *ngIf="!show4">></div>
     </button>
     Garder une compétence active<br/>
-    <span *ngIf="show4">
+    <span class="divshow" *ngIf="show4">
         cf <a routerLink="/character/skills/attack" routerLinkActive="activebutton">compétences</a> comme Analyse, ou Viser
     </span>
     
