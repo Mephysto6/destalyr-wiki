@@ -188,3 +188,11 @@ a {
     color: black;
     font: 20px Arial, sans-serif;
 }
+.bullet-button {
+    /* margin-top: 10px; */
+    color: #000000;
+    font: 15px Arial;
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}

@@ -52,6 +52,7 @@ import { LyuneComponent } from './lore/races/lyune/lyune.component';
 import { MagicSystemExplanationComponent } from './system/magic-system/magic-system-explanation/magic-system-explanation.component';
 import { MagicCreationComponent } from './system/magic-system/magic-creation/magic-creation.component';
 import { MagicManipulationComponent } from './system/magic-system/magic-manipulation/magic-manipulation.component';
+import { MagicConcentrationComponent } from './system/magic-system/magic-concentration/magic-concentration.component';
 import { MagicVisionComponent } from './system/magic-system/magic-vision/magic-vision.component';
 import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
 import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
@@ -175,6 +176,7 @@ const routes: Routes = [
           { path: 'explanation', component: MagicSystemExplanationComponent },
           { path: 'creation', component: MagicCreationComponent },
           { path: 'manipulation', component: MagicManipulationComponent },
+          { path: 'concentration', component: MagicConcentrationComponent },
           { path: 'vision', component: MagicVisionComponent },
           { path: 'ballparks', component: MagicBallparksComponent },
           { path: 'group', component: MagicGroupComponent },

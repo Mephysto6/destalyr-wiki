@@ -1,0 +1,258 @@
+<p>
+    <button class="bullet-button" (click)="show_text_1()">
+        <div *ngIf="show1">v</div>
+        <div *ngIf="!show1">></div>
+    </button>
+    Contrôle sur un sort
+</p>
+<div *ngIf="show1">
+    Concentration sur un sort
+    <div class="div-table" *ngIf="langue.l == 'fr'">
+        <table>
+            <tr>
+                <th>Puissance du sort</th>
+                <th>Niveau du sort</th>
+                <th>Coût du sort</th>
+                <th>Coût de la concentration</th>
+            </tr>
+            <tr>
+                <td>0-4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Être conscient</td>
+            </tr>
+            <tr>
+                <td>5-9</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1 / minute (= 10 tours)</td>
+            </tr>
+            <tr>
+                <td>10-14</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1 / 5 tours</td>
+            </tr>
+            <tr>
+                <td>15-19</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1 / 2 tours</td>
+            </tr>
+            <tr>
+                <td>20-24</td>
+                <td>4</td>
+                <td>4</td>
+                <td>1 / tour</td>
+            </tr>
+            <tr>
+                <td>25-29</td>
+                <td>5</td>
+                <td>5</td>
+                <td>1 / tour</td>
+            </tr>
+        </table>
+    </div>
+    <div class="div-table" *ngIf="langue.l == 'en'">
+        <table>
+            <tr>
+                <th>Puissance du sort</th>
+                <th>Niveau du sort</th>
+                <th>Coût du sort</th>
+                <th>Coût de la concentration</th>
+            </tr>
+            <tr>
+                <td>0-4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Être conscient</td>
+            </tr>
+            <tr>
+                <td>5-9</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1 / minute (= 10 tours)</td>
+            </tr>
+            <tr>
+                <td>10-14</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1 / 5 tours</td>
+            </tr>
+            <tr>
+                <td>15-19</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1 / 2 tours</td>
+            </tr>
+            <tr>
+                <td>20-24</td>
+                <td>4</td>
+                <td>4</td>
+                <td>1 / tour</td>
+            </tr>
+            <tr>
+                <td>25-29</td>
+                <td>5</td>
+                <td>5</td>
+                <td>1 / tour</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<p>
+    <button class="bullet-button" (click)="show_text_2()">
+        <div *ngIf="show2">v</div>
+        <div *ngIf="!show2">></div>
+    </button>
+    Contrôle sur un élément
+</p>
+<div *ngIf="show2">
+    Niveaux de concentration sur le contrôle d'un élément selon sa tangibilité
+    <div class="div-table" *ngIf="langue.l == 'fr'">
+        <table>
+            <tr>
+                <th>Taille de l'élément</th>
+                <th>Tangible</th>
+                <th>intangible</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>10+</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </div>
+    <div class="div-table" *ngIf="langue.l == 'en'">
+        <table>
+            <tr>
+                <th>Taille de l'élément</th>
+                <th>Tangible</th>
+                <th>intangible</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>10+</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+
+<p>
+    <button class="bullet-button" (click)="show_text_3()">
+        <div *ngIf="show3">v</div>
+        <div *ngIf="!show3">></div>
+    </button>
+    Garder ses PR d'un tour à l'autre<br/>
+    <span *ngIf="show3">
+        cf <a routerLink="/system/combat" routerLinkActive="activebutton">préparer une action</a>
+    </span>
+</p>
+
+<p>
+    <button class="bullet-button" (click)="show_text_4()">
+        <div *ngIf="show4">v</div>
+        <div *ngIf="!show4">></div>
+    </button>
+    Garder une compétence active<br/>
+    <span *ngIf="show4">
+        cf <a routerLink="/character/skills/attack" routerLinkActive="activebutton">compétences</a> comme Analyse, ou Viser
+    </span>
+    
+</p>
