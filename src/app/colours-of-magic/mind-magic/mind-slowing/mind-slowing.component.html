@@ -1,8 +1,10 @@
 <p *ngIf="langue.l == 'fr'">
-    Pour ralentir les pensées :
+    Pour ralentir les pensées :<br/>
+    1d12 + (précision x2) contre 1d12 + sensitivité
 </p>
 <p *ngIf="langue.l == 'en'">
-    To slow someone's mind :
+    To slow someone's mind :<br/>
+    1d12 + (precision x2) vs 1d12 + sensitivity
 </p>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
@@ -17,7 +19,7 @@
         <tr>
             <td>Sens</td>
             <td>De combien c'est ralenti</td>
-            <td>Discrétion</td>
+            <td>Discrétion & Application</td>
             <td>Quelles capacités sont affectées</td>
             <td>Distance entre le mage et la victime</td>
         </tr>

@@ -47,8 +47,8 @@
 <h3 *ngIf="langue.l == 'en'">Attack</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Toucher : <b>1d12 + (précision x2)</b> contre esquive<br/>
-    Dégâts : <b>efficacité + taille</b> - résistance* (naturelle, sans armure)<br/>
+    Toucher : <b>1d12 + (précision x2)</b> contre esquive*<br/>
+    Dégâts : <b>efficacité + taille</b> - résistance** (naturelle, sans armure)<br/>
     Pour ce calcul, on considère que la valeur de la taille est majorée par la taille de la cible.
     Par exemple : Une personne fait face à un humain et un renard.
     La personne lance un sort possèdant 3 en efficacité, et 5 en taille.
@@ -58,9 +58,12 @@
     Le renard tombe inconscient et l'humain n'est que blessé.
     (cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeurs</a>)
     <br/>
-    * = La plupart des magies auront des conséquences physiques, et donc sont opposées à la résistances d'une personne.
+    * = Après avoir reçu le résultat de l'attaque (si ça touche ou pas), le mage peut prendre 1 point de fatigue pour relancer son jet
+    et forcer l'ennemi à relancer le sien.
+    Il peut faire ça un nombre de fois égal à sa spécialisation/2 par tour.<br/>
+    ** = La plupart des magies auront des conséquences physiques, et donc sont opposées à la résistances d'une personne.
     Certaines magies (esprit, âme et purification) sont plus abstraites et attaque une créature plus psychologiquement que physiquement.
-    Dans ces cas là, la magie va s'opposer à la sensitivité de la cible et non sa résistance.
+    Dans ces cas là, la magie va s'opposer à la sensitivité de la cible et non sa résistance.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 
