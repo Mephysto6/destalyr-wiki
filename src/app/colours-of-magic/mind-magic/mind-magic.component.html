@@ -15,5 +15,9 @@
         <menu-button *ngIf="langue.l == 'fr'">Haluciner</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Halucinating</menu-button>
     </a>
+    <a routerLink="/colours-of-magic/mind/suggesting" class="button" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Suggestion</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Suggestion</menu-button>
+    </a>
 </nav>
 <router-outlet></router-outlet>
