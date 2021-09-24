@@ -5,6 +5,7 @@
         <tr>
             <th>Élement pur</th>
             <th>Tangibilité</th>
+            <th>DET</th>
             <th>Effet simple</th>
             <th>Effet moyen</th>
             <th>Effet avancé</th>
@@ -13,6 +14,7 @@
         <tr>
             <td>Feu</td>
             <td>i</td>
+            <td>1</td>
             <td>Allumer une torche</td>
             <td>Trait de feu</td>
             <td>Chalumeau</td>
@@ -21,6 +23,7 @@
         <tr>
             <td>Air</td>
             <td>T</td>
+            <td>5</td>
             <td>Éteindre une torche</td>
             <td>Pousser qqn, amortir une chute</td>
             <td>Désarmer qqn</td>
@@ -29,6 +32,7 @@
         <tr>
             <td>Lumière</td>
             <td>i</td>
+            <td>4</td>
             <td>Éclairer une pièce</td>
             <td>Éblouir qqn</td>
             <td>Barreaux</td>
@@ -37,6 +41,7 @@
         <tr>
             <td>Nature</td>
             <td>T</td>
+            <td>2</td>
             <td>Écarter des vignes</td>
             <td>Fouetter</td>
             <td>Restreindre qqn</td>
@@ -45,6 +50,7 @@
         <tr>
             <td>Eau</td>
             <td>T</td>
+            <td>3</td>
             <td>Transvaser</td>
             <td>Pousser qqn</td>
             <td>Couper</td>
@@ -53,6 +59,7 @@
         <tr>
             <td>Ténèbres</td>
             <td>i</td>
+            <td>(5)</td>
             <td>Cacher qqch</td>
             <td>Bloquer une lumière</td>
             <td>Profondeur d'ombre</td>
@@ -128,6 +135,7 @@
         <tr>
             <th>Élement combiné</th>
             <th>Tangibilité</th>
+            <th>DET</th>
             <th>Effet simple</th>
             <th>Effet moyen</th>
             <th>Effet avancé</th>
@@ -135,6 +143,7 @@
         <tr>
             <td>Explosion</td>
             <td>i</td>
+            <td>1</td>
             <td>Exploser du verre</td>
             <td>Exploser du bois ou de la pierre</td>
             <td>Exploser du metal</td>
@@ -142,6 +151,7 @@
         <tr>
             <td>Tonnerre</td>
             <td>i</td>
+            <td>1</td>
             <td>Allumer une torche</td>
             <td>Electriser quelqu'un</td>
             <td>Electrocuter quelqu'un</td>
@@ -149,6 +159,7 @@
         <tr>
             <td>Purification</td>
             <td>i</td>
+            <td>4</td>
             <td>Assainir de l'eau</td>
             <td>Soigner une blessure ou une maladie</td>
             <td>Supprimer le contrôle d'âme</td>
@@ -156,6 +167,7 @@
         <tr>
             <td>Croissance</td>
             <td>i</td>
+            <td>3</td>
             <td>Faire pousser des plantes</td>
             <td>Agrandir le sol pour faire un pont ou un mur</td>
             <td>Agrandir une personne</td>
@@ -163,6 +175,7 @@
         <tr>
             <td>Animaux</td>
             <td>T</td>
+            <td>3</td>
             <td>Communication totale et contrôle basique des animaux</td>
             <td>Gagner les particularités d'animaux</td>
             <td>Appel et contrôle total d'animaux</td>
@@ -170,6 +183,7 @@
         <tr>
             <td>Terre</td>
             <td>T</td>
+            <td>3</td>
             <td>Écarter de la terre ou des cailloux</td>
             <td>Lancer des rochers</td>
             <td>Gagner la résistance de la pierre</td>
@@ -177,6 +191,7 @@
         <tr>
             <td>Glace</td>
             <td>T</td>
+            <td>2</td>
             <td>Transformer de l'eau en glace</td>
             <td>Envoyer des pics de glace, faire une plateforme en glace</td>
             <td>Faire une tombe/prison de glace</td>
@@ -184,6 +199,7 @@
         <tr>
             <td>Eau de vie</td>
             <td>T</td>
+            <td>1</td>
             <td>Transformer de l'eau en eau de vie</td>
             <td>Lance-flamme</td>
             <td>Fondre du métal</td>
@@ -191,6 +207,7 @@
         <tr>
             <td>Illusion</td>
             <td>i</td>
+            <td>-</td>
             <td>Changer la couleur de quelque chose</td>
             <td>Appliquer une illusion sur de l'eau</td>
             <td>Se rendre invisible</td>
@@ -198,6 +215,7 @@
         <tr>
             <td>Esprit</td>
             <td>T</td>
+            <td>-</td>
             <td>Savoir si une personne est consciente,<br/>communiquer avec des gens volontaires</td>
             <td>Lire les pensées de surface,<br/>communiquer avec des gens non volontaires</td>
             <td>Lire, modifier et supprimer des souvenirs</td>
@@ -205,6 +223,7 @@
         <tr>
             <td>Tentacules</td>
             <td>i</td>
+            <td>2</td>
             <td>Faire un tentacule</td>
             <td>Fouetter avec un tentacule</td>
             <td>Porter du lourd avec un tentacule</td>
@@ -212,6 +231,7 @@
         <tr>
             <td>Âme</td>
             <td>T</td>
+            <td>-</td>
             <td>Ressentir les émotions de surface</td>
             <td>Imposer des émotions</td>
             <td>Modifier la douleur et la fatigue</td>
@@ -313,3 +333,12 @@
         </tr>
     </table>
 </div>
+
+<p *ngIf="langue.l == 'fr'">
+    DET : Damage Efficacity Threshold<br/>
+    Minimum d'efficacité à atteindre pour que le sort puisse servir à faire des dégâts
+</p>
+<p *ngIf="langue.l == 'en'">
+    DET : Damage Efficacity Threshold<br/>
+    Minimum efficacity to reach in order for the spell to be able to deal damage.
+</p>
