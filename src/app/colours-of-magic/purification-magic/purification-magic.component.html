@@ -1,7 +1,7 @@
 <p *ngIf="langue.l == 'fr'">
     La magie de purification est majoritairement connue pour ses bienfaits et ses soins efficaces.<br/>
     Évidemment, la purification sert principalement à soigner des blessures, des infections et autres maladies,
-    et à libérer de l'emprise d'un sort de magie d'âme.
+    et à libérer de l'emprise d'un sort de magie d'âme.<br/>
     Mais elle peut aussi être utilisée en combat :
     si un ennemi hostile a une blessure, alors un mage de purification peut augmenter la douleur de cette blessure.<br/>
     La quantité de douleur dépend de l'intensité de la blessure et de l'efficacité du sort de purification,
@@ -23,65 +23,98 @@
         <tr>
             <th>Valeur</th>
             <th>Efficacité</th>
+            <th>Efficacité pour Infusion</th>
             <th>Précision</th>
             <th>Taille</th>
             <th>Distance</th>
         </tr>
         <tr>
             <td>Sens</td>
-            <td>De combien la blessure est accentuée</td>
+            <td>Dégâts de purification</td>
+            <td>Dégâts de purification pour infusion</td>
             <td>Si ça s'applique</td>
-            <td>Taille du support</td>
-            <td>Distance au support</td>
+            <td>Taille de la blessure</td>
+            <td>Distance à la blessure</td>
         </tr>
         <tr>
             <td>1</td>
-            <td>-</td>
+            <td>0%</td>
+            <td>0%</td>
             <td></td>
             <td>Paume (5 cm)</td>
             <td>Contact*</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>-</td>
+            <td>0%</td>
+            <td>0%</td>
             <td></td>
             <td>Main (20 cm)</td>
             <td>1 case**</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>sans changement</td>
+            <td>0%</td>
+            <td>0%</td>
             <td></td>
             <td>Bras (1 pas)</td>
             <td>2-4 cases</td>
         </tr>
         <tr>
             <td>4</td>
-            <td>x 1.25</td>
+            <td>50%</td>
+            <td>50%</td>
             <td></td>
             <td>Corps (2 m)</td>
             <td>5-10 cases</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>x 1.5</td>
+            <td>50%</td>
+            <td>50%</td>
             <td></td>
             <td>Groupe (5-10 m)</td>
             <td>11-20 cases</td>
         </tr>
         <tr>
             <td>6</td>
-            <td>x 1.75</td>
+            <td>100%</td>
+            <td>50%</td>
             <td></td>
             <td>Très grand (20 m)</td>
-            <td>21-40 cases</td>
+            <td>21-50 cases</td>
         </tr>
         <tr>
-            <td>7+</td>
-            <td>x 2</td>
+            <td>7</td>
+            <td>100%</td>
+            <td>100%</td>
             <td></td>
             <td>Très très grand (40 m)</td>
-            <td>41+ cases</td>
+            <td>51-100 cases</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>150%</td>
+            <td>100%</td>
+            <td></td>
+            <td>Très très grand (40 m)</td>
+            <td>101-200 cases</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>150%</td>
+            <td>100%</td>
+            <td></td>
+            <td>Très très grand (40 m)</td>
+            <td>201-500 cases</td>
+        </tr>
+        <tr>
+            <td>10+</td>
+            <td>200%</td>
+            <td>150%</td>
+            <td></td>
+            <td>Très très grand (40 m)</td>
+            <td>501+ cases</td>
         </tr>
     </table>
 </div>
@@ -89,10 +122,25 @@
 <p *ngIf="langue.l == 'fr'">
     En utilisant la magie de purification pour accentuer une blessure,
     certaines conditions peuvent augmenter la précision du sort : <br/>
-    - si il a vu la blessure être infligée<br/>
-    - si c'est le joueur qui a infligé la blessure<br/>
+    - si le personnage a vu la blessure être infligée<br/>
+    - si c'est le personnage qui a infligé la blessure<br/>
     - si c'est une magie du personnage qui a infligé la blessure<br/>
-    Pour chacune de ces conditions, le sort gagne +1 en précision (donc un +2 au jet de précision).
+    Pour chacune de ces conditions, le sort gagne +1 en précision (donc un +2 au jet de précision).<br/>
+    Pour calculer les dégâts totaux infligés, il faut commencer par calculer les dégâts de la blessure ciblée.<br/>
+    Les dégâts physiques infligés par une arme est de 1dx + stat, souvent 1d6 + Force. Ce résultat est appelé dégâts physiques purs.
+    En retirant la défense (résistance + armure) de la victime, on obtient les dégâts physiques infligés.
+    En multipliant ces dégâts par le multiplicateur du tableau précédent, on obtient les dégâts de purification purs.
+    En retirant la sensitivité de la victime, on obtient les dégâts de purification infligés.<br/>
+    Les dégâts physiques infligés déterminent la blessure (type, taille et intensité) et la douleur correspondante.
+    Les dégâts de purification infligés s'ajoutent en douleur seulement, et sont liés à la blessures.
+    Ils ne peuvent pas être soignés, mais disparaissent si la blessure est entièrement soignée et disparaît.<br/>
+    Résumé :<br/>
+    1dx + stat = dégâts physiques purs<br/>
+    dégâts physiques purs - défense = dégâts physiques infligés<br/>
+    dégâts physiques infligés x mulitplicateur = dégâts de purification purs<br/>
+    dégâts de purification purs - sensitivité = dégâts de purification infligés.<br/>
+    dégâts infligés => douleur + blessure<br/>
+    dégâts de purification infligés => douleur<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     
