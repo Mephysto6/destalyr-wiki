@@ -6,15 +6,154 @@
     To suggest :<br/>
     1d12 + (efficacity x2) vs 1d12 + sensitivity
 </p>
-<p *ngIf="langue.l == 'fr'">
-    E = force<br/>
-    P = discrétion<br/>
-    T = complexité (= nombre de mots dans la suggestion)<br/>
-    D = distance<br/>
-</p>
-<p *ngIf="langue.l == 'en'">
-    E = strength<br/>
-    P = discretion<br/>
-    T = complexity (= number of words in the suggestion)<br/>
-    D = distance<br/>
-</p>
+
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>Force de la suggestion</td>
+            <td>Discrétion & Application</td>
+            <td>Complexité de la suggestion</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>-</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1 verbe</td>
+            <td>1 case*</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>-</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1 verbe + 1 complément</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>-</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>6</td>
+            <td>2 verbes + 2 compléments</td>
+            <td>21-50 cases</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>7</td>
+            <td>-</td>
+            <td>51-100 cases</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>8</td>
+            <td>8</td>
+            <td>une phrase courte</td>
+            <td>101-200 cases</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>9</td>
+            <td>9</td>
+            <td>-</td>
+            <td>201-500 cases</td>
+        </tr>
+        <tr>
+            <td>10+</td>
+            <td>10</td>
+            <td>10</td>
+            <td>une phrase détaillée</td>
+            <td>501+ cases</td>
+        </tr>
+    </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+    <table>
+        <tr>
+            <th>Valeur</th>
+            <th>Efficacité</th>
+            <th>Précision</th>
+            <th>Taille</th>
+            <th>Distance</th>
+        </tr>
+        <tr>
+            <td>Sens</td>
+            <td>De combien c'est ralenti</td>
+            <td>Discrétion</td>
+            <td>Quelles capacités sont affectées</td>
+            <td>Distance entre le mage et la victime</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>-</td>
+            <td>1</td>
+            <td>Discussion</td>
+            <td>Contact*</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>Actions (ex : attaquer)</td>
+            <td>1 case**</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>-</td>
+            <td>3</td>
+            <td>-</td>
+            <td>2-4 cases</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>Réactions (ex : esquiver)</td>
+            <td>5-10 cases</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>-</td>
+            <td>5</td>
+            <td>-</td>
+            <td>11-20 cases</td>
+        </tr>
+        <tr>
+            <td>6+</td>
+            <td>3</td>
+            <td>6+</td>
+            <td>Réflexion</td>
+            <td>21+ cases</td>
+        </tr>
+    </table>
+</div>
+
