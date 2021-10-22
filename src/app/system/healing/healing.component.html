@@ -1,7 +1,13 @@
-<h2 *ngIf="langue.l == 'fr'">Soin</h2>
-<h2 *ngIf="langue.l == 'en'">Healing</h2>
+<h2 *ngIf="langue.l == 'fr'">Blessures</h2>
+<h2 *ngIf="langue.l == 'en'">Wounds</h2>
 
 <p *ngIf="langue.l == 'fr'">
+    Quand une blessure est infligée, elle possède un type, une position, une taille et une intensité.<br/>
+    Le type d'une blessure est en général une casse ou une coupure.<br/>
+    La position d'une blessure est l'endroit sur le corps où la blessure a été infligée.<br/>
+    La taille et l'intensité de la blessure sont liées à l'attaque ayant causé la blessure.<br/>
+    <br/>
+    Une blessure cause à la victime des points de douleurs.
     L'intensité d'une blessure est liée à la douleur causée par cette blessure par :<br/>
     Douleur = Intensité + 1 -ou bien- Intensité = Douleur - 1.<br/>
     La définition de soigner est de réduire l'intensité de la blessure, ce qui réduit aussi la douleur liée.<br/>
@@ -9,6 +15,12 @@
     Une blessure à -1 d’intensité est guérie et disparaît.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
+    When a wound is dealt, it possesses a type, a location, a size and an intensity.<br/>
+    The type of a wound is in general either a cut or a break.<br/>
+    The location of a wound is where on the body the wound was dealt.<br/>
+    The size and intesity of the wound are linked to the attacked which cause the wound.<br/>
+    <br/>
+    A wound causes its victim pain points.<br/>
     The intensity of a wound is linked to the pain caused by this wound by :<br/>
     Pain = Intensity + 1 -or- Intensity = Pain - 1.<br/>
     The definition of healing is to reduce the intensity of the wound which also reduces the pain.<br/>
@@ -22,22 +34,46 @@
 <p *ngIf="langue.l == 'fr'">
     Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer <b>1d6</b> par blessure par heure de repos.<br/>
     Si le dé donne 6 alors la blessure correspondante est soignée de 1.<br/>
-    Si le personnage s'occupe de sa blessure, alors le 5 permet aussi de soigner. Une personne ne peut s'occuper que d'une blessure à la fois.<br/>
+    Si le personnage s'occupe de sa blessure, alors le 5 permet aussi de soigner. Une personne ne peut s'occuper que d'une blessure à la fois.
+    Plusieurs personnages peuvent d'occuper de blessures différentes sur le même personnage blessé.<br/>
     Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagner 2 points d'énergie).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     A wounded character can rest to heal. They can roll <b>1d6</b> per wound per hour of rest.<br/>
     If the die lands on 6 then the corresponding wound is healed by 1.<br/>
-    If the character tends to the wound, a 5 can also heal. A character can tend to only one wound at a time.<br/>
+    If the character tends to the wound, a 5 can also heal. A character can tend to only one wound at a time.
+    Several characters can tend to different wounds on the same wounded character.<br/>
     A character also loses 2 fatigue points per hour of rest (also called gaining 2 points of energy).<br/>
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">Dormir</h2>
+<h2 *ngIf="langue.l == 'en'">Sleeping</h2>
+
+<p *ngIf="langue.l == 'fr'">
+    Une personne doit dormir un minimum de 6 heures par nuit pour ne pas recevoir de pénalité.<br/>
+    Si un personnage dort moins de 6 heures, alors sa fatigue minimum augmente du nombre d'heures manquées (max 10).<br/>
+    Si un personnage dort plus que 6 heures, alors sa fatigue minimum diminue du nombre d'heures ajoutées (min 0).<br/>
+    Un personnage ne peut pas descendre sa fatigue sous sa fatigue minimum.<br/>
+    Par exemple : Un personnage dort 2 heures pendant une nuit. Il a donc (6-2 = 4) 4 de fatigue minimum.
+    Le nuit suivante, il dort 9 heures. Il récupère donc (9-6 = 3) 3 heures, et est maintenant à (4-3 = 1) 1 point de fatigue minimum.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    A person has to sleep a minimum of 6 hours per night in order not to receive penalties.<br/>
+    If a character sleeps less than 6 hours, then their minimum fatigue increases by the number of lacking hours (max 10).<br/>
+    If a character sleeps more than 6 hours, then their minimum fatigue descreases by the number of added hours (min 0).<br/>
+    A character's fatigue cannot go under their minimum fatigue.<br/>
+    For example : A character sleeps for 2 hours during a night. They have (6-2 = 4) 4 minimum fatigue.
+    The next night, they sleep 9 hours. They get back (9-6 = 3) 3 hours, and are now at (4-3 = 1) 1 minimum fatigue.<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Sorts</h2>
 <h2 *ngIf="langue.l == 'en'">Spells</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    Taille et distance selon blessure et cibles.<br/>
-    Le soigneur lance <b>1d12 + précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.
+    Pour soigner une blessure avec un sort, celui-ci doit couvrir la blessure en Taille.<br/>
+    La distance correspond à la distance entre le soigneur et la personne blessée.<br/>
+    Le soigneur lance <b>1d12 + précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.<br/>
+    Et la blessure est soignée selon l'efficacité du sort (cf tableau).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Size and distance depending on wound and target.<br/>
