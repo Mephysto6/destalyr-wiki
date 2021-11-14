@@ -3,11 +3,11 @@
 
 <p *ngIf="langue.l == 'fr'">
     Quand une blessure est infligée, elle possède un type, une position, une taille et une intensité.<br/>
-    Le type d'une blessure est en général une casse ou une coupure.<br/>
+    Le type d'une blessure est casse, coupure, ou autre (brûlures, poison, ...).<br/>
     La position d'une blessure est l'endroit sur le corps où la blessure a été infligée.<br/>
     La taille et l'intensité de la blessure sont liées à l'attaque ayant causé la blessure.<br/>
     <br/>
-    Une blessure cause à la victime des points de douleurs.
+    Une blessure cause à sa victime des points de douleurs.
     L'intensité d'une blessure est liée à la douleur causée par cette blessure par :<br/>
     Douleur = Intensité + 1 -ou bien- Intensité = Douleur - 1.<br/>
     La définition de soigner est de réduire l'intensité de la blessure, ce qui réduit aussi la douleur liée.<br/>
@@ -73,7 +73,7 @@
     Pour soigner une blessure avec un sort, celui-ci doit couvrir la blessure en Taille.<br/>
     La distance correspond à la distance entre le soigneur et la personne blessée.<br/>
     Le soigneur lance <b>1d12 + précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.<br/>
-    Et la blessure est soignée selon l'efficacité du sort (cf tableau).<br/>
+    La blessure est soignée selon l'efficacité du sort (cf tableau).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Size and distance depending on wound and target.<br/>
