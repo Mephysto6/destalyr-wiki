@@ -31,24 +31,52 @@
         </tr>
         <tr>
             <td>4</td>
-            <td>Forte</td>
+            <td>Moyenne</td>
             <td>Forte (20 cm)</td>
-            <td>Corps (2 m)</td>
+            <td>Corps (2 m / 1 case)</td>
             <td>5-10 cases</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>Très forte</td>
+            <td>Moyenne+</td>
             <td>Très forte (5 cm)</td>
-            <td>Groupe (5-10 m)</td>
+            <td>Groupe (5-10 m / 2-6 cases)</td>
             <td>11-20 cases</td>
         </tr>
         <tr>
-            <td>6+</td>
-            <td>Extrême</td>
+            <td>6</td>
+            <td>Forte</td>
             <td>Extrême (1 cm)</td>
-            <td>Très grand (20 m)</td>
-            <td>21+ cases</td>
+            <td>Très grand (10-20 m / 7-14 cases)</td>
+            <td>21-50 cases</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Très forte</td>
+            <td>+</td>
+            <td>21-50 m / 15-34 cases</td>
+            <td>51-100 cases</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Très très forte</td>
+            <td>+</td>
+            <td>51-100 m / 35-64 cases</td>
+            <td>101-200 cases</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>++</td>
+            <td>++</td>
+            <td>101-200 m / 65-134 cases</td>
+            <td>201-500 cases</td>
+        </tr>
+        <tr>
+            <td>10+</td>
+            <td>Extrême</td>
+            <td>++</td>
+            <td>200+ m / 135+ cases</td>
+            <td>501+ cases</td>
         </tr>
     </table>
 </div>
@@ -107,11 +135,11 @@
 </div>
 
 <p *ngIf="langue.l == 'fr'">
-    *= contact quasi impossible avec un ennemi en combat<br/><br/>
+    *= contact quasi impossible avec un ennemi en combat<br/>
     **= distance d’attaque mêlée “classique”<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    *= contact almost impossible with an enemy in combat<br/><br/>
+    *= contact almost impossible with an enemy in combat<br/>
     **= "classic" melee attack range<br/>
 
 </p>
