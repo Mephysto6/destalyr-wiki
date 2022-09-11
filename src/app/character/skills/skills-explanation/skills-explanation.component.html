@@ -2,6 +2,10 @@
 <h3 *ngIf="langue.l == 'en'">Offensive skills</h3>
 
 <p *ngIf="langue.l == 'fr'">
+    <b>Débloquer les armes</b><br/>
+    Les premières compétences permettent l'utilisation respective d'armes simples de distance et d'armes simples de contact.<br/>
+    Avec 3 points investis dans l'arbre, l'utilisation des armes versatiles est débloquée.<br/>
+    <br/>
     <b>Cibler</b><br/>
     cf cibler pour le tableau.<br/>
     Cibler est débloqué par les premiers points de compétences dans l'arbre d'attaque :
@@ -12,10 +16,9 @@
     <br/>
     <b>Diversion</b><br/>
     cf état occupé<br/>
-    Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.<br/>
-    Un ennemi occupé n'obtient pas de réaction de la part des actions du personnage avec cette compétence.<br/>
+    (Définition : Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.)<br/>
     Ne provoque plus de réaction de la part d'un ennemi occupé.<br/>
-    De plus, le personnage gagne un +1 au toucher contre les ennemis occupés.<br/>
+    De plus, gagne un +1 au toucher contre les ennemis occupés.<br/>
     <br/>
     <b>Présences</b><br/>
     Les présences sont débloqué par la compétence Présence (niveau 2) dans l'arbre d'attaque.<br/>
@@ -32,7 +35,7 @@
 <p *ngIf="langue.l == 'fr'">
     <b>Résistance à l'inconscience</b><br/>
     La résistance à l'inconscience est débloquée par le dernier point de compétence dans l'arbre de défense (niveau 3).<br/>
-    Cette résistance ne s'applique pour l'inconscience causée par la douleur.
+    Cette résistance ne s'applique que pour l'inconscience causée par la douleur.
     Le premier tour de résistance correspond à quand le personnage commence son tour à 10 ou plus de douleur.
     Si pour une certaine raison, le personnage commence son tour à moins de 10 et le finit à 10 ou plus,
     ce tour ne compte pas dans les 2 tours de résistances, et il faut attendre le prochain tour (où le personnage
@@ -70,6 +73,8 @@
     Les sorts de niveau 1 sont donc gratuits.<br/>
     À partir de 5 points dans cet arbre, ils sont réduits de 1 additionnel, donc de 2 au total.
     Les sorts de niveau 2 sont donc gratuits.<br/>
+    À partir de 8 points dans cet arbre, ils sont réduits de 1 additionnel, donc de 3 au total.
+    Les sorts de niveau 3 sont donc gratuits.<br/>
     <br/>
     <b>Méditation</b><br/>
     La méditation est débloquée par le premier point de compétence de magie (niveau 0).<br/>
@@ -81,17 +86,16 @@
     L'énergie temporaire ne peut être utilisée que pour la magie et disparait après un sommeil,
     ou 12 heures (le premier qui arrive).<br/>
     Méditer ne peut pas ammener quelqu'un à posséder plus que 2 points d'énergie temporaire.<br/>
-    Méditer permet aussi de réduire à zéro le coût des sorts et des concentrations.
-    <br/>
+    Tout sort lancé et concentration gardée durant la méditation ne coûte aucun point de fatigue.<br/>
     <br/>
     <b>Perturber</b><br/>
     La perturbation est débloquée par le premier point dans la branch de gauche dans l'arbre de magie (niveau 1).<br/>
     La personne qui perturbe est appelée perturbant, et la cible est appelée victime.<br/>
+    Le perturbant décide de perturber à l'annonce du début du sort, avant le lancé de dés.<br/>
     La victime lance 1d12 + sensitivité, et le perturbant lance 1d12.
-    Si le perturbant a une magie en commun (pure ou combinée) avec le sort lancé, il peut ajouter sa sentivité au jet.<br/>
+    Si le perturbant a une magie en commun (pure ou combinée) avec le <b>sort lancé</b>, il peut ajouter sa sentivité au jet.<br/>
     Si le perturbant obtient la même valeur ou plus haut que la valeur de la victime,
-    la victime perd 1d4. Sinon, il ne se passe rien.
-    <br/>
+    la victime perd 1d4. Sinon, il ne se passe rien.<br/>
     <br/>
     <b>Infusion</b><br/>
     L'infusion est débloquée par le point du milieu de la branche du milieu de l'arbre de magie (niveau 2).<br/>
@@ -100,8 +104,7 @@
     Pour la manipulation, la distance correspond à la distance entre le mage et l'objet support.<br/>
     La taille correspond à la surface de l'objet à couvrir par l'infusion.<br/>
     La précision correspond à la probabilité que l'infusion fonctionne.<br/>
-    Et l'efficacité va dépendre de tout, mais va globalement décider de l'utilité et de l'intensité des résultats.
-    <br/>
+    Et l'efficacité va dépendre de tout, mais va globalement décider de l'utilité et de l'intensité des résultats.<br/>
     <br/>
     <b>Absorber</b><br/>
     L'absorption est débloquée par le dernier point dans la branche de gauche de l'arbre de magie (niveau 3).<br/>
@@ -110,7 +113,7 @@
     Si le résultat sur chaque caractéristique est supérieur ou égal à celui du sort lancé
     (ou avec un manque cumulé de 2 ou moins), alors le sort est absorbé, n'a aucun effet,
     et l'énergie additionnelle dépensée par le lanceur est ajouté à l'énergie de l'absorbeur.<br/>
-    Le manque cumulé n'est pas diminué par un dépassement dans une caractéristique.
+    Le manque cumulé n'est pas diminué par un dépassement dans une caractéristique.<br/>
     Par exemple : le lanceur a E4-P3-T2-D1, et l'absorbeur ne connait pas ces caractéristiques et doit les deviner.
     L'absorbeur pose alors E2-P4-T1-D1. Le manque est de 3 au total (2 de efficacité + 1 de taille).
     Le point additionnel dans précision n'affecte rien. Le sort n'est pas absorbé.<br/>
@@ -119,8 +122,7 @@
     le sort a coûté 1 point de fatigue additionnel (+1 de base pour lancer les dés).
     L'absorbeur récupère ainsi 1 point d'énergie.<br/>
     Si l'absorbeur possède une magie en commun avec la magie lancée, ou bien qu'il possède de la détection magique (feu ou lumière),
-    alors il peut sentir quelles sont respectivement la caractéristique la plus forte et celle la plus faible.
-    <br/>
+    alors il peut sentir quelles sont respectivement la caractéristique la plus forte et celle la plus faible.<br/>
     <br/>
     <b>Transe</b><br/>
     La transe est débloquée par le dernier point dans la branche de droite de l'arbre de magie (niveau 3).<br/>
@@ -129,7 +131,7 @@
     Le mage garde la moitié (arrondi haut) des dés supplémentaires lancés (donc min 3).<br/>
     Après avoir utilisé la transe, le mage tombe inconscient (fatigue à 10),
     et sa récupération d'énergie est limitée à 1/heure de repos pour les prochaines 24h
-    (et il ne récupère pas d'énergie avec la méditation).
+    (et il ne récupère pas d'énergie avec la méditation).<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 

@@ -7,6 +7,7 @@
     Armes 1H tranchante : finesse (au choix, force ou dextérité)<br/>
     Les armes simples permettent un type d'attaque (soit légère, soit moyenne, soit lourde),
     et les armes versatiles permettent 2 types d'attaques (soit légère + moyenne, soit moyenne + lourde).<br/>
+    Il faut 3 points dans l'arbres de compétences d'attaque pour savoir utiliser les armes versatiles.<br/>
     Les différences entre les deux types d'armes sont principalement le prix et l'accessibilité.<br/>
     Toutes les armes tranchantes peuvent faire une attaque improvisée en dégât contondants.
 </p>
@@ -16,6 +17,7 @@
     One-handed slashing weapon : finesse (choice, strength or dexterity)<br/>
     Simple weapons allow for one attack type (either light, medium or heavy),
     while versatiles weapons allow for 2 attack types (either light + medium, or medium + heavy).<br/>
+    You need 3 points in the attack skill tree to unlock using versatile weapons.<br/>
     The main differences between the two weapon types are the price and accessibility.<br/>
     All slashing weapons can make an improvised attack for bludgeoning damage.
 </p>
@@ -33,7 +35,7 @@
             <th>Points d'actions (PA)</th>
         </tr>
         <tr>
-            <td>Rien</td>
+            <td>Poings</td>
             <td>mains nues</td>
             <td>d1 - 2</td>
             <td>/</td>
@@ -41,25 +43,25 @@
         </tr>
         <tr>
             <td>Attaque improvisée</td>
-            <td>couteau, gourdin</td>
+            <td>couteau, gourdin, chaise</td>
             <td>d2 - 2</td>
             <td>/</td>
             <td>3</td>
         </tr>
         <tr>
             <td>Attaque légère</td>
-            <td>dague, arc court, bâton</td>
+            <td>dague, bâton, arc court, arbalète de poing*</td>
             <td>d4</td>
             <td>/</td>
             <td>2</td>
         </tr>
         <tr>
             <td>Versatile légère ou moyenne</td>
-            <td>scimetaire, arc long</td>
+            <td>épée courte, scimetaire, arc recourbé</td>
         </tr>
         <tr>
             <td>Attaque moyenne</td>
-            <td>épée, mace, lance, arbalète*</td>
+            <td>épée longue, mace, arc long, arbalète*</td>
             <td>d6</td>
             <td>min 3 force</td>
             <td>3</td>
@@ -143,10 +145,25 @@
 <h3 *ngIf="langue.l == 'en'">Attacking one-handed or two-handed ?</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Si une arme à deux mains est utilisée à une mains pour attaquer, l'attaque prend un -3 au toucher.<br/>
-    Si une arme à une main est utilisée à deux mains pour attaquer, l'attaque gagne un +1 au toucher.<br/>
+    Pour les armes de contact :<br/>
+    Si une arme peut faire une attaque légère, alors elle ne peut pas être tenue à deux mains.<br/>
+    Les autres armes peuvent être tenues à une ou deux mains.<br/>
+    Si une arme est tenue à deux mains, alors l'attaque gagne un bonus selon la caractérisqtique utilisée par l'attaquant :<br/>
+    - +1 aux dégâts si l'attaquant utilise sa Force<br/>
+    - +1 au toucher si l'attaquant utilise sa Dextérité.<br/>
+    Les attaques lourdes nécessitent deux mains sur l'arme pour être effectuées, elles profitent donc toujours du bonus.<br/>
+    <br/>
+    Pour les armes à distance :<br/>
+    Les arcs ont tous besoin de deux mains pour faire des attaques.<br/>
+    Les arbalètes ont besoin de soit une main soit deux selon la taille de l'arbalète,
+    ignorent les restrictions de force pour les différentes attaques,
+    et demandent une action supplémentaire pour recharger.<br/>
+    <br/>
+    Pour les armes d'aste :<br/>
+    TBD
 </p>
 <p *ngIf="langue.l == 'en'">
+    If a weapon can make light attacks, then it cannot be held in two hands.<br/>
     If a two-handed weapon is used one-handed, the attack takes a -3 to hit.<br/>
     If a one-handed weapon is used two-handed, the attack gains a +1 to hit.<br/>
 </p>
@@ -155,10 +172,16 @@
 <h3 *ngIf="langue.l == 'en'">Not enough strength ?</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Si une personne veut utiliser une arme sans remplir la condition de Force, l'attaque prend -2 au toucher par Force manquante.<br/>
+    Si une personne veut utiliser une arme sans remplir la condition de Force, alors :<br/>
+    - si il manque 1 de Force, alors l'attaque prend -1 au toucher.<br/>
+    - si il manque 2 de Force, l'attaque prend -3 au toucher et -1 aux dégâts.<br/>
+    - si il manque 3 ou plus de Force, la personne ne peut pas utiliser l'arme.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-    If a person wants to use a weapon without filling the Strength requirement, the attack takes a -2 to hit per missing Strength.<br/>
+    If a person wants to use a weapon without fulfilling the Strength requirement, then :<br/>
+    - if they lack 1 Strength, then the attack takes -1 to hit.<br/>
+    - if they lack 2 Strength, then the attack takes -3 to hit and -1 to damage.<br/>
+    - if they lack 3 Strength or more, the person cannot use this weapon.<br/>
 </p>
 
 <h3 *ngIf="langue.l == 'fr'">Distance limite pour les armes à distance</h3>
