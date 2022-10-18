@@ -1,8 +1,9 @@
-<div class="headband">
+<div class="band headband">
     <a routerLink="/home" class="home-icon">{{title}}</a>
     <button (click)="langue.change_lang('en')" class="button_language"><img src="../assets/images/flags/en_flag_xs.png"/></button>
     <button (click)="langue.change_lang('fr')" class="button_language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
 </div>
+
 <nav class="band band1">
     <a routerLink="/home" class="button" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Accueil</menu-button>
@@ -46,3 +47,6 @@
 <div class="page-background">
     <router-outlet></router-outlet>
 </div>
+<footer>
+    -
+</footer>

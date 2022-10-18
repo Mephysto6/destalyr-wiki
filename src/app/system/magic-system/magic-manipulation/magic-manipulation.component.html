@@ -4,10 +4,9 @@
     <br/>
     Par défaut : lancer <b>Xd4</b> où X est la sensitivité de la source.<br/>
     Si X est inférieur à 4, alors le joueur lance un nombre de d2 pour arriver à 4 dés.<br/>
-    Coûte 1 point de fatigue pour lancer les dés<br/>
     Choisit dans quelle catégorie va chaque dé<br/>
     Ne peut pas "couper" de dé<br/>
-    Min 1 dans chaque carac pour que le sort fonctionne<br/>
+    Minimum 1 dans chaque carac pour que le sort fonctionne<br/>
     Pas obligé d'utiliser tous les dés<br/>
     Ajoute les résultats des dés dans la même carac, 1+1 = même résultat que 2<br/>
 </p>
@@ -34,9 +33,9 @@
     Puissance = somme de tous les dés utilisés (sans compter les +1 de magie primaire ou autres bonus/malus)<br/>
     La puissance d'un sort détermine son "niveau".<br/>
     Si le sort est purement visuel (équivalent de puissance 4) et qu'aucun dé n'a été lancé, il est de niveau 0, et ne coûte pas d'énergie.<br/>
-    Si le sort a une puissance entre 5 et 9, il est de niveau 1, et ne coûte pas plus d'énergie que de lancer les dés (1 point).<br/>
-    Si le sort a une puissance entre 10 et 14 inclus, il est de niveau 2, et coûte 1 point d'énergie aditionnel (2 points au total).<br/>
-    Si le sort a une puissance entre 15 et 19 inclus, il est de niveau 3, et coûte 2 point d'énergie aditionnel (3 points au total).<br/>
+    Si le sort a une puissance entre 5 et 9, il est de niveau 1 et coûte 1 point d'énergie.<br/>
+    Si le sort a une puissance entre 10 et 14 inclus, il est de niveau 2 et coûte 2 points d'énergie.<br/>
+    Si le sort a une puissance entre 15 et 19 inclus, il est de niveau 3 et coûte 3 points d'énergie.<br/>
     Les niveaux de sorts continuent à suivre la puissance du sort par fourchette de 5 et coûtent de plus en plus cher, suivant les règles déjà établies.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -47,8 +46,14 @@
 <h3 *ngIf="langue.l == 'en'">Attack</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Toucher : <b>1d12 + (précision x2)</b> contre esquive*<br/>
-    Dégâts : <b>efficacité + taille</b> - résistance** (naturelle, sans armure)<br/>
+    Il existe trois types d'attaques magiques : l'attaque directe sur l'ennemis, le lancé, et l'attaque psychologique.<br/>
+    <b>Attaque directe</b> : exemple : création d'une boule de feu autour d'un ennemis, prise de contrôle de la terre sous les pieds de quelqu'un et faire un trou.<br/>
+    Dans ce cas là, le jet d'attaque est <b>1d12 + (précision x2) contre l'esquive</b> de l'ennemis, et les degâts sont efficacité + taille - résistance.<br/>
+    <b>Lancé</b> : création d'une boule de feu dans les mains du mage et lancé vers l'ennemis, prise de contrôle de glace pour faire des piques et lancé vers l'ennemis.<br/>
+    Dans ce cas là, le jet d'attaque est <b>1d12 + (précision + Dex) contre l'esquive</b> de l'ennemis, et les degâts sont efficacité + taille - résistance.<br/>
+    <b>Attaque psychologique</b> : prise de contrôle partielle de l'esprit de l'ennemis pour le ralentir, illusion.<br/>
+    Dans ce cas là, le jet d'attaque est <b>1d12 + (précision x2) contre la sensitivité</b> de l'ennemis, et les degâts n'existent pas mais les résultats dépendront des caractéristiques du sort.<br/>
+    <br/>
     Pour ce calcul, on considère que la valeur de la taille est majorée par la taille de la cible.
     Par exemple : Une personne fait face à un humain et un renard.
     La personne lance un sort possèdant 3 en efficacité, et 5 en taille.
@@ -57,13 +62,10 @@
     Grâce à leurs résistances respectives, l'humain subira 3+4-2 de douleur, et le renard 3+3-1.
     Le renard tombe inconscient et l'humain n'est que blessé.
     (cf <a routerLink="/system/magic/ballparks" routerLinkActive="activebutton">ordres de grandeurs</a>)<br/>
-    <br/>
-    * = Après avoir reçu le résultat de l'attaque (si ça touche ou pas), le mage peut prendre 1 point de fatigue pour relancer son jet
+    <!-- ajouter en skill point
+        * = Après avoir reçu le résultat de l'attaque (si ça touche ou pas), le mage peut prendre 1 point de fatigue pour relancer son jet
     et forcer l'ennemi à relancer le sien.<br/>
-    Il peut faire ça un nombre de fois égal à sa spécialisation/2 par tour (arrondi inférieur).<br/>
-    ** = La plupart des magies auront des conséquences physiques, et donc sont opposées à la résistances d'une personne.
-    Certaines magies (illusion, esprit, âme et purification) sont plus abstraites et attaque une créature plus psychologiquement que physiquement.
-    Dans ces cas là, la magie va s'opposer à la sensitivité de la cible et non sa résistance.<br/>
+    Il peut faire ça un nombre de fois égal à sa spécialisation/2 par tour (arrondi inférieur).<br/> -->
 </p>
 <p *ngIf="langue.l == 'en'">
 
