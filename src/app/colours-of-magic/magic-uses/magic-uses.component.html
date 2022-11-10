@@ -347,3 +347,137 @@
 <p *ngIf="langue.l == 'en'">
     * = non physical magic, use sensitivity instead of resistance for the target.
 </p>
+
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+    <table>
+        <tr>
+            <th>Élements</th>
+            <th class="fire"><a routerLink="/colours-of-magic/fire" routerLinkActive="activebutton">Feu</a></th>
+            <th class="air"><a routerLink="/colours-of-magic/air" routerLinkActive="activebutton">Air</a></th>
+            <th class="light"><a routerLink="/colours-of-magic/light" routerLinkActive="activebutton">Lumière</a></th>
+            <th class="nature"><a routerLink="/colours-of-magic/nature" routerLinkActive="activebutton">Nature</a></th>
+            <th class="water"><a routerLink="/colours-of-magic/water" routerLinkActive="activebutton">Eau</a></th>
+            <th class="shadow"><a routerLink="/colours-of-magic/shadow" routerLinkActive="activebutton">Ténèbres</a></th>
+        </tr>
+        <tr>
+            <th class="fire">Feu</th>
+            <td class="null">/</td>
+            <td class="explosion"><a routerLink="/colours-of-magic/explosion" routerLinkActive="activebutton">Explosion</a></td>
+            <td class="purification"><a routerLink="/colours-of-magic/purification" routerLinkActive="activebutton">Purification</a></td>
+            <td class="null">/</td>
+            <td class="firewater"><a routerLink="/colours-of-magic/firewater" routerLinkActive="activebutton">Eau de vie</a></td>
+            <td class="soul"><a routerLink="/colours-of-magic/soul" routerLinkActive="activebutton">Âme</a></td>
+        </tr>
+        <tr>
+            <th class="air">Air</th>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="thunder"><a routerLink="/colours-of-magic/thunder" routerLinkActive="activebutton">Tonnerre</a></td>
+            <td class="animals"><a routerLink="/colours-of-magic/animal" routerLinkActive="activebutton">Animaux</a></td>
+            <td class="null">/</td>
+            <td class="tentacles"><a routerLink="/colours-of-magic/tentacles" routerLinkActive="activebutton">Tentacules</a></td>
+        </tr>
+        <tr>
+            <th class="light">Lumière</th>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="growth"><a routerLink="/colours-of-magic/growth" routerLinkActive="activebutton">Croissance</a></td>
+            <td class="ice"><a routerLink="/colours-of-magic/ice" routerLinkActive="activebutton">Glace</a></td>
+            <td class="null">/</td>
+        </tr>
+        <tr>
+            <th class="nature">Nature</th>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="earth"><a routerLink="/colours-of-magic/earth" routerLinkActive="activebutton">Terre</a></td>
+            <td class="mind"><a routerLink="/colours-of-magic/mind" routerLinkActive="activebutton">Esprit</a></td>
+        </tr>
+        <tr>
+            <th class="water">Eau</th>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="illusion"><a routerLink="/colours-of-magic/illusion" routerLinkActive="activebutton">Illusion</a></td>
+        </tr>
+        <tr>
+            <th class="shadow">Ténèbres</th>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+            <td class="null">/</td>
+        </tr>
+    </table>
+</div>
+
+
+<h2>HEXACLE AVEC BOUTTONS</h2>
+
+<div id="hexacle_box">
+
+    <!-- FEU --> <a style= "margin: 17px 197px" routerLink="/colours-of-magic/fire" 
+        class="hexacle_button_node"></a>
+    
+    <!-- AIR --> <a style= "margin: 77px 57px" routerLink="/colours-of-magic/air" 
+        class="hexacle_button_node"></a>
+
+    <!-- LUMIÈRE --> <a style= "margin: 247px 48px" routerLink="/colours-of-magic/light" 
+        class="hexacle_button_node"></a>
+
+    <!-- NATURE --> <a style= "margin: 324px 199px" routerLink="/colours-of-magic/nature" 
+        class="hexacle_button_node"></a>
+
+    <!-- EAU --> <a style= "margin: 248px 343px" routerLink="/colours-of-magic/water" 
+        class="hexacle_button_node"></a>
+
+    <!-- TÉNÈBRES --> <a style= "margin: 83px 343px" routerLink="/colours-of-magic/shadow" 
+        class="hexacle_button_node"></a>
+    
+    <!-- style : "padding: [height/2]px [width/2]px; margin: [pos_y]px [pos_x]px"-->
+
+    <!-- EXPLOSION --> <a style= "padding: 9px 30px; margin: 44px 103px" routerLink="/colours-of-magic/explosion"
+        class="hexacle_button_edge"></a>
+    
+    <!-- PURIFICATION --> <a style= "padding: 10px 38px; margin: 148px 160px" routerLink="/colours-of-magic/purification"
+        class="hexacle_button_edge"></a>
+
+    <!-- EAU DE VIE --> <a style= "padding: 9px 33px; margin: 168px 231px" routerLink="/colours-of-magic/firewater"
+        class="hexacle_button_edge"></a>
+    
+    <!-- AME --> <a style= "padding: 7px 14px; margin: 53px 304px" routerLink="/colours-of-magic/soul"
+    class="hexacle_button_edge"></a>
+    
+    <!-- TONNERRE --> <a style= "padding: 8px 29px; margin: 175px 17px" routerLink="/colours-of-magic/thunder"
+        class="hexacle_button_edge"></a>
+
+    <!-- ANIMAUX --> <a style= "padding: 8px 29px; margin: 214px 160px" routerLink="/colours-of-magic/animal"
+        class="hexacle_button_edge"></a>
+    
+    <!-- TENTACULES --> <a style= "padding: 9px 34px; margin: 115px 190px" routerLink="/colours-of-magic/tentacles"
+    class="hexacle_button_edge"></a>
+    
+    <!-- CROISSANCE #Macron2022 --> <a style= "padding: 8px 37px; margin: 318px 96px" routerLink="/colours-of-magic/growth"
+        class="hexacle_button_edge"></a>
+
+    <!-- GLACE --> <a style= "padding: 10px 21px; margin: 247px 210px" routerLink="/colours-of-magic/ice"
+        class="hexacle_button_edge"></a>
+    
+    <!-- TERRE --> <a style= "padding: 8px 17px; margin: 321px 293px" routerLink="/colours-of-magic/earth"
+    class="hexacle_button_edge"></a>
+    
+    <!-- ESPRIT --> <a style= "padding: 8px 20px; margin: 221px 254px" routerLink="/colours-of-magic/mind"
+        class="hexacle_button_edge"></a>
+
+    <!-- ILLUSION --> <a style= "padding: 9px 23px; margin: 179px 376px" routerLink="/colours-of-magic/illusion"
+        class="hexacle_button_edge"></a>
+
+
+
+</div>

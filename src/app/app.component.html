@@ -1,35 +1,35 @@
 <div class="band headband">
     <a routerLink="/home" class="home-icon">{{title}}</a>
-    <button (click)="langue.change_lang('en')" class="button_language"><img src="../assets/images/flags/en_flag_xs.png"/></button>
-    <button (click)="langue.change_lang('fr')" class="button_language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
+    <button (click)="langue.change_lang('en')" class="button-language"><img src="../assets/images/flags/en_flag_xs.png"/></button>
+    <button (click)="langue.change_lang('fr')" class="button-language"><img src="../assets/images/flags/fr_flag_xs.png"/></button>
 </div>
 
 <nav class="band band1">
-    <a routerLink="/home" class="button" routerLinkActive="activebutton">
+    <a routerLink="/home" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Accueil</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Home</menu-button>
     </a>
-    <a routerLink="/lore" class="button" routerLinkActive="activebutton">
+    <a routerLink="/lore" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Lore</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Lore</menu-button>
     </a>
-    <a routerLink="/system" class="button" routerLinkActive="activebutton">
+    <a routerLink="/system" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Système</menu-button>
         <menu-button *ngIf="langue.l == 'en'">System</menu-button>
     </a>
-    <a routerLink="/character" class="button" routerLinkActive="activebutton">
+    <a routerLink="/character" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Personnage</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Character</menu-button>
     </a>
-    <a routerLink="/colours-of-magic" class="button" routerLinkActive="activebutton">
+    <a routerLink="/colours-of-magic" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Couleurs de magie</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Colours of magic</menu-button>
     </a>
-    <a routerLink="/more-rules" class="button" routerLinkActive="activebutton">
+    <a routerLink="/more-rules" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Règles additionnelles</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Additional rules</menu-button>
     </a>
-    <a routerLink="/compendium" class="button" style="float: right;" routerLinkActive="activebutton">
+    <a routerLink="/compendium" class="button-band" style="float: right;" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Compendium</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Compendium</menu-button>
     </a>

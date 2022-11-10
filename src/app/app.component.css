@@ -3,12 +3,27 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    --purple-lighter : #cab7ff;
+    --purple-light : #b99fff;
+    --purple-med : #a98aff;
+    --purple-dark : #9b78fd;
+    --blue : #22298f;
+    --blue-dark : #131750;
+    --off-white : #eeeeee ;
+    --grey-lighter : #cccccc ;
+    --grey-light : #888888 ;
+    --grey-med : #444444 ;
+    --grey-dark : #222222 ;
+    --transparent : rgba(255, 255, 255, 0) ;
+    --semi-transparent-white : rgba(255, 255, 255, 0.6) ;
 }
+
+/* --- variables --- */
 
 /* --- titles --- */
 .home-icon {
-    color: #22298f;
-    background-color: rgba(238, 238, 238, 0);
+    color: var(--blue);
+    background-color: var(--transparent);
     text-decoration: none;
     padding: 15px;
     margin-top: 30px;
@@ -24,44 +39,27 @@ h2 {
 h3 {
     margin: 30px;
     font: small-caps bold 20px/30px Georgia, serif;
-    color: rgb(8, 0, 51);
+    color: var(--blue-dark);
 }
 h4 {
     margin: -20px 0 30px 30px ;
     font: bold 15px/20px Georgia, serif;
-    color: rgb(8, 0, 51);
+    color: var(--blue-dark);
 }
 footer {
-    color: rgba(0, 0, 0, 0);
+    color: var(--transparent);
 }
 
 /* --- background --- */
 .page-background {
     color: black;
     font: 20px Georgia, serif;
-    /* --gap: 32px; */
-    /* margin: 0;
-    padding: 0; */
-    /* height: auto;
-    width: auto;
-    min-height: 900px;
-    min-width: 1000px; */
-    /* background-repeat: no-repeat; */
-    /* margin-top: 0px;
-    margin-bottom: calc(-1  * var(--gap));
-    margin-left: calc(-1  * var(--gap));
-    margin-right: calc(-1  * var(--gap));
-    padding-top: 0px;
-    padding-left: var(--gap);
-    padding-right: var(--gap);
-    padding-bottom: 20px; */
-    /* background-color: #cab7ff; */
 }
 
 /* --- text --- */
 p {
     font: Times;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--semi-transparent-white);
     border-radius: 20px;
     padding: 20px;
     margin: 30px;
@@ -77,7 +75,7 @@ table {
     margin: 30px;
     border: 1px solid black;
     border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--semi-transparent-white);
 }
 th, td {
     border: 1px solid black;
@@ -91,37 +89,21 @@ div .div-table {
 
 /* --- bands --- */
 .headband {
-    background-color: #cab7ff;
-    /* --gap: 32px;
-    background-size: 100%;
-    padding-right: var(--gap);
-    margin-top: calc(-1 * var(--gap));
-    margin-left: calc(-1 * var(--gap));
-    margin-right: calc(-1 * var(--gap)); */
-    /* min-width: 1032px; */
+    background-color:  var(--purple-lighter);
 }
 .band {
     min-width: 1125px;
     width: 100%;
     padding: 0px 35px;
-    /* padding-bottom: 10px;
-    padding-left: 35px; */
-    /* --gap: 32px; */
-    /* padding-top: 0px; */
-    /* margin-top: 0px;
-    margin-bottom: 0px; */
-    /* margin-left: calc(-1  * var(--gap));
-    margin-right: calc(-1 * var(--gap)); */
-    /* min-width: 1032px; */
 }
 .band1 {
-    background-color: #b99fff;
+    background-color: var(--purple-light);
 }
 .band2 {
-    background-color: #a98aff;
+    background-color: var(--purple-med);
 }
 .band3 {
-    background-color: #9b78fd;
+    background-color: var(--purple-dark);
 }
 
 /* --- search --- */
@@ -132,7 +114,7 @@ div .div-table {
     border-color: rgba(0, 0, 0, 0.6);
     margin-top: 10px;
     font-size: 17px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--semi-transparent-white);
 }
 .band1 .search-container button {
     float: right;
@@ -142,11 +124,11 @@ div .div-table {
     margin-top: 10px;
     margin-right: 16px;
     font-size: 17px;
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--semi-transparent-white);
     cursor: pointer;
 }
 .band1 .search-container button:hover {
-    background: rgba(200, 200, 200, 0.7);
+    background: var(--semi-transparent-white);
 }
 .band1 .search-container {
     float: right;
@@ -157,42 +139,54 @@ menu-button {
     font: small-caps bold 15px/30px Georgia, serif;
 }
 .button {
+    color: black;
+    background-color: var(--off-white);
+    border: solid thin var(--grey-med);
+}
+.button:hover {
+    background-color: var(--grey-lighter);
+    border: solid thin var(--grey-dark);
+}
+/* band buttons */
+.button-band {
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
-    background-color: rgba(238, 238, 238, 0);
+    background-color: var(--transparent);
     border-radius: 0px;
-    color: #002999;
+    color: var(--blue);
     font: small-caps bold 15px/30px Georgia, serif;
 }
-.button:hover {
+.button-band:hover {
     background-color: #ded2ff75;
 }
 .activebutton {
     background-color: #4400ff21;
 }
-.button_language {
+/* language buttons */
+.button-language {
     padding-bottom: -10px;
     text-decoration: none;
     margin-top: 20px;
     margin-bottom: -10px;
     margin-right: 20px;
     margin-left: 10px;
-    background-color: rgba(238, 238, 238, 0);
+    background-color: var(--transparent);
     border-radius: 0px;
     border: 0px;
     float: right;
 }
+/* home tuto show button */
 .in-page-button {
     margin-top: 10px;
-    color: #000000;
+    color: black;
     font: 15px/30px Arial;
 }
 .button-box {
     min-width: 300px;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: white;
     text-align: left;
     font: 15px/30px Arial;
     padding: 5px 10px;
@@ -205,33 +199,20 @@ menu-button {
     position: absolute;
     z-index: 99;
 }
+/* system > magic > concentration */
 .bullet-button {
-    /* margin-top: 10px; */
-    color: #000000;
-    background-color: #fff;
     font: 15px Arial;
     width: 25px;
     height: 25px;
-    border: solid thin #444444;
     border-radius: 5px;
 }
-.bullet-button:hover {
-    border: solid thin #222222;
-    background-color: #eee;
-}
+/* colours > any */
 .back-button {
-    color: #000000;
-    background-color: #eee;
     font: 15px Arial;
     padding: 5px;
     margin-top: 30px;
     margin-left: 30px;
-    border: solid thin #444444;
     border-radius: 5px;
-}
-.back-button:hover {
-    border: solid thin #222222;
-    background-color: #ccc;
 }
 .back-button a {
     text-decoration: none;
@@ -256,4 +237,130 @@ menu-button {
     width: 80%;
     margin: auto;
     /* align-items: center; */
+}
+
+/* --- page specifics --- */
+
+/* - magic uses - */
+.magic-pres {
+    background-color: rgba(240, 227, 255, 0.6);
+    border-radius: 10px;
+    margin: 0 50px;
+    max-width: 400px;
+}
+.magic-title {
+    margin: 20px;
+    padding: 10px;
+    font: small-caps bold 20px/30px Georgia, serif;
+    color: var(--blue-dark);
+    text-align: center;
+}
+.magic-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.magic-purity, .magic-tangibility {
+    background-color: rgba(236, 233, 255, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.magic-det {
+    text-align: center;
+}
+.magic-active {
+    color: black;
+}
+.magic-inactive {
+    color: var(--grey-light);
+}
+/* - bg colours for magics - */
+.fire {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.air {
+    background-color: rgba(255, 128, 0, 0.5);
+}
+.light {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+.nature {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+.water {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.shadow {
+    background-color: rgba(100, 0, 128, 0.5);
+}
+/* combined magics */
+.explosion {
+    background-color: rgba(255, 50, 0, 0.5);
+}
+.purification {
+    background-color: rgba(250, 128, 128, 0.6);
+}
+.firewater {
+    background-color: rgba(200, 0, 170, 0.5);
+}
+.soul {
+    background-color: rgba(240, 0, 240, 0.5);
+}
+.thunder {
+    background-color: rgba(240, 211, 83, 0.6);
+}
+.animals {
+    background-color: rgba(142, 202, 0, 0.5);
+}
+.growth {
+    background-color: rgba(204, 248, 9, 0.5);
+}
+.ice {
+    background-color: rgba(144, 216, 240, 0.7);
+}
+.earth {
+    background-color: rgba(2, 136, 136, 0.5);
+}
+.tentacles {
+    background-color: rgba(155, 0, 221, 0.5);
+}
+.mind {
+    background-color: rgba(0, 60, 20, 0.5);
+}
+.illusion {
+    background-color: rgba(11, 0, 165, 0.5);
+}
+.null {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* hexacle */
+#hexacle_box{
+    background-image: url("../assets/images/elements_new_transp.png");
+    background-size: 471px 408px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* height: 0; */
+    /* padding-bottom: 45%; */
+    aspect-ratio : 7 / 6;
+    /* height: 400px; */
+    /* min-width: 330px; */
+    width: 480px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.hexacle_button_node {
+    display: inline-block;
+    position: absolute;
+    padding: 30px 30px;
+    /* background-color: black; */
+    border-radius: 50%;
+}
+.hexacle_button_edge {
+    display: inline-block;
+    position: absolute;
+    /* background-color: grey; */
 }

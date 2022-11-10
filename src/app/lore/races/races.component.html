@@ -1,15 +1,15 @@
 <nav class="band band3">
-    <a routerLink="/lore/races/lyune" class="button" routerLinkActive="activebutton">Lyune</a>
-    <a routerLink="/lore/races/nekali" class="button" routerLinkActive="activebutton">Nekali</a>
-    <a routerLink="/lore/races/flyhn" class="button" routerLinkActive="activebutton">Flyhn</a>
-    <a routerLink="/lore/races/wood-elf" class="button" routerLinkActive="activebutton">
+    <a routerLink="/lore/races/lyune" class="button-band" routerLinkActive="activebutton">Lyune</a>
+    <a routerLink="/lore/races/nekali" class="button-band" routerLinkActive="activebutton">Nekali</a>
+    <a routerLink="/lore/races/flyhn" class="button-band" routerLinkActive="activebutton">Flyhn</a>
+    <a routerLink="/lore/races/wood-elf" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Elf Sylvain</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Wood Elf</menu-button>
     </a>
-    <a routerLink="/lore/races/dark-elf" class="button" routerLinkActive="activebutton">
+    <a routerLink="/lore/races/dark-elf" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Elf Sombre</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Dark Elf</menu-button>
     </a>
-    <a routerLink="/lore/races/etrek" class="button" routerLinkActive="activebutton">Etrek</a>
+    <a routerLink="/lore/races/etrek" class="button-band" routerLinkActive="activebutton">Etrek</a>
 </nav>
 <router-outlet></router-outlet>
