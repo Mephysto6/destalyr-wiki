@@ -302,16 +302,16 @@ menu-button {
     background-color: rgba(255, 50, 0, 0.5);
 }
 .purification {
-    background-color: rgba(250, 128, 128, 0.6);
+    background-color: rgba(255, 128, 128, 0.6);
 }
 .firewater {
-    background-color: rgba(200, 0, 170, 0.5);
+    background-color: rgba(200, 0, 140, 0.5);
 }
 .soul {
     background-color: rgba(240, 0, 240, 0.5);
 }
 .thunder {
-    background-color: rgba(240, 211, 83, 0.6);
+    background-color: rgba(240, 203, 83, 0.6);
 }
 .animals {
     background-color: rgba(142, 202, 0, 0.5);
@@ -320,22 +320,24 @@ menu-button {
     background-color: rgba(204, 248, 9, 0.5);
 }
 .ice {
-    background-color: rgba(144, 216, 240, 0.7);
+    background-color: rgba(144, 216, 240, 0.6);
 }
 .earth {
     background-color: rgba(2, 136, 136, 0.5);
 }
 .tentacles {
-    background-color: rgba(155, 0, 221, 0.5);
+    background-color: rgba(99, 0, 141, 0.6);
 }
 .mind {
     background-color: rgba(0, 60, 20, 0.5);
 }
 .illusion {
-    background-color: rgba(11, 0, 165, 0.5);
+    background-color: rgba(29, 6, 160, 0.6);
+    color: rgba(76, 0, 130, 0.5);
 }
 .null {
-    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    /* background-color: rgba(255, 255, 255, 0.5); */
 }
 /* hexacle */
 #hexacle_box{
