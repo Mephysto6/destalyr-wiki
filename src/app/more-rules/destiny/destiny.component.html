@@ -9,14 +9,7 @@
     (si un joueur veut activer sa carte pendant le tour d'un autre joueur, ce dernier doit donner son accord).<br/>
     Une fois retournée, la carte peut être garder un temps indéfini avant d'être activée.<br/>
     Quand le joueur veut utiliser la carte, il la retourne (si elle était encore face cachée), la lit et décide de la cible (si applicable).<br/>
-    Chaque carte a des effets différents, avec quelques tendances globales :<br/>
-    - La couleur détermine la qualité de l'effet :
-    Coeur est un effet bénéfique, Pique est un effet néfaste,
-    et Carreau et Trèfle sont des effets relativement neutres qui peuvent tendre vers le bon ou le mauvais respectivement.<br/>
-    - Le numero de la carte détermine la quantité de l'effet :
-    les cartes de 2 à 10 ont des effets mineurs augmentant avec le nombre,
-    les têtes ont des effets forts,
-    l'as est le plus fort, et le joker donne le choix au joueur.
+    La cible doit être en ligne de vue du personnage, ou bien être à proximité et dont la position est connue par le personnage.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     <br/>
@@ -34,46 +27,43 @@
         <tr>
             <td>2</td>
             <td>La cible regagne 2 points d'énergie</td>
-            <td>Le ciel se dégage</td>
-            <td>Du brouillard arrive</td>
+            <td>La cible gagne +1 au toucher**</td>
+            <td>La cible gagne +1 aux dégâts**</td>
             <td>La cible prend 2 points de fatigue</td>
         </tr>
         <tr>
             <td>3</td>
             <td>Une blessure de la cible est soigné de 2</td>
-            <td>Un animal inoffensif apparaît</td>
-            <td>Il commence à pleuvoir</td>
+            <td>La cible gagne +2 au toucher**</td>
+            <td>La cible gagne +2 aux dégâts**</td>
             <td>La cible prend 2 points de douleur jusqu'au prochain repos</td>
         </tr>
         <tr>
             <td>4</td>
             <td>La cible regagne 3 points d'énergie</td>
-            <td>Le sol devient glissant</td>
-            <td>Le sol tremble</td>
+            <td>La cible gagne +3 au toucher**</td>
+            <td>La cible gagne +3 aux dégâts**</td>
             <td>La cible prend 3 points de fatigue</td>
         </tr>
         <tr>
             <td>5</td>
             <td>Une blessure de la cible est soigné de 3</td>
-            <td>Un bruit est entendu</td>
-            <td>Les sons sont atténués<br/>
-                pour 10 minutes</td>
+            <td>La cible prend -1 au toucher**</td>
+            <td>La cible prend -1 aux dégâts**</td>
             <td>La cible prend 3 points de douleur jusqu'au prochain repos</td>
         </tr>
         <tr>
             <td>6</td>
             <td>Un objet est découvert</td>
-            <td>Un objet apparaît</td>
-            <td>Un objet disparaît</td>
+            <td>La cible prend -2 au toucher**</td>
+            <td>La cible prend -2 aux dégâts**</td>
             <td>Un objet se casse</td>
         </tr>
         <tr>
             <td>7</td>
             <td>La cible regagne 5 points d'énergie</td>
-            <td>Un objet cible commence à léviter<br/>
-                pour 1 minute</td>
-            <td>Une créature cible commence à léviter<br/>
-                pour 1 minute</td>
+            <td>La cible prend -3 au toucher**</td>
+            <td>La cible prend -3 aux dégâts**</td>
             <td>La cible prend 5 points de fatigue</td>
         </tr>
         <tr>
@@ -88,7 +78,8 @@
             <td>La cible gagne 3 PA</td>
             <td>Tu apprends les choses suivantes sur la cible :<br/>
                 les magies pures et combinées, les -PA, PR, fatigue et douleur- max et actuels</td>
-            <td>La cible s'endort</td>
+            <td>Tu apprends les choses suivantes sur la cible :<br/>
+                les magies pures et combinées, les -PA, PR, fatigue et douleur- max et actuels</td>
             <td>La cible perd 3 PA</td>
         </tr>
         <tr>
@@ -257,7 +248,10 @@
     Une fois lancés, ces dés ne peuvent être modifiés par aucune source, ni être relancés.
     Ces dés ne peuvent pas être enlevés par de la perturbation, ni augmentés par une compétence magique.<br/>
     La manipulation doit être effectuée dans la minute, après quoi l'effet se dissipe.<br/>
-    Quand la manipulation est effectuée, l'effet se dissipe.
+    Quand la manipulation est effectuée, l'effet se dissipe.<br/>
+    <br/>
+    ** = Ce bonus s'applique à une seule attaque au prochain tour de la cible.
+    La cible peut choisir quelle attaque gagne le bonus, mais si il n'est pas consommé, le bonus disparaît à la fin du tour.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     <br/>

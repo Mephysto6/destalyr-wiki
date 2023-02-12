@@ -21,43 +21,50 @@
             <th>Race</th>
             <th>+1 au choix</th>
             <th>Cap à 2</th>
-            <th>Capacité spéciale</th>
+            <th>Capacité passive</th>
+            <th>Capacité active</th>
         </tr>
         <tr>
             <td>Nekali</td>
             <td>Agilité / Perception</td>
             <td>Force</td>
             <td>Grimper</td>
+            <td>Attaquer avec ses griffes (attaque légère tranchante)</td>
         </tr>
         <tr>
             <td>Flyhn</td>
             <td>Force / Perception</td>
             <td>Dextérité</td>
-            <td>planner</td>
+            <td>Planner</td>
+            <td>+2 pour sauter (plus haut, plus loin)</td>
         </tr>
         <tr>
             <td>Elf Sylvain</td>
             <td>Éloquence / Sensitivité</td>
             <td>Résistance</td>
-            <td>Communication basique avec êtres vivants non sensés</td>
+            <td>Comprendre les instincts des êtres vivants non sensés</td>
+            <td>Communications dans 2 sens avec les êtres vivants non sensés</td>
         </tr>
         <tr>
             <td>Etrek</td>
             <td>Force / Résistance</td>
             <td>Agilité</td>
-            <td>Purifier de l’eau + enracinement</td>
+            <td>Purifier de l'eau</td>
+            <td>Enracinement (+1 force, +1 res, et 0 movement quand actif, 2PA switch on/off)</td>
         </tr>
         <tr>
             <td>Elf Sombre</td>
             <td>Dextérité / Agilité</td>
             <td>Éloquence</td>
             <td>Vision dans le noir total</td>
+            <td>Se cacher magiquement dans les ombres</td>
         </tr>
         <tr>
             <td>Lyune</td>
             <td>Oui</td>
             <td>Non</td>
-            <td>Ne pas être détesté</td>
+            <td>+1 éloquence</td>
+            <td>minimum 6 au dé pour négocier / calmer</td>
         </tr>
     </table>
 </div>
@@ -115,7 +122,7 @@
     sinon la stat est baissée à 2 pour respecter.<br/>
     Ensuite, il faut décider de quel background le personnage vient et quelle éducation le personnage a reçu.
     S'il est diplômé de la citadelle, le personnage commence avec 3 points de compétence.<br/>
-    Les points de compétence peuvent être dépensé sur un des trois arbres de 
+    Les points de compétence peuvent être dépensé sur un des trois arbres de
     <a routerLink="/character/skills" routerLinkActive="activebutton">compétence</a>.
     Chaque bloc coûte un point à apprendre et nécessite un bloc parent connu (suivre les flèches).<br/>
     Les arbres sont indépendents et un personnage peut aller dans les trois arbres sans restrictions.
@@ -131,6 +138,31 @@
     Les connaissances est une partie entièrement ouverte et personalisable du personnage
     (tant que ça reste dans le thème général du monde aka médiéval fantasy).<br/>
 </p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3>Gagner des niveaux</h3>
+
+
+<p *ngIf="langue.l == 'fr'">
+  Résumé de création de perso :<br/>
+  - stats 1-2-2-3-4-4-5, +1 de race.<br/>
+  - compétences : 3<br/>
+  - connaissances : 1<br/>
+  - spécialisation : 2<br/>
+  - PA max : 5<br/>
+  Ces valeurs vont augmenter avec l'expérience du personnage,
+  et la limitation de 2 dans une stat causée par le choix de la race ne s'applique pas aux gains de niveaux, seulement à la création (niveau 0).<br/>
+  Suggestion de progression :<br/>
+  1er levelup : +1 stats +1 skills<br/>
+  2e levelup : +1 connaissance +1 skills<br/>
+  3e levelup : +1 PA +1 spéc<br/>
+  4e levelup : +1 stats +1 skills<br/>
+  5e levelup : +1 stats +1 connaissance<br/>
+  6e levelup : +1 PA +1 spéc<br/>
+</p>
+
 <p *ngIf="langue.l == 'en'">
 
 </p>
