@@ -2,7 +2,7 @@
     Pour créer un personnage dans Destalyr, il est suggéré de commencer par la race ou la magie.<br/>
     Chaque race possède des bonus et des limitations sur certaines statistiques de jeu, et la magie est un point important de l'univers.<br/>
     Note : Les races ont des affinités naturelles,
-    donc un personnage d'une certaine race va avoir tendance a posséder la magie de sa race en majeure ou mineure.<br/>
+    donc un personnage d'une certaine race va avoir tendance a posséder la magie de sa race en majeure (ou au moins mineure).<br/>
     Les exceptions existent, mais sont rares et demandent une explication
     (grandit autre part, en confrontation avec son environnement, illumination, mentor externe, ...).
 </p>
@@ -40,10 +40,10 @@
         </tr>
         <tr>
             <td>Elf Sylvain</td>
-            <td>Éloquence / Sensitivité</td>
+            <td>Dextérité / Éloquence</td>
             <td>Résistance</td>
             <td>Comprendre les instincts des êtres vivants non sensés</td>
-            <td>Communications dans 2 sens avec les êtres vivants non sensés</td>
+            <td>Communications dans les 2 sens avec les êtres vivants non sensés</td>
         </tr>
         <tr>
             <td>Etrek</td>
@@ -90,7 +90,7 @@
         </tr>
         <tr>
             <td>Wood elf</td>
-            <td>Eloquence / Sensitivity</td>
+            <td>Eloquence / Dexterity</td>
             <td>Resistance</td>
             <td>Basic communication with living non sensible beings</td>
         </tr>
@@ -117,14 +117,17 @@
 
 <p *ngIf="langue.l == 'fr'">
     Ensuite il faut répartir les points sur les différentes statistiques.<br/>
-    7 valeurs pour 7 stats : 1 - 2 - 2 - 3 - 4 - 4 - 5<br/>
+    La sensitivité est égale au niveau du personnage, ne peut pas recevoir de bonus ou de malus, et évolue avec la progression du personnage.
+    Le joueur possède ensuite 6 valeurs à répartir sur les 6 stats restantes : 1 - 2 - 2 - 3 - 4 - 5<br/>
     Après la répartition, le joueur peut ajouter son point de stat racial, et vérifier que sa limitation est respectée,
-    sinon la stat est baissée à 2 pour respecter.<br/>
+    sinon la stat limitée est baissée à 2 pour respecter.<br/>
     Ensuite, il faut décider de quel background le personnage vient et quelle éducation le personnage a reçu.
-    S'il est diplômé de la citadelle, le personnage commence avec 3 points de compétence.<br/>
-    Les points de compétence peuvent être dépensé sur un des trois arbres de
+    De manière générale, le personnage commence avec 3 points de compétence.<br/>
+    Les points de compétence peuvent être dépensés sur un des trois arbres de
     <a routerLink="/character/skills" routerLinkActive="activebutton">compétence</a>.
-    Chaque bloc coûte un point à apprendre et nécessite un bloc parent connu (suivre les flèches).<br/>
+    Chaque bloc coûte un point à apprendre et nécessite (au moins) un bloc parent connu (suivre les flèches).
+    Certains blocs de compétences comprennent plusieurs niveaux (entre 1 et 3).
+    Les points additionnels investis dans le même bloc augmente le niveau de la compétence, dans la limite du niveau maximum indiqué.<br/>
     Les arbres sont indépendents et un personnage peut aller dans les trois arbres sans restrictions.
     Les points sont communs à tous les arbres, et une fois consommés ne peuvent pas être ré-utilisés.<br/>
     <b>Exemples</b> :<br/>
@@ -146,21 +149,31 @@
 
 
 <p *ngIf="langue.l == 'fr'">
-  Résumé de création de perso :<br/>
-  - stats 1-2-2-3-4-4-5, +1 de race.<br/>
-  - compétences : 3<br/>
+  Résumé de création de perso<br/>
+  niveau 0 (sensitivité = 0):<br/>
+  - stats 1-2-2-3-4-5, +1 de race.<br/>
+  - compétences (= skill) : 3<br/>
   - connaissances : 1<br/>
-  - spécialisation : 2<br/>
+  - spécialisation : 1<br/>
   - PA max : 5<br/>
   Ces valeurs vont augmenter avec l'expérience du personnage,
   et la limitation de 2 dans une stat causée par le choix de la race ne s'applique pas aux gains de niveaux, seulement à la création (niveau 0).<br/>
   Suggestion de progression :<br/>
-  1er levelup : +1 stats +1 skills<br/>
-  2e levelup : +1 connaissance +1 skills<br/>
-  3e levelup : +1 PA +1 spéc<br/>
-  4e levelup : +1 stats +1 skills<br/>
-  5e levelup : +1 stats +1 connaissance<br/>
-  6e levelup : +1 PA +1 spéc<br/>
+  niveau 1 : +1 spec +1 skill (et sensitivité = 1)<br/>
+  niveau 2 : +1 stat +1 skill (et sensitivité = 2) etc.<br/>
+  niveau 3 : +1 PA max +1 connaissance<br/>
+  niveau 4 : +1 spec +1 skill<br/>
+  niveau 5 : +1 stat +1 skill<br/>
+  niveau 6 : +1 PA max +1 connaissance<br/>
+  niveau 7 : +1 spec +1 skill<br/>
+  niveau 8 : +1 stat +1 skill<br/>
+  niveau 9 : +1 PA max +1 connaissance<br/>
+  Après le niveau 9, le cycle peut continuer à se répéter mais sans augmenter la sensitivité.
+  A la place, les lignes paires du tableau des effets magiques se suppriment une à une, et les valeurs se décalent. <br>
+  Par exemple au niveau 11 (9+2) les lignes 2 et 4 sont supprimées.
+  Donc le 1 garde ses effets, une valeur de 2 aura les effets de la ligne 3, et une valeur de 3 aura les effets de la ligne 5.
+  Le 4 aura les effets de la ligne 6 et le reste continue ligne par ligne. <br>
+  Cela permet aux sorts d'avoir des effets plus forts sans coûter plus d'énergie.<br>
 </p>
 
 <p *ngIf="langue.l == 'en'">
