@@ -7,7 +7,7 @@
     Quand un joueur reçoit une Carte de Destinée, il reçoit une carte face cachée.
     Retourner une carte et/ou l'activer ne coûte rien et est possible à n'importe quel moment
     (si un joueur veut activer sa carte pendant le tour d'un autre joueur, ce dernier doit donner son accord).<br/>
-    Une fois retournée, la carte peut être garder un temps indéfini avant d'être activée.<br/>
+    Une fois retournée, la carte peut être gardée un temps indéfini avant d'être activée.<br/>
     Quand le joueur veut utiliser la carte, il la retourne (si elle était encore face cachée), la lit et décide de la cible (si applicable).<br/>
     La cible doit être en ligne de vue du personnage, ou bien être à proximité et dont la position est connue par le personnage.<br/>
 </p>
@@ -250,8 +250,10 @@
     La manipulation doit être effectuée dans la minute, après quoi l'effet se dissipe.<br/>
     Quand la manipulation est effectuée, l'effet se dissipe.<br/>
     <br/>
-    ** = Ce bonus s'applique à une seule attaque au prochain tour de la cible.
-    La cible peut choisir quelle attaque gagne le bonus, mais si il n'est pas consommé, le bonus disparaît à la fin du tour.<br/>
+    ** = Ce bonus s'applique à la prochaine attaque de la cible, et s'efface ensuite.
+    L'effet n'est valable que pour une attaque (pas pour un tour complet), mais n'a pas de date d'expiration une fois appliqué sur la cible.<br/>
+    La cible (in-game) n'est pas au courant de cet effet et ne ressent rien de spécial.<br/>
+    RP : cette mofidication peut être considérée comme un coup de chance ou de malchance, ou que le destin en a décidé ainsi.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     <br/>

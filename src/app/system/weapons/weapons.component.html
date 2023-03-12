@@ -7,8 +7,8 @@
     Armes 1H tranchante : finesse (au choix, force ou dextérité)<br/>
     Les armes simples permettent un type d'attaque (soit légère, soit moyenne, soit lourde),
     et les armes versatiles permettent 2 types d'attaques (soit légère + moyenne, soit moyenne + lourde).<br/>
-    Il faut 3 points dans l'arbres de compétences d'attaque pour savoir utiliser les armes versatiles.<br/>
-    Les différences entre les deux types d'armes sont principalement le prix et l'accessibilité.<br/>
+    <b>Il faut 3 points dans l'arbres de compétences d'attaque pour savoir utiliser les armes versatiles.</b><br/>
+    Les différences entre les deux types d'armes sont principalement le prix, l'accessibilité, et l'entraînement nécessaire.<br/>
     Toutes les armes tranchantes peuvent faire une attaque improvisée en dégât contondants.
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -33,6 +33,7 @@
             <th>Dé de dégâts</th>
             <th>Restrictions</th>
             <th>Points d'actions (PA)</th>
+            <th>Prix des armes</th>
         </tr>
         <tr>
             <td>Poings</td>
@@ -40,6 +41,7 @@
             <td>d1 - 2</td>
             <td>/</td>
             <td>2</td>
+            <td>ton SANG</td>
         </tr>
         <tr>
             <td>Attaque improvisée</td>
@@ -47,6 +49,7 @@
             <td>d2 - 2</td>
             <td>/</td>
             <td>3</td>
+            <td>/</td>
         </tr>
         <tr>
             <td>Attaque légère</td>
@@ -54,12 +57,14 @@
             <td>d4</td>
             <td>/</td>
             <td>2</td>
+            <td>50</td>
         </tr>
         <tr>
-            <td>Versatile légère ou moyenne</td>
+            <td>Arme versatile légère-moyenne</td>
             <td>épée courte, scimetaire, arc recourbé</td>
             <td>/</td>
             <td>3 points dans l'arbre d'attaque</td>
+            <td>150</td>
         </tr>
         <tr>
             <td>Attaque moyenne</td>
@@ -67,12 +72,14 @@
             <td>d6</td>
             <td>min 3 force</td>
             <td>3</td>
+            <td>100</td>
         </tr>
         <tr>
-            <td>Versatile moyenne ou lourde</td>
+            <td>Arme versatile moyenne-lourde</td>
             <td>claymore, hache, marteau</td>
             <td>/</td>
             <td>3 points dans l'arbre d'attaque</td>
+            <td>250</td>
         </tr>
         <tr>
             <td>Attaque lourde</td>
@@ -80,6 +87,7 @@
             <td>d8</td>
             <td>min 4 force + 2H</td>
             <td>4</td>
+            <td>200</td>
         </tr>
     </table>
 </div>
@@ -155,7 +163,7 @@
     Si une arme est tenue à deux mains, alors l'attaque gagne un bonus selon la caractérisqtique utilisée par l'attaquant :<br/>
     - +1 aux dégâts si l'attaquant utilise sa Force<br/>
     - +1 au toucher si l'attaquant utilise sa Dextérité.<br/>
-    Les attaques lourdes nécessitent deux mains sur l'arme pour être effectuées, elles profitent donc toujours du bonus.<br/>
+    Les attaques lourdes nécessitant deux mains sur l'arme pour être effectuées, elles profitent donc toujours du bonus.<br/>
     <br/>
     Pour les armes à distance :<br/>
     Les arcs ont tous besoin de deux mains pour faire des attaques.<br/>

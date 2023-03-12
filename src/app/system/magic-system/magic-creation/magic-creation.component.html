@@ -3,23 +3,20 @@
 
 <p *ngIf="langue.l == 'fr'">
     Pour manipuler un élément, un mage doit avoir de cet élément à disposition.
-    Si il n'en existe pas à proximité, le mage peut en créer.<br/>
+    Si il n'en existe pas à proximité, le mage peut en créer. Un élément créé est sous le contrôle de son créateur.<br/>
     La difficulté de créer un élément dépend du type de l'élément et de la taille invoquée.
     Un élément peut être tangible ou intangible (noté T et i respectivement).<br/>
     Les éléments tangibles sont plus difficiles à invoquer, coûtent plus d'énergie,
-    mais ne demande qu'une
-    <a routerLink="/system/states" routerLinkActive="activebutton">concentration</a> 
-    niveau 0 pour les maintenir sous contrôle.<br/>
-    À l'inverse, les éléments intangibles sont plus faciles à invoquer, coûtent moins d'énergie,
-    mais requièrent une 
+    mais ne demande une
     <a routerLink="/system/states" routerLinkActive="activebutton">concentration</a>
-    selon la taille pour maintenir l'invocation active.<br/>
-    De manière générale, <b>pour les magies intangibles, la création peut être incluse dans la manipulation</b> et ne pas nécessiter de d12.<br/>
+    plus faible pour les maintenir sous contrôle.<br/>
+    À l'inverse, les éléments intangibles sont plus faciles à invoquer, coûtent moins d'énergie,
+    mais requièrent une
+    <a routerLink="/system/states" routerLinkActive="activebutton">concentration</a>
+    plus élevée pour maintenir l'invocation active.<br/>
+    De manière générale, <b>pour les magies intangibles, la création peut être incluse dans la manipulation</b> (parce que ne coûte que 1PA, mais il faut quand même compter le coût en énergie).<br/>
     <br/>
-    Quand un mage décide d'invoquer un élément, il effectue un nombre de jets de sensitivité.
-    Ce nombre est égal à 1 + sa spécialisation dans l'élément correspondant. Le mage décide de quel résultat sera appliqué.
-    Le résultat final se place sur une échelle continue représentant la taille de l'invocation (à la discrétion du DM).<br/>
-    <br/>
+    À partir de 6 de sensitivité (inclus et plus),
     L'invocation de magies tangibles ou combinées ajoute un coût en énergie.
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -29,31 +26,37 @@
 <div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
-            <th>Résultat (1d12 + sensitivité)<br>
-            (échelle continue)</th>
             <th>Taille</th>
-            <th>Coût de base en énergie</th>
-            <th>Coût de magie tangible</th>
-            <th>Coût de magie combinée</th>
+            <th>Coût de base en énergie si sensitivité 1-5</th>
+            <th>Coût de base en énergie si sensitivité 6-9</th>
+            <th>Coût additionnel en énergie pour magie tangible</th>
+            <th>Coût additionnel en énergie pour magie combinée</th>
         </tr>
         <tr>
-            <td>1 - 5</td>
-            <td>doigt - main</td>
+            <td>doigt - main (T1-2)</td>
+            <td>0</td>
             <td>0</td>
             <td>+2</td>
             <td>+1</td>
         </tr>
         <tr>
-            <td>6 - 10</td>
-            <td>bras - corps</td>
-            <td>+1</td>
+            <td>bras - corps (T3-4)</td>
+            <td>1</td>
+            <td>0</td>
             <td>+2</td>
             <td>+1</td>
         </tr>
         <tr>
-            <td>11+</td>
-            <td>groupe</td>
+            <td>groupe (T5-6)</td>
+            <td>2</td>
+            <td>1</td>
             <td>+2</td>
+            <td>+1</td>
+        </tr>
+        <tr>
+            <td>plus grand (T7-8)</td>
+            <td>3</td>
+            <td>2</td>
             <td>+2</td>
             <td>+1</td>
         </tr>
