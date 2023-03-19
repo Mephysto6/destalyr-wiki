@@ -6,18 +6,19 @@
     Si il n'en existe pas à proximité, le mage peut en créer. Un élément créé est sous le contrôle de son créateur.<br/>
     La difficulté de créer un élément dépend du type de l'élément et de la taille invoquée.
     Un élément peut être tangible ou intangible (noté T et i respectivement).<br/>
-    Les éléments tangibles sont plus difficiles à invoquer, coûtent plus d'énergie,
-    mais ne demande une
+    Les éléments tangibles sont plus difficiles à invoquer, coûtent plus d'énergie, mais demande une
     <a routerLink="/system/states" routerLinkActive="activebutton">concentration</a>
     plus faible pour les maintenir sous contrôle.<br/>
     À l'inverse, les éléments intangibles sont plus faciles à invoquer, coûtent moins d'énergie,
     mais requièrent une
     <a routerLink="/system/states" routerLinkActive="activebutton">concentration</a>
     plus élevée pour maintenir l'invocation active.<br/>
-    De manière générale, <b>pour les magies intangibles, la création peut être incluse dans la manipulation</b> (parce que ne coûte que 1PA, mais il faut quand même compter le coût en énergie).<br/>
+    De manière générale, <b>pour les magies intangibles, l'action de création peut être incluse avec celle de manipulation</b>
+    en une action de 4PA (1PA pour création + 3PA pour manipulation). Le coût en fatigue de la création s'ajoute à celui de la manipulation.<br/>
     <br/>
-    À partir de 6 de sensitivité (inclus et plus),
-    L'invocation de magies tangibles ou combinées ajoute un coût en énergie.
+    À partir de 6 de sensitivité (inclus et plus), la création coûtent moins de fatigue.<br>
+    L'invocation de magies tangibles ou combinées ajoute un coût en énergie (cf table ci-dessous). <br>
+    Le coût en PA reste 1PA sous toutes condition. Toutes les indication de coût dans la table sont en énergie.
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -26,11 +27,11 @@
 <div class="div-table" *ngIf="langue.l == 'fr'">
     <table>
         <tr>
-            <th>Taille</th>
-            <th>Coût de base en énergie si sensitivité 1-5</th>
-            <th>Coût de base en énergie si sensitivité 6-9</th>
-            <th>Coût additionnel en énergie pour magie tangible</th>
-            <th>Coût additionnel en énergie pour magie combinée</th>
+            <th>Taille (choisie par la source)</th>
+            <th>Coût de base si sensitivité 1-5</th>
+            <th>Coût de base si sensitivité 6-9</th>
+            <th>Coût additionnel pour magie tangible</th>
+            <th>Coût additionnel pour magie combinée</th>
         </tr>
         <tr>
             <td>doigt - main (T1-2)</td>
