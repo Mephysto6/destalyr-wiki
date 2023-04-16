@@ -43,8 +43,8 @@
     <b>Source</b> : Douleur à 4 ou plus<br/>
     <b>Effets</b> : Au début de son tour, lance dé de valeur correspondante.
     (cf <a routerLink="/system/gauges" routerLinkActive="activebutton">jauges</a>)<br/>
-    Si le résultat du dé + la somme des intensités des casses est strictement supérieur à 2 + la résistance,
-    alors les points d’action et de réaction sont divisés par 2 pour ce tour (arrondi bas, min 0)<br/>
+    Si le résultat du dé + la somme des intensités des casses + les somme des intensités des brûlures est <b>strictement supérieur</b> à 2 + la résistance,
+    alors les points d'action et de réaction sont divisés par 2 pour ce tour (arrondi bas, min 0)<br/>
     Douleur : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Dé : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
     Si le jet est raté, le personnage peut décider de prendre un point de fatigue pour le réussir. Dans ce cas, il commence son tour avec tous ses PA et PR.
@@ -141,7 +141,37 @@
     <b>Effects</b> : <br/>
 </p>
 
-<!-- 
+
+<h2 *ngIf="langue.l == 'fr'">À genous</h2>
+<h2 *ngIf="langue.l == 'en'">On your knees</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : Décider de mettre un genou à terre, ou être tombé et en train de se relever<br/>
+    <b>Effets</b> : -1 aux attaques de contact ; -1 à l'esquive ; aucun malus aux attaques à distance, ne peut que marcher (et pas courrir)<br/>
+    <b>Effets spéciaux</b> : gratuit de passer de debout à à genous, coûte 1 PA (ou 1 PR) de passer de à genous à debout<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+	<b>Source</b> : Deciding to put a knee on the ground, or having fallen and getting back up<br/>
+    <b>Effects</b> : -1 to all melee attacks ; -1 to evade ; nothing to ranged attacks, can only walk (not run)<br/>
+    <b>Special effects</b> : free to go from standing to on your knees, costs 1 AP (or 1 RP) to go from on your knees to standing<br/>
+</p>
+
+
+<h2 *ngIf="langue.l == 'fr'">Allongé</h2>
+<h2 *ngIf="langue.l == 'en'">Lying down</h2>
+
+<p *ngIf="langue.l == 'fr'">
+	<b>Source</b> : S'allonger volontairement ou être tombé<br/>
+    <b>Effets</b> : -3 aux attaques de contact ; -3 à l'esquive au contact ; +2 à l'esquive d'attaque à distance ; +2 aux attaques à distance<br/>
+    <b>Effets spéciaux</b> : gratuit de passer de à genous à allongé, coûte 1 PA (ou 1 PR) de passer de allongé à à genous<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+	<b>Source</b> : Willingly lying down or having fallen<br/>
+    <b>Effects</b> : -3 to all melee attacks ; -3 to evade melee attacks ; +2 to evade ranged attacks ; -2 to ranged attacks<br/>
+    <b>Special effects</b> : free to go from on your knees to lying down, costs 1 AP (or 1 RP) to go from lying down to on your knees<br/>
+</p>
+
+<!--
 <h2 *ngIf="langue.l == 'fr'">Occupé</h2>
 <h2 *ngIf="langue.l == 'en'">Occupied</h2>
 

@@ -64,6 +64,7 @@
             <td>épée courte, scimetaire, arc recourbé</td>
             <td>/</td>
             <td>3 points dans l'arbre d'attaque</td>
+            <td>/</td>
             <td>150</td>
         </tr>
         <tr>
@@ -79,6 +80,7 @@
             <td>claymore, hache, marteau</td>
             <td>/</td>
             <td>3 points dans l'arbre d'attaque</td>
+            <td>/</td>
             <td>250</td>
         </tr>
         <tr>
@@ -158,18 +160,19 @@
 
 <p *ngIf="langue.l == 'fr'">
     Pour les armes de contact :<br/>
-    Si une arme peut faire une attaque légère, alors elle ne peut pas être tenue à deux mains.<br/>
+    Si une arme peut faire une attaque légère, alors elle ne peut pas être tenue à deux mains pour une attaque.<br/>
+    Une arme doit forcément être tenue à deux mains faire effectuer une attaque lourde.<br/>
     Les autres armes peuvent être tenues à une ou deux mains.<br/>
-    Si une arme est tenue à deux mains, alors l'attaque gagne un bonus selon la caractérisqtique utilisée par l'attaquant :<br/>
+    Si une arme est tenue à deux mains, alors l'attaque gagne un bonus selon la caractéristique utilisée par l'attaquant :<br/>
     - +1 aux dégâts si l'attaquant utilise sa Force<br/>
     - +1 au toucher si l'attaquant utilise sa Dextérité.<br/>
-    Les attaques lourdes nécessitant deux mains sur l'arme pour être effectuées, elles profitent donc toujours du bonus.<br/>
+    Les attaques lourdes, nécessitant deux mains sur l'arme pour être effectuées, profitent donc toujours du bonus.<br/>
     <br/>
     Pour les armes à distance :<br/>
     Les arcs ont tous besoin de deux mains pour faire des attaques.<br/>
     Les arbalètes ont besoin de soit une main soit deux selon la taille de l'arbalète,
     ignorent les restrictions de force pour les différentes attaques,
-    et demandent une action supplémentaire pour recharger.<br/>
+    et demandent une action supplémentaire pour recharger (1PA).<br/>
     <br/>
     Pour les armes d'aste :<br/>
     TBD
@@ -203,8 +206,10 @@
     Chaque type d'arme a une distance correspondante.<br/>
     Pour les armes sans projectiles, c'est la distance atteignable par l'arme.<br/>
     Pour les armes avec projectiles, c'est la distance jusqu'à laquelle un personnage peut tirer sans problème.<br/>
-    Pour ces armes, il est aussi possible de tirer au-delà de cette limite avec un -3 au toucher.
+    Pour ces armes (avec projectiles), il est aussi possible de tirer au-delà de cette limite avec un -3 au toucher.
     La distance maximale pour essayer de tirer est le double de la distance indiquée.<br/>
+    Pour les armes à distances, attaquer au contact est problématique et impose un -2 au toucher.
+    Seuls l'arc court et l'arbalète de poings ne subissent pas ce désavantage.<br/>
     <br/>
     armes de contact : 1 cases (= 1.5m = 2 pas)<br/>
     armes d'aste (polearms) : 2 cases (= 3m = 4 pas)<br/>
