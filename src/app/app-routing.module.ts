@@ -27,6 +27,7 @@ import { GaugesComponent } from './system/gauges/gauges.component';
 import { AttackingComponent } from './system/attacking/attacking.component';
 import { CombatComponent } from './system/combat/combat.component';
 import { MagicSystemComponent } from './system/magic-system/magic-system.component';
+import { OtherRollsComponent } from './system/other-rolls/other-rolls.component';
 import { HealingComponent } from './system/healing/healing.component';
 import { StatesComponent } from './system/states/states.component';
 import { SystemExplanationComponent } from './system/system-explanation/system-explanation.component';
@@ -126,6 +127,18 @@ import { CheatSheetComponent } from './more-rules/cheat-sheet/cheat-sheet.compon
 // search
 import { CompendiumComponent } from './compendium/compendium.component';
 
+// secret pages
+import { SercretPagesComponent } from './sercret-pages/sercret-pages.component';
+import { SercretFlyhnsComponent } from './sercret-pages/sercret-flyhns/sercret-flyhns.component';
+import { SercretSylvansComponent } from './sercret-pages/sercret-sylvans/sercret-sylvans.component';
+import { SercretDarkElvesComponent } from './sercret-pages/sercret-dark-elves/sercret-dark-elves.component';
+import { SercretNekaliComponent } from './sercret-pages/sercret-nekali/sercret-nekali.component';
+import { SercretLyunesComponent } from './sercret-pages/sercret-lyunes/sercret-lyunes.component';
+import { SercretEtreksComponent } from './sercret-pages/sercret-etreks/sercret-etreks.component';
+import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-runes.component';
+import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
@@ -194,7 +207,7 @@ const routes: Routes = [
       { path: 'weapons', component: WeaponsComponent },
       { path: 'armors', component: ArmorsComponent },
       { path: 'gauges', component: GaugesComponent },
-      { 
+      {
         path: 'attacking',
         component: AttackingComponent,
         children: [
@@ -217,6 +230,7 @@ const routes: Routes = [
           { path: 'group', component: MagicGroupComponent },
         ]
       },
+      { path: 'other-rolls', component: OtherRollsComponent },
       { path: 'healing', component: HealingComponent },
       { path: 'states', component: StatesComponent },
       { path: 'explanation', component: SystemExplanationComponent },
@@ -292,7 +306,21 @@ const routes: Routes = [
       { path: 'cheat-sheet', component: CheatSheetComponent },
     ]
   },
-  
+  {
+    path: 'secret-pages',
+    component: SercretPagesComponent,
+    children: [
+      { path: '5Wug0Bk6', component: SercretFlyhnsComponent },
+      { path: 'uRi8C110', component: SercretSylvansComponent },
+      { path: 'dL1226sF', component: SercretDarkElvesComponent },
+      { path: '97gB9txO', component: SercretNekaliComponent },
+      { path: '2REco0Q8', component: SercretLyunesComponent },
+      { path: 'nZX7X17s', component: SercretEtreksComponent },
+      { path: 'ne12V72t', component: SercretRunesComponent },
+      { path: '3X5Ju928', component: SercretSoulStonesComponent },
+    ]
+  },
+
   { path: '**', component: PageNotFoundComponent },
 ];
 

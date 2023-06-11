@@ -1,0 +1,53 @@
+<p *ngIf="langue.l == 'fr'">
+  Pendant un combat, les joueurs vont lancer des jets d'attaque, d'esquive, de dégâts, de magie, etc.<br/>
+  Hors combat, les joueurs auront tendance à utiliser plus leur perception et éloquence, parfois force ou dextérité.<br/>
+  Mais en plus de ces jets de d12 basés sur les stats du personnages, il existe d'autres types de jets de dés.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+  <br/>
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">Le jet de connaissance</h2>
+<h2 *ngIf="langue.l == 'en'">The knowledge roll</h2>
+
+<p *ngIf="langue.l == 'fr'">
+  Un jet de connaissance est en général <b>permis par la possession d'une connaissance</b>, quel que soit son niveau (débutant, avancé, etc).<br/>
+  Souvent quand le joueur pose une question pertinente
+  ou bien quand une situation permetterait au personnage de reconnaître quelque chose grâce à une (ou plusieurs) de ces connaissances,
+  il peut être demandé au joueur d'effectuer un jet de connaissance.
+  Ceci est un lancé d'un <b>d20</b> sans bonus, avec un DC adaptatif selon la difficulté de l'information à obtenir et le niveau actuel de la connaissance du joueur.<br/>
+  Par exemple, si le joueur pose une question spécifique comme "Est-ce que je reconnais cette plante ?"
+  et qu'il n'a pas de connaissance en botanisterie, ni d'autres connaissances qui auraient un lien avec les plantes, il ne peut pas obtenir d'information.
+  En revanche, si il a une connaissance d'herbaliste par exemple, alors il pourrait lancer un d20.
+  Si la plante est utilisée dans le cadre de sa connaissance, le DC pourrait être autour de 5 ou 10. Si la plante ne l'est pas, le DC pourrait être autour de 15.<br/>
+  De manière générale, plus la connaissance correspond à la question posée ou à l'information recherchée, plus il sera facile au joueur d'obtenir l'information.
+  Il est aussi suggéré d'utiliser une échelle progressive plutôt que des DC stricts, à la discrétion du GM (et selon la situation).
+</p>
+<p *ngIf="langue.l == 'en'">
+  <br/>
+</p>
+
+<h2 *ngIf="langue.l == 'fr'">Le jet de mémoire</h2>
+<h2 *ngIf="langue.l == 'en'">The memory roll</h2>
+
+<p *ngIf="langue.l == 'fr'">
+  Le jet de mémoire permet au joueur de demander au GM de lui rappeler une information dont son personnage pourrait se souvenir (mais que le joueur a oublié),
+  ou bien au GM d'aider les joueurs en leur rappelant une information qu'ils sembleraient avoir oublié.<br/>
+  C'est un jet méta (dont les personnages ne s'en rendent pas compte, mais que les joueurs savent), et est donc à utiliser <b>avec modération</b>.<br/>
+  <b>Ce jet n'est pas à utiliser pour donner une information que le joueur ne connait pas déjà.</b><br/>
+  Si le joueur n'a jamais eu accès à cette information, alors c'est soit un jet de connaissance, soit c'est à l'histoire d'apporter l'information.<br/>
+  C'est un lancé de <b>n'importe quel dé officiel</b> (donc d2, d4, d6, d8, d10, d12, ou d20) au choix du joueur qui le lance.
+  Le GM décide à l'avance la proportion qui permettra au joueur d'obtenir l'information, et les potentiels niveaux d'information existant.
+  Il est de bonne pratique de garder le principe du "résultat haut = bon", mais rien n'empêche d'inverser ou d'avoir d'autres règles pour perturber les joueurs
+  (nombres pairs/impairs, multiples de 3, nombre de boucles dans l'écriture du nombre).<br/>
+  Par exemple, que le joueur pose sa question, le GM décide que le joueur possède environ 40% de chance d'obtenir l'information totale, 30% d'obtenir une partie d'information, et 30% de n'obtenir rien.<br/>
+  Si le joueur décide de prendre le d2, alors il "force" le GM à adapter à 50% d'avoir l'information, 50% de n'avoir rien.<br/>
+  Si le joueur décide de prendre un d4, alors le GM peut changer vers 50% d'avoir l'information, 25% d'avoir une partie, et 25% de n'avoir rien.
+  Ainsi de suite, le GM adapte ses probabilités initiales au dé choisi par le joueur.<br/>
+  <b>Rappel</b> : il est <b>fortement déconseillé</b> au GM de partager les probabilité initiales aux joueurs, ou au moins leurs effets.
+  Par exemple : dans notre situation précedente le GM ne dira soit rien aux joueurs, soit peut-être "30%-30%-40%"
+  (toujours aller dans l'ordre croissant ou bien décroissant, mais pas "le bon en premier") sans dire à quoi correspondent ces pourcentages.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+  <br/>
+</p>

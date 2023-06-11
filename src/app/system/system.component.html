@@ -27,6 +27,10 @@
         <menu-button *ngIf="langue.l == 'fr'">Magie</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Magic</menu-button>
     </a>
+    <a routerLink="/system/other-rolls" class="button-band" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Autres lancés</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Other rolls</menu-button>
+    </a>
     <a routerLink="/system/healing" class="button-band" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Soins & Repos</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Healing & Rest</menu-button>

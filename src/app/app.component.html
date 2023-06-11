@@ -29,11 +29,15 @@
         <menu-button *ngIf="langue.l == 'fr'">Règles additionnelles</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Additional rules</menu-button>
     </a>
+    <a routerLink="/secret-pages" class="button-band" routerLinkActive="activebutton">
+        <menu-button *ngIf="langue.l == 'fr'">Pages secrètes</menu-button>
+        <menu-button *ngIf="langue.l == 'en'">Secret pages</menu-button>
+    </a>
     <a routerLink="/compendium" class="button-band" style="float: right;" routerLinkActive="activebutton">
         <menu-button *ngIf="langue.l == 'fr'">Compendium</menu-button>
         <menu-button *ngIf="langue.l == 'en'">Compendium</menu-button>
     </a>
-<!-- 
+<!--
     <div class="search-container">
         <form>
             <button routerLink="/searching" *ngIf="langue.l == 'fr'" type="submit">Lancer</button>

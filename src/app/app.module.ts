@@ -34,6 +34,7 @@ import { GaugesComponent } from './system/gauges/gauges.component';
 import { AttackingComponent } from './system/attacking/attacking.component';
 import { CombatComponent } from './system/combat/combat.component';
 import { MagicSystemComponent } from './system/magic-system/magic-system.component';
+import { OtherRollsComponent } from './system/other-rolls/other-rolls.component';
 import { HealingComponent } from './system/healing/healing.component';
 import { StatesComponent } from './system/states/states.component';
 import { SystemExplanationComponent } from './system/system-explanation/system-explanation.component';
@@ -133,6 +134,17 @@ import { CheatSheetComponent } from './more-rules/cheat-sheet/cheat-sheet.compon
 // search
 import { CompendiumComponent } from './compendium/compendium.component';
 
+// secret pages
+import { SercretPagesComponent } from './sercret-pages/sercret-pages.component';
+import { SercretFlyhnsComponent } from './sercret-pages/sercret-flyhns/sercret-flyhns.component';
+import { SercretSylvansComponent } from './sercret-pages/sercret-sylvans/sercret-sylvans.component';
+import { SercretDarkElvesComponent } from './sercret-pages/sercret-dark-elves/sercret-dark-elves.component';
+import { SercretNekaliComponent } from './sercret-pages/sercret-nekali/sercret-nekali.component';
+import { SercretLyunesComponent } from './sercret-pages/sercret-lyunes/sercret-lyunes.component';
+import { SercretEtreksComponent } from './sercret-pages/sercret-etreks/sercret-etreks.component';
+import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-runes.component';
+import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -228,7 +240,17 @@ import { CompendiumComponent } from './compendium/compendium.component';
     MagicUsesIllusionComponent,
     MagicUsesMindComponent,
     MagicUsesTentaclesComponent,
-    MagicUsesSoulComponent
+    MagicUsesSoulComponent,
+    OtherRollsComponent,
+    SercretPagesComponent,
+    SercretSylvansComponent,
+    SercretDarkElvesComponent,
+    SercretFlyhnsComponent,
+    SercretNekaliComponent,
+    SercretLyunesComponent,
+    SercretEtreksComponent,
+    SercretRunesComponent,
+    SercretSoulStonesComponent,
   ],
   imports: [
     BrowserModule,
