@@ -33,11 +33,20 @@
 <h2 *ngIf="langue.l == 'en'">Rest</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer <b>1d6</b> par blessure par heure de repos.<br/>
-    Si le dé donne 6 alors la blessure correspondante est soignée de 1.<br/>
-    Si le personnage s'occupe de sa blessure, alors le 5 permet aussi de soigner. Une personne ne peut s'occuper que d'une blessure à la fois.
+    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagner 2 points d'énergie) (avec un minimum de 0 de fatigue).<br/>
+    Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer <b>1d6</b> par blessure par heure de repos,
+    et le résultat au dé déterminera si la blessure est soignée de 1 ou pas.<br/>
+    Le calcul est effectué pour chaque blessure indépendemment, est chaque blessure commence à 1 point.
+    Chaque bonne situation ajoute un point, et chaque mauvaise situation enlève un point (min 0).
+    Les points décident du seuil qui accepte le soin : le nombre de point correspond au nombre de faces soignantes. Avoir plus de points donne plus d'opportunités.<br/>
+    Par exemple : Si une blessure a 1 point, seul le 6 (au d6) permet de soigner. Si une blessure a 3 points, le 4, 5, et 6 permettent de soigner.<br/>
+    Exemples de situations bénéfiques :<br/>
+    - Si le personnage s'occupe de sa blessure, la blessure gagne un point. Une personne ne peut s'occuper que d'une blessure à la fois.
     Plusieurs personnages peuvent d'occuper de blessures différentes sur le même personnage blessé.<br/>
-    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagner 2 points d'énergie).<br/>
+    - Si le repos est effectué dans un lieu de soin (hopital ou autre), la blessure gagne un point.<br/>
+    Exemples de situations néfastes :<br/>
+    - Si la blessure est infectée (en développement), la blessure perd un point.<br/>
+    - Si le personnage se repose sans matelas ou lit, la blessure perd un point.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     A wounded character can rest to heal. They can roll <b>1d6</b> per wound per hour of rest.<br/>
