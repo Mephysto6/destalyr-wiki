@@ -1,0 +1,29 @@
+@import '../app.component.css';
+
+form {
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+input[type="text"] {
+  border: solid 1px black;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: calc(max(50%, 200px)) ;
+}
+
+button {
+  background-color: var(--purple-light);
+  border: solid 1px black;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+button:hover {
+  background-color: var(--purple-dark);
+  cursor: pointer;
+}
