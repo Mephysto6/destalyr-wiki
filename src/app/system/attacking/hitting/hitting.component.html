@@ -78,6 +78,21 @@
     </table>
 </div>
 
+<h3 *ngIf="langue.l == 'fr'">Attaques à distance</h3>
+<h3 *ngIf="langue.l == 'en'">Ranged attacks</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Les attaques à distance ont besoin d'une ligne de vue ininterrompue pour ne pas être handicappées.<br/>
+    Si la ligne entre l'attaquant et la cible traverse le token d'une créature de tout son diamètre, alors la ligne de vue est considérée complètement interrompue et l'attaque impossible.
+    Si la ligne entre l'attaquant et la cible traverse le token d'une créature de moins de la moitié de son diamètre, alors l'attaque subit un malus de 3 au toucher.
+    Si la ligne entre l'attaquant et la cible traverse la case d'une créature sans toucher son token, alors l'attaque subit un malus de 1 au toucher.<br/>
+    L'environnement peut aussi perturber la ligne de vue en fournissant du couvert, allant de -1 au -3 au toucher, voire casser la ligne et rendre l'attaque impossible.
+    L'impact dépend de la taille du couvert, et certains matériaux peuvent être plus fragiles que d'autres.
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
+</p>
+
 <h3 *ngIf="langue.l == 'fr'">Continuation</h3>
 <h3 *ngIf="langue.l == 'en'">Continuation</h3>
 

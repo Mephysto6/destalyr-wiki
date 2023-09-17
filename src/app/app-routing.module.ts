@@ -137,6 +137,7 @@ import { SercretLyunesComponent } from './sercret-pages/sercret-lyunes/sercret-l
 import { SercretEtreksComponent } from './sercret-pages/sercret-etreks/sercret-etreks.component';
 import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-runes.component';
 import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
+import { BloodRulesComponent } from './sercret-pages/blood-rules/blood-rules.component';
 
 
 const routes: Routes = [
@@ -318,6 +319,7 @@ const routes: Routes = [
       { path: 'nZX7X17s', component: SercretEtreksComponent },
       { path: 'ne12V72t', component: SercretRunesComponent },
       { path: '3X5Ju928', component: SercretSoulStonesComponent },
+      { path: 'r8t2VuC5', component: BloodRulesComponent },
     ]
   },
 

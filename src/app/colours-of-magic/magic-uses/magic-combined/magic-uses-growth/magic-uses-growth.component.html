@@ -6,23 +6,124 @@
 </button>
 
 <div class="magic-pres">
-    <div class="magic-title">
-        Croissance
+  <div class="magic-title">
+    Croissance
+  </div>
+  <div class="magic-stats">
+    <div class="magic-purity">
+      <div class="magic-inactive">pure</div>
+      <div class="magic-active">combinée</div>
     </div>
-    <div class="magic-stats">
-        <div class="magic-purity">
-            <div class="magic-inactive">pure</div>
-            <div class="magic-active">combinée</div>
-        </div>
-        <div class="magic-tangibility">
-            <div class="magic-inactive">Tangible</div>
-            <div class="magic-active">intangible</div>
-        </div>
-        <div class="magic-det">
-            <div>DET</div>
-            <div>3</div>
-        </div>
+    <div class="magic-tangibility">
+      <div class="magic-inactive">Tangible</div>
+      <div class="magic-active">intangible</div>
     </div>
+    <div class="magic-det">
+      <div>DET</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+  <table>
+      <tr>
+          <th>Valeur</th>
+          <th>Efficacité</th>
+          <th>Efficacité pour Infusion</th>
+          <th>Précision</th>
+          <th>Taille</th>
+          <th>Distance</th>
+      </tr>
+      <tr>
+          <td>Sens</td>
+          <td>Mulitplicateur de Force</td>
+          <td>Mulitplicateur de Force pour infusion</td>
+          <td>Si ça s'applique</td>
+          <td>Taille de la cible (4 pour humain)</td>
+          <td>Distance à la cible</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td></td>
+          <td>Paume (5 cm)</td>
+          <td>Contact*</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td></td>
+          <td>Main (20 cm)</td>
+          <td>1 case**</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td></td>
+          <td>Bras (1 pas)</td>
+          <td>2-4 cases</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>50%</td>
+          <td>50%</td>
+          <td></td>
+          <td>Corps (2 m)</td>
+          <td>5-10 cases</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>50%</td>
+          <td>50%</td>
+          <td></td>
+          <td>Groupe (5-10 m)</td>
+          <td>11-20 cases</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td></td>
+          <td>Très grand (20 m)</td>
+          <td>21-50 cases</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td></td>
+          <td>Très très grand (40 m)</td>
+          <td>51-100 cases</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>150%</td>
+          <td>100%</td>
+          <td></td>
+          <td>Très très grand (40 m)</td>
+          <td>101-200 cases</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>150%</td>
+          <td>100%</td>
+          <td></td>
+          <td>Très très grand (40 m)</td>
+          <td>201-500 cases</td>
+      </tr>
+      <tr>
+          <td>10+</td>
+          <td>200%</td>
+          <td>150%</td>
+          <td></td>
+          <td>Très très grand (40 m)</td>
+          <td>501+ cases</td>
+      </tr>
+  </table>
 </div>
 
 <p></p>

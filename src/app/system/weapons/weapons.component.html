@@ -203,23 +203,96 @@
 <h3 *ngIf="langue.l == 'en'">Limit range for ranged weapons</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Chaque type d'arme a une distance correspondante.<br/>
-    Pour les armes sans projectiles, c'est la distance atteignable par l'arme.<br/>
-    Pour les armes avec projectiles, c'est la distance jusqu'à laquelle un personnage peut tirer sans problème.<br/>
-    Pour ces armes (avec projectiles), il est aussi possible de tirer au-delà de cette limite avec un -3 au toucher.
-    La distance maximale pour essayer de tirer est le double de la distance indiquée.<br/>
-    Pour les armes à distances, attaquer au contact est problématique et impose un -2 au toucher.
-    Seuls l'arc court et l'arbalète de poings ne subissent pas ce désavantage.<br/>
+    Chaque type d'arme à distance possède deux fourchettes de distances correspondantes : la distance droite et la distance en cloche.<br/>
     <br/>
-    armes de contact : 1 cases (= 1.5m = 2 pas)<br/>
-    armes d'aste (polearms) : 2 cases (= 3m = 4 pas)<br/>
-    fouet normal : 3 cases (= 4.5m = 6 pas)<br/>
-    fouet liane (magie nature) : 5 cases (= 7.5m = 10 pas)<br/>
-    arc court : 15 cases (= 22.5m = 30 pas)<br/>
-    arbalète : 15 cases (= 22.5m = 30 pas)<br/>
-    arc recourbé : 20 cases (= 30m = 40 pas)<br/>
-    arc long : 30 cases (= 45m = 60 pas)<br/>
+    Pour la distance droite :<br/>
+    - tirer une cible plus proche que la limite inférieure impose un -2 au toucher.<br/>
+    - tirer une cible plus loin que la limite supérieure impose un -3 au toucher.<br/>
+    - tirer une cible plus loin que le double de la limite supérieure est impossible.<br/>
+    - tirer <b>requiert une ligne de vue</b> (cf ci-dessous).<br/>
+    <br/>
+    Pour la distance en cloche :<br/>
+    - tirer une cible plus proche que la limite inférieure est impossible.<br/>
+    - tirer une cible plus loin que la limite supérieure impose un -3 au toucher.<br/>
+    - tirer une cible plus loin que le double de la limite supérieure est impossible.<br/>
+    - toute attaque en cloche subit un -1 au toucher.<br/>
+    - tirer <b>ne requiert pas</b> une ligne de vue.<br/>
+    - tirer <b>requiert</b> de la hauteur.<br/>
+    - tirer <b>requiert</b> la compétence dans l'arbre d'attaque.<br/>
 </p>
+
+<table>
+  <tr>
+    <th>Malus de distances</th>
+    <td>d &#60; min</td>
+    <td>min &#60;= d &#60;= max</td>
+    <td>max &#60; d &#60;= 2x max</td>
+    <td>2x max &#60; d</td>
+  </tr>
+  <tr>
+    <td>droite</td>
+    <td>-2</td>
+    <td>/</td>
+    <td>-3</td>
+    <td>impossible</td>
+  </tr>
+  <tr>
+    <td>en cloche</td>
+    <td>impossible</td>
+    <td>-1</td>
+    <td>-4</td>
+    <td>impossible</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Type d'arme</th>
+    <th>Distance droite</th>
+    <th>Distance en cloche</th>
+  </tr>
+  <tr>
+    <td>armes de contact</td>
+    <td>1 cases / 1.5m</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>armes d'aste</td>
+    <td>2 cases / 3m</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>fouet</td>
+    <td>3 cases / 4.5m</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>arc court</td>
+    <td>1-10 cases / 15m</td>
+    <td>5-15 cases</td>
+  </tr>
+  <tr>
+    <td>arbalète de poing</td>
+    <td>1-10 cases / 15m</td>
+    <td>10-20 cases</td>
+  </tr>
+  <tr>
+    <td>arc recourbé</td>
+    <td>2-15 cases / 22.5m</td>
+    <td>10-20 cases</td>
+  </tr>
+  <tr>
+    <td>arbalète lourde</td>
+    <td>2-20 cases / 30m</td>
+    <td>15-25 cases</td>
+  </tr>
+  <tr>
+    <td>arc long</td>
+    <td>2-20 cases / 30m</td>
+    <td>10-30 cases</td>
+  </tr>
+</table>
+
 <p *ngIf="langue.l == 'en'">
     Every weapon type has a corresponding distance.<br/>
     For the weapons without projectiles, it is the distance reachable by the weapon.<br/>
@@ -230,7 +303,6 @@
     melee weapons : 1 hex (1.5m = 2 steps)<br/>
     polearms : 2 hex (3m = 4 steps)<br/>
     whip : 3 hex (4.5m = 6 steps)<br/>
-    vine whip (nature magic) : 5 hex (7.5m = 10 steps)<br/>
     shortbow : 10 hex (15m = 20 steps)<br/>
     crossbow : 15 hex (22.5m = 30 steps)<br/>
     longbow : 30 hex (45m = 60 steps)<br/>

@@ -144,6 +144,7 @@ import { SercretLyunesComponent } from './sercret-pages/sercret-lyunes/sercret-l
 import { SercretEtreksComponent } from './sercret-pages/sercret-etreks/sercret-etreks.component';
 import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-runes.component';
 import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
+import { BloodRulesComponent } from './sercret-pages/blood-rules/blood-rules.component';
 
 @NgModule({
   declarations: [
@@ -251,6 +252,7 @@ import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/
     SercretEtreksComponent,
     SercretRunesComponent,
     SercretSoulStonesComponent,
+    BloodRulesComponent,
   ],
   imports: [
     BrowserModule,

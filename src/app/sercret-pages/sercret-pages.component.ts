@@ -55,6 +55,10 @@ export class SercretPagesComponent implements OnInit {
       this.router.navigate(['/secret-pages/3X5Ju928'])
     }
 
+    if (this.passphrase == "BLOOD FOR THE BLOOD GOD") {
+      this.router.navigate(['/secret-pages/r8t2VuC5'])
+    }
+
   }
 
 }
