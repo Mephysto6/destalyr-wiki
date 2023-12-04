@@ -1,4 +1,81 @@
 <br/><br/>
+<div class="div-table" *ngIf="langue.l == 'fr'">
+  <table class="skill-table" >
+    <tr>
+      <th></th>
+      <th>
+        <app-skill-button skill_name="Armes de dextérité" skill_category="ATK" header=true skill_type="Passif" skill_levels="1" skill_colour="btn-green"></app-skill-button>
+      </th>
+      <th>
+        <app-skill-button skill_name="Armes de force" skill_category="ATK" header=true skill_type="Passif" skill_levels="1" skill_colour="btn-red"></app-skill-button>
+      </th>
+      <th></th>
+    </tr>
+    <!-- depth : 1 -->
+    <tr>
+        <td>
+          <app-skill-button skill_name="Viser" skill_category="ATK" header=false skill_type="Action" skill_levels="2" skill_colour="btn-lightgreen"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Dual Wield" skill_category="ATK" header=false skill_type="Passif" skill_levels="2" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Duéliste" skill_category="ATK" header=false skill_type="Passif" skill_levels="2" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Cleave" skill_category="ATK" header=false skill_type="Action" skill_levels="1" skill_colour="btn-lightred"></app-skill-button>
+        </td>
+    </tr>
+    <!-- depth : 2 -->
+    <tr>
+        <td>
+          <app-skill-button skill_name="Sniper" skill_category="ATK" header=false skill_type="Passif" skill_levels="1" skill_colour="btn-lightgreen"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Distraction" skill_category="ATK" header=false skill_type="Passif" skill_levels="3" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Parer" skill_category="ATK" header=false skill_type="Réaction" skill_levels="3" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Charge" skill_category="ATK" header=false skill_type="Action" skill_levels="2" skill_colour="btn-lightred"></app-skill-button>
+        </td>
+    </tr>
+    <!-- depth : 3 -->
+    <tr>
+        <td>
+          <app-skill-button skill_name="Double flèche" skill_category="ATK" header=false skill_type="Action" skill_levels="2" skill_colour="btn-lightgreen"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Angle mort" skill_category="ATK" header=false skill_type="Passif" skill_levels="1" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Frontliner" skill_category="ATK" header=false skill_type="Passif" skill_levels="2" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Mage Slayer" skill_category="ATK" header=false skill_type="Passif" skill_levels="1" skill_colour="btn-lightred"></app-skill-button>
+        </td>
+    </tr>
+    <!-- depth : 4 -->
+    <tr>
+        <td>
+          <app-skill-button skill_name="Critique étendu" skill_category="ATK" header=false skill_type="Passif" skill_levels="1" skill_colour="btn-lightgreen"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Aggressif" skill_category="ATK" header=false skill_type="Action" skill_levels="3" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Présence" skill_category="ATK" header=false skill_type="Action & Passif" skill_levels="3" skill_colour="btn-lightorange"></app-skill-button>
+        </td>
+        <td>
+          <app-skill-button skill_name="Fort" skill_category="ATK" header=false skill_type="Passif" skill_levels="1" skill_colour="btn-lightred"></app-skill-button>
+        </td>
+    </tr>
+  </table>
+</div>
+
+<br/><br/>
+
 <div class="div-skills">
     <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_attack.png"/>
     <button class="button-skills xtop left">

@@ -32,7 +32,7 @@
     margin-top: 20%;
     border-radius: 6px;
     transform: translateX(-50%);
-   
+
     position: absolute;
     z-index: 99;
 }
@@ -68,7 +68,7 @@
     margin-left: 51%;
     border-radius: 6px;
     transform: translateY(-50%);
-   
+
     position: absolute;
     z-index: 99;
 }
@@ -77,4 +77,113 @@
 }
 span {
     font: 15px/25px Arial, serif;
+}
+
+/* New Skills table */
+*{
+  --button-height: 100px;
+  --button-width: 200px;
+}
+
+.div-table {
+  width: 950px;
+  margin: auto;
+  background-color: #ffffff00;
+}
+.skill-table {
+  align-content: center;
+  border-collapse: separate;
+  border-color: #ffffff00;
+  background-color: #ffffff00;
+}
+.skill-table tr {
+  text-align: center;
+  height: var(--button-height);
+  margin: 0;
+  padding: 0;
+}
+
+.skill-table th,td {
+  text-align: center;
+  width: var(--button-width);
+  margin: 0;
+  padding: 0;
+  border-color: #ffffff00;
+}
+
+.skill-button {
+  height: var(--button-height);
+  width: var(--button-width);
+  background-color: rgba(0, 0, 0, 0.5);
+  font: 20px Georgia, serif;
+  padding: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+/* .skill-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+} */
+.skill-button .hovertext, .popuptext {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  transform: translateX(-55%);
+
+  position: absolute;
+  z-index: 99;
+}
+.skill-button .hovertext {
+  visibility: hidden;
+}
+.skill-button:hover .hovertext {
+  visibility: visible;
+}
+
+.skill-type {
+  font: 15px/25px Arial, serif;
+}
+
+.div-skills .button-skills .bot-line {
+  transform: translate(-50%, -100%);
+  margin-top: -20%;
+}
+
+.skill-button .skill-type {
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* button colours */
+.btn-green {
+  background-color: rgb(0, 128, 0);
+}.btn-green:hover {
+  background-color: rgb(0, 85, 0);
+}
+
+.btn-red {
+  background-color: rgb(255, 0, 0);
+}.btn-red:hover {
+  background-color: rgb(170, 0, 0);
+}
+
+.btn-lightred {
+  background-color: rgb(255, 96, 96);
+}.btn-lightred:hover {
+  background-color: rgb(170, 64, 64);
+}
+.btn-lightorange {
+  background-color: rgb(255, 191, 96);
+}.btn-lightorange:hover {
+  background-color: rgb(190, 135, 72);
+}
+.btn-lightgreen {
+  background-color: rgb(85, 177, 85);
+}.btn-lightgreen:hover {
+  background-color: rgb(65, 128, 65);
 }

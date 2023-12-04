@@ -1,0 +1,9 @@
+@import '../skills.component.css';
+
+.header {
+  font-weight: bold;
+  font: bold 17px Georgia, serif;
+}
+.skill-name {
+  font: 17px Georgia, serif;
+}
