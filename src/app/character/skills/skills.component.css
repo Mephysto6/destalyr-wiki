@@ -161,29 +161,29 @@ span {
 
 /* button colours */
 .btn-green {
-  background-color: rgb(0, 128, 0);
+  background-color: rgb(0, 200, 0);
 }.btn-green:hover {
-  background-color: rgb(0, 85, 0);
+  background-color: rgb(0, 160, 0);
 }
 
 .btn-red {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(226, 61, 39);
 }.btn-red:hover {
-  background-color: rgb(170, 0, 0);
+  background-color: rgb(189, 55, 31);
 }
 
 .btn-lightred {
-  background-color: rgb(255, 96, 96);
+  background-color: rgb(235, 115, 115);
 }.btn-lightred:hover {
-  background-color: rgb(170, 64, 64);
+  background-color: rgb(192, 95, 95);
 }
 .btn-lightorange {
-  background-color: rgb(255, 191, 96);
+  background-color: rgb(235, 183, 70);
 }.btn-lightorange:hover {
-  background-color: rgb(190, 135, 72);
+  background-color: rgb(195, 151, 55);
 }
 .btn-lightgreen {
-  background-color: rgb(85, 177, 85);
+  background-color: rgb(115, 201, 123);
 }.btn-lightgreen:hover {
-  background-color: rgb(65, 128, 65);
+  background-color: rgb(90, 150, 94);
 }
