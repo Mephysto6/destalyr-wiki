@@ -1,17 +1,55 @@
 <p *ngIf="langue.l == 'fr'">
     Les connaissances d'une créature dépendent de ses expériences.<br/>
     Une personne peut apprendre de nouvelles connaissances seule ou avec un tuteur.<br/>
-    L'apprentissage seul coûte 2 points pour avancer de niveau, pendant que l'apprentissage avec tuteur coûte 1 point.<br/>
-    Il existe 5 niveaux de connaissances pour la plupart des sujets : débutant - adepte - avancé - maître - renommé.<br/>
+    Les connaissances représentent l'avancée du personnage et l'impact que l'environnement a pu avoir sur lui pendant sa vie.<br/>
+    Cet aspect du personnage est relativement libre et il est encouragé de réfléchir à son personnage et à son histoire pour trouver les connaissances les plus appropriées.
+    Un joueur peut inventer des connaissances ou bien s'inspirer ou se baser sur une des connaissances présentées ici et la modifier pour la rendre plus adaptée au personnage (à voir avec le MJ pour l'équilibrage).<br/>
     <br/>
     Quelques exemples de connaissances :<br/>
-    - politique<br/>
-    - socio-économie<br/>
-    - faune et flore<br/>
-    - une profession (soigneur, enseignant, ...)<br/>
-    - un artisanat (tanneur, forgeron, joallier, ...)<br/>
-    - un domaine de recherche (archéologie, anthropologie, runes magiques, ...)<br/>
-    - un domaine moins légal (vol, mensonge, assassinat, ...)<br/>
+    - template : vision élémentaire plus puissante + savoir sur un sujet approprié<br/>
+    vision de feu + cuisine / forge / etc.<br/>
+    vision d'air + météorologie / sonnore / etc.<br/>
+    vision de lumière + optique / astrologie / etc.<br/>
+    vision de nature + botanique / élevage / etc.<br/>
+    vision d'eau + sailing / alchemie / etc.<br/>
+    vision de ténèbres + se cacher / voir dans le noir / etc.<br/>
+    <br/>
+    - template : [requirement de magie majeure] point de spéc + spécialisation dans la détection/discrétion/soins liée<br/>
+    feu +> détection magique<br/>
+    air +> détection physique<br/>
+    lumière +> soins<br/>
+    nature +> discrétion magique<br/>
+    eau +> soins<br/>
+    ténèbre +> discrétion physique<br/>
+    <br/>
+    - template : [requirement de magie combinée] point de spéc + spécialisation dans une sous section/aspect de cette magie<br/>
+    explosion +> faire chauffer l'air et sécher les choses / explosions petites et controllées<br/>
+    purification +> amplifier les dégâts / soigner les blessures<br/>
+    eau de vie +> brûlures contrôlées plus forte que "juste feu"<br/>
+    âme +> perturbation magique / détection émotions<br/>
+    tonnerre +> interaction avec les muscles / tonnerre du ciel<br/>
+    animaux +> appel / self-buffs<br/>
+    tentacules +> structure / armes<br/>
+    croissance +> buff / construction<br/>
+    glace +> formes spécifiques / construction<br/>
+    terre +> construction / buff<br/>
+    esprit +> buff / debuff / detection mémoires<br/>
+    illusion +> invisibilité / apparence modifiée<br/>
+    <br/>
+    - template : job + stat<br/>
+    forgeron + force<br/>
+    fermier + resistence<br/>
+    tanneur + dextérité<br/>
+    livreur + agilité<br/>
+    professeur + perception<br/>
+    marchand + éloquence<br/>
+    <br/>
+    - template : interactions avec certains skills<br/>
+    req : armes dex > accès aux skills de force avec la dex<br/>
+    req : armures lourdes > l'agi capée à +1 qu'indiqué par l'armure.<br/>
+    req : réaction magie > gagne un autre trigger pour magie ou mouvement<br/>
+    req : conjuration > permet de conjurer 2 petits pets au lieu d'un moyen.<br/>
+
     <br/>
 </p>
 <p *ngIf="langue.l == 'en'">
