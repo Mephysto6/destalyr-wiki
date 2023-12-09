@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SkillsAttackComponent } from '../skills-attack/skills-attack.component';
+import { SkillsDefenseComponent } from '../skills-defense/skills-defense.component';
+import { SkillsMagicComponent } from '../skills-magic/skills-magic.component';
 
 @Component({
   selector: 'app-skill-button',
@@ -19,7 +21,11 @@ export class SkillButtonComponent implements OnInit {
   show_that_skill : boolean = false ;
 
 
-  constructor(public AtkComp: SkillsAttackComponent) { }
+  constructor(
+    private AtkComp: SkillsAttackComponent,
+    private DefComp: SkillsDefenseComponent,
+    private MagComp: SkillsMagicComponent,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +33,12 @@ export class SkillButtonComponent implements OnInit {
   get_skill(skill_category : string, depth: string, skill_name: string) {
     if (skill_category == "ATK") {
       return this.AtkComp.give_skill(Number(depth), skill_name);
+    }
+    if (skill_category == "DEF") {
+      return this.DefComp.give_skill(Number(depth), skill_name);
+    }
+    if (skill_category == "MAG") {
+      return this.MagComp.give_skill(Number(depth), skill_name);
     }
   }
 

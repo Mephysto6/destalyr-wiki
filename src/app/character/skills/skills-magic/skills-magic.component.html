@@ -1,3 +1,25 @@
+<br/><br/>
+<div class="div-table">
+  <table class="skill-table" >
+    <tr *ngFor="let depth of this.depths">
+      <td *ngFor="let skill of this.skills[depth].name_list">
+        <span *ngIf="skill !== 'nothing'">
+          <app-skill-button
+            [skill_name]="skill"
+            [skill_category]="this.skills[depth].skill_list[skill].category"
+            [skill_depth]="depth"
+            [header]="this.skills[depth].skill_list[skill].header"
+            [skill_type]="this.skills[depth].skill_list[skill].type"
+            [skill_levels]="this.skills[depth].skill_list[skill].levels"
+            [skill_colour]="this.skills[depth].skill_list[skill].colour"
+          >
+          </app-skill-button>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
+
 <br/>
 <div class="div-skills">
     <img src="../../../assets/images/skill_trees/skill_tree_magic.png"/>

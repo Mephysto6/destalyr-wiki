@@ -1,5 +1,5 @@
 <br/><br/>
-<div class="div-table" *ngIf="langue.l == 'fr'">
+<div class="div-table">
   <table class="skill-table" >
     <tr *ngFor="let depth of this.depths">
       <td *ngFor="let skill of this.skills[depth].name_list">
@@ -25,14 +25,11 @@
 <div class="div-skills">
     <img style="vertical-align: middle;" src="../../../assets/images/skill_trees/skill_tree_attack.png"/>
     <button class="button-skills xtop left">
-        <span class="hovertext" *ngIf="langue.l == 'fr'">
+        <span class="hovertext">
             Être capable d'utiliser des armes de distance en combat.<br/><br/>
             Pour chaque attaque, le personnage attaquant doit cibler un membre spécifique de sa victime.<br/>
             Selon le membre, l'attaque peut subir un malus au toucher*.
             Si l'attaque touche, la victime souffre des pénalités selon le membre touché et les dégâts*.
-        </span>
-        <span class="hovertext" *ngIf="langue.l == 'en'">
-            Be able to use ranged weapons in combat.
         </span>
     </button>
     <button class="button-skills xtop right">
@@ -168,11 +165,11 @@
     </button>
 </div>
 
-<p *ngIf="langue.l == 'fr'">
+<!-- <p *ngIf="langue.l == 'fr'">
     * : cf <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">cibler</a><br/>
     ** : cf <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">continuation</a>
 </p>
 <p *ngIf="langue.l == 'en'">
     * : see <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">targeting</a><br/>
     ** : see <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">continuation</a>
-</p>
+</p> -->

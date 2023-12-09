@@ -93,6 +93,7 @@ import { SkillsAttackComponent } from './character/skills/skills-attack/skills-a
 import { SkillsDefenseComponent } from './character/skills/skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from './character/skills/skills-magic/skills-magic.component';
 import { SkillsExplanationComponent } from './character/skills/skills-explanation/skills-explanation.component';
+import { SkillButtonComponent } from './character/skills/skill-button/skill-button.component';
 
 // colours/uses
 import { MagicUsesComponent } from './colours-of-magic/magic-uses/magic-uses.component';
@@ -145,7 +146,6 @@ import { SercretEtreksComponent } from './sercret-pages/sercret-etreks/sercret-e
 import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-runes.component';
 import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
 import { BloodRulesComponent } from './sercret-pages/blood-rules/blood-rules.component';
-import { SkillButtonComponent } from './character/skills/skill-button/skill-button.component';
 
 @NgModule({
   declarations: [
@@ -264,7 +264,11 @@ import { SkillButtonComponent } from './character/skills/skill-button/skill-butt
     MatToolbarModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    SkillsAttackComponent,
+    SkillsDefenseComponent,
+    SkillsMagicComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -160,10 +160,17 @@ span {
 }
 
 /* button colours */
+
+/* attack tree */
 .btn-green {
   background-color: rgb(0, 200, 0);
 }.btn-green:hover {
   background-color: rgb(0, 160, 0);
+}
+.btn-lightgreen {
+  background-color: rgb(115, 201, 123);
+}.btn-lightgreen:hover {
+  background-color: rgb(90, 150, 94);
 }
 
 .btn-red {
@@ -171,19 +178,50 @@ span {
 }.btn-red:hover {
   background-color: rgb(189, 55, 31);
 }
-
 .btn-lightred {
   background-color: rgb(235, 115, 115);
 }.btn-lightred:hover {
   background-color: rgb(192, 95, 95);
 }
+
 .btn-lightorange {
   background-color: rgb(235, 183, 70);
 }.btn-lightorange:hover {
   background-color: rgb(195, 151, 55);
 }
-.btn-lightgreen {
-  background-color: rgb(115, 201, 123);
-}.btn-lightgreen:hover {
-  background-color: rgb(90, 150, 94);
+
+/*  defense tree */
+.btn-blue {
+  background-color: rgb(19, 117, 245);
+}.btn-blue:hover {
+  background-color: rgb(23, 97, 194);
+}
+.btn-lightblue {
+  background-color: rgb(90, 161, 228);
+}.btn-lightblue:hover {
+  background-color: rgb(75, 135, 190);
+}
+
+.btn-teal {
+  background-color: rgb(0, 177, 200);
+}.btn-teal:hover {
+  background-color: rgb(2, 149, 160);
+}
+.btn-lightteal {
+  background-color: rgb(55, 192, 202);
+}.btn-lightteal:hover {
+  background-color: rgb(40, 166, 170);
+}
+
+/* magic tree */
+
+.btn-purple {
+  background-color: rgb(100, 30, 220);
+}.btn-purple:hover {
+  background-color: rgb(78, 23, 172);
+}
+.btn-lightpurple {
+  background-color: rgb(150, 150, 255);
+}.btn-lightpurple:hover {
+  background-color: rgb(126, 126, 214);
 }
