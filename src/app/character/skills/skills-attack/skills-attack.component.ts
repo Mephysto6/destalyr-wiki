@@ -167,9 +167,9 @@ export class SkillsAttackComponent implements OnInit {
           "colour": "btn-lightorange",
         },
         "Frontliner": {
-          "hover_text": "Déclanche moins d'opportunité.",
-          "details_text": "(1) Les attaques mêlées ne déclanchent plus d'opportunités des ennemis au contact, et les attaques en réactions gagnent un +2 au toucher. \
-                           (2) Une fois par tour, après avoir effectué une attaque, gagne 1PA de mouvement qui ne déclanche pas d'opportunité.",
+          "hover_text": "Déclenche moins d'opportunité.",
+          "details_text": "(1) Les attaques mêlées ne déclenchent plus d'opportunités des ennemis au contact, et les attaques en réactions gagnent un +2 au toucher. \
+                           (2) Une fois par tour, après avoir effectué une attaque, gagne 1PA de mouvement qui ne déclenche pas d'opportunité.",
           "category": "ATK",
           "header": "false",
           "type": "Passif",

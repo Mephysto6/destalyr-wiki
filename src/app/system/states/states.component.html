@@ -96,9 +96,11 @@
     <b>Effets</b> : La personne en train de méditer doit être assise ou alongée, dans une optique de repos.<br/>
     Elle devient incapable d'attaquer ou de lancer de sorts sans sortir de méditation,
     mais elle peut encore parler, utiliser un objet ou d'autres intéractions.<br/>
-    <b>Effets spéciaux</b> : > Si la méditation dure 1 heure, récupère 1 point d'énergie + 2 points d'énergie temporaire.<br/>
+    <b>Effets spéciaux</b> : <br>
     > Après 5 minutes de méditation et si la méditation continue, alors la personne peut lancer des sorts,
-    et le coût en énergie des sorts et des concentrations est ignoré.<br/>
+    et le coût en énergie des sorts et des concentrations est ignoré (= 0).<br/>
+    > Après 10 minutes totales de méditation, le personnage peut interrompre la méditation et gagner 1 point d'énergie temporaire.<br/>
+    > Si la méditation dure 1 heure, récupère 1 point d'énergie + 2 points d'énergie temporaire.<br/>
     > Si combiné avec un sort en concentration, le lanceur du sort est de plus en plus limité suivant la puissance du sort.<br/>
     - niveau 2 : immobilisé (peut seulement parler)<br/>
     - niveau 3 : + aveugle<br/>
@@ -133,7 +135,7 @@
 <h2 *ngIf="langue.l == 'en'">Occupied</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	<b>Source</b> : Face à un ennemi et l'ayant attaqué<br/>
+	<b>Source</b> : Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.<br/>
     <b>Effets</b> : Les personnages avec certaines compétences gagnent des avantages contre une personne occupée.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">

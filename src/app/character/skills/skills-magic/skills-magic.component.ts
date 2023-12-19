@@ -61,7 +61,7 @@ export class SkillsMagicComponent implements OnInit {
         },
         "Perturbation": {
           "hover_text": "Perturbe les mages ennemis et affaiblis leurs sorts, voire les annule.",
-          "details_text": "(1) Débloque la réaction Perturber. Coûte 1PR, déclanchable quand un mage visible lance un sort. \
+          "details_text": "(1) Débloque la réaction Perturber. Coûte 1PR, déclenchable quand un mage visible lance un sort. \
                               La victime de la perturbation lance un jet de sensitivité, et le perturbant lance un 1d12. \
                               Si le perturbant possède une magie en commun avec le sort lancé, alors il peut ajouter sa sensitivité aussi. \
                               La victime perd la moitié (arrondie bas) de la différence des jets (attaquant - défenseur, min 0) en nombre de d4 de son lancé de sort. \
@@ -155,22 +155,21 @@ export class SkillsMagicComponent implements OnInit {
     },
     {
       "depth": 4,
-      "name_list": ["Détermination", "Effets de bord", "Créateur"],
+      "name_list": ["Créateur", "Effets de bord", "Détermination"],
       "skill_list": {
-        "Détermination": {
-          "hover_text": "Relancer des dés de magie.",
-          "details_text": "(1) Une fois par manip, permet de relancer un dé.\
-                           (2) Une fois par manip, permet de relancer autant de dés que voulu. (remplace le niveau 1).",
+        "Créateur": {
+          "hover_text": "Réduit le coût de création.",
+          "details_text": "Réduit le coût de la création d'élément intangible (de 1) et le coût de garder sous contrôle un élément tangible (de 1 niveau).",
           "category": "MAG",
           "header": "false",
           "type": "Passif",
-          "levels": "2",
+          "levels": "1",
           "colour": "btn-lightpurple",
         },
         "Effets de bord": {
           "hover_text": "Permet de faire des dégâts quand une attaque magique rate.",
           "details_text": "(1) Débloque la réaction Effets de bord. \
-                              Coûte 1PR, limité à une fois par tour global, déclanchable après qu'une créature esquive une attaque magique lancée par ce personnage. \
+                              Coûte 1PR, limité à une fois par tour global, déclenchable après qu'une créature esquive une attaque magique lancée par ce personnage. \
                               La victime reçoit une attaque magie dont les dégât sont calculés par Précision + Taille (au lieu de Efficacité + Taille).\
                            (2) La réaction n'est plus limitée à une fois par tour.",
           "category": "MAG",
@@ -179,13 +178,14 @@ export class SkillsMagicComponent implements OnInit {
           "levels": "2",
           "colour": "btn-lightpurple",
         },
-        "Créateur": {
-          "hover_text": "Réduit le coût de création.",
-          "details_text": "Réduit le coût de la création d'élément intangible (de 1) et le coût de garder sous contrôle un élément tangible (de 1 niveau).",
+        "Détermination": {
+          "hover_text": "Relancer des dés de magie.",
+          "details_text": "(1) Une fois par manip, permet de relancer un dé.\
+                           (2) Une fois par manip, permet de relancer autant de dés que voulu. (en plus du niveau 1).",
           "category": "MAG",
           "header": "false",
           "type": "Passif",
-          "levels": "1",
+          "levels": "2",
           "colour": "btn-lightpurple",
         },
       },

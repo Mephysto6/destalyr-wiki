@@ -1,29 +1,47 @@
+<h3 *ngIf="langue.l == 'fr'">Les arbres</h3>
+<h3 *ngIf="langue.l == 'en'">The skill trees</h3>
+
+<p *ngIf="langue.l == 'fr'">
+  <b>La structure</b><br>
+  Les arbres de compétences prennent la forme de tableaux cadrillés avec des blocs de compétences.<br>
+  Chaque bloc de compétence peut contenir entre un et trois niveaux de compétence, indiqué par le nombre d'étoiles dans le bloc.
+  Le type d'avantage apporté par la compétence est inscrite en italique au dessus du nom de la compétence.<br>
+  Les compétences sans étoiles dans leur bloc correspondent aux compétences fondamentales.
+  Chaque compétence fondamentale possède exactement un niveau, et est la première compétence à prendre pour entrer dans l'arbre.<br>
+  <br>
+  <b>Le déplacement</b><br/>
+  Au début, seul la ligne la plus haute dans l'arbre est accessible.<br/>
+  En consommant un point de compétence (gagné en même temps qu'un niveau), un personnage peut acquérir une compétence accessible.
+  Cela rend accessible les compétences directement en dessous et en diagonale vers le bas par rapport à cette nouvelle compétence acquise.
+  Les "mouvements" horizonteaux ne sont pas permis.<br/>
+  Les compétences acquises sont donc possédées par le personnage et peuvent prendre effet.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
 <h3 *ngIf="langue.l == 'fr'">Compétences d'attaque</h3>
 <h3 *ngIf="langue.l == 'en'">Offensive skills</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    <b>Débloquer les armes</b><br/>
-    Les premières compétences permettent l'utilisation respective d'armes simples de distance et d'armes simples de contact.<br/>
-    Avec 3 points investis dans l'arbre, l'utilisation des armes versatiles est débloquée.<br/>
-    <br/>
-    <b>Cibler</b><br/>
-    cf cibler pour le tableau.<br/>
-    Cibler est débloqué par les premiers points de compétences dans l'arbre d'attaque :
-    Arme à distance et Armes de mélée (niveau 0).<br/>
-    Lors d'une attaque, il est <b>obligé</b> de cibler une partie du corps à attaquer.
-    Cibler applique un malus au toucher allant de -0 à -3.
-    Les résultats d'avoir ciblé une attaque dépendent de la cible et du type de dégâts de l'attaque.<br/>
-    <br/>
-    <b>Diversion</b><br/>
-    cf état occupé<br/>
-    (Définition : Un ennemi est occupé si un allié est au contact de cet ennemi et l'un a attaqué l'autre au tour dernier.)<br/>
-    Ne provoque plus de réaction de la part d'un ennemi occupé.<br/>
-    De plus, gagne un +1 au toucher contre les ennemis occupés.<br/>
-    <br/>
-    <b>Présences</b><br/>
-    Les présences sont débloqué par la compétence Présence (niveau 2) dans l'arbre d'attaque.<br/>
-    Présence Imposante impose un -1 au toucher à tous les ennemis voulant attaquer quelqu'un d'autre que la personne avec Présence Imposante.<br/>
-    Présence Discrète impose un -2 au toucher à tous les ennemis voulant attaquer la personne avec Présence Discrète.<br/>
+  <b>Les couleurs</b><br>
+  Le vert correspond aux compétences liées aux armes de dextérité, pendant que les compétences rouges sont liées aux armes de force.<br>
+  Il est impossible d'appliquer les effets d'une compétence verte à des arme de force (ou les effets d'une compétence rouge à des armes de dextérité)
+  sans une règle explicite qui surpasserait ce statut par défaut (par exemple une connaissance).<br>
+  Les compétences oranges sont accessibles aux deux types d'armes.<br>
+  <br>
+  <b>Débloquer les types d'armes</b><br/>
+  Les premières compétences permettent l'utilisation respective d'armes simples de dextérité et d'armes simples de force.<br/>
+  Avec 3 points investis dans l'arbre, l'utilisation des armes versatiles est débloquée.<br/>
+  <br/>
+  <b>Cibler</b><br/>
+  cf <a routerLink="/system/attacking/targeting" routerLinkActive="activebutton">cibler</a> pour le tableau.<br/>
+  Cibler est débloqué par les premiers points de compétences dans l'arbre d'attaque :
+  Arme de dextérité et Armes de force (niveau 0).<br/>
+  Lors d'une attaque avec une arme, il est <b>obligé</b> de cibler une partie du corps à attaquer (par défaut, un personnage cible le torse).
+  Cibler applique un malus au toucher allant de -0 à -3.
+  Les résultats d'avoir ciblé une attaque dépendent de la cible et du type de dégâts de l'attaque.<br/>
+  <br/>
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -33,17 +51,10 @@
 <h3 *ngIf="langue.l == 'en'">Defensive skills</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    <b>Résistance à l'inconscience</b><br/>
-    La résistance à l'inconscience est débloquée par le dernier point de compétence dans l'arbre de défense (niveau 3).<br/>
-    Cette résistance ne s'applique que pour l'inconscience causée par la douleur.
-    Le premier tour de résistance correspond à quand le personnage commence son tour à 10 ou plus de douleur.
-    Si pour une certaine raison, le personnage commence son tour à moins de 10 et le finit à 10 ou plus,
-    ce tour ne compte pas dans les 2 tours de résistances, et il faut attendre le prochain tour (où le personnage
-    commencera donc à 10 ou plus) pour compter.<br/>
-    Si le personnage redescend à 9 ou moins de douleur avant de tomber inconscient, il peut continuer,
-    et les tours de résistances sont remis à zéro.
-    Quand il atteindra 10 de nouveau, il aura de nouveau 2 tours de résistance
-    (même si le joueur n'a pas eu de tour entre la baisse et la remontée de douleur).
+  <b>Les couleurs</b><br>
+  Le bleu turquoise représente les compétences réservées aux armures lourdes.
+  Leurs effets ne peuvent être appliqués/activés que quand le personnage porte une armure lourde.<br>
+  Il est nécessaire de prendre la compétence "Armure légère" avant "Armure lourde" puisque "Armure lourde" n'est pas sur la première ligne de l'arbre.<br>
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -68,7 +79,7 @@
     et il enlève un point d'un dé, pour passer la puissance totale à 9.<br/>
     <br/>
     <b>Investissement</b><br/>
-    Investir des points dans cet arbre de compétence rend le lancé de sort plus facile.<br/>
+    Investir des points dans cet arbre de compétence rend le lancé de sorts plus facile et moins coûteux.<br/>
     À partir de 3 points dans cet arbre, tous les coûts de lancé de sorts (pas des concentrations) sont diminués de 1 (min 0).
     Les sorts de niveau 1 sont donc gratuits.<br/>
     À partir de 5 points dans cet arbre, ils sont réduits de 1 additionnel, donc de 2 au total.
@@ -78,7 +89,7 @@
     <br/>
     <b>Méditation</b><br/>
     La méditation est débloquée par le premier point de compétence de magie (niveau 0).<br/>
-    cf états en méditation<br/>
+    cf état <a routerLink="/system/states" routerLinkActive="activebutton">en méditation</a><br>
     La méditation remplace le repos, et en 1 heure permet d'obtenir
     2 points d'énergie temporaire ainsi que de restorer 1 point de fatigue.
     Il est possible de ne méditer que 10 minutes et ainsi obtenir 1 point d'énergie temporaire,
@@ -88,50 +99,6 @@
     Méditer ne peut pas ammener quelqu'un à posséder plus que 2 points d'énergie temporaire.<br/>
     Tout sort lancé et concentration gardée durant la méditation ne coûte aucun point de fatigue.<br/>
     <br/>
-    <b>Perturber</b><br/>
-    La perturbation est débloquée par le premier point dans la branch de gauche dans l'arbre de magie (niveau 1).<br/>
-    La personne qui perturbe est appelée perturbant, et la cible est appelée victime.<br/>
-    Le perturbant décide de perturber à l'annonce du début du sort, avant le lancé de dés.<br/>
-    La victime lance 1d12 + sensitivité, et le perturbant lance 1d12.
-    Si le perturbant a une magie en commun (pure ou combinée) avec le <b>sort lancé</b>, il peut ajouter sa sentivité au jet.<br/>
-    Si le perturbant obtient la même valeur ou plus haut que la valeur de la victime,
-    la victime perd 1d4. Sinon, il ne se passe rien.<br/>
-    <br/>
-    <b>Infusion</b><br/>
-    L'infusion est débloquée par le point du milieu de la branche du milieu de l'arbre de magie (niveau 2).<br/>
-    Le mage décide de la magie, de l'objet support, et du but de l'infusion.
-    (Une discussion avec le GM peut être nécessaire).<br/>
-    Pour la manipulation, la distance correspond à la distance entre le mage et l'objet support.<br/>
-    La taille correspond à la surface de l'objet à couvrir par l'infusion.<br/>
-    La précision correspond à la probabilité que l'infusion fonctionne.<br/>
-    Et l'efficacité va dépendre de tout, mais va globalement décider de l'utilité et de l'intensité des résultats.<br/>
-    <br/>
-    <b>Absorber</b><br/>
-    L'absorption est débloquée par le dernier point dans la branche de gauche de l'arbre de magie (niveau 3).<br/>
-    Le mage qui veut absorber lance ses propres dés de magies comme s'il lançait un sort.
-    Il les répartit sur les 4 caractéristiques et ajoute ses différents bonus.
-    Si le résultat sur chaque caractéristique est supérieur ou égal à celui du sort lancé
-    (ou avec un manque cumulé de 2 ou moins), alors le sort est absorbé, n'a aucun effet,
-    et l'énergie additionnelle dépensée par le lanceur est ajouté à l'énergie de l'absorbeur.<br/>
-    Le manque cumulé n'est pas diminué par un dépassement dans une caractéristique.<br/>
-    Par exemple : le lanceur a E4-P3-T2-D1, et l'absorbeur ne connait pas ces caractéristiques et doit les deviner.
-    L'absorbeur pose alors E2-P4-T1-D1. Le manque est de 3 au total (2 de efficacité + 1 de taille).
-    Le point additionnel dans précision n'affecte rien. Le sort n'est pas absorbé.<br/>
-    Deuxième situation, l'absorbeur pose E4-P2-T1-D1, il a alors un manque de 2 (1 en précision et 1 en taille),
-    donc le sort est aborbé, et comme il était de niveau 2 (4+3+2+1 = 10),
-    le sort a coûté 1 point de fatigue additionnel (+1 de base pour lancer les dés).
-    L'absorbeur récupère ainsi 1 point d'énergie.<br/>
-    Si l'absorbeur possède une magie en commun avec la magie lancée, ou bien qu'il possède de la détection magique (feu ou lumière),
-    alors il peut sentir quelles sont respectivement la caractéristique la plus forte et celle la plus faible.<br/>
-    <br/>
-    <b>Transe</b><br/>
-    La transe est débloquée par le dernier point dans la branche de droite de l'arbre de magie (niveau 3).<br/>
-    Le mage consomme 1 PA et 1 point d'énergie pour activer la transe. Elle peut être activée avant ou pendant un lancer de sort.
-    Une fois la transe activée, le joueur décide d'un nombre de points d'énergie à dépenser, et ceux-ci deviennent des d4 additionnels pour le sort.<br>
-    Attention: ces dés comptent comme étant partie de la puissance du sort et vont donc augmenter le niveau du sort (et donc son coût).<br>
-    Si le mage, après avoir payé le coût de la transe, doit se voir dépasser son maximum de fatigue à cause du coût du sort, il tombe simplement inconscient.<br>
-    TL;DR : peut pas dépasser le max par le coût de la transe, mais peut dépasser à cause du coût du sort.<br>
-
 </p>
 <p *ngIf="langue.l == 'en'">
 
