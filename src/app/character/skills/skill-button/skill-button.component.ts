@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { SkillsAttackComponent } from '../skills-attack/skills-attack.component';
 import { SkillsDefenseComponent } from '../skills-defense/skills-defense.component';
 import { SkillsMagicComponent } from '../skills-magic/skills-magic.component';
+import { OpenedSkillService } from '../opened-skill.service';
 
 @Component({
   selector: 'app-skill-button',
@@ -25,9 +26,15 @@ export class SkillButtonComponent implements OnInit {
     private AtkComp: SkillsAttackComponent,
     private DefComp: SkillsDefenseComponent,
     private MagComp: SkillsMagicComponent,
+    public opened_skill: OpenedSkillService,
   ) { }
 
   ngOnInit(): void {
+  }
+
+  public click_skill(skill: string) {
+    // this.show_that_skill = !this.show_that_skill ;
+    this.opened_skill.click_skill(skill);
   }
 
   get_skill(skill_category : string, depth: string, skill_name: string) {

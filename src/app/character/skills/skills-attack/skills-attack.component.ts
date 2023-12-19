@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageLanguageService } from "../../../page-language.service";
+import { OpenedSkillService } from '../opened-skill.service';
 
 @Component({
   selector: 'app-skills-attack',
@@ -8,7 +9,7 @@ import { PageLanguageService } from "../../../page-language.service";
 })
 export class SkillsAttackComponent implements OnInit {
 
-  constructor(public langue: PageLanguageService) {
+  constructor(public langue: PageLanguageService, opened_skill: OpenedSkillService) {
   }
   ngOnInit(): void {
   }
@@ -245,5 +246,6 @@ export class SkillsAttackComponent implements OnInit {
   public give_skill(depth: number, skill_name: string) {
     return this.skills[depth].skill_list[skill_name] ;
   }
+
 
 }

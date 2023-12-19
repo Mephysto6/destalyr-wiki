@@ -1,5 +1,5 @@
 
-<button class="skill-button {{skill_colour}}" (click)="this.show_that_skill = !this.show_that_skill">
+<button class="skill-button {{skill_colour}}" (click)="click_skill(skill_name)">
 
   <!-- skill type (passif, action, other) -->
   <div>
@@ -22,7 +22,7 @@
     <span *ngIf="header == 'true'"><br></span>
   </div>
   <!-- skill descriptions (short & long) -->
-  <span class="hovertext" *ngIf="!show_that_skill">{{ this.hovertext(skill_category, skill_depth, skill_name) }}</span>
-  <span class="popuptext" *ngIf="show_that_skill">{{ this.details(skill_category, skill_depth, skill_name) }}</span>
+  <span class="hovertext" *ngIf="!(opened_skill.name == skill_name)">{{ this.hovertext(skill_category, skill_depth, skill_name) }}</span>
+  <span class="popuptext" *ngIf="(opened_skill.name == skill_name)">{{ this.details(skill_category, skill_depth, skill_name) }}</span>
 
 </button>
