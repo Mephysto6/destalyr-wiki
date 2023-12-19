@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PageLanguageService } from "../../../page-language.service";
-import { OpenedSkillService } from '../opened-skill.service';
 
 @Component({
   selector: 'app-skills-attack',
@@ -9,7 +8,7 @@ import { OpenedSkillService } from '../opened-skill.service';
 })
 export class SkillsAttackComponent implements OnInit {
 
-  constructor(public langue: PageLanguageService, opened_skill: OpenedSkillService) {
+  constructor(public langue: PageLanguageService) {
   }
   ngOnInit(): void {
   }
