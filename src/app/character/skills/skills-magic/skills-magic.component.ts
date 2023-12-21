@@ -51,7 +51,7 @@ export class SkillsMagicComponent implements OnInit {
         "Infatiguable": {
           "hover_text": "Résister à la fatigue.",
           "details_text": "(1) Ignore tous les malus de magie liés à l'état fatigué (ne change pas les malus aux d12 et dégâts).\
-                          (2) Augmente le maximum de fatigue de 2. En plus, les malus de fatigue aux d12 sont ignorés. \
+                          (2) Augmente le maximum d'énergie de 2. En plus, les malus de fatigue aux d12 sont ignorés. \
                           (3) Augmente le maximum d'énergie temporaire de 2.",
           "category": "MAG",
           "header": "false",
@@ -69,7 +69,7 @@ export class SkillsMagicComponent implements OnInit {
                               (si le sort est une magie pure, alors posséder cette magie pure en majeure ou mineure permet d'ajouter sa sensitivité en tant qu'attaquant. \
                               si le sort est une magie combinée, alors posséder cette magie combinée ou une des deux magie pures liées permet aussi d'ajouter sa sensitivité)\
                           (2) après une perturbation réussie, les dés perdus de la victime sont gagnés pour la prochaine manipulation\
-                              (et ne comptent pas dans la puissance du sort pour le calcul du coût en fatigue) \
+                              (et ne comptent pas dans la puissance du sort pour le calcul du coût en énergie) \
                           (3) le perturbant peut maintenant perturber les sorts dont la magie est différente des siennes, \
                               et ajouter sa spécialisation dans la magie correspondante si il/elle la possède.",
           "category": "MAG",
@@ -96,7 +96,7 @@ export class SkillsMagicComponent implements OnInit {
         },
         "Régularité": {
           "hover_text": "Gagne de la régularité dans les lancés de magie.",
-          "details_text": "(1) Ignore les crit 1 aux lancés de magie. Permet de relancer un jet de toucher magique pour 1PR ou 1PA ou 1 fatigue, utilisable une fois par tour.\
+          "details_text": "(1) Ignore les crit 1 aux lancés de magie. Permet de relancer un jet de toucher magique pour 1PR ou 1PA ou 1 d'énergie, utilisable une fois par tour.\
                            (2) Le relancer du toucher n'est plus limité à une fois par tour. En plus, si le d12 du lancé affiche moins que 5, alors il peut être compté comme un 5.",
           "category": "MAG",
           "header": "false",
@@ -133,7 +133,7 @@ export class SkillsMagicComponent implements OnInit {
         "Mastermind": {
           "hover_text": "Gagne plus de dés pour les manipulations.",
           "details_text": "(1) Gagne 1d1 à toute manipulation (qui ne compte pas dans le calcul de la puissance). Une fois par tour, peut dépenser 1PR pour gagner un autre 1d1.\
-                           (2) Permet de prendre 1 fatigue pour gagner 2d4 pour une manipulation. Cummulable. (ces dés comptent dans le calcul de la puissance).\
+                           (2) Permet de consommer 1 d'énergie pour gagner 2d4 pour une manipulation. Cummulable. (ces dés comptent dans le calcul de la puissance).\
                            (3) Les extra dés (de toute source ? TBD) ne comptent plus dans le calcul de la puissance, seuls ceux de la sensitivités comptent.",
           "category": "MAG",
           "header": "false",

@@ -5,7 +5,7 @@
     Quand une blessure est infligée, elle possède un type, une position, une taille et une intensité.<br/>
     Le type d'une blessure est casse, coupure, ou autre (brûlures, poison, ...).<br/>
     La position d'une blessure est l'endroit sur le corps où la blessure a été infligée.<br/>
-    La taille et l'intensité de la blessure sont liées à l'attaque ayant causé la blessure.<br/>
+    La taille et l'intensité de la blessure sont liées à l'attaque ayant causé la blessure. La plupart des blessures venant d'armes ont une taille de 2.<br/>
     <br/>
     Une blessure cause à sa victime des points de douleurs.
     L'intensité d'une blessure est liée à la douleur causée par cette blessure par :<br/>
@@ -33,7 +33,7 @@
 <h2 *ngIf="langue.l == 'en'">Rest</h2>
 
 <p *ngIf="langue.l == 'fr'">
-    Un personnage perd aussi 2 points de fatigue par heure de repos (aussi appelé gagner 2 points d'énergie) (avec un minimum de 0 de fatigue).<br/>
+    Un personnage regagne 2 points d'énergie par heure de repos (dans la limite de son maximum naturel).<br/>
     Un personnage étant blessé peut se reposer pour guerrir ses blessures. Il peut alors lancer <b>1d6</b> par blessure par heure de repos,
     et le résultat au dé déterminera si la blessure est soignée de 1 ou pas.<br/>
     Le calcul est effectué pour chaque blessure indépendemment, est chaque blessure commence à 1 point.
@@ -53,7 +53,7 @@
     If the die lands on 6 then the corresponding wound is healed by 1.<br/>
     If the character tends to the wound, a 5 can also heal. A character can tend to only one wound at a time.
     Several characters can tend to different wounds on the same wounded character.<br/>
-    A character also loses 2 fatigue points per hour of rest (also called gaining 2 points of energy).<br/>
+    A character also regains 2 points of energy per hour of rest (within the limits of its natural maximum).<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Dormir</h2>
@@ -61,19 +61,19 @@
 
 <p *ngIf="langue.l == 'fr'">
     Une personne doit dormir un minimum de 6 heures par nuit pour ne pas recevoir de pénalité.<br/>
-    Si un personnage dort moins de 6 heures, alors sa fatigue minimum augmente du nombre d'heures manquées (max 10).<br/>
-    Si un personnage dort plus que 6 heures, alors sa fatigue minimum diminue du nombre d'heures ajoutées (min 0).<br/>
-    Un personnage ne peut pas descendre sa fatigue sous sa fatigue minimum.<br/>
-    Par exemple : Un personnage dort 2 heures pendant une nuit. Il a donc (6-2 = 4) 4 de fatigue minimum.
-    Le nuit suivante, il dort 9 heures. Il récupère donc (9-6 = 3) 3 heures, et est maintenant à (4-3 = 1) 1 point de fatigue minimum.<br/>
+    Si un personnage dort moins de 6 heures, alors son énergie maximum diminue du nombre d'heures manquées.<br/>
+    Si un personnage dort plus que 6 heures, alors son énergie maximum monte du nombre d'heures ajoutées (dans la limite de son maximum naturel).<br/>
+    Un personnage ne peut pas monter son énergie au dessus de son maximum.<br/>
+    Par exemple : Un personnage dort 2 heures pendant une nuit. Il perd donc (6-2 = 4) 4 d'énergie maximum et est donc à (10-4 = 6) 6 d'énergie max.
+    Le nuit suivante, il dort 9 heures. Il récupère donc (9-6 = 3) 3 heures, et est maintenant à (6+3 = 9) 9 d'énergie maximum.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     A person has to sleep a minimum of 6 hours per night in order not to receive penalties.<br/>
-    If a character sleeps less than 6 hours, then their minimum fatigue increases by the number of lacking hours (max 10).<br/>
-    If a character sleeps more than 6 hours, then their minimum fatigue descreases by the number of added hours (min 0).<br/>
-    A character's fatigue cannot go under their minimum fatigue.<br/>
-    For example : A character sleeps for 2 hours during a night. They have (6-2 = 4) 4 minimum fatigue.
-    The next night, they sleep 9 hours. They get back (9-6 = 3) 3 hours, and are now at (4-3 = 1) 1 minimum fatigue.<br/>
+    If a character sleeps less than 6 hours, then their maximum energy descreases by the number of lacking hours.<br/>
+    If a character sleeps more than 6 hours, then their maximum energy increases by the number of added hours (within the bounds of their natural maximum).<br/>
+    A character's energy cannot go over their maximum energy.<br/>
+    For example : A character sleeps for 2 hours during a night. They lose (6-2 = 4) 4 maximum energy and are now at (10-4 = 6) 6 maximum energy instead of 10.
+    The next night, they sleep 9 hours. They get back (9-6 = 3) 3 hours, and are now at (6+3 = 9) 9 maximum energy.<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Sorts</h2>
@@ -81,9 +81,22 @@
 
 <p *ngIf="langue.l == 'fr'">
     Pour soigner une blessure avec un sort, celui-ci doit couvrir la blessure en Taille.<br/>
-    La distance correspond à la distance entre le soigneur et la personne blessée.<br/>
-    Le soigneur lance <b>1d12 + précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.<br/>
-    La blessure est soignée selon l'efficacité du sort (cf tableau).<br/>
+    La Distance correspond à la distance entre le soigneur et la personne blessée.<br/>
+    Le soigneur lance <b>1d12 + Précision x2</b> et doit atteindre le seuil indiqué pour que le soin prenne effet.<br/>
+    L'Efficacité détermine les points de soins disponibles pour soigner (cf tableau).<br/>
+    La Taille du sort permet d'inclure plusieurs blessures dans les soins applicables.<br/>
+    Par exemple : un personnage lance un sort de soin de purification avec ces stats E3-P4-T2-D1.<br/>
+    - Distance 1 : le sort sera appliqué au contact.<br/>
+    - Taille 2 : le sort peut englober une blessure de taille 2 comme une coupure d'une épée.<br/>
+    - Précision 4 : le personnage lancera 1d12 + 8 pour déterminer si le sort prend effet ou non.
+      Si le lancé atteint 11, alors il pourra soigner des blessures en profondeur, sinon le sort sera limité aux blessures de surface.<br/>
+    - Efficacité 3 : le personnage aura 3 points de soin à répartir sur les blessures existantes et atteignables.<br/>
+    <br/>
+    Une Taille de 3 permet d'englober deux blessures différentes de taille 2. Une Taille 4 permet d'englober tout un corps humain (et en général toute une case).
+    L'échelle de Taille suit le tableau des ordres de grandeur
+    (rappel que les sorts de soins sont des manipulations, il faut donc créer l'élément correspondant dans le cas d'un élément non tangible).<br/>
+    Dans le cas où le sort englobe plusieurs blessures, les points de soins doivent être répartis sur les différentes blessure (la répartission est au choix de la source)
+    et chaque point de soin ne peut être utilisé que sur une blessure.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Size and distance depending on wound and target.<br/>

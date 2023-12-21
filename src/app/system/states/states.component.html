@@ -47,7 +47,7 @@
     alors les points d'action et de réaction sont divisés par 2 pour ce tour (arrondi bas, min 0)<br/>
     Douleur : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Dé : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
-    Si le jet est raté, le personnage peut décider de prendre un point de fatigue pour le réussir. Dans ce cas, il commence son tour avec tous ses PA et PR.
+    Si le jet est raté, le personnage peut décider de perde un point d'énergie pour le réussir. Dans ce cas, il commence son tour avec tous ses PA et PR.
 </p>
 <p *ngIf="langue.l == 'en'">
     <b>Source</b> : Pain at 4 or more<br/>
@@ -57,18 +57,18 @@
     then their AP and RP are divided by 2 for this turn (rounded down, minimum 0)<br/>
     Pain : 1  2  3 <span style="color:rgb(240, 240, 0)"> 4  5 </span><span style="color:rgb(230, 149, 0)"> 6  7 </span><span style="color:orangered"> 8  9</span><br/>
     Die : 0, <span style="color:rgb(240, 240, 0)">d4</span>, <span style="color:rgb(230, 149, 0)">d6</span>, <span style="color:orangered">d8</span><br/>
-    If the roll fails, the character can decide to take one fatigue point to instead succeed. In this case, they start their turn with full AP and RP.
+    If the roll fails, the character can decide to lose one energy point point to instead succeed. In this case, they start their turn with full AP and RP.
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">Fatigué</h2>
 <h2 *ngIf="langue.l == 'en'">Tired</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	<b>Source</b> : Fatigue à 4 ou plus<br/>
+	<b>Source</b> : Energie à 6 ou moins<br/>
 	<b>Effets</b> : Malus aux jets selon la <a routerLink="/system/gauges" routerLinkActive="activebutton">fatigue</a>.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-	<b>Source</b> : Fatigue at 4 or more<br/>
+	<b>Source</b> : Energy at 6 or less<br/>
 	<b>Effects</b> : Penalty to rolls depending on the <a routerLink="/system/gauges" routerLinkActive="activebutton">fatigue</a>.<br/>
 </p>
 
@@ -76,16 +76,14 @@
 <h2 *ngIf="langue.l == 'en'">Unconscious</h2>
 
 <p *ngIf="langue.l == 'fr'">
-	<b>Source</b> : Fatigue à 10 ou Douleur à 10 (ou autre)<br/>
+	<b>Source</b> : Energie à 0 ou Douleur à 10 (ou autre)<br/>
 	<b>Effets</b> : tombe par terre, perd connaissance, perd concentrations.<br/>
-	<b>Effets spéciaux</b> : > si Douleur à 10, dure 1 minute ; > si Fatigue à 10, dure 1 heure<br/>
-    Peut être réveillé à la moitié du temps par un input externe<br/>
+	<b>Effets spéciaux</b> : > si Douleur à 10, dure 1 minute ; > si Energie à 0, dure 1 heure<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
-	<b>Source</b> : Fatigue at 10 or Pain at 10 (or other)<br/>
+	<b>Source</b> : Energy at 0 or Pain at 10 (or other)<br/>
 	<b>Effects</b> : fall on the ground, lose consciousness, lose all concentrations.<br/>
-	<b>Special effects</b> : > If Pain at 10, lasts 1 minute ; > If Fatigue at 10, lasts 1 hour<br/>
-    Can be woken up at half the time by an external input.<br/>
+	<b>Special effects</b> : > If Pain at 10, lasts 1 minute ; > If Energy at 0, lasts 1 hour<br/>
 </p>
 
 <h2 *ngIf="langue.l == 'fr'">En méditation</h2>
@@ -110,9 +108,9 @@
 	<b>Source</b> : Meditation (unlocked by magic skill)<br/>
     <b>Effects</b> : The meditating character must be sitting or laying down, as if resting.<br/>
     They become unable to attack or cast spells without leaving meditation, but they can still speak, use objects or other interactions.<br/>
-    <b>Special effects</b> : > If the meditation lasts 1 hour, the character loses 1 point of fatigue and gains 2 points of temporary energy.<br/>
+    <b>Special effects</b> : > If the meditation lasts 1 hour, the character regains 1 point of energy and gains 2 points of temporary energy.<br/>
     > After 5 minutes of meditation and if the meditation continues, then the character can cast spells again,
-    and all costs in fatigue of spells and concentrations are ignored..<br/>
+    and all costs in energy of spells and concentrations are ignored..<br/>
     > If combined with a concentrating spell, the caster is more and more limited depending on the level of the spell:<br/>
     - level 2 : immobilised (can only talk)<br/>
     - level 3 : + blind<br/>

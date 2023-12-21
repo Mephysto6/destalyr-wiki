@@ -2,7 +2,7 @@
 <h3 *ngIf="langue.l == 'fr'">Mots-clé</h3>
 <h3 *ngIf="langue.l == 'en'">Keywords</h3>
 <br/>
-<!-- 
+<!--
 <button class="key-word" (click)="change_kw('')">Reset</button>
 <br/>
 <br/>
@@ -89,8 +89,8 @@
     <span *ngIf="search_kw_in(['armor', 'attacking'])">
         <a routerLink="/system/armors" routerLinkActive="activebutton">Armures de combat</a><br/>
     </span>
-    <span *ngIf="search_kw_in(['jauges', 'douleur', 'fatigue'])">
-        <a routerLink="/system/gauges" routerLinkActive="activebutton">Jauges de fatigue et de douleur</a><br/>
+    <span *ngIf="search_kw_in(['jauges', 'douleur', 'fatigue', 'énergie'])">
+        <a routerLink="/system/gauges" routerLinkActive="activebutton">Jauges d'énergie et de douleur</a><br/>
     </span>
     <span *ngIf="search_kw_in(['attacking', 'hitting'])">
         <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">Attaquer et toucher</a><br/>

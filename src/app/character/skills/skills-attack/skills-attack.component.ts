@@ -83,7 +83,7 @@ export class SkillsAttackComponent implements OnInit {
           "hover_text": "Débloque l'action Cleave.",
           "details_text": "Consomme 4PA pour faire une attaque lourde, et vise 3 cases consécutives within reach.\
                            Un jet d'attaque et de dégâts pour l'ensemble des cibles.\
-                           Utilisable tel quel une fois par combat, les utilisations suivantes nécessitent de prendre 1 fatigue supplémentaire.",
+                           Utilisable tel quel une fois par combat, les utilisations suivantes nécessitent de consommer 1 point d'énergie supplémentaire.",
           "category": "ATK",
           "header": "false",
           "type": "Action",
@@ -133,7 +133,7 @@ export class SkillsAttackComponent implements OnInit {
           "hover_text": "Débloque l'action Charger.",
           "details_text": "(1) Débloque l'action Charger. Se déplace jusqu'à 3 cases avant d'attaquer. Coûte les mêmes PA que l'attaque seule. \
                                Si 2 cases ou plus ont été traversées et que l'attaque touche, l'énnemis trébuche (donc continuation). \
-                               Utilisable tel quel une fois par tour, les utilisations suivantes nécessitent de prendre 1 fatigue supplémentaire.\
+                               Utilisable tel quel une fois par tour, les utilisations suivantes nécessitent de consommer 1 point d'énergie supplémentaire.\
                            (2) Si 2+ cases traversées, gagne +3/+1 à l'attaque chargée et +2 au touché de la continuation.",
           "category": "ATK",
           "header": "false",
@@ -204,8 +204,8 @@ export class SkillsAttackComponent implements OnInit {
         "Aggressif": {
           "hover_text": "Gagne des PA pour attaquer.",
           "details_text": "(1) Chaque tour, gagne 1PA utilisable uniquement pour attaquer avec une arme. \
-                           (2) Débloque l'action Surge. Coûte 0PA et 2 fatigue, gagne 4PA. \
-                           (3) Le coût de Surge passe à 1 fatigue. Une fois par jour, peut utiliser Surge gratuitement.",
+                           (2) Débloque l'action Surge. Coûte 0PA et 2 d'énergie, gagne 4PA. \
+                           (3) Le coût de Surge passe à 1 d'énergie. Une fois par jour, peut utiliser Surge gratuitement.",
           "category": "ATK",
           "header": "false",
           "type": "Action",
