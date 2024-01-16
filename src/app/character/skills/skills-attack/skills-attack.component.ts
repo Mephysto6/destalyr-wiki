@@ -122,7 +122,7 @@ export class SkillsAttackComponent implements OnInit {
           "details_text": "(1) Débloque la réaction Parer : 1PR pour gagner +1 esquive pour un tour de créature. \
                            (2) Parer devient 1PR pour gagner +2 esquive pour un tour de créature. \
                            (3) Contre-attaque : débloque le trigger 'après avoir esquivé une attaque'. Cette opportunité ne peut être utilisée que pour attaquer. \
-                               La réaction attaque coûte 1PR de moins (min 0PR) si l'esquive a été parée.",
+                               La réaction attaque coûte 1PR de moins (min 0PR) si l'attaque a été parée.",
           "category": "ATK",
           "header": "false",
           "type": "Réaction",
@@ -132,7 +132,7 @@ export class SkillsAttackComponent implements OnInit {
         "Charge": {
           "hover_text": "Débloque l'action Charger.",
           "details_text": "(1) Débloque l'action Charger. Se déplace jusqu'à 3 cases avant d'attaquer. Coûte les mêmes PA que l'attaque seule. \
-                               Si 2 cases ou plus ont été traversées et que l'attaque touche, l'énnemis trébuche (donc continuation). \
+                               Si 2 cases ou plus ont été traversées et que l'attaque touche, l'ennemi trébuche (donc continuation). \
                                Utilisable tel quel une fois par tour, les utilisations suivantes nécessitent de consommer 1 point d'énergie supplémentaire.\
                            (2) Si 2+ cases traversées, gagne +3/+1 à l'attaque chargée et +2 au touché de la continuation.",
           "category": "ATK",
@@ -178,7 +178,7 @@ export class SkillsAttackComponent implements OnInit {
         },
         "Mage Slayer": {
           "hover_text": "Spécialisation contre les mages.",
-          "details_text": "Au contact d'un ennemi qui lance un sort, l'opportunité d'attaquer est gagnée avant que le sort finnisse (au lieu d'après). \
+          "details_text": "Au contact d'un ennemi qui lance un sort, l'opportunité d'attaquer est gagnée avant que le sort finisse (au lieu d'après). \
                            Si l'attaque touche et fait des dégâts, le sort est perturbé et le mage perd autant de dés que de dégâts subis.",
           "category": "ATK",
           "header": "false",
@@ -215,8 +215,8 @@ export class SkillsAttackComponent implements OnInit {
         "Présences": {
           "hover_text": "Débloque les Présences.",
           "details_text": "(1) Débloque les actions Présence Imposante et Présence Discrète. Ces actions sont activable au début d'un combat et sont mutuellement exclusives. \
-                              Présence Imposante : tout ennemis attaquant qqn d'autre que la Présence Imposante prend un -1 au toucher. \
-                              Présence Discrète : tout ennemis attaquant la Présence Discrète prend un -2 au toucher. \
+                              Présence Imposante : tout ennemi attaquant qqn d'autre que la Présence Imposante prend un -1 au toucher. \
+                              Présence Discrète : tout ennemi attaquant la Présence Discrète prend un -2 au toucher. \
                            (2) Débloque l'action Inspiration. \
                               Coûte 0PA. Activable une fois par tour. Cible un allié (autre que soi-même) et lui donne +1 au toucher pour un tour global. \
                            (3) Gagne le passif Vengeance. \

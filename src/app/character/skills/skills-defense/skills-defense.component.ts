@@ -59,7 +59,7 @@ export class SkillsDefenseComponent implements OnInit {
         },
         "Esquive Snowball": {
           "hover_text": "Gagne des bénéfices à réussir une esquive.",
-          "details_text": "Si le jet d'esquive est supérieur à l'attaque de 5 ou plus, alors gagne +2 PR par tour global, et +1 esquive cummulable.",
+          "details_text": "Si le jet d'esquive est supérieur à l'attaque de 5 ou plus, alors gagne +2 PR par tour global, et +1 esquive cumulable.",
           "category": "DEF",
           "header": "false",
           "type": "Passif",
@@ -109,8 +109,8 @@ export class SkillsDefenseComponent implements OnInit {
                            (2) Gagne un +1 esquive tant que le personnage ne porte pas d'armure lourde.",
           "category": "DEF",
           "header": "false",
-          "type": "Passif",
-          "levels": "1",
+          "type": "Action & Passif",
+          "levels": "2",
           "colour": "btn-lightblue",
         },
       },
@@ -130,8 +130,10 @@ export class SkillsDefenseComponent implements OnInit {
         },
         "Armure contre magie": {
           "hover_text": "Gagner de la défense contre la magie.",
-          "details_text": "(1) Jusqu'à 2 points d'armure sont ajoutés à la défense magique.\
-                           (2) Jusqu'à 4 points.",
+          "details_text": " Certains points de l'armure portée s'ajoutent au calcul de la défense face aux dégâts magiques.\
+                            On ne peut pas ajouter plus de points que la quantité de défense donnée par l'armure.\
+                            (1) Jusqu'à 2 points d'armure sont ajoutés à la défense magique.\
+                            (2) Jusqu'à 4 points.",
           "category": "DEF",
           "header": "false",
           "type": "Passif",
@@ -141,7 +143,8 @@ export class SkillsDefenseComponent implements OnInit {
         "Réactivité": {
           "hover_text": "Regagne des PA si tous les PR ne sont pas consommé.",
           "details_text": "(1) Si le tour commence avec 2PR (ou plus), gagne 1PA.\
-                           (2) Gagne un nouveau trigger permanent au choix.",
+                           (2) Gagne un nouveau trigger permanent au choix\
+                            (cf système > combat > préparer une action ).",
           "category": "DEF",
           "header": "false",
           "type": "Passif",

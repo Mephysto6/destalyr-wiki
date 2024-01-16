@@ -40,8 +40,8 @@ export class SkillsMagicComponent implements OnInit {
         "Concentrations": {
           "hover_text": "Permet de garder une manipulation active sur la durée.",
           "details_text": "(1) Débloque la possibilité de garder des sorts actifs sur plusieurs tours.\
-                          (2) Diminue le coût des concentrations en énergie (TBD).\
-                          (3) Diminue le coût des concentrations en PA (TBD).",
+                          (2) Diminue le coût des concentrations en énergie (chaque concentration coûte comme étant un niveau de moins).\
+                          (3) Diminue le coût des concentrations en PA (la première concentration ne coûte pas de PA à maintenir).",
           "category": "MAG",
           "header": "false",
           "type": "Passif",
@@ -70,8 +70,8 @@ export class SkillsMagicComponent implements OnInit {
                               si le sort est une magie combinée, alors posséder cette magie combinée ou une des deux magie pures liées permet aussi d'ajouter sa sensitivité)\
                           (2) après une perturbation réussie, les dés perdus de la victime sont gagnés pour la prochaine manipulation\
                               (et ne comptent pas dans la puissance du sort pour le calcul du coût en énergie) \
-                          (3) le perturbant peut maintenant perturber les sorts dont la magie est différente des siennes, \
-                              et ajouter sa spécialisation dans la magie correspondante si il/elle la possède.",
+                          (3) le perturbant peut maintenant ajouter sa sensitivité quel que soit l'élément du sort,\
+                              et peut ajouter sa spécialisation dans les éléments qu'il/elle possède.",
           "category": "MAG",
           "header": "false",
           "type": "Réaction",
@@ -122,7 +122,7 @@ export class SkillsMagicComponent implements OnInit {
       "skill_list": {
         "Conjuration": {
           "hover_text": "Permet de  conjurer un élémentaire.",
-          "details_text": "(1) Débloque l'action Conjurer. Choisir un élément pur possédé et invoque une créature de pure magie. (TBD les stats).\
+          "details_text": "(1) Débloque l'action Conjurer. Choisir un élément pur possédé et invoque une créature de pure magie. (cf le tableau Conjuration).\
                            (2) Renforce les liens entre la source et l'élémentaire : la source peut voir et lancer des sorts à travers l'élémentaire.",
           "category": "MAG",
           "header": "false",
@@ -133,8 +133,8 @@ export class SkillsMagicComponent implements OnInit {
         "Mastermind": {
           "hover_text": "Gagne plus de dés pour les manipulations.",
           "details_text": "(1) Gagne 1d1 à toute manipulation (qui ne compte pas dans le calcul de la puissance). Une fois par tour, peut dépenser 1PR pour gagner un autre 1d1.\
-                           (2) Permet de consommer 1 d'énergie pour gagner 2d4 pour une manipulation. Cummulable. (ces dés comptent dans le calcul de la puissance).\
-                           (3) Les extra dés (de toute source ? TBD) ne comptent plus dans le calcul de la puissance, seuls ceux de la sensitivités comptent.",
+                           (2) Permet de consommer 1 d'énergie pour gagner 2d4 pour une manipulation. Cumulable. (ces dés comptent dans le calcul de la puissance).\
+                           (3) Les extra dés (de cette compétence) ne comptent plus dans le calcul de la puissance, seuls ceux de la sensitivité comptent.",
           "category": "MAG",
           "header": "false",
           "type": "Passif",
@@ -144,7 +144,7 @@ export class SkillsMagicComponent implements OnInit {
         "Réaction Magie": {
           "hover_text": "Débloque la réaction Magie.",
           "details_text": "(1) Débloque la réaction Magie. Coûte 3PR.\
-                           (2) La réaction Magie coûte 2PR. Gagne un trigger au choix permanent pour la magie.",
+                           (2) La réaction Magie coûte 2PR. Gagne un trigger au choix permanent pour la magie (cf système > combat > préparer une action).",
           "category": "MAG",
           "header": "false",
           "type": "Réaction",
