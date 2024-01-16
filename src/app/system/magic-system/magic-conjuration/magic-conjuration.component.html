@@ -1,0 +1,68 @@
+<h3 *ngIf="langue.l == 'fr'">Conjuration</h3>
+<h3 *ngIf="langue.l == 'en'">Conjuration</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    La conjuration correspond à l'appel à un élément pour créer un élémentaire sous son contrôle.
+    Cet élementaire est une créature incapable de réflexion, et qui obéit aux ordres à la lettre.
+    Il fonctionne grâce au partage que la source fait de son âme envers l'élémentaire.
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<h3 *ngIf="langue.l == 'fr'">Naissance de l'élémentaire</h3>
+<h3 *ngIf="langue.l == 'en'">Birth of the elemental</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Pour conjurer un élémentaire, un mage doit d'abord posséder une certaine quantité de l'élément voulu sous son contrôle (donc à prendre ou à créer avant).<br>
+    La quantité de cet élément va déterminer la taille maximale de l'élémentaire.
+    Plus la source veut un élémentaire grand, plus la taille de l'élément inerte sous contrôle doit être grande.<br>
+    Une fois l'élément sous le contrôle de la source, celle-ci va exécuter une manipulation (3 PA) de cet élément
+    et insouffler une partie de son âme dans cet élément, lui donnant un semblant de vie temporairement.
+    Les caractéristiques de cette manipulation vont déterminer les caractéristiques de l'élémentaire.<br>
+    La source décide au moment de sa création le type d'élémentaire voulu sous la forme d'une statistique principale : Force ou Dextérité.
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Vie de l'élémentaire</h3>
+<h3 *ngIf="langue.l == 'en'">Life of the elemental</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Pour garder actif un élémentaire, la source doit garder une concentration dessus
+    (cf <a routerLink="/system/magic/concentration" routerLinkActive="activebutton">concentration</a>) du niveau de la manipulation qui lui a donné vie.<br>
+    Les caractéristiques de l'élémentaires sont ainsi déterminées :<br>
+    - La Taille détermine la taille de l'élémentaire.
+    De manière indicative, une taille 1 correspond environ à une souris, une taille 2 à un renard,
+    une taille 3 à un loup, une taille 4 à un humanoïde, une taille 5 à un géant.<br>
+    - La Distance détermine la distance jusqu'à laquelle l'élementaire peut s'éloigner de sa source (cf ordres de grandeur).
+    Si un mouvement mène l'élémentaire ou la source à s'écarter l'un de l'autre de plus que cette distance,
+    le lien entre les deux est mis en veille jusqu'à ce que la distance revienne en dessous de la limite.
+    Si la distance entre les deux dépasse le double de la distance autorisée, le lien est rompu, la concentration retombe et l'élémentaire redevient inerte (considéré comme mort) .<br>
+    - L'Efficacité et la Précision vont déterminer les stats de l'élémentaire :
+    la stat d'attaque principale (Force ou Dextérité) aura la valeur de la Précision du sort, l'autre (Dextérité ou Force) aura Précision / 2 (arrondi bas) ;
+    l'agilité aura Efficacité, et la Resistence aura Efficacité / 2 (arrondi bas).<br>
+    L'élémentaire agit dans un combat en même temps que sa source. L'élémentaire possède 5 PA et sa taille détermine les types d'attaques possibles :
+    1 - légère ; 2 - légère et moyenne ; 3 - moyenne ; 4 - moyenne et lourde ; 5 - lourde.<br><br>
+    Par défaut, la source doit dépenser 1 PA pour donner un ordre à son élémentaire. Sans ordre donné, l'élémentaire continue l'ordre précédent, ou sinon attend.
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Mort de l'élémentaire</h3>
+<h3 *ngIf="langue.l == 'en'">Death of the elemental</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Quand l'élémentaire meurt à cause de dégâts ou de distance, la source souffre de 1 point de Douleur pour les prochaines 24 heures,
+    représentant la souffrance de la partie de son âme qui était dans l'élémentaire au moment de sa mort, qui a ensuite rejoint la source.<br>
+    Pour éviter cela, la source peut protéger son élémentaire, ou bien le réabsorber (dissipation donc 2 PA) ce qui permet de récupérer la partie de son âme sans douleur.
+    La dissipation est possible tant que l'élémentaire est sous le contrôle de sa source et que le lien est actif (donc dans la limite de la distance du sort).<br>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+

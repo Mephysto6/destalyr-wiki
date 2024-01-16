@@ -122,12 +122,13 @@ export class SkillsMagicComponent implements OnInit {
       "skill_list": {
         "Conjuration": {
           "hover_text": "Permet de  conjurer un élémentaire.",
-          "details_text": "(1) Débloque l'action Conjurer. Choisir un élément pur possédé et invoque une créature de pure magie. (cf le tableau Conjuration).\
-                           (2) Renforce les liens entre la source et l'élémentaire : la source peut voir et lancer des sorts à travers l'élémentaire.",
+          "details_text": "(1) Débloque l'action Conjurer. Choisir un élément pur sous contrôle et invoque une créature de pure magie. (cf Système > Magie > Conjuration).\
+                           (2) Renforce les liens entre la source et l'élémentaire : la source peut voir et lancer des sorts à travers l'élémentaire, et lui donner des ordres devient gratuit.\
+                           (3) Rend l'élémentaire plus puissant : l'élémentaire possède 6 PA au lieu de 5, et les stats arrondies bas sont maintenant arrondies haut.",
           "category": "MAG",
           "header": "false",
           "type": "Action",
-          "levels": "2",
+          "levels": "3",
           "colour": "btn-lightpurple",
         },
         "Mastermind": {
