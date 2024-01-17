@@ -194,7 +194,7 @@ export class SkillsAttackComponent implements OnInit {
       "skill_list": {
         "Critique étendu": {
           "hover_text": "Permet de faire plus de coups critiques.",
-          "details_text": "Si le jet d'attaque est supérieur à l'esquive de 5 ou plus, alors l'attaque est comptée comme un coup critique (et donc ignore la resistance naturelle).",
+          "details_text": "Si le jet d'attaque est supérieur à l'esquive de 5 ou plus, alors l'attaque est comptée comme un coup critique (et donc ignore la résistance naturelle).",
           "category": "ATK",
           "header": "false",
           "type": "Passif",

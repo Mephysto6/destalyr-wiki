@@ -2,9 +2,10 @@
 <h3 *ngIf="langue.l == 'en'">Conjuration</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    La conjuration correspond à l'appel à un élément pour créer un élémentaire sous son contrôle.
+    La conjuration correspond à l'appel à un élément pur pour créer un élémentaire sous son contrôle.
     Cet élementaire est une créature incapable de réflexion, et qui obéit aux ordres à la lettre.
     Il fonctionne grâce au partage que la source fait de son âme envers l'élémentaire.
+    Il est donc composé d'un élément pur (n'importe quel élément pur, pas d'élément combiné, et un seul élément) et d'une partie de l'âme de sa source.
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -14,7 +15,7 @@
 <h3 *ngIf="langue.l == 'en'">Birth of the elemental</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Pour conjurer un élémentaire, un mage doit d'abord posséder une certaine quantité de l'élément voulu sous son contrôle (donc à prendre ou à créer avant).<br>
+    Pour conjurer un élémentaire, un mage doit d'abord posséder une certaine quantité de l'élément (pur) voulu sous son contrôle (donc à prendre ou à créer avant).<br>
     La quantité de cet élément va déterminer la taille maximale de l'élémentaire.
     Plus la source veut un élémentaire grand, plus la taille de l'élément inerte sous contrôle doit être grande.<br>
     Une fois l'élément sous le contrôle de la source, celle-ci va exécuter une manipulation (3 PA) de cet élément
@@ -33,6 +34,7 @@
 <p *ngIf="langue.l == 'fr'">
     Pour garder actif un élémentaire, la source doit garder une concentration dessus
     (cf <a routerLink="/system/magic/concentration" routerLinkActive="activebutton">concentration</a>) du niveau de la manipulation qui lui a donné vie.<br>
+    <br>
     Les caractéristiques de l'élémentaires sont ainsi déterminées :<br>
     - La Taille détermine la taille de l'élémentaire.
     De manière indicative, une taille 1 correspond environ à une souris, une taille 2 à un renard,
@@ -40,13 +42,39 @@
     - La Distance détermine la distance jusqu'à laquelle l'élementaire peut s'éloigner de sa source (cf ordres de grandeur).
     Si un mouvement mène l'élémentaire ou la source à s'écarter l'un de l'autre de plus que cette distance,
     le lien entre les deux est mis en veille jusqu'à ce que la distance revienne en dessous de la limite.
-    Si la distance entre les deux dépasse le double de la distance autorisée, le lien est rompu, la concentration retombe et l'élémentaire redevient inerte (considéré comme mort) .<br>
+    Si la distance entre les deux dépasse le double de la distance autorisée, le lien est rompu,
+    la concentration retombe et l'élémentaire redevient inerte (considéré comme mort) .<br>
     - L'Efficacité et la Précision vont déterminer les stats de l'élémentaire :
-    la stat d'attaque principale (Force ou Dextérité) aura la valeur de la Précision du sort, l'autre (Dextérité ou Force) aura Précision / 2 (arrondi bas) ;
-    l'agilité aura Efficacité, et la Resistence aura Efficacité / 2 (arrondi bas).<br>
-    L'élémentaire agit dans un combat en même temps que sa source. L'élémentaire possède 5 PA et sa taille détermine les types d'attaques possibles :
-    1 - légère ; 2 - légère et moyenne ; 3 - moyenne ; 4 - moyenne et lourde ; 5 - lourde.<br><br>
-    Par défaut, la source doit dépenser 1 PA pour donner un ordre à son élémentaire. Sans ordre donné, l'élémentaire continue l'ordre précédent, ou sinon attend.
+    la stat d'attaque principale (Force ou Dextérité) aura la valeur de la Précision du sort,
+    l'autre (Dextérité ou Force) aura Précision / 2 (arrondi bas, min 1) ;
+    l'agilité aura Efficacité, et la Résistance aura Efficacité / 2 (arrondi bas, min 1) ;
+    le maximum de la jauge de douleur de l'élémentaire sera de Resistance + 2, et il ne possède pas de jauge de fatigue.<br>
+    <br>
+    L'élémentaire agit dans un combat en même temps que sa source.
+    L'élémentaire possède 5 PA et sa taille détermine les types d'attaques possibles :
+    1 - légère ; 2 - légère et moyenne ; 3 - moyenne ; 4 - moyenne et lourde ; 5 - lourde.<br>
+    <br>
+    Par défaut, la source doit dépenser 1 PA pour donner un ordre à son élémentaire.
+    Sans ordre donné, l'élémentaire continue l'ordre précédent, ou sinon attend.<br>
+    Avoir le niveau 2 dans la compétence Conjuration (arbre Magie) permet de donner des ordres gratuitement (sans coût en PA),
+    de lancer des sorts "à travers" l'élémentaire, et d'envoyer son élémentaire plus loin.
+    Ce lancer de sort à travers l'élémentaire est comparable à un sort lancé par la source mais qui émane de l'élémentaire.
+    Les dés et bonus sont les mêmes que pour un sort "normal",
+    seulement la distance (et potentiel trajet) est calculée par rapport à l'élémentaire et pas la source.
+    Les sorts lancés à travers l'élémentaire doivent appartenir à son élément ou un élément combiné basé sur son élément.
+    Par exemple : un élémentaire de nature peut servir de relai pour des sorts de nature, croissance, animaux, esprit, et terre,
+    mais pas de lumière, air, ténèbres ou eau (et certainement pas feu).<br>
+    <br>
+    Mécaniquement, le lien renforcé qui permet d'envoyer son élémentaire plus loin est représenté par un +2 en Distance sur la manipulation de création de l'élémentaire.<br>
+    L'élémentaire est considéré comme une créature indépendante au niveau des points d'action et de réaction.
+    Cela veut dire que les points d'action et de réaction de l'élémentaire ne peuvent être utilisés que par l'élémentaire, et aux moments appropriés.
+    L'élémentaire est considéré comme un combatant (mêlé ou à distance selon sa stat principale, son élément, et le choix de sa source)
+    et obtient les opportunités en combat de la même façon qu'un joueur de niveau 1.<br>
+    <br>
+    Un élémentaire est immunisé aux dégâts de son élément, résistant aux dégâts des éléments combinés basé sur son élément, et vulnérable aux dégâts de l'élément opposé.
+    Par exemple : un élémentaire de nature sera immunisé aux dégâts de nature, résistant aux dégats de croissance, animaux, esprit, et terre, et vulnérable aux dégâts de feu. Cela veut aussi dire qu'un élémentaire de feu sera vulnérable aux dégâts de nature. Ce qui implique que la coexistance d'élémentaires d'éléments opposés est extrêment improbable sans la présence de plusieurs mages les contrôlant.
+
+
 </p>
 <p *ngIf="langue.l == 'en'">
 
@@ -61,6 +89,27 @@
     représentant la souffrance de la partie de son âme qui était dans l'élémentaire au moment de sa mort, qui a ensuite rejoint la source.<br>
     Pour éviter cela, la source peut protéger son élémentaire, ou bien le réabsorber (dissipation donc 2 PA) ce qui permet de récupérer la partie de son âme sans douleur.
     La dissipation est possible tant que l'élémentaire est sous le contrôle de sa source et que le lien est actif (donc dans la limite de la distance du sort).<br>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Cas particulier : armure vivante</h3>
+<h3 *ngIf="langue.l == 'en'">Special case : living armour</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Dans la situation où un joueur voudrait créer un élémentaire dont le seul but est de protéger sa source, alors on peut assimiler l'élémentaire à une armure vivante.
+    Les détails de l'apparence de cet élémentaire-armure sont décidés par le joueur, mais les effets mécaniques sont déterminés ainsi :<br>
+    Pour les attaques physiques, après le jet d'esquive de sa source et si l'attaque devrait toucher,
+    l'armure peut lancer son propre jet d'anti-esquive pour voir si elle peut prendre l'attaque à la place (1d12 + Agi).
+    Si le résultat est au dessus du jet d'attaque, alors l'armure prend les dégâts à la place de sa source.<br>
+    Les dégâts sont ensuite calculés avec les degâts bruts et la résistance de l'armure, et sont reportés sur les points de vie de l'armure.
+    Si l'armure meurt à cause de l'attaque, les dégâts "superflus" sont perdus et non reportés sur la source
+    (qui va juste prendre 1 points de dégât émotionel parce que son élémentaire est mort).<br>
+    Dans le cas d'attaques magiques de zone, l'armure et la source comptent comme des créatures différentes et indépendantes qui partagent la même case.
+    Selon l'attaque, la source peut décider de sacrifier des PV de son armure pour se donner des bonus aux jets pour se défendre/éviter l'attaque
+    (à voir avec le MJ, en général 1 PV perdu = +2 esquive OU +1 défense).<br>
 </p>
 <p *ngIf="langue.l == 'en'">
 
