@@ -131,7 +131,8 @@ export class SkillsAttackComponent implements OnInit {
         },
         "Charge": {
           "hover_text": "Débloque l'action Charger.",
-          "details_text": "(1) Débloque l'action Charger. Se déplace jusqu'à 3 cases avant d'attaquer. Coûte les mêmes PA que l'attaque seule. \
+          "details_text": "(1) Débloque l'action Charger. Se déplace jusqu'à 3 cases avant d'attaquer sans provoquer d'opportunité.\
+                               Coûte les mêmes PA que l'attaque seule. \
                                Si 2 cases ou plus ont été traversées et que l'attaque touche, l'ennemi trébuche (donc continuation). \
                                Utilisable tel quel une fois par tour, les utilisations suivantes nécessitent de consommer 1 point d'énergie supplémentaire.\
                            (2) Si 2+ cases traversées, gagne +3/+1 à l'attaque chargée et +2 au touché de la continuation.",

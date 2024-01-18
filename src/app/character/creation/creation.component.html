@@ -159,21 +159,24 @@
   Ces valeurs vont augmenter avec l'expérience du personnage,
   et la limitation de 2 dans une stat causée par le choix de la race ne s'applique pas aux gains de niveaux, seulement à la création (niveau 0).<br/>
   Suggestion de progression :<br/>
-  niveau 1 : +1 spec +1 skill (et sensitivité = 1)<br/>
-  niveau 2 : +1 stat +1 skill (et sensitivité = 2) etc.<br/>
-  niveau 3 : +1 PA max +1 connaissance<br/>
-  niveau 4 : +1 spec +1 skill<br/>
-  niveau 5 : +1 stat +1 skill<br/>
-  niveau 6 : +1 PA max +1 connaissance<br/>
-  niveau 7 : +1 spec +1 skill<br/>
-  niveau 8 : +1 stat +1 skill<br/>
-  niveau 9 : +1 PA max +1 connaissance<br/>
+  niveau 1 : +1 skill +1 spec (et sensitivité = 1)<br/>
+  niveau 2 : +1 skill +1 stat (et sensitivité = 2) etc.<br/>
+  niveau 3 : +1 skill +1 PA max<br/>
+  niveau 4 : +1 skill +1 spec<br/>
+  niveau 5 : +1 skill +1 stat<br/>
+  niveau 6 : +1 skill +1 PA max<br/>
+  niveau 7 : +1 skill +1 spec<br/>
+  niveau 8 : +1 skill +1 stat<br/>
+  niveau 9 : +1 skill +1 PA max<br/>
   Après le niveau 9, le cycle peut continuer à se répéter mais sans augmenter la sensitivité.
   A la place, les lignes paires du tableau des effets magiques se suppriment une à une, et les valeurs se décalent. <br>
   Par exemple au niveau 11 (9+2) les lignes 2 et 4 sont supprimées.
   Donc le 1 garde ses effets, une valeur de 2 aura les effets de la ligne 3, et une valeur de 3 aura les effets de la ligne 5.
   Le 4 aura les effets de la ligne 6 et le reste continue ligne par ligne. <br>
   Cela permet aux sorts d'avoir des effets plus forts sans coûter plus d'énergie.<br>
+  <br>
+  Gagner de nouvelles connaissances est plus lié aux expériences et choix du personnage qu'à son niveau,
+  mais une quantité suggérée (pour l'équilibre) est de donner environ une connaissance tout les 3 niveaux.
 </p>
 
 <p *ngIf="langue.l == 'en'">
