@@ -1,3 +1,42 @@
+
+<h3 *ngIf="langue.l == 'fr'">Types de concentrations</h3>
+<h3 *ngIf="langue.l == 'en'">Types of concentrations</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Il existe 3 types majeurs de concentrations : une concentration sur un sort actif (nécessite la compétence en magie correspondante),
+    une concentration sur le contrôle d'un élément inerte (disponible à tout personnage possédant au moins une magie quelconque),
+    et les autres concentrations (par exemple pour préparer une attaque, ou bien pour garder une compétence active).
+    Les deux premiers types sont des concentrations magiques, le dernier type correspond aux concentrations physiques.<br/>
+    Chaque concentration (quel que soit son type) nécessite de dépenser 1 PA au début de chaque tour du personnage pour rester active.
+    Si la concentration commence après le début du tour, alors le premier coût commencera au tour prochain.<br/>
+    En plus du coût en PA, garder des concentrations actives est fatiguant et coûte des points d'énergie selon le niveau de chaque concentration.
+    Le niveau d'une concentration est déterminé par la chose sur laquelle le personnage est concentré :<br/>
+    - Pour les concentration de sorts actifs, le niveau de la concentration est le même que le niveau du sort.<br/>
+    - Pour les concentrations de contrôle d'élément, le niveau de la concentration dépend de la taille et de la tangibilité de l'élément (cf tableau si dessous).<br/>
+    - Pour les concentrations physiques, c'est niveau 1 par défaut (sauf si précisé dans la compétence).<br/>
+    Il est possible de garder plusieurs concentrations à la fois, et leurs coûts se cumulent.
+    En revanche il existe des limites du nombre de concentrations magiques cumulables :<br/>
+    Par défaut, on commence à une concentration de chaque niveau.
+    En plus, un personnage peut gagner un deuxième slot de concentration si sa spécialisation est égale ou supérieure au niveau de concentration.<br/>
+    Par exemple :
+    Un mage d'eau avec 0 de spécialisation en eau peut avoir en nombre de concentrations magiques d'eau : 2 (niv 0), 1 (niv 1), 1 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
+    Un mage d'eau avec 1 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 1 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
+    Un mage d'eau avec 2 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 2 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
+    Un mage d'eau avec 3 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 2 (niv 2), 2 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
+    <br/>
+    Si un personnage veut posséder plus de concentrations, il doit utiliser un slot de niveau supérieur.
+    Par exemple :
+    Un mage d'eau avec 0 de spécialisation en eau possède une concentration active de niveau 1 et veut lancer un nouveau sort concentration de niveau 1.
+    Cette nouvelle concentration sera de niveau 2. Si il veut lancer encore un autre sort de niveau 1, cette nouvelle concentration sera de niveau 3.<br/>
+    <br/>
+    Les concentrations magiques d'éléments différents n'ont pas d'impact entre elles.<br/>
+    Les concentrations physiques n'ont pas d'impact sur les concentrations magiques et peuvent être accumulées sans limite.<br/>
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
+</p>
+
+
 <p>
     <button class="button bullet-button" (click)="show_text_1()">
         <div *ngIf="show1">v</div>
@@ -252,5 +291,5 @@
     <span class="divshow" *ngIf="show4">
         cf <a routerLink="/character/skills/attack" routerLinkActive="activebutton">compétences</a> comme Viser
     </span>
-    
+
 </p>
