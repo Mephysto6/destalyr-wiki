@@ -52,7 +52,10 @@
 <h3 *ngIf="langue.l == 'en'">Attack</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Il existe trois types d'attaques magiques : l'attaque directe sur l'ennemis, le lancé, et l'attaque psychologique.<br/>
+    Il existe trois types d'attaques magiques : l'attaque directe sur l'ennemis, le lancé, et l'attaque psychologique.
+    Ces attaques suivent les mêmes règles de résultats spéciaux que les attaques armées
+    (cf <a routerLink="/system/attacking/hitting" routerLinkActive="activebutton">tableau de toucher</a>)
+    sachant que les continuations et coups critiques (ignore résistance naturelle) ne sont disponibles qu'aux armes et pas aux attaques magiques.<br/>
     <b>Attaque directe</b> : exemple : création d'une boule de feu autour d'un ennemis, prise de contrôle de la terre sous les pieds de quelqu'un et faire un trou.<br/>
     Dans ce cas là, le jet d'attaque est <b>1d12 + (précision x2) contre l'esquive</b> de l'ennemis, et les degâts sont efficacité + taille - résistance.<br/>
     <b>Lancé</b> : création d'une boule de feu dans les mains du mage et lancé vers l'ennemis, prise de contrôle de glace pour faire des piques et lancé vers l'ennemis.<br/>
