@@ -1,0 +1,168 @@
+<h3 *ngIf="langue.l == 'fr'">Infusion</h3>
+<h3 *ngIf="langue.l == 'en'">Infusion</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    L'infusion correspond à une manipulation dont la cible est un objet
+    et qui a pour but d'imbuer cet objet avec l'élément désiré (= élément de la manipulation).<br>
+    Tous les éléments peuvent être utilisé en tant qu'infusion,
+    et les effets peuvent varier grandement selon l'élément, la puissance de la manipulation, et la volonté de la source.<br>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Buffs</h3>
+<h3 *ngIf="langue.l == 'en'">Buffs</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Le buff correspond à une manipulation dont la cible est une créature (animale, humaine, élémentaire, ou autre)
+    et qui a pour but d'imbuer cette créature avec l'élément désiré (= élément de la manipulation).<br>
+    La plupart mais pas tous les éléments peuvent être source de buff,
+    certains sont plus faciles à utiliser pour buffer que d'autres,
+    et de manière générale, chaque élément ne peut buffer qu'une caractéristique de la créature
+    (cf hexagramme ci dessous).<br>
+    La difficulté est statique, mais la caractéristique buffée peut être modifiée.
+    En revanche un sort ne peut buffer qu'une stat à la fois.<br>
+    Les couleurs des caractéristiques représentent les difficultés à buffer par l'élément déterminé par la position dans l'hexagramme :
+    vert est facile, jaune est difficile, rouge est très difficile, et noir est impossible.
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Caractéristiques</h3>
+<h3 *ngIf="langue.l == 'en'">Charactéristics</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Les caractéristiques de la manipulation vont affecter les résultats ainsi : <br>
+    - La Taille doit couvrir la cible entièrement (cf ordres de grandeur)<br>
+    - La Distance indique la distance entre la source et la cible.
+    De même que la conjuration, si ces deux s'éloignent de plus que cette distance, alors le lien devient dormant,
+    et si la distance excède le double de la distance autorisée, alors le lien est rompu.<br>
+    - La Précision détermine si l'infusion prend effet.
+    Le test est effectué une fois au début du tour et consiste en un jet de précision (1d12 + Précision x2) DC11.<br>
+    - L'Efficacité détermine la force des effets.
+    Selon le type d'effet, le résultat suivra une des colonnes (ou une variation de ces colonnes) du tableau ci-dessous.<br>
+</p>
+<p *ngIf="langue.l == 'en'">
+
+</p>
+
+<br>
+<img  class="image-schema" src="../../../assets/images/elements_buffs_transp.png"/>
+<br>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+  <table>
+      <tr>
+          <th>Efficacité</th>
+          <th>Résultats Très facile</th>
+          <th>Résultats Facile</th>
+          <th>Résultats Difficile</th>
+          <th>Résultats Très difficile</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>3</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>3</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>5</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>5</td>
+          <td>4</td>
+          <td>3</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>6</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>12</td>
+          <td>6</td>
+          <td>5</td>
+          <td>4</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>13</td>
+          <td>7</td>
+          <td>6</td>
+          <td>4</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>14</td>
+          <td>7</td>
+          <td>6</td>
+          <td>4</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>etc</td>
+      </tr>
+  </table>
+</div>

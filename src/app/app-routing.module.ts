@@ -76,6 +76,7 @@ import { MagicVisionComponent } from './system/magic-system/magic-vision/magic-v
 import { MagicBallparksComponent } from './system/magic-system/magic-ballparks/magic-ballparks.component';
 import { MagicGroupComponent } from './system/magic-system/magic-group/magic-group.component';
 import { MagicConjurationComponent } from './system/magic-system/magic-conjuration/magic-conjuration.component';
+import { MagicBuffsComponent } from './system/magic-system/magic-buffs/magic-buffs.component';
 
 // system/attacking
 import { HittingComponent } from './system/attacking/hitting/hitting.component';
@@ -231,6 +232,7 @@ const routes: Routes = [
           { path: 'ballparks', component: MagicBallparksComponent },
           { path: 'group', component: MagicGroupComponent },
           { path: 'conjuration', component: MagicConjurationComponent },
+          { path: 'buffs', component: MagicBuffsComponent },
         ]
       },
       { path: 'other-rolls', component: OtherRollsComponent },
