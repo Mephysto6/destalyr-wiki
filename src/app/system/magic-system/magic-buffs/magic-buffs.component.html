@@ -33,7 +33,7 @@
 
 
 <h3 *ngIf="langue.l == 'fr'">Caractéristiques</h3>
-<h3 *ngIf="langue.l == 'en'">Charactéristics</h3>
+<h3 *ngIf="langue.l == 'en'">Characteristics</h3>
 
 <p *ngIf="langue.l == 'fr'">
     Les caractéristiques de la manipulation vont affecter les résultats ainsi : <br>
@@ -45,23 +45,24 @@
     Le test est effectué une fois au début du tour et consiste en un jet de précision (1d12 + Précision x2) DC11.<br>
     - L'Efficacité détermine la force des effets.
     Selon le type d'effet, le résultat suivra une des colonnes (ou une variation de ces colonnes) du tableau ci-dessous.<br>
+    À noter que la colonne Très facile ne sera pas utilisée par les buffs mais seulement les infusions.
 </p>
 <p *ngIf="langue.l == 'en'">
 
 </p>
-
-<br>
-<img  class="image-schema" src="../../../assets/images/elements_buffs_transp.png"/>
-<br>
 
 <div class="div-table" *ngIf="langue.l == 'fr'">
   <table>
       <tr>
           <th>Efficacité</th>
           <th>Résultats Très facile</th>
-          <th>Résultats Facile</th>
-          <th>Résultats Difficile</th>
-          <th>Résultats Très difficile</th>
+          <th style="color: green;">Résultats Facile</th>
+          <th style="color: rgb(255, 150, 0);">Résultats Difficile</th>
+          <th style="color: red;">Résultats Très difficile</th>
+          <th rowspan="16"></th>
+          <th>Eléments</th>
+          <th>Difficulté</th>
+          <th>Stat</th>
       </tr>
       <tr>
           <td>1</td>
@@ -69,6 +70,10 @@
           <td>0</td>
           <td>0</td>
           <td>0</td>
+
+          <td>Feu</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Eloquence</td>
       </tr>
       <tr>
           <td>2</td>
@@ -76,6 +81,10 @@
           <td>0</td>
           <td>0</td>
           <td>0</td>
+
+          <td>Air</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Dextérité</td>
       </tr>
       <tr>
           <td>3</td>
@@ -83,6 +92,10 @@
           <td>1</td>
           <td>1</td>
           <td>0</td>
+
+          <td>Lumière</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Perception</td>
       </tr>
       <tr>
           <td>4</td>
@@ -90,6 +103,10 @@
           <td>1</td>
           <td>1</td>
           <td>1</td>
+
+          <td>Nature</td>
+          <td style="color: rgb(255, 0, 0);">Très difficile</td>
+          <td>Force</td>
       </tr>
       <tr>
           <td>5</td>
@@ -97,6 +114,10 @@
           <td>2</td>
           <td>1</td>
           <td>1</td>
+
+          <td>Eau</td>
+          <td style="color: rgb(255, 0, 0);">Très difficile</td>
+          <td>Résistance</td>
       </tr>
       <tr>
           <td>6</td>
@@ -104,6 +125,10 @@
           <td>2</td>
           <td>2</td>
           <td>1</td>
+
+          <td>Ténèbre</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Agilité</td>
       </tr>
       <tr>
           <td>7</td>
@@ -111,6 +136,10 @@
           <td>3</td>
           <td>2</td>
           <td>2</td>
+
+          <td>Tonnerre</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Agilité</td>
       </tr>
       <tr>
           <td>8</td>
@@ -118,6 +147,10 @@
           <td>3</td>
           <td>2</td>
           <td>2</td>
+
+          <td>Purification</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Perception magique</td>
       </tr>
       <tr>
           <td>9</td>
@@ -125,6 +158,10 @@
           <td>4</td>
           <td>3</td>
           <td>2</td>
+
+          <td>Animaux</td>
+          <td style="color: green;">Facile</td>
+          <td>N'importe</td>
       </tr>
       <tr>
           <td>10</td>
@@ -132,6 +169,10 @@
           <td>4</td>
           <td>3</td>
           <td>3</td>
+
+          <td>Croissance</td>
+          <td style="color: green;">Facile</td>
+          <td>Force</td>
       </tr>
       <tr>
           <td>11</td>
@@ -139,6 +180,10 @@
           <td>5</td>
           <td>3</td>
           <td>3</td>
+
+          <td>Esprit</td>
+          <td style="color: green;">Facile</td>
+          <td>PA</td>
       </tr>
       <tr>
           <td>12</td>
@@ -146,6 +191,10 @@
           <td>5</td>
           <td>4</td>
           <td>3</td>
+
+          <td>Âme</td>
+          <td style="color: green;">Facile</td>
+          <td>Douleur</td>
       </tr>
       <tr>
           <td>13</td>
@@ -153,6 +202,10 @@
           <td>6</td>
           <td>4</td>
           <td>3</td>
+
+          <td>Terre</td>
+          <td style="color: rgb(255, 150, 0);">Difficile</td>
+          <td>Résistance</td>
       </tr>
       <tr>
           <td>14</td>
@@ -160,9 +213,16 @@
           <td>6</td>
           <td>4</td>
           <td>4</td>
+
+          <td rowspan="2">Explosion, Glace,<br> Tentacule, Illusion,<br> Eau de vie</td>
+          <td rowspan="2">Impossible</td>
+          <td rowspan="2">/</td>
       </tr>
       <tr>
           <td>etc</td>
       </tr>
   </table>
 </div>
+
+<img style="background-color: rgba(255, 255, 255, 0.5); height: 500px; margin: 50px;" src="../../../assets/images/elements_buffs_transp.png"/>
+<br>
