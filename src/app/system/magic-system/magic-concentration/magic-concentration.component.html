@@ -16,20 +16,15 @@
     - Pour les concentrations physiques, c'est niveau 1 par défaut (sauf si précisé dans la compétence).<br/>
     Il est possible de garder plusieurs concentrations à la fois, et leurs coûts se cumulent.
     En revanche il existe des limites du nombre de concentrations magiques cumulables :<br/>
-    Par défaut, on commence à une concentration de chaque niveau.
-    En plus, un personnage peut gagner un deuxième slot de concentration si sa spécialisation est égale ou supérieure au niveau de concentration.<br/>
-    Par exemple :
-    Un mage d'eau avec 0 de spécialisation en eau peut avoir en nombre de concentrations magiques d'eau : 2 (niv 0), 1 (niv 1), 1 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
-    Un mage d'eau avec 1 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 1 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
-    Un mage d'eau avec 2 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 2 (niv 2), 1 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
-    Un mage d'eau avec 3 de spécialisation en eau peut avoir : 2 (niv 0), 2 (niv 1), 2 (niv 2), 2 (niv 3), 1 (niv 4), 1 (niv 5), etc.<br/>
+    Chaque élément est compté indépendemment des autres éléments.
+    Pour chaque élément, le niveau maximum des concentrations est égal à la spécialisation de l'individu dans cet élément,
+    et le nombre de concentration est égal à sa spécialisation divisé par 2 (arrondi haut).<br/>
+    Par exemple : Un mage ayant 3 de spécialisation en illusion, 2 en eau et 0 en ténèbre.
+    Il peut avoir jusqu'à 2 concentrations de niveau inférieur ou égal à 3 en illusion, et 1 concentration de niveau inférieur ou égal à 2 en eau.
+    Il ne peut pas avoir de concentrations de ténèbres, ni excéder ces limitations par élément.<br/>
     <br/>
-    Si un personnage veut posséder plus de concentrations, il doit utiliser un slot de niveau supérieur.
-    Par exemple :
-    Un mage d'eau avec 0 de spécialisation en eau possède une concentration active de niveau 1 et veut lancer un nouveau sort concentration de niveau 1.
-    Cette nouvelle concentration sera de niveau 2. Si il veut lancer encore un autre sort de niveau 1, cette nouvelle concentration sera de niveau 3.<br/>
-    <br/>
-    Les concentrations magiques d'éléments différents n'ont pas d'impact entre elles.<br/>
+    Les concentrations magiques d'éléments différents n'ont pas d'impact entre elles.
+    Chaque élément possède ses propres valeurs et compteurs de concentrations qui ne se superposent pas <br/>
     Les concentrations physiques n'ont pas d'impact sur les concentrations magiques et peuvent être accumulées sans limite.<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
