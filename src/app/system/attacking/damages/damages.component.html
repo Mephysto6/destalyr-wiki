@@ -121,9 +121,57 @@
     L'élément est peu important une fois la blessure infligée.<br>
     La taille (en général 2 pour une arme, et selon la manipulation pour la magie) va donner un minimum de taille pour le soin.<br>
     La forme et l'intensité ont des effets avant le soin :
-    si la blessure est saignante, alors la victime saigne et perd son sang à une vitesse déterminée par l'intensité de la blessure (cf <a routerLink="/character/dying" routerLinkActive="activebutton">mourir</a>) ;
-    si la blessure est gênante, alors la victime peut perdre des PA selon un jet de résistance (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).
+    si la blessure est saignante, alors la victime saigne et perd son sang à une vitesse déterminée par l'intensité de la blessure
+    (cf <a routerLink="/character/dying" routerLinkActive="activebutton">mourir</a>) ;
+    si la blessure est gênante, alors la victime peut perdre des PA selon un jet de résistance
+    (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).
     La profondeur d'une blessure n'importe que pour le soin.
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Accumulations (stacks) élémentaires</h3>
+<h3 *ngIf="langue.l == 'en'">Elemental stacks</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Ceci est une suggestion de règle. Elle n'est pas encore officielle ni implémentée.<br>
+    <br>
+    Chaque attaque infligeant des dégâts inflige en plus un point élémentaire sur la cible de l'attaque
+    (= la victime qui reçoit la blessure reçoit aussi le point élémentaire).
+    Le point élémentaire est indépendant de la blessure et n'a aucun effet en lui même,
+    mais peut se cumuler et quand ils atteignent un seuil, explosent et infligent un effet à la victime.<br>
+    Les points élémentaires n'existent que pour les éléments purs.
+    Les attaques avec des éléments combinés infligent un point dans chacune des magies pures liées.
+    Les points se cumulent idépendemment sur chaque élément, sauf les éléments opposés qui s'annulent (avec un ratio 1-1).
+    L'effet résultant de l'explosion des stacks varie selon l'élément, et si 2 éléments sont proc-és en même temps, alors l'effet vient de leur magie combinée.<br>
+    Le seuil en général est de 3. Il peut varier selon la taille, la sensitivité, et l'importance de la créature
+    (par exemple si la créature est petite, le seuil peut baisser donc 2, et si la créature est grande le seuil peut monter à 4).<br>
+    Si l'effet possède une durée, alors l'état infligé dure 2 tours globaux, et si le même état est infligé une nouvelle fois avant la fin du premier,
+    alors l'état est accentué et la duration de 2 tours est rafraîchie (et non cumulée).<br>
+    <br>
+    Des exemples d'états selon la magie (à déterminer ensemble et à équilibrer) :<br>
+    <br>
+    feu : dégâts de brûlure continus - plus de dégâts si mouvement<br>
+    air : ralenti - perd balance<br>
+    lumière : brille - malus aux attaques<br>
+    nature : épines - entangled<br>
+    eau : glissé / poussé - alourdi<br>
+    ténèbre : aveuglé - anti magie<br>
+    <br>
+    explosion : encore plus d'explosion - lâcher ce qu'il tenait<br>
+    tonnerre : incapacité à utiliser des objets - perdre des PA<br>
+    croissance : alourdi - perd balance<br>
+    purification : douleur en fonction des blessures (halp j'ai pas d'idées)<br>
+    animaux : attaqué par des animaux (variés)<br>
+    tentacules : grappled - slapped/dazed<br>
+    glace : ralenti - gelé<br>
+    esprit : perdre des PA - dazed<br>
+    firewater : spawn du firewater sur/autour<br>
+    terre : ralenti - alourdi<br>
+    illusion : vision perturbée - hallucinations<br>
+    âme : douleur - fatigue<br>
 </p>
 <p *ngIf="langue.l == 'en'">
     <br/>
