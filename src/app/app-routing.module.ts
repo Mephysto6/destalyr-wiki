@@ -141,7 +141,6 @@ import { SercretRunesComponent } from './sercret-pages/sercret-runes/sercret-run
 import { SercretSoulStonesComponent } from './sercret-pages/sercret-soul-stones/sercret-soul-stones.component';
 import { BloodRulesComponent } from './sercret-pages/blood-rules/blood-rules.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
@@ -161,9 +160,12 @@ const routes: Routes = [
           { path: 'the-elven-war', component: TheElvenWarComponent },
           { path: 'the-emergence', component: TheEmergenceComponent },
           { path: 'the-lyune-civil-war', component: TheLyuneCivilWarComponent },
-          { path: 'the-dark-elves-stabilisation', component: TheDarkElvesStabilisationComponent },
+          {
+            path: 'the-dark-elves-stabilisation',
+            component: TheDarkElvesStabilisationComponent,
+          },
           { path: 'the-new-war', component: TheNewWarComponent },
-        ]
+        ],
       },
       { path: 'religion', component: ReligionComponent },
       {
@@ -176,7 +178,7 @@ const routes: Routes = [
           { path: 'etrek', component: EtrekComponent },
           { path: 'dark-elf', component: DarkElfComponent },
           { path: 'lyune', component: LyuneComponent },
-        ]
+        ],
       },
       {
         path: 'magic',
@@ -186,7 +188,7 @@ const routes: Routes = [
           { path: 'runic', component: MagicRunicComponent },
           { path: 'materials', component: MetalComponent },
           { path: 'colours', component: MagicColoursComponent },
-        ]
+        ],
       },
       { path: 'geography', component: GeographyComponent },
       { path: 'languages', component: LanguagesComponent },
@@ -198,9 +200,9 @@ const routes: Routes = [
           { path: 'education', component: CitadelleComponent },
           { path: 'professions', component: ProfessionsComponent },
           { path: 'economy', component: EconomyComponent },
-        ]
+        ],
       },
-    ]
+    ],
   },
 
   {
@@ -217,7 +219,7 @@ const routes: Routes = [
           { path: 'hitting', component: HittingComponent },
           { path: 'damages', component: DamagesComponent },
           { path: 'targeting', component: TargetingComponent },
-        ]
+        ],
       },
       { path: 'combat', component: CombatComponent },
       {
@@ -233,13 +235,13 @@ const routes: Routes = [
           { path: 'group', component: MagicGroupComponent },
           { path: 'conjuration', component: MagicConjurationComponent },
           { path: 'buffs', component: MagicBuffsComponent },
-        ]
+        ],
       },
       { path: 'other-rolls', component: OtherRollsComponent },
       { path: 'healing', component: HealingComponent },
       { path: 'states', component: StatesComponent },
       { path: 'explanation', component: SystemExplanationComponent },
-    ]
+    ],
   },
 
   {
@@ -257,11 +259,11 @@ const routes: Routes = [
           { path: 'defense', component: SkillsDefenseComponent },
           { path: 'magic', component: SkillsMagicComponent },
           { path: 'explanation', component: SkillsExplanationComponent },
-        ]
+        ],
       },
       { path: 'knowledge', component: KnowledgeComponent },
       { path: 'dying', component: DyingComponent },
-    ]
+    ],
   },
 
   {
@@ -296,10 +298,10 @@ const routes: Routes = [
           { path: 'hallucinating', component: MindHallucinatingComponent },
           { path: 'boosting', component: MindBoostingComponent },
           { path: 'suggesting', component: MindSuggestingComponent },
-        ]
+        ],
       },
       { path: 'purification', component: PurificationMagicComponent },
-    ]
+    ],
   },
 
   {
@@ -309,7 +311,7 @@ const routes: Routes = [
       { path: 'action-flowchart', component: ActionFlowchartComponent },
       { path: 'destiny', component: DestinyComponent },
       { path: 'cheat-sheet', component: CheatSheetComponent },
-    ]
+    ],
   },
   {
     path: 'secret-pages',
@@ -324,7 +326,7 @@ const routes: Routes = [
       { path: 'ne12V72t', component: SercretRunesComponent },
       { path: '3X5Ju928', component: SercretSoulStonesComponent },
       { path: 'r8t2VuC5', component: BloodRulesComponent },
-    ]
+    ],
   },
 
   { path: '**', component: PageNotFoundComponent },
@@ -332,6 +334,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
