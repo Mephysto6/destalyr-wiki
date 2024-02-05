@@ -1,5 +1,44 @@
-<h3 *ngIf="langue.l == 'fr'">Dégâts</h3>
-<h3 *ngIf="langue.l == 'en'">Damages</h3>
+<h3 *ngIf="langue.l == 'fr'">Types de dégâts</h3>
+<h3 *ngIf="langue.l == 'en'">Damage types</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Chaque attaque possède 2 catégories de types : son élément, et sa forme.<br/>
+    L'élément d'une attaque est soit physique, soit un élément de magie pure, soit un élément de magie combinée.<br/>
+    La forme d'une attaque est soit perçante, soit contondante, soit tranchante, soit brûlante, soit "autre" ("autre" est utilisé en général pour les poisons/debuffs).<br/>
+    L'élément et la forme sont décidés quand l'attaque est effectuée.<br/>
+    Pour l'élément :<br/>
+    Si l'attaque vient d'une arme (ou d'un objet) non magique sans infusion, alors l'attaque est physique.
+    Si l'attaque vient d'une arme infusée, alors son élément est le même élément que celui de l'infusion.
+    Si l'attaque vient d'un sort magique, alors l'élément est le même que celui de la magie manipulée.<br/>
+    Pour la forme :<br/>
+    La forme dépend de l'arme ou des détails de l'attaque magique.
+    Si une arme a été utilisée (magique ou non, infusée ou non), alors l'attaque sera du même type que l'arme.
+    Si une manipulation magique a été effectuée, alors l'élément particulier et la description de la manipulation mènent à la décision de la forme de l'attaque.<br/>
+    Exemples :<br/>
+    Un individu attaque avec une hache non magique non infusée. L'attaque sera physique tranchante.<br/>
+    Un individu attaque avec un arc infusé d'air. L'attaque sera air perçante.<br/>
+    Un individu attaque avec un trait de feu. L'attaque sera feu brûlante.<br/>
+    Un individu attaque avec un pic de glace. L'attaque sera glace perçante.<br/>
+    Un individu attaque avec un tentacule. L'attaque sera tentacule contondant.<br/>
+    <br/>
+    La blessure résultante d'une attaque est de mêmes types que l'attaque.
+    De manière générale, l'élément est important quand l'attaque est appliquée (donc pour l'attaquant),
+    et la forme est plus importante durant le soin et le temps avant le soin (donc pour la victime).<br/>
+    <br/>
+    Certaines créature peuvent avoir des résistances ou vulnérabilités à certains éléments,
+    et il faut donc prendre en compte les éléments des attaques les ciblant pour calculer correctement les dégâts infligés :
+    si une créature est vulnérable, alors les dégâts augmentent de 3 (avant le filtre de défense) ;
+    si une créature est résistante, alors les dégâts sont diminués de 3 (min 0) ;
+    si une créature est invulnérable, alors ne prend aucun dégâts.<br/>
+
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
+</p>
+
+
+<h3 *ngIf="langue.l == 'fr'">Calcul des dégâts</h3>
+<h3 *ngIf="langue.l == 'en'">Damage points</h3>
 
 <p *ngIf="langue.l == 'fr'">
     Attaquant : <b>1dx</b> (selon arme) <b>+ stat</b> (force ou dex)<br/>
@@ -7,8 +46,9 @@
     Dégâts de l'attaque - défense = dégâts en points de douleur (min 0, si 0 alors pas de blessure)<br/>
     <br/>
     Blessure laissée dépend du type de dégâts de l'arme :<br/>
-    Tranchant/Perçant = coupure<br/>
+    Tranchant = coupure<br/>
     Contondant = casse<br/>
+    Perçant = perforation<br/>
     <br/>
     Les coupures causent un saignement, qui provoque une perte de sang, qui à son tour peut entraîner la mort de la victime.<br/>
     Les casses peuvent empêcher la victime d'agir (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).<br/>
@@ -42,4 +82,49 @@
     5-6 : big cut - broken bone<br/>
     7-8 : very big cut - very broken bone<br/>
     9-10 : limb cut off - all bones broken in the limb<br/>
+</p>
+
+<div class="div-table" *ngIf="langue.l == 'fr'">
+  <table>
+      <tr>
+          <th>Profondeur / Saignement ?</th>
+          <td>Saignante</td>
+          <td>Gênante</td>
+      </tr>
+      <tr>
+          <td>Surface</td>
+          <td>Coupure</td>
+          <td>Brûlure</td>
+      </tr>
+      <tr>
+          <td>Profond</td>
+          <td>Perforation</td>
+          <td>Cassure</td>
+      </tr>
+  </table>
+</div>
+<div class="div-table" *ngIf="langue.l == 'en'">
+  <table>
+      <tr>
+          <th>/</th>
+      </tr>
+  </table>
+</div>
+
+
+<h3 *ngIf="langue.l == 'fr'">Les conséquences d'une attaque</h3>
+<h3 *ngIf="langue.l == 'en'">The consequences of an attack</h3>
+
+<p *ngIf="langue.l == 'fr'">
+    Après une attaque réussie, la victime souffre d'une blessure. Cette blessure possède plusieurs caractéristiques :
+    une forme, un élément, une taille, et un intensité.<br>
+    L'élément est peu important une fois la blessure infligée.<br>
+    La taille (en général 2 pour une arme, et selon la manipulation pour la magie) va donner un minimum de taille pour le soin.<br>
+    La forme et l'intensité ont des effets avant le soin :
+    si la blessure est saignante, alors la victime saigne et perd son sang à une vitesse déterminée par l'intensité de la blessure (cf <a routerLink="/character/dying" routerLinkActive="activebutton">mourir</a>) ;
+    si la blessure est gênante, alors la victime peut perdre des PA selon un jet de résistance (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).
+    La profondeur d'une blessure n'importe que pour le soin.
+</p>
+<p *ngIf="langue.l == 'en'">
+    <br/>
 </p>
