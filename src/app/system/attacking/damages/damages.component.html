@@ -4,7 +4,8 @@
 <p *ngIf="langue.l == 'fr'">
     Chaque attaque possède 2 catégories de types : son élément, et sa forme.<br/>
     L'élément d'une attaque est soit physique, soit un élément de magie pure, soit un élément de magie combinée.<br/>
-    La forme d'une attaque est soit perçante, soit contondante, soit tranchante, soit brûlante, soit "autre" ("autre" est utilisé en général pour les poisons/debuffs).<br/>
+    La forme d'une attaque est soit perçante, soit contondante, soit tranchante, soit brûlante, soit "autre"
+    ("autre" est utilisé en général pour les poisons/debuffs).<br/>
     L'élément et la forme sont décidés quand l'attaque est effectuée.<br/>
     Pour l'élément :<br/>
     Si l'attaque vient d'une arme (ou d'un objet) non magique sans infusion, alors l'attaque est physique.
@@ -25,11 +26,11 @@
     De manière générale, l'élément est important quand l'attaque est appliquée (donc pour l'attaquant),
     et la forme est plus importante durant le soin et le temps avant le soin (donc pour la victime).<br/>
     <br/>
-    Certaines créature peuvent avoir des résistances ou vulnérabilités à certains éléments,
+    Certaines créatures peuvent avoir des résistances ou vulnérabilités à certains éléments,
     et il faut donc prendre en compte les éléments des attaques les ciblant pour calculer correctement les dégâts infligés :
     si une créature est vulnérable, alors les dégâts augmentent de 3 (avant le filtre de défense) ;
     si une créature est résistante, alors les dégâts sont diminués de 3 (min 0) ;
-    si une créature est invulnérable, alors ne prend aucun dégâts.<br/>
+    si une créature est invulnérable, alors elle ne prend aucun dégâts.<br/>
 
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -144,14 +145,16 @@
     mais peut se cumuler et quand ils atteignent un seuil, explosent et infligent un effet à la victime.<br>
     Les points élémentaires n'existent que pour les éléments purs.
     Les attaques avec des éléments combinés infligent un point dans chacune des magies pures liées.
-    Les points se cumulent idépendemment sur chaque élément, sauf les éléments opposés qui s'annulent (avec un ratio 1-1).
-    L'effet résultant de l'explosion des stacks varie selon l'élément, et si 2 éléments sont proc-és en même temps, alors l'effet vient de leur magie combinée.<br>
+    Les attaques physiques sans élément n'infligent aucun points élémentaires.
+    Les points se cumulent indépendamment sur chaque élément, sauf les éléments opposés qui s'annulent (avec un ratio 1-1).
+    L'effet résultant de l'explosion des stacks varie selon l'élément, et si 2 éléments sont proc-és en même temps,
+    alors l'effet vient de leur magie combinée et remplace les effets venant des magies pures.<br>
     Le seuil en général est de 3. Il peut varier selon la taille, la sensitivité, et l'importance de la créature
     (par exemple si la créature est petite, le seuil peut baisser donc 2, et si la créature est grande le seuil peut monter à 4).<br>
     Si l'effet possède une durée, alors l'état infligé dure 2 tours globaux, et si le même état est infligé une nouvelle fois avant la fin du premier,
     alors l'état est accentué et la duration de 2 tours est rafraîchie (et non cumulée).<br>
     <br>
-    Des exemples d'états selon la magie (à déterminer ensemble et à équilibrer) :<br>
+    Des exemples d'effets selon la magie (à déterminer ensemble et à équilibrer) :<br>
     <br>
     feu : dégâts de brûlure continus - plus de dégâts si mouvement<br>
     air : ralenti - perd balance<br>
