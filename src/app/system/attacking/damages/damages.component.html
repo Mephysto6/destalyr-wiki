@@ -3,18 +3,19 @@
 
 <p *ngIf="langue.l == 'fr'">
     Chaque attaque possède 2 catégories de types : son élément, et sa forme.<br/>
-    L'élément d'une attaque est soit physique, soit un élément de magie pure, soit un élément de magie combinée.<br/>
-    La forme d'une attaque est soit perçante, soit contondante, soit tranchante, soit brûlante, soit "autre"
+    <b>L'élément d'une attaque</b> est soit physique, soit un élément de magie pure, soit un élément de magie combinée.<br/>
+    <b>La forme d'une attaque</b> est soit perçante, soit contondante, soit tranchante, soit brûlante, soit "autre"
     ("autre" est utilisé en général pour les poisons/debuffs).<br/>
     L'élément et la forme sont décidés quand l'attaque est effectuée.<br/>
-    Pour l'élément :<br/>
+    Pour <b>l'élément</b> :<br/>
     Si l'attaque vient d'une arme (ou d'un objet) non magique sans infusion, alors l'attaque est physique.
     Si l'attaque vient d'une arme infusée, alors son élément est le même élément que celui de l'infusion.
     Si l'attaque vient d'un sort magique, alors l'élément est le même que celui de la magie manipulée.<br/>
-    Pour la forme :<br/>
+    Pour <b>la forme</b> :<br/>
     La forme dépend de l'arme ou des détails de l'attaque magique.
     Si une arme a été utilisée (magique ou non, infusée ou non), alors l'attaque sera du même type que l'arme.
     Si une manipulation magique a été effectuée, alors l'élément particulier et la description de la manipulation mènent à la décision de la forme de l'attaque.<br/>
+    <br/>
     Exemples :<br/>
     Un individu attaque avec une hache non magique non infusée. L'attaque sera physique tranchante.<br/>
     Un individu attaque avec un arc infusé d'air. L'attaque sera air perçante.<br/>
@@ -28,9 +29,9 @@
     <br/>
     Certaines créatures peuvent avoir des résistances ou vulnérabilités à certains éléments,
     et il faut donc prendre en compte les éléments des attaques les ciblant pour calculer correctement les dégâts infligés :
-    si une créature est vulnérable, alors les dégâts augmentent de 3 (avant le filtre de défense) ;
-    si une créature est résistante, alors les dégâts sont diminués de 3 (min 0) ;
-    si une créature est invulnérable, alors elle ne prend aucun dégâts.<br/>
+    si une créature est <b>vulnérable</b>, alors les dégâts augmentent de 3 (avant le filtre de défense) ;
+    si une créature est <b>résistante</b>, alors les dégâts sont diminués de 3 (min 0) ;
+    si une créature est <b>invulnérable</b>, alors elle ne prend aucun dégâts.<br/>
 
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -46,7 +47,7 @@
     Défense : <b>res + armure</b> (fixe)<br/>
     Dégâts de l'attaque - défense = dégâts en points de douleur (min 0, si 0 alors pas de blessure)<br/>
     <br/>
-    Blessure laissée dépend du type de dégâts de l'arme :<br/>
+    Blessure infligée dépend du type de dégâts de l'arme :<br/>
     Tranchant = coupure<br/>
     Contondant = casse<br/>
     Perçant = perforation<br/>
@@ -54,14 +55,14 @@
     Les coupures causent un saignement, qui provoque une perte de sang, qui à son tour peut entraîner la mort de la victime.<br/>
     Les casses peuvent empêcher la victime d'agir (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).<br/>
     <br/>
-    Dégâts -1 = intensité de la blessure laissée (coupure ou casse)<br/>
+    Dégâts -1 = intensité de la blessure infligée (coupure ou casse)<br/>
     L'échelle des intensités commence à 0.<br/>
     0 : égratinure - ecchymose (bleu)<br/>
-    1-2 : petite coupure - gros ecchymose<br/>
-    3-4 : coupure moyenne - os fracturé<br/>
+    1-2 : petite coupure - gros hématome<br/>
+    3-4 : coupure moyenne - os fêlé<br/>
     5-6 : grosse coupure - os cassé<br/>
-    7-8 : très grosse coupure - os très cassé<br/>
-    9-10 : membre coupé - tous les os du membre cassés<br/>
+    7-8 : très grosse coupure - fracture ouverte<br/>
+    9-10 : membre coupé - os pulvérisé<br/>
 </p>
 <p *ngIf="langue.l == 'en'">
     Attacker : <b>1dx</b> (depending on the weapon) <b>+ stat</b> (str or dex)<br/>
@@ -117,7 +118,7 @@
 <h3 *ngIf="langue.l == 'en'">The consequences of an attack</h3>
 
 <p *ngIf="langue.l == 'fr'">
-    Après une attaque réussie, la victime souffre d'une blessure. Cette blessure possède plusieurs caractéristiques :
+    Après une attaque réussie, la victime subit une blessure. Cette blessure possède plusieurs caractéristiques :
     une forme, un élément, une taille, et une intensité.<br>
     L'élément est peu important une fois la blessure infligée.<br>
     La taille (en général 2 pour une arme, et selon la manipulation pour la magie) va donner un minimum de taille pour le soin.<br>
@@ -125,7 +126,7 @@
     si la blessure est saignante, alors la victime saigne et perd son sang à une vitesse déterminée par l'intensité de la blessure
     (cf <a routerLink="/character/dying" routerLinkActive="activebutton">mourir</a>) ;
     si la blessure est gênante, alors la victime peut perdre des PA selon un jet de résistance
-    (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).
+    (cf <a routerLink="/system/states" routerLinkActive="activebutton">état blessé</a>).<br>
     La profondeur d'une blessure n'importe que pour le soin.
 </p>
 <p *ngIf="langue.l == 'en'">
@@ -139,14 +140,14 @@
 <p *ngIf="langue.l == 'fr'">
     Ceci est une suggestion de règle. Elle n'est pas encore officielle ni implémentée.<br>
     <br>
-    Chaque attaque infligeant des dégâts inflige en plus un point élémentaire sur la cible de l'attaque
+    Chaque attaque infligeant des dégâts inflige en plus un <b>point élémentaire</b> sur la cible de l'attaque
     (= la victime qui reçoit la blessure reçoit aussi le point élémentaire).
     Le point élémentaire est indépendant de la blessure et n'a aucun effet en lui même,
-    mais peut se cumuler et quand ils atteignent un seuil, explosent et infligent un effet à la victime.<br>
-    Les points élémentaires n'existent que pour les éléments purs.
+    mais peut se cumuler et <b>quand ils atteignent un seuil, ils explosent</b> et infligent un effet à la victime (puis reviennent à 0).<br>
+    Les points élémentaires n'existent que pour les <b>éléments purs</b>.
     Les attaques avec des éléments combinés infligent un point dans chacune des magies pures liées.
-    Les attaques physiques sans élément n'infligent aucun points élémentaires.
-    Les points se cumulent indépendamment sur chaque élément, sauf les éléments opposés qui s'annulent (avec un ratio 1-1).
+    Les attaques physiques sans élément n'infligent aucun point élémentaire.
+    Les points se cumulent indépendamment sur chaque élément, <b>sauf les éléments opposés qui s'annulent</b> (avec un ratio 1-1).
     L'effet résultant de l'explosion des stacks varie selon l'élément, et si 2 éléments sont proc-és en même temps,
     alors l'effet vient de leur magie combinée et remplace les effets venant des magies pures.<br>
     Le seuil en général est de 3. Il peut varier selon la taille, la sensitivité, et l'importance de la créature
