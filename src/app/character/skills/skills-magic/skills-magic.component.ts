@@ -194,7 +194,7 @@ export class SkillsMagicComponent implements OnInit {
     },
     {
       "depth": 5,
-      "name_list": ["nothing", "Supériorité", "nothing"],
+      "name_list": ["Élémentaliste", "Supériorité", "nothing"],
       "skill_list": {
         "Supériorité": {
           "hover_text": "Gagne plus de dé à toute manipulation.",
@@ -204,6 +204,18 @@ export class SkillsMagicComponent implements OnInit {
           "header": "false",
           "type": "Passif",
           "levels": "2",
+          "colour": "btn-lightpurple",
+        },
+        "Élémentaliste": {
+          "hover_text": "Appliquer plus de points d'accumulation élémentaire par attaque.",
+          "details_text": "Pour chaque attaque éffectuée portant (au moins) un point élémentaire, \
+                            le personnage peut ajouter un autre point élémentaire parmis les éléments déjà présents.\
+                            Cet effet ne peut être appliqué que sur les attaques magiques lancées par le personnage \
+                            et les attaques avec des armes infusées par ce personnage.",
+          "category": "MAG",
+          "header": "false",
+          "type": "Passif",
+          "levels": "1",
           "colour": "btn-lightpurple",
         },
       },
